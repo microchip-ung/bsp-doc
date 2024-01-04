@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LAN966x SDMMC :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2023.12">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2023.12</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html#docs/readme">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html#docs/readme">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html#docs/readme">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html#docs/readme">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html#docs/readme">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html#docs/readme">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html#docs/readme">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html#docs/readme">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html#docs/readme">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html#docs/readme">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="lan966x.html">LAN966x</a></li>
+    <li><a href="lan966x-mmc.html">MMC</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LAN966x SDMMC</h1>
+<div class="sect1">
+<h2 id="_lan966x_sdmmc"><a class="anchor" href="#_lan966x_sdmmc"></a>LAN966x SDMMC</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_soc_resources"><a class="anchor" href="#_soc_resources"></a>SoC Resources</h3>
+<div class="paragraph">
+<p>LAN966x SDMMC controller supports the embedded Multimedia Card (e.MMC)
+Specification (v5.01) and the SD Memory Card(v3.0).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kernel_configurations"><a class="anchor" href="#_kernel_configurations"></a>Kernel configurations</h3>
+<div class="paragraph">
+<p>Following kernel config options should be enabled to use LAN966x SDMMC:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CONFIG_MMC_SDHCI</code> - SD Host controller config option.</p>
+</li>
+<li>
+<p><code>CONDFIG_MMC</code> - MMC interface config option</p>
+</li>
+<li>
+<p><code>CONFIG_MMC_SDHCI_OF_AT91</code> - SDHCI OF support (for the Atmel SDMMC controller)
+config option.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_devicetree_configuration"><a class="anchor" href="#_devicetree_configuration"></a>Devicetree Configuration</h3>
+<div class="paragraph">
+<p>To use SDMMC interface, following configurations are required in device tree.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>compatible</code> string must be set to <code>microchip,lan966x-sdhci</code>.</p>
+</li>
+<li>
+<p><code>reg</code> property must be set with base register address and length.</p>
+</li>
+<li>
+<p><code>pinctrl-0</code> property must be set to</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;&amp;emmc_sd_pins&gt;, &lt;&amp;sdmmc_pins&gt;</code> to use SD Card interface.</p>
+</li>
+<li>
+<p><code>&lt;&amp;emmc_sd_pins&gt;, &lt;&amp;emmc_pins&gt;</code> to use eMMC interface.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p><code>emmc_sd_pins</code> includes CMD, CLK, D0, D1, D2, D3, RSTN pins for both SD
+and eMMC, <code>sdmmc_pins</code> includes VSEL, WP, CD, LED pins for SD interface only and
+<code>emmc_pins</code> includes D4, D5, D6, D7 pins for eMMC interface only. <code>sdmmc_pins</code> and
+<code>emmc_pins</code> pin numbers are same but driver will take care of configuring
+different ALT modes for SD and eMMC pins.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">pinctrl node</th>
+<th class="tableblock halign-left valign-top">CMD pin</th>
+<th class="tableblock halign-left valign-top">CLK pin</th>
+<th class="tableblock halign-left valign-top">D0</th>
+<th class="tableblock halign-left valign-top">D1</th>
+<th class="tableblock halign-left valign-top">D2</th>
+<th class="tableblock halign-left valign-top">D3</th>
+<th class="tableblock halign-left valign-top">RSTN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">emmc_sd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO67</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO68</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO69</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO72</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO77</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">pinctrl node</th>
+<th class="tableblock halign-left valign-top">DT Func</th>
+<th class="tableblock halign-left valign-top">VSEL pin</th>
+<th class="tableblock halign-left valign-top">WP pin</th>
+<th class="tableblock halign-left valign-top">CD pin</th>
+<th class="tableblock halign-left valign-top">LED pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sdmmc_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO73</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO74</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO76</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">pinctrl node</th>
+<th class="tableblock halign-left valign-top">DT Func</th>
+<th class="tableblock halign-left valign-top">D4</th>
+<th class="tableblock halign-left valign-top">D5</th>
+<th class="tableblock halign-left valign-top">D6</th>
+<th class="tableblock halign-left valign-top">D7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">emmc_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">emmc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO73</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO74</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO76</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><code>interrupts</code> property must set with interrupt details.
+Interrupt number[CPU INTR] corresponding to a sdmmc must be configured as
+defined below:</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">SDMMC ID</th>
+<th class="tableblock halign-left valign-top">Shared Peripheral Interrupt</th>
+<th class="tableblock halign-left valign-top">CPU INTR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sdmmc0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">98</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">66</p></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p>Shared peripheral interrupt lines start at index ID32. So, CPU INTR
+must be calculated as [Shared peripheral interrupt number - 32].</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Input clock <code>clocks</code> property must be set to GCK clock using phandle and GCK ID
+as <code>&lt;&amp;clk GCK_ID_SDMMC0&gt;</code>.</p>
+</li>
+<li>
+<p><code>clock-names</code> must be set to <code>hclock</code> and <code>multclk</code></p>
+</li>
+<li>
+<p><code>assigned-clocks</code> must be set to <code>&lt;&amp;clks GCK_ID_SDMMC0&gt;</code>.</p>
+</li>
+<li>
+<p><code>assigned-clock-rates</code> must be set to 45Mhz.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p>While operating as eMMC interface, <code>tx-phase</code> property must be set to
+zero.
+Possible phase shift values are <code>0</code> for 180degrees, <code>c</code> for 90 degrees,
+<code>4</code> for 270 degrees, <code>8</code> for 360 degrees. 180 degress phase shift is
+considered as best chioce for generating phase difference between data/command
+bus and output clock. It provides sufficient time limit to compensate for any
+board delays/skew and provides sufficient time margin for setup/hold time
+requirements.</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_references"><a class="anchor" href="#_references"></a>References</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://elixir.bootlin.com/linux/latest/source/Documentation/devicetree/bindings/mmc/sdhci-atmel.txt">SDHCI DT Documentation</a></p>
+</li>
+<li>
+<p><a href="https://elixir.bootlin.com/linux/latest/source/Documentation/devicetree/bindings/mmc/mmc-controller.yaml">MMC DT Documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example"><a class="anchor" href="#_example"></a>Example</h4>
+<div class="paragraph">
+<p>Following example shows how a SD/eMMC should be defined in DT:</p>
+</div>
+<div class="paragraph">
+<p>dtsi file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sdmmc0: sdio-host@e0830000 {
+        compatible = "microchip,lan966x-sdhci";
+        reg = &lt;SDMMC_ADDR SDMMC_SIZE&gt;;
+        interrupts = &lt;GIC_SPI 66 IRQ_TYPE_LEVEL_HIGH&gt;;
+        clocks = &lt;&amp;clks GCK_ID_SDMMC0&gt;, &lt;&amp;clks GCK_ID_SDMMC0&gt;;
+        clock-names = "hclock", "multclk";
+        assigned-clocks = &lt;&amp;clks GCK_ID_SDMMC0&gt;;
+        assigned-clock-rates = &lt;45000000&gt;;
+        status = "disabled";
+};</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>dts file changes for eMMC:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&amp;sdmmc0 {
+        bus-width = &lt;8&gt;;
+        cap-mmc-highspeed;
+        cap-mmc-hw-reset;
+        non-removable;
+        pinctrl-0 = &lt;&amp;emmc_sd_pins&gt;, &lt;&amp;emmc_pins&gt;;
+        pinctrl-names = "default";
+        no-1-8-v;
+        tx-phase = &lt;0&gt;; /* 180 degrees phase shift */
+        status = "okay";
+};</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>dts file changes for SD Card:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&amp;sdmmc0 {
+        bus-width = &lt;8&gt;;
+        pinctrl-0 = &lt;&amp;emmc_sd_pins&gt;, &lt;&amp;sdmmc_pins&gt;;
+        pinctrl-names = "default";
+        no-1-8-v;
+        status = "okay";
+};</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_userspace"><a class="anchor" href="#_userspace"></a>UserSpace</h3>
+<div class="paragraph">
+<p><a href="https://www.linux4sam.org/bin/view/Linux4SAM/SDCardBootNotice#How_to_make_a_bootable_SD_card">Steps to Format, Create partitions and Mount SD/eMMC</a></p>
+</div>
+<div class="sect3">
+<h4 id="_confirm_instances_are_created"><a class="anchor" href="#_confirm_instances_are_created"></a>Confirm instances are created</h4>
+<div class="paragraph">
+<p>To confirm if mmc device is created:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check if a mmc device is created in <code>/dev</code> directory.</p>
+</li>
+<li>
+<p>To check card details, mount debugfs using command
+<code>mount -t debugfs none /sys/kernel/debug/</code> and then use command
+<code>cat /sys/kernel/debug/mmc0/ios</code> to get IOs debugging information.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_example_on_how_to_use"><a class="anchor" href="#_example_on_how_to_use"></a>Example on how to use</h4>
+<div class="paragraph">
+<p>eMMC Interface testing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ls -l /dev/mmc*
+brw-------    1 root     root      179,   0 Jan  1 00:00 /dev/mmcblk0
+brw-------    1 root     root      179,   8 Jan  1 00:00 /dev/mmcblk0boot0
+brw-------    1 root     root      179,  16 Jan  1 00:00 /dev/mmcblk0boot1
+crw-------    1 root     root      247,   0 Jan  1 00:00 /dev/mmcblk0rpmb
+#
+#
+# dmesg | grep mmc
+[    3.154864] mmc0: SDHCI controller on e0830000.sdio-host [e0830000.sdio-host] using ADMA
+[    3.355470] mmc0: new high speed MMC card at address 0001
+[    3.365870] mmcblk0: mmc0:0001 IS004G 3.64 GiB
+[    3.369463] mmcblk0boot0: mmc0:0001 IS004G partition 1 2.00 MiB
+[    3.373726] mmcblk0boot1: mmc0:0001 IS004G partition 2 2.00 MiB
+[    3.386894] mmcblk0rpmb: mmc0:0001 IS004G partition 3 512 KiB, chardev (247:0)
+[    3.397439]  mmcblk0: p1 p2
+#
+# mount -t debugfs none /sys/kernel/debug/
+# cat /sys/kernel/debug/mmc0/ios
+clock:          46000000 Hz
+actual clock:   46000000 Hz
+vdd:            21 (3.3 ~ 3.4 V)
+bus mode:       2 (push-pull)
+chip select:    0 (don't care)
+power mode:     2 (on)
+bus width:      3 (8 bits)
+timing spec:    1 (mmc high-speed)
+signal voltage: 0 (3.30 V)
+driver type:    0 (driver type B)
+
+# dd if=/dev/zero of=/dev/mmcblk0 bs=10M count=1
+
+1+0 records in
+1+0 records out
+#
+# fdisk /dev/mmcblk0
+Device contains neither a valid DOS partition table, nor Sun, SGI, OSF or GPT disklabel
+Building a new DOS disklabel. Changes will remain in memory only,
+until you decide to write them. After that the previous content
+won't be recoverable.
+
+
+The number of cylinders for this disk is set to 119296.
+There is nothing wrong with that, but this is larger than 1024,
+and could in certain setups cause problems with:
+1) software that runs at boot time (e.g., old versions of LILO)
+2) booting and partitioning software from other OSs
+   (e.g., DOS FDISK, OS/2 FDISK)
+
+Command (m for help): p
+Disk /dev/mmcblk0: 3728 MB, 3909091328 bytes, 7634944 sectors
+119296 cylinders, 4 heads, 16 sectors/track
+Units: sectors of 1 * 512 = 512 bytes
+
+Device       Boot StartCHS    EndCHS        StartLBA     EndLBA    Sectors  Size Id Type
+
+Command (m for help): n
+Partition type
+   p   primary partition (1-4)
+   e   extended
+1
+Invalid partition number for type '1'
+Partition type
+   p   primary partition (1-4)
+   e   extended
+p
+Partition number (1-4): 1
+First sector (16-7634943, default 16):
+Using default value 16
+Last sector or +size{,K,M,G,T} (16-7634943, default 7634943): +64M
+
+Command (m for help): t
+Selected partition 1
+Hex code (type L to list codes): 6
+Changed system type of partition 1 to 6 (FAT16)
+
+Command (m for help): n
+Partition type
+   p   primary partition (1-4)
+   e   extended
+p
+Partition number (1-4): 2
+First sector (131088-7634943, default 131088):
+Using default value 131088
+Last sector or +size{,K,M,G,T} (131088-7634943, default 7634943): +1500M
+
+Command (m for help): p
+Disk /dev/mmcblk0: 3728 MB, 3909091328 bytes, 7634944 sectors
+119296 cylinders, 4 heads, 16 sectors/track
+Units: sectors of 1 * 512 = 512 bytes
+
+Device       Boot StartCHS    EndCHS        StartLBA     EndLBA    Sectors  Size Id Type
+/dev/mmcblk0p1    0,1,1       1023,3,16           16     131087     131072 64.0M  6 FAT16
+/dev/mmcblk0p2    1023,3,16   1023,3,16       131088    3203087    3072000 1500M 83 Linux
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table
+
+[   44.720213]  mmcblk0: p1 p2
+#
+# mkdir /tmp/ext
+# mkfs.ext2 /dev/mmcblk0p2
+mke2fs 1.45.5 (07-Jan-2020)
+/dev/mmcblk0p2 contains a ext2 file system
+        last mounted on /tmp/ext on Thu Jan  1 00:02:16 1970
+Proceed anyway? (y,N)
+
+# mount -t ext2 /dev/mmcblk0p2 /tmp/ext
+#
+#
+# echo "Hello_World: Welcome" &gt; /tmp/ext/t6.txt
+#
+# cat /tmp/ext/t6.txt
+Hello_World: Welcome
+#
+#
+# umount /tmp/ext/</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>SD Card Interface testing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># dmesg | grep mmc
+[    1.305841] mmc0: SDHCI controller on e0830000.sdio-host [e0830000.sdio-host] using ADMA
+[    1.459624] mmc0: new ultra high speed DDR50 SDHC card at address aaaa
+[    1.610121] mmcblk0: mmc0:aaaa SC32G 29.7 GiB
+[    1.683630]  mmcblk0: p1 p2
+#
+#
+# mount -t debugfs none /sys/kernel/debug/
+# cat /sys/kernel/debug/mmc0/ios
+clock:          50000000 Hz
+actual clock:   50000000 Hz
+vdd:            21 (3.3 ~ 3.4 V)
+bus mode:       2 (push-pull)
+chip select:    0 (don't care)
+power mode:     2 (on)
+bus width:      2 (4 bits)
+timing spec:    7 (sd uhs DDR50)
+signal voltage: 1 (1.80 V)
+driver type:    0 (driver type B)
+#
+# ls -l /dev/mmc*
+brw-------    1 root     root      179,   0 Jan  1 00:00 /dev/mmcblk0
+brw-------    1 root     root      179,   1 Jan  1 00:00 /dev/mmcblk0p1
+brw-------    1 root     root      179,   2 Jan  1 00:00 /dev/mmcblk0p2
+#
+# cat /proc/interrupts | grep mmc
+ 43:         89     GIC-0  98 Level     mmc0
+#
+
+# dd if=/dev/zero of=/dev/mmcblk0 bs=10M count=1
+
+1+0 records in
+1+0 records out
+# fdisk /dev/mmcblk0
+Device contains neither a valid DOS partition table, nor Sun, SGI, OSF or GPT disklabel
+Building a new DOS disklabel. Changes will remain in memory only,
+until you decide to write them. After that the previous content
+won't be recoverable.
+
+
+The number of cylinders for this disk is set to 973968.
+There is nothing wrong with that, but this is larger than 1024,
+and could in certain setups cause problems with:
+1) software that runs at boot time (e.g., old versions of LILO)
+2) booting and partitioning software from other OSs
+   (e.g., DOS FDISK, OS/2 FDISK)
+
+Command (m for help): p
+Disk /dev/mmcblk0: 30 GB, 31914983424 bytes, 62333952 sectors
+973968 cylinders, 4 heads, 16 sectors/track
+Units: sectors of 1 * 512 = 512 bytes
+
+Device       Boot StartCHS    EndCHS        StartLBA     EndLBA    Sectors  Size Id Type
+
+Command (m for help): n
+Partition type
+   p   primary partition (1-4)
+   e   extended
+p
+Partition number (1-4): 1
+First sector (16-62333951, default 16):
+Using default value 16
+Last sector or +size{,K,M,G,T} (16-62333951, default 62333951): +64M
+
+Command (m for help): t
+Selected partition 1
+Hex code (type L to list codes): 6
+Changed system type of partition 1 to 6 (FAT16)
+
+Command (m for help): n
+Partition type
+   p   primary partition (1-4)
+   e   extended
+p
+Partition number (1-4): 2
+First sector (131088-62333951, default 131088):
+Using default value 131088
+Last sector or +size{,K,M,G,T} (131088-62333951, default 62333951): +1500M
+
+Command (m for help): p
+Disk /dev/mmcblk0: 30 GB, 31914983424 bytes, 62333952 sectors
+973968 cylinders, 4 heads, 16 sectors/track
+Units: sectors of 1 * 512 = 512 bytes
+
+Device       Boot StartCHS    EndCHS        StartLBA     EndLBA    Sectors  Size Id Type
+/dev/mmcblk0p1    0,1,1       1023,3,16           16     131087     131072 64.0M  6 FAT16
+/dev/mmcblk0p2    1023,3,16   1023,3,16       131088    3203087    3072000 1500M 83 Linux
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table
+[   63.250316]  mmcblk0: p1 p2
+#
+# ls -l /dev/mmc*
+brw-------    1 root     root      179,   0 Jan  1 00:01 /dev/mmcblk0
+brw-------    1 root     root      179,   1 Jan  1 00:01 /dev/mmcblk0p1
+brw-------    1 root     root      179,   2 Jan  1 00:01 /dev/mmcblk0p2
+# mkdir /tmp/ext
+# mount -t ext2 /dev/mmcblk0p2 /tmp/ext
+#
+# mkfs.ext2 /dev/mmcblk0p2
+mke2fs 1.45.6 (20-Mar-2020)
+/dev/mmcblk0p2 contains a ext2 file system
+        last mounted on /media/vishnu/842a0c11-7809-4b40-a98f-25bae7c7d16c on Thu Aug  5 11:23:26 2021
+Proceed anyway? (y,N) y
+Discarding device blocks: done
+Creating filesystem with 384000 4k blocks and 96000 inodes
+Filesystem UUID: b2dde0d3-5b02-458d-9893-07a876e5a6bf
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912
+
+Allocating group tables: done
+Writing inode tables: done
+Writing superblocks and filesystem accounting information: done
+#
+#
+#
+#
+# mkdir /tmp/ext
+#
+# mount -t ext2 /dev/mmcblk0p2 /tmp/ext
+# ls -l /tmp/ext/
+total 16
+drwx------    2 root     root         16384 Jan  1 00:02 lost+found
+#
+#
+#
+# echo "3-9-2021: Testing SD card at HS 50Mhz" &gt; /tmp/ext/t1.txt
+#
+#
+#
+# cat /tmp/ext/t1.txt
+3-9-2021: Testing SD card at HS 50Mhz
+#
+#
+# umount /tmp/ext/</pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p>Enable <code>e2fsprogs</code> utility from buildroot to use ext2,ext3,ext4 filesystems.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
