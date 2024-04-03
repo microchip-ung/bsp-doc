@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rewriter VLAN Tagging (ES0) :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.03">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-pcie-rpi4cm.html">PCIe NIC with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="5">
+    <a class="nav-link" href="tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.03</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li>Egress</li>
+    <li><a href="tc-es0.html">Rewriter VLAN tagging (ES0)</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.03</button>
+  <div class="version-menu">
+    <a class="version is-current" href="tc-es0.html">2024.03</a>
+    <a class="version" href="../../2023.12/tc/tc-es0.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Rewriter VLAN Tagging (ES0)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before a frame is transmitted on a port it is subject to one ES0 lookup.</p>
+</div>
+<div class="paragraph">
+<p>ES0 is intended for VLAN tag manipulations and is controlled by the tc flower filter command.</p>
+</div>
+<div class="paragraph">
+<p>ES0 supports only one keyset on each switch:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Switch</th>
+<th class="tableblock halign-center valign-top">Keyset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Sparx5</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ISDX</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">LAN966x</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">VID</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A keyset is an internal value used by the hardware. A flower key is what the user specifies in the tc flower
+filter command.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_isdx"><a class="anchor" href="#_isdx"></a>1. ISDX</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ISDX keyset is used for all lookups and matches on the following flower keys:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;VID&gt; or &lt;VID&gt;/&lt;VID_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id&#160;1234 or vlan_id&#160;0x100/0xff0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The classified VID to match.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype&#160;all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only 'all' is allowed here as ES0 cannot match on a specific protocol.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vid"><a class="anchor" href="#_vid"></a>2. VID</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The VID keyset is used for all lookups and matches on the following flower keys:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;VID&gt; or &lt;VID&gt;/&lt;VID_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id&#160;1234 or vlan_id&#160;0x100/0xff0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The classified VID to match.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PCP&gt; or &lt;PCP&gt;/&lt;PCP_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio&#160;3 or vlan_id&#160;0x0/0x1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The classified PCP to match.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype&#160;all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only 'all' is allowed here as ES0 cannot match on a specific protocol.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_filter_examples"><a class="anchor" href="#_filter_examples"></a>3. Filter examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This filter matches on the classified VID and PCP and pops the VLAN tag:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+
+# tc filter add dev eth0 egress chain 30000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype all \
+  action vlan pop \
+  action goto chain 30001</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Sparx5: Does not support vlan_prio, the vlan actions (will be added in a future release).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This filter matches on the classified VID and PCP and modifies the VLAN tag:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+
+# tc filter add dev eth0 egress chain 30000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype all \
+  action vlan modify id 200 priority 2 \
+  action goto chain 30001</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This filter matches on the classified VID and PCP and adds an outermost VLAN service tag:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+
+# tc filter add dev eth0 egress chain 30000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype all \
+  action vlan push protocol 802.1ad id 200 priority 2 \
+  action goto chain 30001</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="es0-actions"><a class="anchor" href="#es0-actions"></a>3.1. ES0 Actions</h3>
+<div class="paragraph">
+<p>The ES0 lookup supports the actions shown in this table:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower action</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Sparx5</th>
+<th class="tableblock halign-left valign-top">LAN966x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action pass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is a no-op action.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan pop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action vlan pop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pops the outermost VLAN tag.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan modify [protocol &lt;PROTO&gt;] id &lt;VID&gt; priority &lt;PCP&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action vlan modify id 100 priority 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modifies the frame to a specific VID, PCP, and optionally VLAN protocol of 802.1Q or 802.1ad. Default is 802.1Q.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan push [protocol &lt;PROTO&gt;] id &lt;VID&gt; priority &lt;PCP&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action vlan push protocol 802.1ad id 100 priority 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add an outermost VLAN tag with specific VID, PCP, and optionally VLAN protocol of 802.1Q or 802.1ad. Default is 802.1Q.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">goto chain &lt;CHAIN&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action goto chain 30001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which chain to go to after this match. A required no-op action where the chain number must be higher than the ES0 chain number (30000).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_es0_status"><a class="anchor" href="#_es0_status"></a>4. ES0 Status</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the <code>tc filter show</code> command to see the filter configuration for a specific port.</p>
+</div>
+<div class="paragraph">
+<p>Add <code>-s</code> to also see the statistics:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc -s filter show dev eth3 egress
+  filter protocol 802.1Q pref 100 flower chain 30000
+  filter protocol 802.1Q pref 100 flower chain 30000 handle 0xc8
+  vlan_id 3857
+  vlan_prio 1
+  vlan_ethtype all
+  eth_type 0003
+  skip_sw
+  in_hw in_hw_count 1
+  action order 1: vlan  push id 3874 protocol 802.1ad priority 2 pipe
+  index 1 ref 1 bind 1 installed 0 sec used 0 sec
+  Action statistics:
+  Sent 0 bytes 1 pkt (dropped 0, overlimits 0 requeues 0)
+  Sent software 0 bytes 0 pkt
+  Sent hardware 0 bytes 1 pkt
+  backlog 0b 0p requeues 0
+  used_hw_stats immediate
+
+  action order 2: gact action goto chain 30001
+  random type none pass val 0
+  index 1 ref 1 bind 1 installed 0 sec used 0 sec
+  Action statistics:
+  Sent 0 bytes 1 pkt (dropped 0, overlimits 0 requeues 0)
+  Sent software 0 bytes 0 pkt
+  Sent hardware 0 bytes 1 pkt
+  backlog 0b 0p requeues 0
+  used_hw_stats immediate</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>First comes information about the filter, then the match and finally the actions including statistics.</p>
+</div>
+<div class="paragraph">
+<p>The number of frames that has his the filter is shown as <code>Sent hardware 0 bytes 1 pkt</code>.</p>
+</div>
+<div class="paragraph">
+<p>Note that the hardware does not support counting the number of bytes and that the counter in ES0 is only 1 bit wide.</p>
+</div>
+<div class="paragraph">
+<p>This means that the <code>pkt</code> counter shown here will only increment by one each time the <code>tc -s filter show</code> command is executed.</p>
+</div>
+<div class="paragraph">
+<p>In the current kernel the same statistics are shown for all actions in a filter. This might change in the future.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

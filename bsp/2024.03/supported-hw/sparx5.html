@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sparx5 :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.03">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pcie-rpi4cm.html">PCIe NIC with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.03</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="sparx5.html">Sparx5</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.03</button>
+  <div class="version-menu">
+    <a class="version is-current" href="sparx5.html">2024.03</a>
+    <a class="version" href="../../2023.12/supported-hw/sparx5.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Sparx5</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Sparx5 family consists of the following SKUs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>VSC7546 - SparX-5-64 supports up to 64 Gbps of switch core bandwidth</p>
+</li>
+<li>
+<p>VSC7549 - SparX-5-90 supports up to 90 Gbps of switch core bandwidth</p>
+</li>
+<li>
+<p>VSC7552 - SparX-5-128 supports up to 128 Gbps of switch core bandwidth</p>
+</li>
+<li>
+<p>VSC7556 - SparX-5-160 supports up to 160 Gbps of switch core bandwidth</p>
+</li>
+<li>
+<p>VSC7558 - SparX-5-200 supports up to 200 Gbps of switch core bandwidth</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_booting_sparx5"><a class="anchor" href="#_booting_sparx5"></a>1. Booting Sparx5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes the Sparx5 boot sequence including the relevant HW and SW
+facilities.</p>
+</div>
+<div class="sect2">
+<h3 id="_overview"><a class="anchor" href="#_overview"></a>1.1. Overview</h3>
+<div class="paragraph">
+<p>The behavior of the Sparx5 CPU system after reset is determined by four
+strapping pins that are overlaid on GPIO pins. The value of these GPIOs is
+sampled shortly after releasing reset to the device.</p>
+</div>
+<div class="paragraph">
+<p>This allows the Sparx5 system to decide the boot mode:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Main CPU booting from SPI Interface (CPU is SPI controller)</p>
+</li>
+<li>
+<p>Sub CPU booting from SPI Interface (Sub CPU is SPI controller)</p>
+</li>
+<li>
+<p>SPI device mode, Main CPU and Sub CPU are stopped</p>
+</li>
+<li>
+<p>SPI device mode, MIIM device mode, Main CPU and Sub CPU are stopped</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the first listed mode Sparx5 can boot from an external boot media such as SPI
+NOR flash and load a boot loader image such as UBoot.</p>
+</div>
+<div class="paragraph">
+<p>UBoot can then load drivers for other external media such as SPI NAND or eMMC
+and continue the boot process after having loaded final images from these media.</p>
+</div>
+<div class="paragraph">
+<p>It is also possible to load all images from SPI NOR flash, but this is not as
+fast as using SPI NAND or eMMC.</p>
+</div>
+<div class="paragraph">
+<p>During boot Sparx5s PCIe controller will also be enabled in device mode.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hw_facilities"><a class="anchor" href="#_hw_facilities"></a>1.2. HW Facilities</h3>
+<div class="paragraph">
+<p>This document will focus on the Sparx5 SoCs, but to fully explain the boot
+process and boot facilities, it is also necessary to consider the flash memories
+available on the board. The section will briefly describe the boot media
+supported by the Sparx5, and then describe which of these media is available on
+the Sparx5 evaluation boards offered by Microchip.</p>
+</div>
+<div class="paragraph">
+<p>There are currently two Sparx5 evaluation boards available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PCB134 - Providing 20 SPF+ ports with 10Gbps speed.</p>
+</li>
+<li>
+<p>PCB135 - Providing 64 1Gbps Ethernet PHY ports and 4 25Gbps SFP+ ports</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The two boards can be mounted with either SPI NAND or eMMC enabled (but not
+both).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bootmedia"><a class="anchor" href="#bootmedia"></a>1.3. Sparx5 boot media</h3>
+<div class="paragraph">
+<p>To utilize the Main CPU of the Sparx5, the correct boot mode must be selected and
+a SPI NOR device with a boot image must be available at the SPI NOR
+memory address found in the memory map below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Name                   Start       Size
+====================== ==========  =================
+Mirror SPI NOR Flash   0x000000000 0x100000000 (4GB)
+Mirror SPI NAND Flash  0x100000000 0x100000000 (4GB)
+SPI NOR Flash          0x400000000 0x100000000 (4GB)
+SPI NAND Flash         0x500000000 0x100000000 (4GB)
+Vcore Chip Regs        0x610000000 0x10000000  (256MB)
+CSR Chip Regs          0x620000000 0x10000000  (256MB)
+PCIe outbound          0x630000000 0x10000000  (256MB)
+Sub CPU system         0x640000000 0x10000000  (256MB)
+DDR Memory             0x800000000 0x200000000 (8GB)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 1: Sparx5 Boot Mode memory map.</p>
+</div>
+<div class="paragraph">
+<p>The bootloader will switch the Sparx5 from Boot mode to Normal mode which will
+remap the DDR memory down to address 0.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spi_nor"><a class="anchor" href="#_spi_nor"></a>2. SPI NOR</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During the boot process, the boot loader will read configuration from its
+environment partition in the SPI NOR device.</p>
+</div>
+<div class="paragraph">
+<p>Based on the configuration it will decide where to find and load the next stage
+image. The following table shows the offset and name of where the different
+components are expected to be found when using the SPI NOR device.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>MEDIA    Partition No Name        Size               Offset
+=======  ============ =========== ================== ==========
+SPI NOR  0            UBoot       0x00100000 (1MB)   0x00000000
+SPI NOR  1            Env         0x00040000 (256KB) 0x00100000
+SPI NOR  2            Env.bk      0x00040000 (256KB) 0x00140000
+SPI NOR  3            linux       0x01400000 (20MB)  0x00180000
+SPI NOR  4            linux.bk    0x01400000 (20MB)  0x01580000
+SPI NOR  5            rootfs_data 0x02000000 (32MB)  0x01580000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 2: Partitions in the SPI NOR only boot mode.</p>
+</div>
+<div class="paragraph">
+<p>The above partition table is used in a system that has only a SPI NOR media, so
+all images will be stored in this partition table.</p>
+</div>
+<div class="paragraph">
+<p>For a system using a SPI NAND device only the first 3 partitions are needed.</p>
+</div>
+<div class="paragraph">
+<p>The content of the <code>linux</code> and <code>linux.bk</code> partition is the raw binary FIT image
+that is used by UBoot when booting from NOR only.  This mode is explained later
+in this document.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spi_nand"><a class="anchor" href="#_spi_nand"></a>3. SPI NAND</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A SPI NAND device uses a block design which does not allow it to be used
+as an execute-in-place device.</p>
+</div>
+<div class="paragraph">
+<p>Instead the bootloader will read the content of the device in blocks and execute
+the image from DDR memory once the whole image has been loaded.</p>
+</div>
+<div class="paragraph">
+<p>Here is the partition table for the Sparx5 SPI NAND device.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>MEDIA     Partition No Name        Size               Offset
+=======   ============ =========== ================== ==========
+SPI NAND  0            Boot0       0x04000000 (64MB)  0x00000000
+SPI NAND  1            Boot1       0x04000000 (64MB)  0x04000000
+SPI NAND  2            rootfs_data 0x08000000 (128MB) 0x08000000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 3: SPI NAND Partitions</p>
+</div>
+<div class="paragraph">
+<p>The <code>Boot0</code> and <code>Boot1</code> partitions contain a UBI filesystem with a FIT image file
+in the root of the filesystem.</p>
+</div>
+<div class="paragraph">
+<p>The UBI filesystem also contains the Linux root filesystem that the kernel
+mounts during boot.  The BSP contains a root filesystem that can be used for
+this purpose.</p>
+</div>
+<div class="paragraph">
+<p>The <code>rootfs_data</code> partition can be used for storage when the Linux Kernel have
+booted.</p>
+</div>
+<div class="paragraph">
+<p>The partitions of both the SPI NOR and the SPI NAND devices can be shown with
+the <code>mtd list</code> command in the UBoot shell.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; mtd list
+List of MTD devices:
+* nor0
+  - type: NOR flash
+  - block size: 0x1000 bytes
+  - min I/O: 0x1 bytes
+  - 0x000000000000-0x000008000000 : "nor0"
+          - 0x000000000000-0x000000100000 : "UBoot"
+          - 0x000000100000-0x000000140000 : "Env"
+          - 0x000000140000-0x000000180000 : "Env.bk"
+* spi-nand0
+  - device: spi-nand@e
+  - parent: spi-master@600104000
+  - driver: spi_nand
+  - type: NAND flash
+  - block size: 0x20000 bytes
+  - min I/O: 0x800 bytes
+  - OOB size: 128 bytes
+  - OOB available: 62 bytes
+  - 0x000000000000-0x000010000000 : "spi-nand0"
+          - 0x000000000000-0x000004000000 : "Boot0"
+          - 0x000004000000-0x000008000000 : "Boot1"
+          - 0x000008000000-0x000010000000 : "rootfs_data"
+=&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 4: SPI Device Partitions</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_emmc"><a class="anchor" href="#_emmc"></a>4. eMMC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An eMMC device is essentially a faster version of a SPI NAND device.  It may use
+more that one data line and may also provide DMA functionality to increase the
+transfer rate compared to a SPI NAND type of device.</p>
+</div>
+<div class="paragraph">
+<p>The partitions of the eMMC device can be inspected with the <code>mmc</code> tool:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; mmc part
+
+Partition Map for MMC device 0  --   Partition Type: EFI
+
+Part    Start LBA       End LBA         Name
+        Attributes
+        Type GUID
+        Partition GUID
+  1     0x00000022      0x00200021      "Boot0"
+        attrs:  0x0000000000000000
+        type:   0fc63daf-8483-4772-8e79-3d69d8477de4
+        type:   linux
+        guid:   0e036503-0cc3-46c3-9790-1e65b9589954
+  2     0x00200022      0x00400021      "Boot1"
+        attrs:  0x0000000000000000
+        type:   0fc63daf-8483-4772-8e79-3d69d8477de4
+        type:   linux
+        guid:   758a6c00-643e-4eb5-9561-f226556ade32
+  3     0x00400022      0x00700021      "Data"
+        attrs:  0x0000000000000000
+        type:   0fc63daf-8483-4772-8e79-3d69d8477de4
+        type:   linux
+        guid:   1be9268f-39a3-4112-929a-04fc915b9b87</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 5: eMMC Device Partitions</p>
+</div>
+<div class="paragraph">
+<p>There are 3 partition in a GPT (GUID Partition Table) and all 3 are <code>linux</code> type
+which means that the type is recognizable by the Linux Kernel&#8217;s filesystem
+drivers and in this case this means that the EXT4 filesystem is used in these
+partitions.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Boot0</code> (and <code>Boot1</code>) partitions will need to contain a EXT4 filesystem image
+containing a root filesystem and a UBoot FIT image.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The UBoot FIT image must called <code>Image.itb</code> and must be placed in the root</p>
+</li>
+<li>
+<p>folder of the filesystem. The FIT image must contain a Linux kernel and device
+trees.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Data partition can be used for storage when the Linux Kernel have booted.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="refboards"><a class="anchor" href="#refboards"></a>5. Sparx5 Reference Boards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The next sections describes the different Sparx5 Reference Boards.</p>
+</div>
+<div class="paragraph">
+<p>All examples assume that there is a working TFTP and DHCP server on the same
+subnet as the evaluation board.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bootstrapping_a_spi_nand_evaluation_board"><a class="anchor" href="#_bootstrapping_a_spi_nand_evaluation_board"></a>6. Bootstrapping a SPI NAND Evaluation Board</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The SPI NOR MX66L1G45G flash can be programmed with a standard SPI flash programmer.</p>
+</div>
+<div class="paragraph">
+<p>Find the appropriate u-boot-fireant_pcb*.bin UBoot image file in the
+<code>arm64-armv8_a-linux-gnu/bootloaders/release</code> BSP folder.</p>
+</div>
+<div class="sect2">
+<h3 id="_uboot_environment_for_spi_nand_boot"><a class="anchor" href="#_uboot_environment_for_spi_nand_boot"></a>6.1. UBoot environment for SPI NAND boot</h3>
+<div class="paragraph">
+<p>Reset the board and eventually press any key to stop autoboot in order to get a
+U-Boot prompt.</p>
+</div>
+<div class="paragraph">
+<p>First make sure that the following environment variables are defined as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; env print
+baudrate=115200
+bootargs_extra=loglevel=4
+bootcmd=run nand_boot
+bootdelay=3
+console=ttyS0,115200n8
+fdtcontroladdr=77ffd0310
+loadaddr=740000000
+mtdids=nor0=spi0.0,spi-nand0=spi0.14
+mtdparts=mtdparts=spi0.0:1m(UBoot),256k(Env),256k(Env.bk);spi0.14:64m(Boot0),64m(Boot1),-(rootfs_data)
+nand_bak=1
+nand_boot=run nand_tryboot;env set nand_cur ${nand_bak};run nand_tryboot
+nand_cur=0
+nand_dlup=dhcp ${nand_image};run nand_update
+nand_image=new.ubifs
+nand_mtdroot=root=ubi0:rootfs ro rootfstype=ubifs
+nand_swap=env set nand_cur ${nand_bak}; env save
+nand_tryboot=run nandload;setenv mtdroot ubi.mtd=Boot${nand_cur},2048 ${nand_mtdroot};run ramboot
+nand_update=sf probe;mtd erase Boot${nand_cur};ubi part Boot${nand_cur};ubi create rootfs -;ubi write ${fileaddr} rootfs ${filesize}
+nandload=sf probe;ubi part Boot${nand_cur};ubifsmount ubi0:rootfs;ubifsload - /Image.itb
+nor_boot=sf probe; env set active linux; run nor_tryboot; env set active linux.bk; run nor_tryboot
+nor_dlup=dhcp ${nor_image}; run nor_update
+nor_image=new.itb
+nor_only=env set mtdparts mtdparts=${nor_parts};env set bootcmd run nor_boot;env save
+nor_parts=spi0.0:1m(UBoot),256k(Env),256k(Env.bk),20m(linux),20m(linux.bk),32m(rootfs_data)
+nor_tryboot=mtd read ${active} ${loadaddr}; run ramboot
+nor_update=sf probe; sf update ${fileaddr} linux ${filesize}
+pcb=pcb134
+ramboot=run setup; bootm #${pcb}
+rootargs=root=/dev/ram0 rw rootfstype=squashfs
+setup=setenv bootargs console=${console} ${mtdparts} ${rootargs} ${mtdroot} fis_act=${active} ${bootargs_extra}
+stderr=serial@600100000
+stdin=serial@600100000
+stdout=serial@600100000
+ubupdate=sf probe; sf update ${fileaddr} 0 ${filesize}
+ver=U-Boot 2019.10 (Mar 09 2022 - 12:41:04 +0100)fireant
+
+Environment size: 1705/8187 bytes</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 6: SPI NAND UBoot default environment</p>
+</div>
+<div class="paragraph">
+<p>Some of these environment variables are command macros that can be used to
+simplify the boot process.</p>
+</div>
+<div class="paragraph">
+<p>If there is a difference you should reset the environment, save it and restart
+the board to use the default environment.</p>
+</div>
+<div class="paragraph">
+<p>This can be done with these 3 commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; env default -a -f
+...
+=&gt; saveenv
+...
+=&gt; reset
+...
+Hit any key to stop autoboot:  0
+=&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boot_via_network"><a class="anchor" href="#_boot_via_network"></a>6.2. Boot via Network</h3>
+<div class="paragraph">
+<p>During development, it is often advantageous to load and execute the image via
+DHCP instead of loading it from flash. The ramboot setting above supports that,
+if you have a FIT image on the TFTP server.</p>
+</div>
+<div class="paragraph">
+<p>Here are the commands to run to load a <code>fit-sparx5.itb</code> file from the root of the
+TFTP server:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; dhcp fit-sparx5.itb
+NPI Port: Up
+...
+=&gt; run ramboot
+## Loading kernel from FIT Image at 740000000 ...
+   Using 'pcb134' configuration
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When this works satisfactorily you can commit this to the SPI NAND memory and
+update UBoot to use this media for booting.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_spi_nand_boot"><a class="anchor" href="#_setting_up_spi_nand_boot"></a>6.3. Setting up SPI NAND boot</h3>
+<div class="paragraph">
+<p>As UBoot expects a UBIFS image in the SPI NAND partition Boot0 (or Boot1) you
+need to produce a UBIFS image file and place it in your TFTP server.</p>
+</div>
+<div class="paragraph">
+<p>If you have the Linux kernel, the device tree binary files and the rootfile
+system file then you can create a UBIFS image file for a PCB134 evaluation board
+by running the imggen.rb script like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ external/support/scripts/imggen.rb -s sparx5 -o /tftpboot/ -k mscc-linux-kernel.bin.gz -d sparx5_pcb134_switchdev.dtb,pcb134 -r rootfs.squashfs -t ubifs-itb-bare -n new</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the device tree configuration is renamed by adding a <code>,pcb134</code> element
+to the device tree binary file references.</p>
+</div>
+<div class="paragraph">
+<p>Also note that the resulting file is generated in the /tftproot folder (used by the
+TFTP server in this case) and has the name <code>new</code> so that the folder will contain
+the file <code>new.ubifs</code> which is what the UBoot environment macros expect by
+default.</p>
+</div>
+<div class="paragraph">
+<p>Now you can load the image and write it to SPI NAND with this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; run nand_dlup
+...
+Filename 'new.ubifs'.
+...
+Bytes transferred = 30601216 (1d2f000 hex)
+...
+ubi0: attached mtd5 (name "Boot0", size 64 MiB)
+...
+Creating dynamic volume rootfs of size 59170816
+30601216 bytes written to volume rootfs
+=&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the image in Boot0 time has now come to boot this image.  This involve
+loading the Image.itb file from the UBIFS image and booting this as a FIT image
+containing a Linux kernel and a device tree.</p>
+</div>
+<div class="paragraph">
+<p>Note that the UBoot environment expects a device tree configuration with the
+name found in the <code>pcb</code> environment variable.  This was the reason for adding
+the <code>,pcb134</code> to the imggen.rb scripts device tree reference.</p>
+</div>
+<div class="paragraph">
+<p>As mentioned above the UBoot FIT image does not contain a root filesystem, so
+the root filesystem is mounted as the content of the Boot0 partition.</p>
+</div>
+<div class="paragraph">
+<p>Now boot the image with this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; run nand_boot
+SF: Detected mx66l1g45g with page size 256 Bytes, erase size 4 KiB, total 128 MiB
+...
+ubi0: attached mtd5 (name "Boot0", size 64 MiB)
+...
+Loading file '/Image.itb' to addr 0x740000000...
+...
+Starting kernel ...
+...
+vcoreiii login:</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The kernel boots and show the Linux command shell.
+Now you are ready to use your system.</p>
+</div>
+<div class="paragraph">
+<p>If this works as expected you can change the UBoot <code>bootcmd</code> setting to use the
+<code>run nand_boot</code> command permanently.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bootstrapping_a_emmc_evaluation_board"><a class="anchor" href="#_bootstrapping_a_emmc_evaluation_board"></a>7. Bootstrapping a eMMC Evaluation Board</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The SPI NOR MX66L1G45G flash can be programmed with a standard SPI flash
+programmer.</p>
+</div>
+<div class="paragraph">
+<p>Find the appropriate u-boot-fireant_pcb*.bin UBoot image file in the
+<code>arm64-armv8_a-linux-gnu/bootloaders/release</code> BSP folder.</p>
+</div>
+<div class="sect2">
+<h3 id="_uboot_environment_for_emmc_boot"><a class="anchor" href="#_uboot_environment_for_emmc_boot"></a>7.1. UBoot environment for eMMC boot</h3>
+<div class="paragraph">
+<p>Reset the board and press any key to stop autoboot in order to get a
+U-Boot prompt.</p>
+</div>
+<div class="paragraph">
+<p>First make sure that the following environment variables are defined as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; env print
+baudrate=115200
+bootargs_extra=loglevel=4
+bootcmd=run mmc_boot
+bootdelay=3
+console=ttyS0,115200n8
+fdtcontroladdr=77ffce2d0
+loadaddr=740000000
+mmc_bak=2
+mmc_boot=run mmc_tryboot;env set mmc_cur ${mmc_bak};run mmc_tryboot
+mmc_cur=1
+mmc_dev=mmc 0
+mmc_dlup=dhcp ${mmc_image};unzip ${fileaddr} ${mmcaddr};run mmc_update
+mmc_format=gpt guid ${mmc_dev} mmc_guid;gpt write ${mmc_dev} ${mmc_part}; env save
+mmc_image=new.ext4.gz
+mmc_part=uuid_disk=${mmc_guid};name=Boot0,size=1024MiB,type=linux;name=Boot1,size=1024MiB,type=linux;name=Data,size=1536MiB,type=linux
+mmc_swap=env set mmc_cur ${mmc_bak}; env save
+mmc_tryboot=run mmcload;setenv mtdroot root_next=/dev/mmcblk0p${mmc_cur}; run ramboot
+mmc_update=run mmcgetoffset;mmc write ${mmcaddr} ${mmc_start} ${filesize_512}
+mmcaddr=760000000
+mmcgetoffset=part start ${mmc_dev} ${mmc_cur} mmc_start
+mmcload=ext4load ${mmc_dev}:${mmc_cur} ${loadaddr} Image.itb
+mtdids=nor0=spi0.0
+mtdparts=mtdparts=spi0.0:1m(UBoot),256k(Env),256k(Env.bk),20m(linux),20m(linux.bk)
+nor_boot=sf probe; env set active linux; run nor_tryboot; env set active linux.bk; run nor_tryboot
+nor_dlup=dhcp ${nor_image}; run nor_update
+nor_image=new.itb
+nor_only=env set mtdparts mtdparts=${nor_parts};env set bootcmd run nor_boot;env save
+nor_parts=spi0.0:1m(UBoot),256k(Env),256k(Env.bk),20m(linux),20m(linux.bk),32m(rootfs_data)
+nor_tryboot=mtd read ${active} ${loadaddr}; run ramboot
+nor_update=sf probe; sf update ${fileaddr} linux ${filesize}
+pcb=pcb134_emmc
+ramboot=run setup; bootm #${pcb}
+rootargs=root=/dev/ram0 rw rootfstype=squashfs
+setup=setenv bootargs console=${console} ${mtdparts} ${rootargs} ${mtdroot} fis_act=${active} ${bootargs_extra}
+stderr=serial@600100000
+stdin=serial@600100000
+stdout=serial@600100000
+ubupdate=sf probe; sf update ${fileaddr} 0 ${filesize}
+ver=U-Boot 2019.10 (Mar 09 2022 - 12:41:16 +0100)fireant
+
+Environment size: 1849/8187 bytes</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 7: eMMC UBoot default environment</p>
+</div>
+<div class="paragraph">
+<p>As in the SPI NAND case some of these environment variables are command macros
+that can be used to simplify the eMMC boot process.</p>
+</div>
+<div class="paragraph">
+<p>If you do not see the above environment you have either used the UBoot image
+when flashing, or you need to reset the environment.</p>
+</div>
+<div class="paragraph">
+<p>Resetting the UBoot environment is done with the following commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; env default -a -f
+...
+=&gt; saveenv
+...
+=&gt; reset
+...
+Hit any key to stop autoboot:  0
+=&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boot_via_network_2"><a class="anchor" href="#_boot_via_network_2"></a>7.2. Boot via Network</h3>
+<div class="paragraph">
+<p>Like described in the SPI NAND boot section of this document it is recommended
+to do a network boot of your images before writing the image to the eMMC device.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_emmc_boot"><a class="anchor" href="#_setting_up_emmc_boot"></a>7.3. Setting up eMMC boot</h3>
+<div class="paragraph">
+<p>Start by formatting the eMMC device with a GPT partition.  You only need to do
+this once before writing images to the eMMC.</p>
+</div>
+<div class="paragraph">
+<p>Use the mmc_format command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; run mmc_format
+Writing GPT: success!</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates a <code>mmc_guid</code> setting in the UBoot environment for the eMMC device,
+that is used in the GUID Partition Table.</p>
+</div>
+<div class="paragraph">
+<p>As UBoot expects an EXT4 image in the eMCC partition Boot0 (or Boot1) you
+need to produce a EXT4 image file and place it in your TFTP server.</p>
+</div>
+<div class="paragraph">
+<p>If you have the Linux kernel, the device tree binary files and the rootfile
+system file then you can create a EXT4 image file for a PCB134 evaluation board
+by running the imggen.rb script like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ external/support/scripts/imggen.rb -s sparx5 -o /tftpboot/ -k mscc-linux-kernel.bin.gz -d sparx5_pcb134_emmc_switchdev.dtb,pcb134_emmc -r rootfs.squashfs -t ext4-itb-bare -n new -z</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the device tree configuration is renamed by adding a <code>,pcb134_emmc</code> element
+to the device tree binary file references.</p>
+</div>
+<div class="paragraph">
+<p>Also note that the resulting file is generated in the /tftproot folder (used by the
+TFTP server in this case) and has the name <code>new</code> so that the folder will contain
+the file <code>new.ext4.gz</code> which is what the UBoot environment macros expect by
+default.</p>
+</div>
+<div class="paragraph">
+<p>Now you can load the image and write it to eMMC with this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; run mmc_dlup
+...
+Filename 'new.ext4.gz'.
+Load address: 0x740000000
+...
+MMC write: dev # 0, block # 34, count 213808 ... 213808 blocks written: OK
+=&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Before you can boot the eMMC disk image, you need to make two small changes in
+the UBoot environment.</p>
+</div>
+<div class="paragraph">
+<p>First delete the <code>rootargs</code> setting</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; setenv rootargs</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next change the <code>mmc_tryboot</code> environment variable to use the <code>root</code> argument
+instead of the <code>next_root</code> argument and to wait 1s for the eMMC filesystem to be
+mounted.</p>
+</div>
+<div class="paragraph">
+<p>This is done fairly easy by using the <code>editenv</code> command like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; editenv mmc_tryboot</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the setting looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>run mmcload;setenv mtdroot root=/dev/mmcblk0p${mmc_cur} rootdelay=1; run ramboot</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>you can save the changes that you have made permanently with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; saveenv
+Saving Environment to SPI Flash... Erasing SPI flash...Writing to SPI flash...done
+Valid environment: 2
+OK
+=&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can now boot the system with the <code>run mmc_boot</code> command.</p>
+</div>
+<div class="paragraph">
+<p>If this works as expected you can change the <code>bootcmd</code> setting to use the <code>run
+mmc_boot</code> command permanently.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_up_spi_nor_only_boot"><a class="anchor" href="#_setting_up_spi_nor_only_boot"></a>8. Setting up SPI NOR only boot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>No matter if you have a SPI NAND or a eMMC equipped evaluation board you can
+also select to store the boot image in SPI NOR flash only and use this image as
+the boot media.</p>
+</div>
+<div class="paragraph">
+<p>This will not be as fast as booting SPI NAND or eMMC, but can be used as a
+fallback solution in case the first two options are not available for some other
+reason.</p>
+</div>
+<div class="sect2">
+<h3 id="_uboot_environment_for_spi_nor_only_boot"><a class="anchor" href="#_uboot_environment_for_spi_nor_only_boot"></a>8.1. UBoot environment for SPI NOR only boot</h3>
+<div class="paragraph">
+<p>As the first step you should reset the environment, save it and restart the
+board to use the initialized environment.</p>
+</div>
+<div class="paragraph">
+<p>This can be done with these 3 commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; env default -a -f
+...
+=&gt; saveenv
+...
+=&gt; reset
+...
+Hit any key to stop autoboot:  0
+=&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now switch the to the SPI NOR only partition configuration with this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; run nor_only
+...
+=&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The SPI NOR flash is partitioned like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; mtd list
+List of MTD devices:
+* nor0
+  - type: NOR flash
+  - block size: 0x1000 bytes
+  - min I/O: 0x1 bytes
+  - 0x000000000000-0x000008000000 : "nor0"
+          - 0x000000000000-0x000000100000 : "UBoot"
+          - 0x000000100000-0x000000140000 : "Env"
+          - 0x000000140000-0x000000180000 : "Env.bk"
+          - 0x000000180000-0x000001580000 : "linux"
+          - 0x000001580000-0x000002980000 : "linux.bk"
+          - 0x000002980000-0x000004980000 : "rootfs_data"
+=&gt; boot</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see there are two 20MB Linux partitions (a main and a backup) that
+can be used to store a UBoot FIT image.</p>
+</div>
+<div class="paragraph">
+<p>The UBoot environment settings that begin with <code>nor_</code> allows you to store and
+load images in these partitions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_spi_nor_only_boot_2"><a class="anchor" href="#_setting_up_spi_nor_only_boot_2"></a>8.2. Setting up SPI NOR only boot</h3>
+<div class="paragraph">
+<p>When using the SPI NOR boot method the FIT image that you provide must have
+both the Linux Kernel, device trees and the root file system.</p>
+</div>
+<div class="paragraph">
+<p>To generate that you can use the imggen.rb tool like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ external/support/scripts/imggen.rb -s sparx5 -o /tftpboot/ -k mscc-linux-kernel.bin.gz -d sparx5_pcb134_emmc_switchdev.dtb,pcb134_emmc -r ws/mscc-brsdk-source-2021.02.7-999/output/build_arm64_standalone/images/rootfs.squashfs -t itb-rootfs -n new</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the device tree configuration is renamed by adding a <code>,pcb134_emmc</code>
+element to the device tree binary file references.  Here you need to choose the
+one that fits with your evaluation board and more specifically the <code>pcb</code> setting
+in the UBoot environment.</p>
+</div>
+<div class="paragraph">
+<p>Also note that the resulting file is generated in the /tftproot folder (used by the
+TFTP server in this case) and has the name <code>new</code> so that the folder will contain
+the file <code>new.itb</code> which is what the UBoot environment <code>nor_</code> macros expect by
+default.</p>
+</div>
+<div class="paragraph">
+<p>Now you can load the image and write it to SPI NOR with this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>=&gt; run nor_dlup
+...
+Filename 'new.itb'.
+Load address: 0x740000000
+...
+SF: Detected mx66l1g45g with page size 256 Bytes, erase size 4 KiB, total 128 MiB
+device 0 offset 0x180000, size 0x11fc663
+18859619 bytes written, 0 bytes skipped in 222.855s, speed 86910 B/s
+=&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can now boot the system with the <code>run nor_boot</code> command.</p>
+</div>
+<div class="paragraph">
+<p>If this works as expected you can change the <code>bootcmd</code> setting to use the <code>run
+nor_boot</code> command permanently.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
