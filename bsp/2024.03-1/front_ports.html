@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Front Ports :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.03-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pcie-rpi4cm.html">PCIe NIC with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.03-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../2024.03/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li><a href="front_ports.html">Front Ports</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.03-1</button>
+  <div class="version-menu">
+    <a class="version" href="../2024.03/front_ports.html">2024.03</a>
+    <a class="version is-current" href="front_ports.html">2024.03-1</a>
+    <a class="version" href="../2023.12/front_ports.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Front Ports</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Front ports are represented as standard Ethernet interfaces within the Linux kernel.</p>
+</div>
+<div class="paragraph">
+<p>After a reboot, all interfaces are considered as host interfaces with no bridging involved.</p>
+</div>
+<div class="paragraph">
+<p>Only the CPU Subsystem can send and receive frames through these interfaces:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/host-ports.svg" alt="host ports"></span></p>
+</div>
+<div class="paragraph">
+<p>Later it is shown how to configure front ports to be members of bridges or link aggregation groups.</p>
+</div>
+<div class="paragraph">
+<p>Front ports are controlled by either <code>iproute2</code> or <code>ethtool</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>iproute2</code> is a collection of commands such as <code>ip</code>, <code>bridge</code> or <code>tc</code>.</p>
+</div>
+<div class="paragraph">
+<p>This section describes general operations on ports using these tools.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The number of front ports depends on the actual switch product.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interface_state"><a class="anchor" href="#_interface_state"></a>1. Interface state</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All interfaces are disabled by default and will need to be enabled before they can be used.</p>
+</div>
+<div class="paragraph">
+<p>Enable an interface and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 up
+# ip link show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9b brd ff:ff:ff:ff:ff:ff</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Disable an interface and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 down
+# ip link show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9b brd ff:ff:ff:ff:ff:ff</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ip_address"><a class="anchor" href="#_ip_address"></a>2. IP address</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is possible to assign an IP address to an interface and use it as a standard network interface.</p>
+</div>
+<div class="paragraph">
+<p>Assign an IP address and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 up
+# ip addr add dev eth0 192.168.1.1
+# ip addr show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:40:42:04:98:9b brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.1/32 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::240:42ff:fe04:989b/64 scope link
+       valid_lft forever preferred_lft forever</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is now possible to ping hosts on the same subnet:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ping 192.168.1.2
+PING 192.168.1.2 (192.168.1.2) 56(84) bytes of data.
+64 bytes from 192.168.1.2: icmp_seq=1 ttl=64 time=0.629 ms
+64 bytes from 192.168.1.2: icmp_seq=2 ttl=64 time=0.334 ms
+64 bytes from 192.168.1.2: icmp_seq=3 ttl=64 time=0.325 ms
+64 bytes from 192.168.1.2: icmp_seq=4 ttl=64 time=0.337 ms
+^C
+--- 192.168.1.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3076ms
+rtt min/avg/max/mdev = 0.325/0.406/0.629/0.128 ms</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Delete an IP address and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip addr del dev eth0 192.168.1.1/24
+# ip addr show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:40:42:04:98:9b brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::240:42ff:fe04:989b/64 scope link
+       valid_lft forever preferred_lft forever</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Do not assign IP addresses to interfaces that will be used in bridges or link aggregation groups.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mtu"><a class="anchor" href="#_mtu"></a>3. MTU</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Change the Maximum Transmission Unit (MTU) on a port and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 mtu 1600
+# ip link show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1600 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9b brd ff:ff:ff:ff:ff:ff</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mac_address"><a class="anchor" href="#_mac_address"></a>4. MAC Address</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Change the Ethernet MAC Address on a port and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 address 00:00:00:22:22:22
+# ip link show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:00:00:22:22:22 brd ff:ff:ff:ff:ff:ff permaddr 00:40:42:04:98:9b</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_speed_and_duplex"><a class="anchor" href="#_speed_and_duplex"></a>5. Speed and Duplex</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auto-negotiation of speed and duplex settings is enabled by default.</p>
+</div>
+<div class="paragraph">
+<p>It is a requirement that the link partner also supports auto-negotiation.</p>
+</div>
+<div class="paragraph">
+<p>If a port is connected to equipment that does not support auto-negotiation, auto-negotiation must be disabled and speed and duplex must be set manually.</p>
+</div>
+<div class="paragraph">
+<p>Change the speed and duplex on a port and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -s eth0 speed 100 duplex half autoneg off
+# ethtool eth0
+Settings for eth0:
+        Supported ports: [ TP MII ]
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
+        Supported pause frame use: Symmetric
+        Supports auto-negotiation: Yes
+        Supported FEC modes: Not reported
+        Advertised link modes:  100baseT/Half
+        Advertised pause frame use: No
+        Advertised auto-negotiation: No
+        Advertised FEC modes: Not reported
+        Speed: 100Mb/s
+        Duplex: Half
+        Port: MII
+        PHYAD: 0
+        Transceiver: internal
+        Auto-negotiation: off
+        Link detected: yes</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_flow_control"><a class="anchor" href="#_flow_control"></a>6. Flow Control</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Flow Control is a mechanism to temporarily stop transmission of traffic and works by letting the receiver
+send a pause control frame back to the transmitter when a certain buffer threshold has been reached.</p>
+</div>
+<div class="paragraph">
+<p>Flow Control was defined by the IEEE 802.3x standard and is disabled by default.</p>
+</div>
+<div class="paragraph">
+<p>Send pause control frames when reaching buffer threshold:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -A eth0 tx on</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Do not send pause control frames when reaching buffer threshold:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -A eth0 tx off</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Obey received pause control frames:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -A eth0 rx on</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ignore received pause control frames:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -A eth0 rx off</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Show flow control configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -a eth0
+Pause parameters for eth0:
+Autonegotiate:  off
+RX:             off
+TX:             off</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Autonegotiation of flow control is not supported.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Flow Control and Priority Flow Control must not be enabled simultaneously.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_priority_flow_control"><a class="anchor" href="#_priority_flow_control"></a>7. Priority Flow Control</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On a per-port basis, the Priority Flow Control as defined in 802.1Qbb can be configured.<br>
+This requires that Port Flow Control (802.3x) is not enabled on the same port.</p>
+</div>
+<div class="paragraph">
+<p>By default, Priority Flow Control is disabled.<br></p>
+</div>
+<div class="paragraph">
+<p>First mapping of frames into priority must be configured.<br>
+The following will enable frames to be mapped to priority based on the PCP value in the tag:<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_tag_map eth0 --prio 0123456701234567 --dpl 0000000011111111
+qos i_mode eth0 --tag 1 --dscp 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The device (port) is <code>eth0</code>.<br></p>
+</div>
+<div class="paragraph">
+<p>Secondly, the LLDP protocol must be enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>lldpad -d -f /tmp/lldpad.conf &amp;
+lldptool set-lldp -i eth0 adminStatus=rxtx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The device (port) is <code>eth0</code>.<br>
+<br>
+The lldpad is started in background.<br></p>
+</div>
+<div class="paragraph">
+<p>This command will enable PFC in selected priorities.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>lldptool -T -i eth0 -V PFC enabled=1,5,7</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The device (port) is <code>eth0</code>.<br>
+The PFC enabled priorities are <code>1,5,7</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_show_configuration_and_status"><a class="anchor" href="#_show_configuration_and_status"></a>8. Show Configuration and Status</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Show the basic configuration and status for a port with <code>ip link</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:00:00:01:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:40:42:04:98:e1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Show detailed configuration and status for a port with <code>ip -d link</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip -d link show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:00:00:01:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:40:42:04:98:e1 promiscuity 1 minmtu 68 maxmtu 65535
+        bridge_slave state forwarding priority 32 cost 4 hairpin off guard off root_block off fastleave off learning on flood on port_id 0x8001 port_no 0x1 designated_port 32769 designated_cost 0 designated_bridge 8000.0:0:0:1:0:0 designated_root 8000.0:0:0:1:0:0 hold_timer    0.00 message_age_timer    0.00 forward_delay_timer    0.00 topology_change_ack 0 config_pending 0 proxy_arp off proxy_arp_wifi off mcast_router 1 mcast_fast_leave off mcast_flood on mcast_to_unicast off neigh_suppress off group_fwd_mask 0 group_fwd_mask_str 0x0 vlan_tunnel off isolated off addrgenmode eui64 numtxqueues 8 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 portname p0 switchid 0040420498e0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Show standard information for a port with <code>ethtool</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool eth0
+Settings for eth0:
+        Supported ports: [ TP MII ]
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
+        Supported pause frame use: Symmetric
+        Supports auto-negotiation: Yes
+        Supported FEC modes: Not reported
+        Advertised link modes:  10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
+        Advertised pause frame use: No
+        Advertised auto-negotiation: Yes
+        Advertised FEC modes: Not reported
+        Link partner advertised link modes:  10baseT/Half 10baseT/Full
+                                             100baseT/Half 100baseT/Full
+                                             1000baseT/Full
+        Link partner advertised pause frame use: Symmetric Receive-only
+        Link partner advertised auto-negotiation: Yes
+        Link partner advertised FEC modes: Not reported
+        Speed: 1000Mb/s
+        Duplex: Full
+        Port: MII
+        PHYAD: 0
+        Transceiver: internal
+        Auto-negotiation: on
+        Link detected: yes</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_show_statistics"><a class="anchor" href="#_show_statistics"></a>9. Show Statistics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Show statistics for a port with <code>ip link</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip -s link show dev eth0
+4: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:00:00:01:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:40:42:04:98:e1
+    RX: bytes  packets  errors  dropped missed  mcast
+    0          0        0       0       0       0
+    TX: bytes  packets  errors  dropped carrier collsns
+    2558       29       0       0       0       0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Show standard group statistics for a port with <code>ethtool</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -S eth0 --all-groups
+Standard stats for eth0:
+eth-mac-FramesTransmittedOK: 114
+eth-mac-SingleCollisionFrames: 0
+eth-mac-MultipleCollisionFrames: 0
+eth-mac-FramesReceivedOK: 160
+eth-mac-FrameCheckSequenceErrors: 0
+eth-mac-AlignmentErrors: 0
+eth-mac-OctetsTransmittedOK: 11368
+eth-mac-FramesWithDeferredXmissions: 0
+eth-mac-LateCollisions: 0
+eth-mac-FramesAbortedDueToXSColls: 0
+eth-mac-FramesLostDueToIntMACXmitError: 0
+eth-mac-CarrierSenseErrors: 0
+eth-mac-OctetsReceivedOK: 14941
+eth-mac-FramesLostDueToIntMACRcvError: 0
+eth-mac-MulticastFramesXmittedOK: 10
+eth-mac-BroadcastFramesXmittedOK: 1
+eth-mac-FramesWithExcessiveDeferral: 0
+eth-mac-MulticastFramesReceivedOK: 54
+eth-mac-BroadcastFramesReceivedOK: 2
+eth-mac-InRangeLengthErrors: 0
+eth-mac-OutOfRangeLengthField: 0
+eth-mac-FrameTooLongErrors: 0
+rmon-etherStatsUndersizePkts: 0
+rmon-etherStatsOversizePkts: 0
+rmon-etherStatsFragments: 0
+rmon-etherStatsJabbers: 0
+rx-rmon-etherStatsPkts64Octets: 49
+rx-rmon-etherStatsPkts65to127Octets: 106
+rx-rmon-etherStatsPkts128to255Octets: 5
+rx-rmon-etherStatsPkts256to511Octets: 0
+rx-rmon-etherStatsPkts512to1023Octets: 0
+rx-rmon-etherStatsPkts1024to1518Octets: 0
+rx-rmon-etherStatsPkts1519to10239Octets: 0
+tx-rmon-etherStatsPkts64Octets: 2
+tx-rmon-etherStatsPkts65to127Octets: 112
+tx-rmon-etherStatsPkts128to255Octets: 0
+tx-rmon-etherStatsPkts256to511Octets: 0
+tx-rmon-etherStatsPkts512to1023Octets: 0
+tx-rmon-etherStatsPkts1024to1518Octets: 0
+tx-rmon-etherStatsPkts1519to10239Octets: 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This output consists of the 4 groups eth-phy, eth-mac, eth-ctrl and rmon.</p>
+</div>
+<div class="paragraph">
+<p>It is also possible to get these individually with the <code>--groups</code> option.</p>
+</div>
+<div class="paragraph">
+<p>Besides these statistics you can get port specific statistics counters, which will differ between switches. On a LAN966x
+you will get this output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -S eth0
+NIC statistics:
+rx_octets: 0
+rx_unicast: 0
+rx_multicast: 0
+rx_broadcast: 0
+rx_short: 0
+rx_frag: 0
+rx_jabber: 0
+rx_crc: 0
+rx_symbol_err: 0
+rx_sz_64: 0
+rx_sz_65_127: 0
+rx_sz_128_255: 0
+rx_sz_256_511: 0
+rx_sz_512_1023: 0
+rx_sz_1024_1526: 0
+rx_sz_jumbo: 0
+rx_pause: 0
+rx_control: 0
+rx_long: 0
+rx_cat_drop: 0
+rx_red_prio_0: 0
+rx_red_prio_1: 0
+rx_red_prio_2: 0
+rx_red_prio_3: 0
+rx_red_prio_4: 0
+rx_red_prio_5: 0
+rx_red_prio_6: 0
+rx_red_prio_7: 0
+rx_yellow_prio_0: 0
+rx_yellow_prio_1: 0
+rx_yellow_prio_2: 0
+rx_yellow_prio_3: 0
+rx_yellow_prio_4: 0
+rx_yellow_prio_5: 0
+rx_yellow_prio_6: 0
+rx_yellow_prio_7: 0
+rx_green_prio_0: 0
+rx_green_prio_1: 0
+rx_green_prio_2: 0
+rx_green_prio_3: 0
+rx_green_prio_4: 0
+rx_green_prio_5: 0
+rx_green_prio_6: 0
+rx_green_prio_7: 0
+rx_assembly_err: 0
+rx_smd_err: 0
+rx_assembly_ok: 0
+rx_merge_frag: 0
+rx_pmac_octets: 0
+rx_pmac_unicast: 0
+rx_pmac_multicast: 0
+rx_pmac_broadcast: 0
+rx_pmac_short: 0
+rx_pmac_frag: 0
+rx_pmac_jabber: 0
+rx_pmac_crc: 0
+rx_pmac_symbol_err: 0
+rx_pmac_sz_64: 0
+rx_pmac_sz_65_127: 0
+rx_pmac_sz_128_255: 0
+rx_pmac_sz_256_511: 0
+rx_pmac_sz_512_1023: 0
+rx_pmac_sz_1024_1526: 0
+rx_pmac_sz_jumbo: 0
+rx_pmac_pause: 0
+rx_pmac_control: 0
+rx_pmac_long: 0
+tx_octets: 2558
+tx_unicast: 2
+tx_multicast: 27
+tx_broadcast: 0
+tx_col: 0
+tx_drop: 0
+tx_pause: 0
+tx_sz_64: 0
+tx_sz_65_127: 27
+tx_sz_128_255: 2
+tx_sz_256_511: 0
+tx_sz_512_1023: 0
+tx_sz_1024_1526: 0
+tx_sz_jumbo: 0
+tx_yellow_prio_0: 0
+tx_yellow_prio_1: 0
+tx_yellow_prio_2: 0
+tx_yellow_prio_3: 0
+tx_yellow_prio_4: 0
+tx_yellow_prio_5: 0
+tx_yellow_prio_6: 0
+tx_yellow_prio_7: 0
+tx_green_prio_0: 22
+tx_green_prio_1: 0
+tx_green_prio_2: 0
+tx_green_prio_3: 0
+tx_green_prio_4: 0
+tx_green_prio_5: 0
+tx_green_prio_6: 0
+tx_green_prio_7: 7
+tx_aged: 0
+tx_llct: 0
+tx_ct: 0
+tx_mm_hold: 0
+tx_merge_frag: 0
+tx_pmac_octets: 0
+tx_pmac_unicast: 0
+tx_pmac_multicast: 0
+tx_pmac_broadcast: 0
+tx_pmac_pause: 0
+tx_pmac_sz_64: 0
+tx_pmac_sz_65_127: 0
+tx_pmac_sz_128_255: 0
+tx_pmac_sz_256_511: 0
+tx_pmac_sz_512_1023: 0
+tx_pmac_sz_1024_1526: 0
+tx_pmac_sz_jumbo:
+dr_local: 0
+dr_tail: 0
+dr_yellow_prio_0: 0
+dr_yellow_prio_1: 0
+dr_yellow_prio_2: 0
+dr_yellow_prio_3: 0
+dr_yellow_prio_4: 0
+dr_yellow_prio_5: 0
+dr_yellow_prio_6: 0
+dr_yellow_prio_7: 0
+dr_green_prio_0: 0
+dr_green_prio_1: 0
+dr_green_prio_2: 0
+dr_green_prio_3: 0
+dr_green_prio_4: 0
+dr_green_prio_5: 0
+dr_green_prio_6: 0
+dr_green_prio_7: 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output for a port on Sparx5 will be slightly different as it has a different set of counters.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>10. References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Show all options with <code>ip</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip help
+# ip link help
+# ip addr help</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Show all options with <code>ethtool</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ethtool -h</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Not all options are supported!
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

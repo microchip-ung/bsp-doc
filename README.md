@@ -1,7 +1,7 @@
 # Microchip UNG BSP Documentation
 
 The information can be viewed using this URL:
-https://microchip-ung.github.io/bsp-doc/bsp/2023.12/index.html using GitHub Pages.
+https://microchip-ung.github.io/bsp-doc/bsp/2024.03-1/index.html using GitHub Pages.
 
 ## Content
 

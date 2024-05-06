@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PSFP (Per Stream Filtering and Policing) :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.03-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pcie-rpi4cm.html">PCIe NIC with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.03-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../2024.03/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li>Egress</li>
+    <li><a href="psfp.html">PSFP</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.03-1</button>
+  <div class="version-menu">
+    <a class="version" href="../2024.03/psfp.html">2024.03</a>
+    <a class="version is-current" href="psfp.html">2024.03-1</a>
+    <a class="version" href="../2023.12/psfp.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">PSFP (Per Stream Filtering and Policing)</h1>
+<div class="paragraph">
+<p>PSFP works on ingress and allows filtering and policing on a per-stream basis.</p>
+</div>
+<div class="paragraph">
+<p>PSFP was originally defined in 802.1Qci-2017 but is now part of 802.1Q-2018.</p>
+</div>
+<div class="paragraph">
+<p>PSFP is implemented by a <code>tc flower</code> filter that is hardware offloaded via the IS1 VCAP.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="tc/tc-intro.html" class="xref page">TC Introduction</a> page for a general introduction to
+<code>tc</code> commands and the <a href="tc/tc-flower-vcap.html" class="xref page">TC and VCAP</a> page for more
+information about how to configure VCAPs by using <code>tc</code> commands.</p>
+</div>
+<div class="paragraph">
+<p>The examples shown here will match on destination MAC address and VLAN ID, also
+known as a Null Stream identification function as defined in 802.1CB-2017.</p>
+</div>
+<div class="paragraph">
+<p>The stream filter implementation is able to match on everything that is supported in
+the IS1 VCAP and this includes the other two passive stream identification functions
+defined in 802.1CB-2017:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Source MAC and VLAN Stream identification function</p>
+</li>
+<li>
+<p>IP Stream identification</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br>
+Just like with any other tc filter command, you must create a 'clsact' qdisc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+To setup a stream filter with a stream gate and a flow meter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc filter add dev eth0 ingress chain 10000 prio 1 handle 2 protocol 802.1q flower skip_sw \
+dst_mac 00:00:00:00:00:11 \
+vlan_id 100 \
+vlan_ethtype all \
+action gate base-time 0 sched-entry open 10000000 3 8m sched-entry close 90000000 \
+action police rate 100000000 burst 15000 mtu 1200 \
+action goto chain 11000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+All packets with DMAC 00:00:00:00:00:11 and VID 100 are matched.<br>
+Gate is open in 10mS and closed in 90mS. Cycle time is implicit at 100mS.<br>
+Frames that pass the gate are assigned an internal priority value of 3.<br>
+A maximum of 8 megabytes can pass the gate during open time.<br>
+Policer rate is 100 mbps and burst size is 15000 bytes.<br>
+Frames larger than 1200 bytes are discarded.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to create a stream filter with only a stream gate or a flow meter
+by removing the line with 'gate' or 'police'.</p>
+</div>
+<div class="paragraph">
+<p>If you want to limit the max sdu without policing, you must still create a flow
+meter but with a rate that exceeds the line speed.</p>
+</div>
+<div class="paragraph">
+<p>If you want to use the stream gate or flow meter in several stream filters, you
+can create them explicitly and giving them an index:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc actions add action gate base-time 0 sched-entry open 10000000 3 8m sched-entry close 90000000 index 42
+# tc actions add action police rate 100000000 burst 15000 mtu 1200 index 20</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+Then use the same indexes in several stream filters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc filter add dev eth0 ingress chain 10000 prio 1 handle 2 protocol 802.1q flower skip_sw \
+dst_mac 00:00:00:00:00:11 \
+vlan_id 100 \
+vlan_ethtype all \
+action gate index 42 \
+action police index 20 \
+action goto chain 11000
+
+# tc filter add dev eth0 ingress chain 10000 prio 1 handle 3 protocol 802.1q flower skip_sw \
+dst_mac 00:00:00:00:00:22 \
+vlan_id 200 \
+vlan_ethtype all \
+action gate index 42 \
+action police index 20 \
+action goto chain 11000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+Use the 'tc filter show' command to see the statistics:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc -s filter show dev eth0 ingress
+filter protocol 802.1Q pref 1 flower chain 10000
+filter protocol 802.1Q pref 1 flower chain 10000 handle 0x2
+  vlan_id 100
+  vlan_ethtype all
+  dst_mac 00:00:00:00:00:22
+  eth_type 0003
+  skip_sw
+  in_hw in_hw_count 1
+       action order 1:
+       priority wildcard       clockid TAI     flags 0
+       base-time 0ns   cycle-time 100ms        cycle-time-ext 0ns
+       schedule:
+        number    0    gate-state open         interval 10ms    ipv 3           max-octets 8Mb
+        number    1    gate-state close        interval 90ms    ipv wildcard    max-octets wildcard
+       pipe
+        index 42 ref 2 bind 1 installed 9 sec used 2 sec
+       Action statistics:
+       Sent 0 bytes 10000 pkt (dropped 9849, overlimits 0 requeues 0)
+       Sent software 0 bytes 0 pkt
+       Sent hardware 0 bytes 10000 pkt
+       backlog 0b 0p requeues 0
+       used_hw_stats immediate
+
+       action order 2:  police 0x14 rate 100Mbit burst 15000b mtu 1200b action reclassify overhead 0b
+       ref 2 bind 1 installed 8 sec used 2 sec
+       Action statistics:
+       Sent 0 bytes 10000 pkt (dropped 9849, overlimits 0 requeues 0)
+       Sent software 0 bytes 0 pkt
+       Sent hardware 0 bytes 10000 pkt
+       backlog 0b 0p requeues 0
+       used_hw_stats immediate
+
+       action order 3: gact action goto chain 11000
+        random type none pass val 0
+        index 1 ref 1 bind 1 installed 7 sec used 2 sec
+       Action statistics:
+       Sent 0 bytes 10000 pkt (dropped 9849, overlimits 0 requeues 0)
+       Sent software 0 bytes 0 pkt
+       Sent hardware 0 bytes 10000 pkt
+       backlog 0b 0p requeues 0
+       used_hw_stats immediate</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+As seen above, it is not possible to see all the PSFP specific counters.
+The "10000 pkt" corresponds to the matching_frames_count
+The "dropped 9849" is the sum of not_passing_frames_count, not_passing_sdu_count and red_frames_count.</p>
+</div>
+<div class="paragraph">
+<p><br>
+In order to see all the PSFP counters you can use a debug command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /sys/kernel/debug/lan966x/qos_show
+PSFP Stream Filter Pool:
+  ix 0: mfc: 10000 pfc: 866 npfc: 9134 psc: 866 npsc: 0 rfc: 715 lu: 17179620
+PSFP Stream Gate Pool:
+  ix 0: user 1 id 42 ref_cnt 1
+PSFP and ACL Policer Pool:
+  ix 81: user 1 id 20 ref_cnt 1
+ptp current time    :           52.109889569 sec</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+Here the PSFP counters are shown as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>mfc  - matching_frames_count</p>
+</li>
+<li>
+<p>pfc  - passing_frames_count</p>
+</li>
+<li>
+<p>npfc - not_passing_frames_count</p>
+</li>
+<li>
+<p>psc  - passing_sdu_count</p>
+</li>
+<li>
+<p>npsc - not_passing_sdu_count</p>
+</li>
+<li>
+<p>rfc  - red_frames_count</p>
+</li>
+<li>
+<p>lu   - last update time in jiffies</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br>
+Up to 256 stream filters are supported and each stream filter can have its own stream gate and flow meter.</p>
+</div>
+<div class="paragraph">
+<p>The valid values for open and close time in a stream gate are &gt;= 1uS and &lt; 1S.</p>
+</div>
+<div class="paragraph">
+<p>Maximum number of scheduler entries in a stream gate is 4.</p>
+</div>
+<div class="paragraph">
+<p>The unit for rate is bits per second and valid values are from 100000 to 1000000000.</p>
+</div>
+<div class="paragraph">
+<p>The resolution in hardware is 33 1/3 kbps and the value is rounded up to the nearest next supported value.</p>
+</div>
+<div class="paragraph">
+<p>The unit for burst is bytes and valid values are from 4096 to 245760 bytes.</p>
+</div>
+<div class="paragraph">
+<p>The resolution in hardware is 4096 bytes and the value is rounded up to the nearest next supported value.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

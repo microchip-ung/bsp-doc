@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LAN969x Secure and Verified Boot :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.03-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pcie-rpi4cm.html">PCIe NIC with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.03-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../2024.03/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="lan969x.html">LAN969x</a></li>
+    <li><a href="lan969x-verified-boot.html">Verified Boot</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.03-1</button>
+  <div class="version-menu">
+    <a class="version" href="../../2024.03/supported-hw/lan969x-verified-boot.html">2024.03</a>
+    <a class="version is-current" href="lan969x-verified-boot.html">2024.03-1</a>
+    <a class="version is-missing" href="../../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LAN969x Secure and Verified Boot</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes the methods to control which firmware is
+allowed to execute on a LAN969X-based platform.</p>
+</div>
+<div class="paragraph">
+<p>First and foremost, LAN969X supports Secure Boot by using <em>Trusted
+Firmware for ARM</em> (TFA), which implements authenticated boot, allowing
+only software explicitly signed for use on the system.</p>
+</div>
+<div class="paragraph">
+<p>This will control all elements executed up to and including the final
+Non-Secure boot stage, the so-called BL33. (See
+<a href="lan969x-boot.html#overview" class="xref page">Booting LAN969X</a> for more
+details on boot stages).</p>
+</div>
+<div class="paragraph">
+<p>BL33 is normally implemented by U-Boot, but TFA can also boot other
+software entities such as Linux or RTOS-based applications. This is
+controlled during preparation of boot media images.</p>
+</div>
+<div class="paragraph">
+<p>After BL33 is authenticated and started, it is the responsibility of
+the BL33 to protect the Non-Secure realm against execution of any
+non-authenticated Non-Secure software. Note that the <em>Secure World</em> is
+inherently protected by hardware mechanisms, and by definition the
+Non-Secure World needs no special precautions for maintaining the
+security of the Secure World. But by ensuring that no undesired
+(Non-Secure) code is allowed, the total attack surface is further
+reduced.</p>
+</div>
+<div class="paragraph">
+<p>When the BL33 used supports starting other firmware entities it will
+be desirable to authenticate those firmware entities. Methods to do
+so is presented for U-Boot and Linux.</p>
+</div>
+<div class="sect2">
+<h3 id="_secure_boot_using_trusted_firmware_for_arm"><a class="anchor" href="#_secure_boot_using_trusted_firmware_for_arm"></a>1.1. Secure Boot using Trusted Firmware for ARM</h3>
+<div class="paragraph">
+<p>Secure Boot is an integral feature of of TFA. Refer to
+<a href="lan969x-tfa.html#introduction" class="xref page">LAN969x Secure Boot</a> for
+information of how to produce (signed) boot media and securing the
+platform with the ROT (root of trust) in the OTP.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verified_boot_in_u_boot"><a class="anchor" href="#_verified_boot_in_u_boot"></a>1.2. Verified boot in U-Boot</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Using U-Boot as BL33 is inherently insecure. More measures
+than described here are required to achieve other than a casual level
+of security. If you are serious about security you should be using
+either (secured, hardened) Linux or an RTOS-based embedded
+application.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This section describes how to enable the verified boot in u-boot and
+how the fit images need to be signed to be able to boot
+them. Although U-Boot may support other image types, only <code>fit</code>
+images can be signed.</p>
+</div>
+<div class="sect3">
+<h4 id="_generate_keys"><a class="anchor" href="#_generate_keys"></a>1.2.1. Generate keys</h4>
+<div class="paragraph">
+<p>First it is required to generate a private and public key which will be used to
+sign the fit images:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>openssl genrsa -F4 -out /tmp/keys/dev.key 2048
+openssl req -batch -new -x509 -key /tmp/keys/dev.key -out /tmp/keys/dev.crt</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configure_u_boot"><a class="anchor" href="#_configure_u_boot"></a>1.2.2. Configure U-boot</h4>
+<div class="paragraph">
+<p>After this it is required to enable these configuration options in u-boot:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>CONFIG_FIT_SIGNATURE=y</p>
+</li>
+<li>
+<p>CONFIG_DEVICE_TREE_INCLUDES="lan969x_signed.dtsi"</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Next step is to get the public key inside the dtbs. The key is to be
+used when authenticating <em>any</em> fit image. Since it is a public key, it
+is not required to be secured/secret, and it is included directly in
+the U-Boot binary image by the <code>u-boot.dtsi</code> device tree included in
+U-Boot.</p>
+</div>
+<div class="paragraph">
+<p>It is required to get the public key into a format that the
+<code>u-boot.dtsi</code> file can understand. This is possible with the following
+tool:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://gitlab.com/rkraevskiy/ubootpubkey" class="bare">https://gitlab.com/rkraevskiy/ubootpubkey</a></p>
+</div>
+<div class="paragraph">
+<p>And run the command like this</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./ubpubkey.py /tmp/keys/dev.crt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output will be printed on the screen:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>rsa,exponent = &lt;0x00 0x10001&gt;;
+rsa,modulus = &lt;0xcfbfd0fa 0x1dd472f3 0xaa6bfa57 0xa5e8fba8 0x617a0f2a 0x4554cde
+0x3569ba8b 0xbb948b19 0x39ad4777 0x80c42017 0xe0568d97 0x2a80a1fc 0x299dab32
+0x3c1e78f2 0x837a24ce 0x3f0b7394 0x8739f31d 0xcaba9ead 0x49917502 0x9443ddfb
+0x97d8de50 0xf9c1a873 0x24b8312f 0x5d0d97ba 0x9d92b21f 0x44120622 0x228dfc54
+0x3bef2d6f 0x1fb391c6 0x782e1b93 0x7677a18b 0x2678af0f 0x138df5bd 0x64b80087
+0x6ea046e7 0xc9922bd2 0xb928c077 0xcda29d2e 0xa5713525 0x759465b5 0x852577bd
+0xc40a9233 0x516f9f6e 0x45653ed1 0x1f62bd9 0x478b7ac9 0xddff297c 0x438501e3
+0xbd3e4a02 0x4f851b57 0x81842570 0x507ce1ce 0x3af6ff00 0xc0519a5b 0x655ab6ae
+0x4a073221 0xfc719ac8 0xf2360513 0x60c57a5c 0x2c9578f7 0x5b9ca51a 0xf46b67a8
+0x21dbfdf4 0x46f0c511&gt;;
+rsa,n0-inverse = &lt;0xe0d340f&gt;;
+rsa,num-bits = &lt;0x800&gt;;
+rsa,r-squared = &lt;0x8c7b3c00 0x2808e8b6 0x25b3e495 0x88cb17a0 0x8dc80f3b
+0x2931470f 0x6186d1c5 0xf300592e 0x9e1706ae 0xf18bcfb7 0x3c1f223a 0xe3a8aca3
+0xdd5d14d6 0x4dd59f67 0xbce4fb1 0x3bebe47 0xdc716260 0x3b5bc3ec 0x4891b7c7
+0x88cb6aad 0xc5ad6144 0x8253b5be 0x26ea6578 0x7bcabc6e 0xa9c391c9 0x360be02e
+0x64574b32 0x7445fa80 0x433ee11a 0xf5cd7ec7 0x6472c089 0xa6d0769c 0xde0987a5
+0xc32a3b1f 0xaece0ae3 0x4951ede8 0x9df3b025 0x7326a93d 0x4c0e31c1 0x7c57d24a
+0x47fa4053 0xf10ba5e4 0xd0655b 0xa6c5a3ae 0x2c653e10 0xae6590a6 0xf6d5f56
+0xfab661d9 0xfa253682 0x3baa5bd1 0x1d1e53f2 0xd40efada 0x789c912c 0x52a5adba
+0x4c1cb1cc 0x4ad22c1a 0x935893f0 0xadbcad80 0x112d184f 0x90eda7af 0xf9a7c5e7
+0x3d2f192b 0x9039c371 0x16dce8ff&gt;;
+k-gen = "ubpubkey/1.0a/1707912564";
+k-sha256-fp =
+"6b84d0da71c8fe705ad46a9c76ce23211f2c5ac835e8823f62db13be5b676e62";
+k-src = "cert/dev.crt";
+Done</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The it is required to take the following fields:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>rsa,exponent</p>
+</li>
+<li>
+<p>rsa,modulus</p>
+</li>
+<li>
+<p>rsa,n0-inverse</p>
+</li>
+<li>
+<p>rsa,num-bits</p>
+</li>
+<li>
+<p>rsa,r-squared</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>And replace the existing one inside the u-boot file 'lan969x_signed.dtsi':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    signature {
+        key-dev {
+            required = "conf";
+            key-name-hint = "dev";
+            algo = "sha1,rsa2048";
+            rsa,exponent = &lt;0x00 0x10001&gt;;
+            rsa,modulus = &lt;0xcfbfd0fa 0x1dd472f3 0xaa6bfa57 ...&gt;;
+            rsa,n0-inverse = &lt;0xe0d340f&gt;;
+            rsa,num-bits = &lt;0x800&gt;;
+            rsa,r-squared = &lt;0x8c7b3c00 0x2808e8b6 0x25b3e495 ...&gt;;
+        };
+    };</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After this, it is required to compile u-boot.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The values in this snippet are just for demo purpose, don&#8217;t use them
+in production.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The BSP contains a pre-compiled U-Boot with sample
+demonstration keys. The pre-compiled binary version should not be used
+directly in a production environment, rather build your own with your
+own, private key.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_to_sign_fit_images_with_private_key"><a class="anchor" href="#_how_to_sign_fit_images_with_private_key"></a>1.2.3. How to sign FIT images with private key</h4>
+<div class="paragraph">
+<p>Inside the <code>its</code> file that is used to generate the <code>itb</code> file using
+mkimage, it is required to add a <code>signature-1</code> node under the
+configuration which will be signed with the private key and a <code>hash-1</code>
+for each of the images that will be signed.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>        images {
+                kernel {
+                        ...
+                        hash-1 {
+                                algo = "sha1";
+                        };
+                };
+
+                ...
+        };
+
+        configurations {
+                lan9698_ev23x71a_0_at_lan969x {
+                        description = "lan9698 ev23x71a";
+                        kernel = "kernel";
+                        ramdisk = "ramdisk";
+                        fdt = "fdt_lan9698_ev23x71a_0_at_lan969x";
+                        signature-1 {
+                                algo = "sha1,rsa2048";
+                                key-name-hint = "dev";
+                                sign-images = "fdt", "kernel", "ramdisk";
+                        };
+                        hash-1 {
+                                algo = "sha1";
+                        };
+                };
+        };</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then simply running mkimage command like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mkimage -f vmlinux.its -k /tmp/keys/ fit.itb</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;will sign the FIT image with the key in the given directory.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verified_boot_in_linux"><a class="anchor" href="#_verified_boot_in_linux"></a>1.3. Verified boot in Linux</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Using Linux in a secure configuration is outside the scope
+of this document. Secure Linux is a vast topic, and this section only
+propose a possible, partial method.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As Linux can be started by both TFA and U-Boot, this method applies to
+both using a Linux (fit) image as BL33 and to using U-Boot as BL33.</p>
+</div>
+<div class="paragraph">
+<p>The Linux kernel itself should be authenticated by the previous boot
+stage - either TFA or U-Boot depending on which BL33 is used. This was
+described in the previous sections.</p>
+</div>
+<div class="paragraph">
+<p>But as Linux (typically) supports starting separate firmware entities
+from a file system, such as Linux kernel modules and/or user-mode
+applications, it may be required to control the origin of these
+entities.</p>
+</div>
+<div class="paragraph">
+<p>If your Linux image FIT contain an initial <em>root file system</em>
+(rootfs), then it should already been authenticated by the prior boot
+stage. But if it is mounting a file system from a NOR or eMMC
+partition, then it is necessary to ensure that the data in the file
+system is not tampered with or entirely overwritten with a rogue file
+system image.</p>
+</div>
+<div class="paragraph">
+<p>The following describes how to enable file system integrity checking.</p>
+</div>
+<div class="sect3">
+<h4 id="_file_system_integrity"><a class="anchor" href="#_file_system_integrity"></a>1.3.1. File system integrity</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+File system integrity cannot stand alone. It can easily be
+circumvented if the Linux system allows either root-level command line
+access, using U-Boot or if the base system (TFA) is not properly tied
+to a ROT in the OTP.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Several methods for protecting a file system is available under
+Linux. The method presented here is using a tool called <code>dm-verity</code>.</p>
+</div>
+<div class="paragraph">
+<p>Detailed info can be seen here:
+<a href="https://www.starlab.io/blog/dm-verity-in-embedded-device-security">dm-verity introduction</a>.</p>
+</div>
+<div class="paragraph">
+<p>Dm-verity works by creating a so-called <em>Merkle Tree</em> data structure,
+which is a hierarchical set of hashes, the bottom-most leaves
+representing a hash of the individual data blocks in the raw file
+system its supposed to protect. The top node is the <em>root hash</em> and is
+used to identify the total sum of all hashes.</p>
+</div>
+<div class="paragraph">
+<p>This hash data is contained in a separate disk partition, alongside
+the (unchanged) root file system.</p>
+</div>
+<div class="paragraph">
+<p>When the Linux system mounts the file system, it should be given two
+extra parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>Root Hash</em></p>
+</li>
+<li>
+<p>The partition name where the hash data is kept</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When creating the file system, it is required to use a block size of
+<code>4k</code> (4096). You can use other file systems than <code>ext4</code>, and it makes
+good sense to use read-only file systems.</p>
+</div>
+<div class="paragraph">
+<p>When you have the file system image ready (in a file of appropriate
+size), then you can create the hash data.</p>
+</div>
+<div class="paragraph">
+<p>The command to generate the hash data file is (input file
+<code>rootfs.squashfs</code>, hash algorithm <code>sha256</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ veritysetup format -v --debug \
+ --hash=sha256 --root-hash-file roothash.txt rootfs.squashfs rootfs.hash
+# cryptsetup 2.4.3 processing "veritysetup -v --debug format --hash=sha256 --root-hash-file roothash.txt rootfs.squashfs rootfs.hash"
+# Running command format.
+# Allocating context for crypt device rootfs.hash.
+# Trying to open and read device rootfs.hash with direct-io.
+# Initialising device-mapper backend library.
+# Formatting device rootfs.hash as type VERITY.
+# Crypto backend (OpenSSL 3.0.2 15 Mar 2022 [default][legacy]) initialized in cryptsetup library version 2.4.3.
+# Detected kernel Linux 6.5.0-18-generic x86_64.
+# Setting ciphertext data device to rootfs.squashfs.
+# Trying to open and read device rootfs.squashfs with direct-io.
+# Hash creation sha256, data device rootfs.squashfs, data blocks 1476, hash_device rootfs.hash, offset 1.
+# Data device size required: 6045696 bytes.
+# Hash device size required: 57344 bytes.
+# Using 2 hash levels.
+# Updating VERITY header of size 512 on device rootfs.hash, offset 0.
+VERITY header information for rootfs.hash
+UUID:            	7cbcdd9d-2c7f-4615-84b3-b2c8fd7ff0af
+Hash type:       	1
+Data blocks:     	1476
+Data block size: 	4096
+Hash block size: 	4096
+Hash algorithm:  	sha256
+Salt:            	b61705a90f00c79348629adf0c777a8d9c923636f7f9ece854902f3a609233c5
+Root hash:      	e3796aecd5f734716fc0f2569d54bf60c585dd61fa0e346586cb017b6f1ec27f
+# Created root hash file roothash.txt.
+# Releasing crypt device rootfs.hash context.
+# Releasing device-mapper backend.
+# Closing read write fd for rootfs.hash.
+Command successful.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After running this command, the root hash is in the <code>roothash.txt</code>
+file, and the hash data is in <code>rootfs.hash</code>. The former needs to be
+read prior to mounting the verified file system, and the latter needs
+to be put in a disk partition (or loop mounted as a file).</p>
+</div>
+<div class="paragraph">
+<p>Mounting the disk can be done like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ veritysetup open \
+        /dev/mmcblk0p5 \
+        dmv_root \
+        /dev/mmcblk0p6 \
+        e3796aecd5f734716fc0f2569d54bf60c585dd61fa0e346586cb017b6f1ec27f
+$ mkdir mnt
+$ mount /dev/mapper/dmv_root mnt/</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>dmv_root</code> is an arbitrary name used to identify the verified file
+system, and <code>/dev/mmcblk0p5</code> is assumed to hold the file system image,
+whereas <code>/dev/mmcblk0p6</code> holds the hash data generated.</p>
+</div>
+<div class="paragraph">
+<p>To support a <code>dm-verity</code> in the Linux kernel, make sure you have the
+following kernel options enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>CONFIG_MD=y
+CONFIG_BLK_DEV_DM=y
+CONFIG_DM_VERITY=y
+CONFIG_CRYPTO_SHA256=y
+CONFIG_CRYPTO_USER_API_HASH=y
+CONFIG_CRYPTO_USER_API_SKCIPHER=y</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

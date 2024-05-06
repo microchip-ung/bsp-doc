@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LAN969x OTP :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.03-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pcie-rpi4cm.html">PCIe NIC with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.03-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../2024.03/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li><a href="lan969x-otp.html">LAN969x OTP</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.03-1</button>
+  <div class="version-menu">
+    <a class="version" href="../../2024.03/supported-hw/lan969x-otp.html">2024.03</a>
+    <a class="version is-current" href="lan969x-otp.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/supported-hw/lan969x-otp.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LAN969x OTP</h1>
+<div class="sect1">
+<h2 id="_soc_resources"><a class="anchor" href="#_soc_resources"></a>1. SoC Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LAN969X SoC has 8K of internal OTP(One time programmable).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kernel_configurations"><a class="anchor" href="#_kernel_configurations"></a>2. Kernel configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Following kernel config options should be enabled to enable the LAN969X OTP
+driver and to be able to access the OTP from userspace.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CONFIG_NVMEM_MICROCHIP_OTP</code> - None volatile memory driver config option.</p>
+</li>
+<li>
+<p><code>CONFIG_NVMEM_SYSFS</code> - Config option to enable access to OTP using sysfs.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_devicetree_configuration"><a class="anchor" href="#_devicetree_configuration"></a>3. Devicetree Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To enable LAN969X OTP, following configurations are required in device tree:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>compatible</code> - string must be set to <code>microchip,lan969x-otp</code>.</p>
+</li>
+<li>
+<p><code>reg</code> - property must be set to <code>&lt;0xe0021000 0x300&gt;</code>.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_example"><a class="anchor" href="#_example"></a>3.1. Example</h3>
+<div class="paragraph">
+<p>Following example shows how the OTP should be defined in DT:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>otp0: otp@e0021000 {
+	compatible = "microchip,lan969x-otp";
+	reg = &lt;0xe0021000 0x300&gt;;
+};</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_references"><a class="anchor" href="#_references"></a>3.2. References</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.kernel.org/doc/html/latest/driver-api/nvmem.html">NVMEM Subsystem</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_userspace"><a class="anchor" href="#_userspace"></a>4. UserSpace</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before using the userspace application to configure the OTP, make sure that the
+OTP device is created. If the device is created, the following file should
+exist: <code>/sys/bus/nvmem/devices/lan9662-otp0/nvmem</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ll /sys/bus/nvmem/devices/lan9662-otp0/nvmem
+-rw-r--r--    1 root     root       16.0K Jan  1 00:41 /sys/bus/nvmem/devices/lan9662-otp0/nvmem</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The userspace application <code>otp</code> it is used to read/write the OTP. It has the
+following help:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># otp --help
+This tool can be used to access and modify the OTP in the following SoCs:
+ - LAN9662
+ - LAN9668
+ - LAN969X
+
+Usage:
+ otp field list
+ otp field get [&lt;NAME&gt;]
+ otp field set [--merge] &lt;NAME&gt; (ascii|hex|dec|3ascii-dec) &lt;VALUE&gt;
+ otp addr get &lt;ADDRESS&gt; &lt;BYTE-LENGTH&gt;
+ otp addr set [--merge] &lt;ADDRESS&gt; &lt;BYTE-LENGTH&gt; (ascii|hex|dec) &lt;VALUE&gt;
+ otp tag list-tag-names
+ otp tag print
+ otp tag info
+ otp tag get (&lt;tag-number&gt;|&lt;tag-name&gt;)
+ otp tag del (&lt;tag-number&gt;|&lt;tag-name&gt;)
+ otp tag set (&lt;tag-number&gt;|&lt;tag-name&gt;) (ascii|hex|dec) &lt;VALUE&gt;
+ otp nvcnt get (trusted|nontrusted)
+ otp nvcnt set &lt;VALUE&gt; (trusted|nontrusted)
+ otp import-keys [--no-randomize-huk] &lt;FILE&gt;
+ otp region show
+ otp region write-protect &lt;REGION-NUMBER&gt;
+ otp region non-secure &lt;REGION-NUMBER&gt;
+ otp init pcb &lt;PCB&gt; ethaddr (random-ethaddr|&lt;ETHADDR-ADDRESS&gt;) ethaddr_count &lt;COUNT&gt;
+
+Options:
+ -h --help             Show this screen.
+ --version             Show version.
+ --verbose             Enable verbose traces on console
+ -d DEV --device DEV   NVRAM device
+                       This can also be a normal block device, or even a file.
+ -i ID --chip-id ID    Specify OTP layout coresponding to the given chip ID.
+                       NOTE: This setting is only allowed on devices where the
+                       part-ID at byte address 0x5-0x6 is not programmed, or if
+                       the programmed part-ID matches the provided ID.
+ --chip-id-force       Force usage of the ID given with --chip-id=ID, even
+                       though a different part ID is programmed in the OTP.
+ --no-confirm          Do not require the user to confirm write operations.
+
+General:
+
+ The OTP in these products are accessed by various elements including: discrete
+ logic in the chip, TF-A bootrom (BL1), Secure Boot loader (BL2), EL3 Runtime
+ software (BL31/BL32), UBoot, Linux kernel and this user-space application.
+ The OTP has a concept of regions, which can be used to configure access
+ control (read and write protection). The regions and write protect mask is in
+ the OTP it self and need to be provisioned.
+
+ This tool support 3 different kind of content:
+   Fields:                This is fixed-length data at fixed positions in the
+                          OTP. The tool has a build in template for each of the
+                          supported SoC with name, address, length and
+                          description.
+
+   Non volatile counters: This is counters which can only be incremented. This
+                          is used to do rollback protection. This is
+                          implemented as a bitfields, and the max value is
+                          therefore the number of allocated bits for a given
+                          counter.
+
+   Tagged data:           This is semi-one-time-programmable data. The purpose
+                          of this is to allow store various data such as:
+                          mac-addresses, board-ID, ECO level, uniq default
+                          password which may be printed on the device, etc.
+                          This is implemented as an array of 64-bits records
+                          with the following layout:
+
+                           +--------+--------+--------+----------+
+                           | size:3 | cont:1 | tag:12 | value:48 |
+                           +--------+--------+--------+----------+
+
+                          Where:
+                            size:   specify the number of valid bytes in value.
+                                    0 and 0b111 (7) are invalid. If a record
+                                    needs to be invalidated, then it is a
+                                    matter of writing 0b111 in this field.
+                            cont:   specify that the content continues in the
+                                    next valid record with the given tag value.
+                            tag:    This is a number from 0-2047 specifying the
+                                    type of data (the implementation has a list
+                                    of named tags which may be used).
+                            value:  Value associated to the tag.
+
+
+Note:
+ All commands writing ('field set', 'addr set', 'tag del|set') to OTP shall do:
+ - Read out existing content.
+ - If '--merge' flag is not set, confirm that the specified value is possible
+   to set. Abort if not.
+ - Print in hex what is about the be written where
+ - Let use user confirm.
+
+Command details:
+ otp help:
+   Print this message
+
+ otp field list:
+   List all fields recognized by the implementation template.
+
+ otp field get [&lt;NAME&gt;]
+   Get the content of a specific fields, or all fields if non is provided.
+   NOTE: This shall skip fields in areas being read-protected, but will happily
+   print secrets if not proper protected.
+
+ otp field set [--merge] &lt;NAME&gt; (ascii|hex|dec) &lt;VALUE&gt;
+   Set the content of a given field.
+   - If the --merge option is provided, then the content is bit-wised OR with
+     what is in the OTP field already. If not, a check is performed to confirm
+     that the desired value can be written as-is.
+   - The value can either be provided in ascii format, or as a hex-string.
+     - A hex string must always provide an equal number of chars (no half
+       bytes).
+   - The length of the value must match what is find in the template.
+
+ otp addr get &lt;address&gt; &lt;BYTE-LENGTH&gt;
+   Read the raw content in OTP. If the requested area is (partly)
+   read-protected, then return error.
+
+ otp addr set [--merge] &lt;address&gt; &lt;BYTE-LENGTH&gt; (ascii|hex|dec) &lt;VALUE&gt;
+   Write raw content in the OTP. If the requested area is (partly)
+   write-protected, then return error before any content is written.
+
+ otp nvcnt (trusted|nontrusted) get
+ otp nvcnt (trusted|nontrusted) set &lt;VALUE&gt;
+   Get/set the value of either the trusted or nontrusted
+   non-volatile-ever-incrementing-counter.
+   This is implemented as a bit-field, and a given implementation will have
+   limited capacity.
+   NOTE: This is used by the secure boot-ROM to implement rollback protection.
+
+ otp tag list-tag-names
+   List all the tag names and associated numbers know by the implementation.
+
+ otp tag info
+   Print statistics on tag usages.
+ otp tag print
+   Print all valid tags in the otp.
+
+ otp tag get (bin|hex) [(&lt;tag-number&gt;|&lt;tag-name&gt;)]
+   Read out the value of a given tag (either by name or by number) or dump all
+   tags if no name/number is provided.
+   If no valid tag with matching name/number was found, then return an error.
+
+ otp tag [--merge] set (&lt;tag-number&gt;|&lt;tag-name&gt;) (ascii|hex) &lt;VALUE&gt;
+   Set a tagged value. If the --merge flag was set, then the content provided
+   must be of exact same length as the length of existing content in the OTP.
+   If this tag already exists, then it shall be replaced (meaning invalidating
+   the existing tag).
+
+ otp tag append (&lt;tag-number&gt;|&lt;tag-name&gt;)
+   Append more data to a tag. This will always create a new record and set the
+   'cont' flag in existing tags.
+
+ otp tag del (&lt;tag-number&gt;|&lt;tag-name&gt;)
+   Invalidate an existing tag in the OTP.
+
+ otp import-keys [--no-randomize-huk] &lt;FILE&gt;:
+   This shall read the content from a file (or stdin if '-' is provided as
+   file-name).
+   The content is binary and length must match the platform expected length.
+   It can only be used to program the region with TF-A keys (on LAN966x
+   this is region 4). The region will not be defined when the tool is called,
+   and a per platform hard-coded offset/size will be used.
+   Unless the --no-randomize-huk flag is set, then the OTP_TBBR_HUK field will
+   be set with randomized content using /dev/random.
+
+otp region show:
+  Show the start-address, end-address and write-protect bit of all regions.
+  Some regions may be displayed with start- and end-address equal to 0, which
+  means that this region is still not defiend.
+
+otp region write-protect &lt;REGION-NUMBER&gt;:
+  This shall check if the region &lt;REGION-NUMBER&gt; is defined (in
+  `PROTECT_REGION_ADDR`).  If not, the region shall be defined using the
+  per-chip-id defined template.  Once the region is defined it shall be marked
+  as write-protected in `PROTECT_OTP_WRITE`.
+
+otp init pcb &lt;PCBNO&gt; ethaddr (random-ethaddr|&lt;ETHADDR-ADDRESS&gt;) ethaddr_count &lt;COUNT&gt;
+  NOTE: This shall only be called during board manufacturing!
+        Do not call more than once.
+
+  This sub-command will do the following:
+  - Do the equivalent of: $ opt tag set pcb dec &lt;PCBNO&gt;
+  - Do the equivalent of: $ opt tag set ethaddr_count dec &lt;COUNT&gt;
+  - Do the equivalent of: $ opt tag set ethaddr ascii &lt;ETHADDR-ADDRESS&gt;
+    - If the ethaddr-address is `random-ethaddr`, then generate a random ETHADDR with the
+      following limitation:
+      - Broadcast bit is 0
+      - Local-administrated bit is 1
+      - It must not be all zero and not all ff.</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_on_how_to_use"><a class="anchor" href="#_example_on_how_to_use"></a>4.1. Example on how to use</h3>
+<div class="paragraph">
+<p>Here are some examples on how to use it</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Once something is written in the OTP this can&#8217;t be erased. So make sure
+you can write the right command. You can test the command by running the same
+command on a file.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the chip id has not been programmed into the OTP you can provide it on
+the command line and this use the tool correctly.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>How to initialize the board:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>otp -d /sys/bus/nvmem/devices/lan9662-otp0/nvmem init partid 9698 serial &lt;SERIAL_NUMBER&gt; pcb 9300 ethaddr random-ethaddr ethaddr_count 16</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>set the field <code>partid</code> to <code>9698</code></p>
+</li>
+<li>
+<p>set the field <code>serial_number</code> to <code>&lt;SERIAL_NUMBER&gt;</code></p>
+</li>
+<li>
+<p>set the tag <code>pcb</code> to <code>9300</code></p>
+</li>
+<li>
+<p>set the tag <code>ethaddr</code> to a random generated eth addr where bit 1 in MSB is set
+to 1 and bit 0 in MSB is set to 0.</p>
+</li>
+<li>
+<p>set the tag <code>ethaddr_count</code> to <code>16</code> meaning that it would reserve 16 addresses</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is a way to read back a field:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>otp -d /sys/bus/nvmem/devices/lan9662-otp0/nvmem field get PARTID
+2 be25|.%|</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first value of the output represents the number of bytes the field it has,
+second represents the value in little endian in hex and the last value
+represents the ascii characters of the value.</p>
+</div>
+<div class="paragraph">
+<p>To see the available fields the following command can be used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># otp -d /sys/bus/nvmem/devices/lan9662-otp0/nvmem  --chip-id 9692 field list
+Field:                   OTP_PRG offset: 0x0000 length: 04
+Field:                  FEAT_IDS offset: 0x0004 length: 01
+Field:                    PARTID offset: 0x0005 length: 02
+Field:                   TST_TRK offset: 0x0007 length: 01
+Field:             SERIAL_NUMBER offset: 0x0008 length: 08
+Field:               SECURE_JTAG offset: 0x0010 length: 04
+Field:                WAFER_JTAG offset: 0x0014 length: 07
+Field:                 JTAG_UUID offset: 0x0020 length: 10
+Field:                      TRIM offset: 0x0030 length: 08
+Field:         PROTECT_OTP_WRITE offset: 0x0040 length: 04
+Field:       PROTECT_REGION_ADDR offset: 0x0044 length: 32
+Field:            OTP_PCIE_FLAGS offset: 0x0064 length: 04
+Field:              OTP_PCIE_DEV offset: 0x0068 length: 04
+Field:               OTP_PCIE_ID offset: 0x006c length: 08
+Field:             OTP_PCIE_BARS offset: 0x0074 length: 40
+Field:            OTP_TBBR_ROTPK offset: 0x0100 length: 32
+Field:              OTP_TBBR_HUK offset: 0x0120 length: 32
+Field:               OTP_TBBR_EK offset: 0x0140 length: 32
+Field:              OTP_TBBR_SSK offset: 0x0160 length: 32
+Field:             OTP_SJTAG_SSK offset: 0x0180 length: 32
+Field:    OTP_STRAP_DISABLE_MASK offset: 0x01a4 length: 02</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is a way to list all tags:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># otp -d /sys/bus/nvmem/devices/lan9662-otp0/nvmem  --chip-id 9692 tag list-tag-names
+Tag:   password, id: 1
+Tag:        pcb, id: 2
+Tag:   revision, id: 3
+Tag:    ethaddr, id: 4
+Tag: ethaddr_count, id: 5
+Tag: fit_config, id: 6</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

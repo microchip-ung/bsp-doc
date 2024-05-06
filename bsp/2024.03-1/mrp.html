@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MRP functional description :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.03-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pcie-rpi4cm.html">PCIe NIC with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.03-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../2024.03/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li>Protection switching</li>
+    <li><a href="mrp.html">MRP</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.03-1</button>
+  <div class="version-menu">
+    <a class="version" href="../2024.03/mrp.html">2024.03</a>
+    <a class="version is-current" href="mrp.html">2024.03-1</a>
+    <a class="version" href="../2023.12/mrp.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">MRP functional description</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>MRP is Media Redundancy Protocol as described in IEC 62439-2.</p>
+</div>
+<div class="paragraph">
+<p>The Microchip HW Engine supports the following roles: Media Redundancy
+Manager(MRM), Media Redundancy Client(MRC), Media Redundancy Auto-Manager(MRA),
+Media Redundancy Interconnection Manager(MIM) and Media Redundancy
+Interconnection Client(MIC). In a MRP ring, each node needs to support MRP and
+in a ring can be only one MRM and multiple MRC. It is possible to have multiple
+instances of MRP on a single node. But a port can be part of only one MRP
+instance. In an Interconnect MRP ring, there are only 4 nodes where one node is
+MIM and the other 3 nodes are MIC.</p>
+</div>
+<div class="paragraph">
+<p>The MRM is responsible for detecting when there is a loop in the ring. It is
+sending the frame MRP_Test to detect the loops. It would send MRP_Test on both
+ports in the ring and if the frame is received at the other end, then the ring
+is closed. Meaning that there is a loop. In this case, it sets the port state to
+BLOCKED, not allowing traffic to pass through except MRP frames. In case it
+stops receiving MRP_Test frames from itself, then the MRM will detect that the
+ring is open, therefor it would notify the other nodes of this change and will
+set the state of the port to be FORWARDING.</p>
+</div>
+<div class="paragraph">
+<p>The MRC is responsible for forwarding MRP_Test frames between the ring ports
+(and not to flood on other ports) and to listen when there is a change in the
+network to clear the FDB.</p>
+</div>
+<div class="paragraph">
+<p>Similar with the MRP ring, in the interconnect ring, MIM sends MRP_InTest frames
+on all 3 ports and expects to receive at least on one port the MRP_InTest
+frames. The MIM can operate in a different mode where it sends CFM frames on the
+interconnect port.</p>
+</div>
+<div class="paragraph">
+<p>The MIM is responsible for forwarding MRP_Test frames between ring ports and
+MRP_InTest frames between all ports.</p>
+</div>
+<div class="paragraph">
+<p>The MIC is responsible for forwarding MRP_InTest frames on all ports.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To be able to configure the switch, the following user space application is
+required:
+<a href="https://github.com/microchip-ung/mrp" class="bare">https://github.com/microchip-ung/mrp</a></p>
+</div>
+<div class="paragraph">
+<p>The model of this application is a server that implements the MRP state machine
+which talks with the kernel via netlink interface and a client which talks only
+to the server to apply different configurations.</p>
+</div>
+<div class="paragraph">
+<p>This is an example of topology.
+.MRP Topology
+<span class="image"><img src="_images/mrp-topology.svg" alt="mrp topology"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>2. Usage</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_server"><a class="anchor" href="#_server"></a>2.1. Server</h3>
+<div class="paragraph">
+<p>Before doing any configuration it is required to start the server which needs to
+run background because the user will use mrp application to talk with it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mrp_server &amp;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bridge"><a class="anchor" href="#_bridge"></a>2.2. Bridge</h3>
+<div class="paragraph">
+<p>After that is possible to create the bridge and assign the front ports to it</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+ip link set dev eth3 up
+ip link add name br0 type bridge
+ip link set dev eth0 master br0
+ip link set dev eth1 master br0
+ip link set dev eth2 master br0
+ip link set dev eth3 master br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is not set up yet because that could cause loops in the network.</p>
+</div>
+<div class="paragraph">
+<p>Once all MRP instances are created the bridge can be set up to forward also non
+MRP traffic.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ip link set dev br0 up</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_client"><a class="anchor" href="#_client"></a>2.3. Client</h3>
+<div class="sect3">
+<h4 id="_add_mrmmrc"><a class="anchor" href="#_add_mrmmrc"></a>2.3.1. Add MRM/MRC</h4>
+<div class="paragraph">
+<p>Now we can create MRP instances using this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mrp addmrp bridge br0 ring_nr 1 pport eth0 sport eth1 ring_role mrm</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bridge</code> represents the bridge on which to create the MRP instance.</p>
+</li>
+<li>
+<p><code>ring_nr</code> represents the ring id of which this MRP instance is part of. This
+id needs to be unique on each bridge. It is used to differentiate MRP instances.</p>
+</li>
+<li>
+<p><code>pport</code> represents the primary port</p>
+</li>
+<li>
+<p><code>sport</code> represents the secondary port</p>
+</li>
+<li>
+<p><code>ring_role</code> represents the role of the node. This can be <code>mrm</code>,<code>mrc</code>,<code>mra</code>,
+<code>mim</code>,<code>mic</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is possible to create multiple MRP instances:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mrp addmrp bridge br0 ring_nr 2 pport eth2 sport eth3 ring_role mrm</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ring_nr</code> needs to be unique</p>
+</li>
+<li>
+<p><code>pport</code> and <code>sport</code> can be part of an existing ring.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_status"><a class="anchor" href="#_get_status"></a>2.3.2. Get status</h4>
+<div class="paragraph">
+<p>To see the current status of MRP instances it is possible to use this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mrp getmrp
+bridge: br0 ring_nr: 1 pport: eth0 sport: eth1 ring_role: MRM ring_state: CHK_RO
+bridge: br0 ring_nr: 2 pport: eth2 sport: eth3 ring_role: MRM ring_state: CHK_RC</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bridge</code> represents the bridge on which the MRP instance exists</p>
+</li>
+<li>
+<p><code>pport</code> and <code>sport</code> represents the MRP ports of the instance</p>
+</li>
+<li>
+<p><code>ring_role</code> represents the role</p>
+</li>
+<li>
+<p><code>ring_state</code> represents the state of the state machine. In this case first
+MRP instance is in open state <code>CHK_RO</code> and the second is in closed state
+<code>CHK_RC</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_delete_mrp"><a class="anchor" href="#_delete_mrp"></a>2.3.3. Delete MRP</h4>
+<div class="paragraph">
+<p>To delete an MRP instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mrp delmrp bridge br0 ring_nr 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bridge</code> represents the bridge on which MRP instance exists</p>
+</li>
+<li>
+<p><code>ring_nr</code> represents the ring id of MRP instance</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_add_mimmic"><a class="anchor" href="#_add_mimmic"></a>2.3.4. Add MIM/MIC</h4>
+<div class="paragraph">
+<p>It possible for a node to have also the interconnect role. But this role can be
+set on only when the MRP instance is created. The interconnect mode has two
+modes of operating:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>RC_MODE</code> - where it is using MRP_InTest frames to detect if the ring is
+open/closed</p>
+</li>
+<li>
+<p><code>LC_MODE</code> - where it is using CFM frames on the interconnect ports to detect
+if the links go down</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By default MRP instance with interconnect role will use <code>RC_MODE</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mrp addmrp bridge br0 ring_nr 3 pport eth0 ssport eth1 ring_role mrc in_role mim in_id 1 iport eth3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>in_role</code> represents the interconnect role. This can be <code>mim</code> or <code>mic</code>.</p>
+</li>
+<li>
+<p><code>id_id</code> represents the id of the interconnect node. This id needs to be the
+same wit the other nodes in the interconnect ring.</p>
+</li>
+<li>
+<p><code>iport</code> represents the interconnect port.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To create MRP instance with interconnect role that use <code>LC_MODE</code> the following
+command can be used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mrp addmrp bridge br0 ring_nr 3 pport eth0 ssport eth1 ring_role mrc in_role mim
+in_id 1 iport eth3 in_mode lc cfm_instance 1 cfm_level 7 cfm_mepid 2
+cfm_peer_mepid 1 cfm_dmac 00:00:00:00:00:02 cfm_maid ABCD</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>in_mode</code> represents the operation mode. This can be <code>lc</code> or <code>rc</code>.</p>
+</li>
+<li>
+<p><code>cfm_instance</code> represents the id of the cfm instance</p>
+</li>
+<li>
+<p><code>cfm_level</code> represents MEG level</p>
+</li>
+<li>
+<p><code>cfm_mepid</code> represents the MEP id of the MEP</p>
+</li>
+<li>
+<p><code>cfm_peer_mepid</code> represents the MRP id of the peer MEP</p>
+</li>
+<li>
+<p><code>cfm_dmac</code> represents the MAC address of the MEP</p>
+</li>
+<li>
+<p><code>cfm_maid</code> represents the MAID domain name</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More information about CFM can be found here:
+<a href="https://github.com/microchip-ung/cfm" class="bare">https://github.com/microchip-ung/cfm</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
