@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LAN969x Secure Boot :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="lan969x.html">LAN969x</a></li>
+    <li><a href="lan969x-tfa.html">SecureBoot</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="lan969x-tfa.html">2024.06</a>
+    <a class="version" href="../../2024.03/supported-hw/lan969x-tfa.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/supported-hw/lan969x-tfa.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/supported-hw/lan969x-tfa.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LAN969x Secure Boot</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The LAN969x SoC contains an internal CPU which has secure boot capabilities with
+an implementation based on TF-A (Trusted Firmware for ARM).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This document uses many abbreviations, see the
+<a href="#term">terms and abbreviations</a> section for details.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The BootROM in LAN969x offers the following high-level features:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Boot firmware from:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>SPI-NOR</p>
+</li>
+<li>
+<p>SD-Card</p>
+</li>
+<li>
+<p>eMMC</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Firmware authentication based on public key ECSDA algorithm</p>
+</li>
+<li>
+<p>Firmware encryption using AES encryption with</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Secret Symmetric Key (SSK)</p>
+</li>
+<li>
+<p>Per-device unique key (BSSK)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>A bootrom UART monitor (fwu.html) with support for:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Secure JTAG unlock</p>
+</li>
+<li>
+<p>Firmware update over UART</p>
+</li>
+<li>
+<p>OTP programming</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>LAN969x always boots from the BootROM using the TF-A based boot stages. This is
+the case regardless of if secure boot is needed (enabled) or not. This means that
+it will be the TF-A Bootloaders that boots either U-Boot, the Linux kernel or
+another OS directly.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This document, and the referenced sources are provided under the BSD-3-Clause
+license. This means that the content is provided as-is, and that Microchip
+cannot be held liable. See the
+<a href="#_license">License</a> section for details.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+In LAN969x the DDR initialization is done as part of TF-A/BL2 and not
+in U-Boot. If you need to change DDR settings, then this shall be done in TF-A.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The sources and binaries provided to enable secure boot contains
+<em>demo</em> keys which are not handled in a secure way. The symmetric shared keys, and
+the private keys are publicly available. If any of the advertised security
+features in this document are needed, then the demo keys must be replaced with
+new keys which shall then be kept confidential.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_tf_a_architecture"><a class="anchor" href="#_tf_a_architecture"></a>1.1. TF-A architecture</h3>
+<div class="paragraph">
+<p>The Trusted Firmware-A (TF-A) SW project is a multi-stage bootloader which
+utilizes the ARM TrustZone feature in ARM CPUs as an important part of the
+security concept.</p>
+</div>
+<div class="paragraph">
+<p>The TrustZone feature in ARM CPUs introduce the concept of a Secure-World (<code>S</code>)
+and Non-Secure-World (<code>NS</code>) and the ability to switch between these worlds. The
+various CPU peripherals inside the SoC, or connected to the SoC, are then
+classified as secure or non-secure. Secure-World has access to everything, while
+Non-Secure world only has access to the non-secure peripherals.</p>
+</div>
+<div class="paragraph">
+<p>In HW this is implemented as an additional bit in the address bus to specify the
+Secure/Non-Secure mode. Only Secure-World bus controllers can issue transactions
+with the Secure-Bit set.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>                              |   S-Peripheral     NS-Peripheral
+    --------------------------+---------------------------------
+    S-World Bus Controller    |   Access           Access
+    NS-World Bus Controller   |   No Access        Access</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When zooming in on the CPU, the S/NS worlds are often seen as an additional
+dimension to the exception levels (EL3 - EL0). This is illustrated below:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/bootflow-with-secure-non-secure-v8.svg" alt="Bootflow" width="100%">
+</div>
+</div>
+<div class="paragraph">
+<p>The CPU can jump between the secure and non-secure worlds, and the two worlds
+can communicate with each other by using a shared buffer. This allows the
+same kind of application and use-cases as when having a dedicated security
+processor.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tf_a_bootloaders_blx"><a class="anchor" href="#_tf_a_bootloaders_blx"></a>1.2. TF-A Bootloaders (BLx)</h3>
+<div class="paragraph">
+<p>The TF-A framework provides a multi-stage bootloader concept. There are many
+good reasons to go with a multi stage approach. To name a few points:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make the amount of code/functionality in the ROM as small as possible.</p>
+</li>
+<li>
+<p>Make components running within a given exception level (or having different
+life-time) self-contained. TF-A provides different bootloader stages for the
+different levels.</p>
+</li>
+<li>
+<p>Breaking complex stuff into smaller problems is always a good idea.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here is a list with an explanation of the different boot-loader stages:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Trusted ROM Firmware (<code>BL1</code>)</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>This is a binary built from the TF-A sources.</p>
+</li>
+<li>
+<p>Embedded as ROM code in the chip, execute in secure world EL3/SVC-MON.</p>
+</li>
+<li>
+<p>Purpose:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Do basic platform initialization</p>
+</li>
+<li>
+<p>Read BL2 from boot media into secure memory, authenticate it, run it.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Trusted Boot Firmware (<code>BL2</code>)</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>This is a binary built from the TF-A sources.</p>
+</li>
+<li>
+<p>Loaded from a FIP (see below), and runs from on-chip secure memory, execute
+in secure world EL1/SVC-MON.</p>
+</li>
+<li>
+<p>Purpose:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Will do additional platform initialization including:</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>TrustZone configuration</p>
+</li>
+<li>
+<p>DDR initialization</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Load BL3x images into DDR memory, authenticate, decrypt etc.</p>
+</li>
+<li>
+<p>Run <em>EL3 Runtime Software</em></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>EL3 Runtime Software (<code>BL31</code>)</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>This is a binary built from the TF-A sources.</p>
+</li>
+<li>
+<p>Loaded from from a FIP and runs as Secure EL3/SVC. This firmware stays
+resident in memory, and the services offered here can be called later on.</p>
+</li>
+<li>
+<p>Purpose:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Initialize the secure run-time service, typically PSCI and Trusted HW RNG.</p>
+</li>
+<li>
+<p>Authenticate, decrypt and run BL33.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Non-trusted Firmware (<code>BL33</code>)</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>BL33 is not built from the TF-A sources, but is a binary which is stored in a
+FIP and will be loaded (and executed) by TF-A. This is typically U-Boot, a
+direct booting Linux kernel or some other OS.</p>
+</li>
+<li>
+<p>Runs from DDR memory in non-secure world as EL1/SVC</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Firmware update image (<code>BL2u</code>)</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>This is a binary built from the TF-A sources.</p>
+</li>
+<li>
+<p>Compared to the other images, this is special, as it is not used during normal
+boot, and it is not loaded from a FIP stored in flash.</p>
+</li>
+<li>
+<p>This image replaces the normal <code>BL2</code>. It is loaded by BL1 via the UART-monitor
+using a Serial port. Like BL2, it is authenticated by BL1 before it is being
+executed.</p>
+</li>
+<li>
+<p>Purpose: Provide an updateable stepping stone for board provisioning.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_firmware_image_package_fip"><a class="anchor" href="#_firmware_image_package_fip"></a>1.3. Firmware Image Package (FIP)</h3>
+<div class="paragraph">
+<p>The FIP or Firmware Image Package is the file format TF-A uses to contain all the
+artifacts. This includes the BL2 and BL3x images, certificates, and
+configuration files.</p>
+</div>
+<div class="paragraph">
+<p>The FIP is generated as part of the build process. It is written in flash in
+binary format without any transformation, and the BL1 ROM knows how to locate
+and load a particular image type in the FIP.</p>
+</div>
+<div class="paragraph">
+<p>It can be compared to a very simple read-only file-system, as it contains only
+very basic information of the individual files: type, offset and size.</p>
+</div>
+<div class="paragraph">
+<p>The TF-A project includes 2 host tools:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fiptool</code>: which makes it easy to perform common operations (create, display,
+add/del/mod individual images) in <code>fip</code> files.</p>
+</li>
+<li>
+<p><code>cert_create</code>: which makes it easy to generate the keys and certificates
+needed to establish the chain of trust.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the build process the <code>make</code> target is called <code>certtool</code>, but the
+resulting binary is called <code>cert_create</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The FIP generation process where the <code>fiptool</code> and <code>cert_create</code> are used is
+shown below:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/auth_overview-v8.svg" alt="Bootflow" width="100%">
+</div>
+</div>
+<div class="paragraph">
+<p>As shown above, the <code>cert_create</code> tool reads the BLOBs as input, it reads the
+keys from the disk (or generate them on the fly), and creates the needed
+certificates. Once the certificates have been generated, the normal <code>fiptool</code> can
+bundle both the original BLOBs and the associated certificates into the FIP which
+can then be authenticated. To bind devices to this chain of trust, the SHA or
+the public root key needs to be written into OTP.</p>
+</div>
+<div class="sect3">
+<h4 id="_fip_image_ids"><a class="anchor" href="#_fip_image_ids"></a>1.3.1. FIP Image IDs</h4>
+<div class="paragraph">
+<p>When reading console output, browsing the source code, or when using the
+<code>fiptool</code> or the <code>cert_create</code> tool, it is often necessary to reference the
+individual images. The table below provide the mapping between the defines used
+in the <code>C</code> code, the numeric values as they will appear in the trace output, and
+finally the command-line argument which is understood by the <code>fiptool</code> (and
+<code>cert_create</code>).</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">C-Define</th>
+<th class="tableblock halign-left valign-top">Num</th>
+<th class="tableblock halign-left valign-top">fiptool arg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BL2_IMAGE_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--tb-fw</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BL31_IMAGE_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--tos-fw</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BL33_IMAGE_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--nt-fw</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TRUSTED_BOOT_FW_CERT_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--tb-fw-cert</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TRUSTED_KEY_CERT_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--trusted-key-cert</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TRUSTED_OS_FW_KEY_CERT_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--tos-fw-key-cert</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NON_TRUSTED_FW_KEY_CERT_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--nt-fw-key-cert</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TRUSTED_OS_FW_CONTENT_CERT_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--tos-fw-cert</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NON_TRUSTED_FW_CONTENT_CERT_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--nt-fw-cert</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FW_CONFIG_ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--fw-config</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started_with_tf_a_for_lan969x"><a class="anchor" href="#_getting_started_with_tf_a_for_lan969x"></a>2. Getting started with TF-A for LAN969x</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section provides the hands-on steps needed to build TF-A for LAN969x.</p>
+</div>
+<div class="sect2">
+<h3 id="_build_environment"><a class="anchor" href="#_build_environment"></a>2.1. Build environment</h3>
+<div class="paragraph">
+<p>Most modern Linux distributions can be used for building TF-A, but to ensure
+consistent results a docker image can be used for running all the
+build-commands.</p>
+</div>
+<div class="paragraph">
+<p>This project provides a <code>dr</code> (docker run) script to make it easy to run a
+command in the desired docker container.</p>
+</div>
+<div class="paragraph">
+<p>The <code>dr</code> script is provided by the <a href="https://github.com/microchip-ung/docker-run" class="bare">https://github.com/microchip-ung/docker-run</a>
+project which also offers more details on how it works.</p>
+</div>
+<div class="paragraph">
+<p>The folder <code>/opt/mscc</code> must exist before you can use the <code>dr</code> script. This
+folder is used for caching BSP packages.</p>
+</div>
+<div class="paragraph">
+<p>The short story is that prefixing a command with <code>dr</code> will cause it to run
+in a docker container.</p>
+</div>
+<div class="paragraph">
+<p>You can test if it works just by typing <code>dr ls</code> and check the result.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_getting_sources_and_releases"><a class="anchor" href="#_getting_sources_and_releases"></a>2.2. Getting sources and releases</h3>
+<div class="paragraph">
+<p>Sources can be obtained from
+<a href="https://github.com/microchip-ung/arm-trusted-firmware" class="bare">https://github.com/microchip-ung/arm-trusted-firmware</a> using <code>git clone</code>.</p>
+</div>
+<div class="paragraph">
+<p>A release with both source packages and binaries are provided as release artifacts
+and can be found at
+<a href="https://github.com/microchip-ung/arm-trusted-firmware/releases" class="bare">https://github.com/microchip-ung/arm-trusted-firmware/releases</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building"><a class="anchor" href="#_building"></a>2.3. Building</h3>
+<div class="paragraph">
+<p>To build the TF-A binaries for LAN969x, navigate to the root of the project and
+run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr ./scripts/build.rb -p lan969x_a0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will by default do incremental builds. The <code>--clean</code> flag will delete the
+artifacts for a given platform/variant and cause the next build to be complete
+rebuild.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This will use the demo keys from the <code>./keys</code> folder, which are not
+kept confidential. Any secure products must generate new keys and keep them
+secret.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+By default the build script will load a pre-build U-Boot binary into the
+BL33 blob.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>build.rb</code> script offers a set of options to tweak the default settings.
+The <code>--help</code> option shown below provides an overview of possible options, and
+the following sub-sections provides some additional details.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr ./scripts/build.rb --help
+Usage: build.rb [options]
+    -p, --platform &lt;platform&gt;        Build for given platform: lan966x_b0, lan966x_lm, lan969x_sr, lan969x_a0, lan969x_svb, lan969x_lm, lan969x_pcie
+    -r, --root-of-trust &lt;keyfile&gt;    Set ROT key file
+        --create_keys                Create new keys
+        --bl31-key &lt;keyfile&gt;         Set BL31 key
+        --bl32-key &lt;keyfile&gt;         Set BL32 key
+        --bl33-key &lt;keyfile&gt;         Set BL33 key
+        --non_trusted_world-key &lt;keyfile&gt;
+                                     Set non_trusted_world key
+        --scp_bl2-key &lt;keyfile&gt;      Set scp_bl2 key
+        --trusted_world-key &lt;keyfile&gt;
+                                     Set trusted_world key
+        --encrypt-images &lt;imagelist&gt; List of encrypted images, eg BL2,BL32,BL33
+        --encrypt-ssk &lt;keyfile&gt;      Enable encryption with SSK
+        --encrypt-bssk &lt;keyfile&gt;     Enable encryption with BSSK
+        --fw-nvctr &lt;counter&gt;         Set Secure FW NV counter for FIP
+        --ntfw-nvctr &lt;counter&gt;       Set Non-trusted FW NV counter for FIP
+        --bl33_blob &lt;file&gt;           BL33 binary
+    -d, --debug                      Enable DEBUG
+        --release                    Disable DEBUG
+    -g, --[no-]gptimg                Create a GPT image file with the FIP (obsoleted)
+        --gpt-data &lt;file&gt;            Add GPT payload
+    -c, --clean                      Do a 'make clean' instead of normal build
+    -C, --coverity stream            Enable coverity scan
+    -R, --[no-]ramusage              Report RAM usage
+        --extra1 &lt;file&gt;              Add BL32 EXTRA1 image to FIP
+        --extra2 &lt;file&gt;              Add BL32 EXTRA2 image to FIP</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_platform_selection"><a class="anchor" href="#_platform_selection"></a>2.3.1. Platform selection</h4>
+<div class="paragraph">
+<p>The <code>--platform</code> option is used to select the desired platform. This argument
+must be provided, and when building for LAN969x it must be set to: <code>lan969x_a0</code>:</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bl33_content"><a class="anchor" href="#_bl33_content"></a>2.3.2. BL33 content</h4>
+<div class="paragraph">
+<p>By default the U-Boot binary provided by the BSP will be used as BL33 content.
+This is available as the fip.bin image file in the output folder of the build.
+Likewise the build also produces a fip_linux.bin image file where the BSP
+provided <code>brsdk_standalone_arm.itb</code> blob from the BSP is used as the BL33.
+This <code>itb</code> file contains a Linux kernel and a Device Tree, and will
+allow the system to boot Linux without U-Boot.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes it is desirable to provide the BL33 content directly, this can be done
+using <code>--bl33-blob &lt;file&gt;</code>. The blob can be either a <code>itb</code>/<code>fit</code> image or a
+executable binary. If it is not a <code>fit</code> then it will be relocated to address
+<code>0x60200000</code> (in DDR) and once authenticated the BL31 will do a <code>memory-jump</code> to
+that address. If it is a <code>fit</code> then is is handled as described in the following
+section.</p>
+</div>
+<div class="paragraph">
+<p>Be aware that the BL33 blob will be aggregated into the <code>FIP</code>, and if the blob
+is sufficiently large the resulting image may not fit into the <code>NOR</code> flash (in
+this case eMMC can be used for storing the <code>FIP</code>).</p>
+</div>
+<div class="sect4">
+<h5 id="_loading_fititbs_as_bl33"><a class="anchor" href="#_loading_fititbs_as_bl33"></a>2.3.2.1. Loading FIT/ITBs as BL33</h5>
+<div class="paragraph">
+<p>When using a <code>fit</code> image, the FIT image is placed in DDR NS start
+(<code>0x60200000</code>), just like the "flat" binary type image.</p>
+</div>
+<div class="paragraph">
+<p>When the <code>fit</code> image is parsed, individual components are identified
+in this order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Device tree</p>
+</li>
+<li>
+<p>Root FS (optional)</p>
+</li>
+<li>
+<p>Kernel</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The two first components need to be moved to an area outside where the
+<code>fit</code> image itself resides - i.e. the load address cannot overwrite
+the <code>fit</code> image itself.</p>
+</div>
+<div class="paragraph">
+<p>The kernel (being loaded last) is allowed to overwrite the <code>fit</code> image
+itself, so the load address will typically be the NS DDR start.</p>
+</div>
+<div class="paragraph">
+<p>Apart from the above guides, the following <code>fit</code> image restrictions
+apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Compression is not supported for any data (the kernel loader itself
+may use compression).</p>
+</li>
+<li>
+<p>A <code>load</code> address outside NS DDR area is not allowed.</p>
+</li>
+</ul>
+</div>
+<h5 id="_configuration_selection" class="discrete">Configuration selection</h5>
+<div class="paragraph">
+<p>If the <code>fit</code> image contain more than one configuration node, the
+<code>fit_config</code> OTP tag can be use to name the <code>fit</code> configuration node
+to use. Otherwise, the <code>default</code> config will be used - as is custom
+with <code>fit</code> images.</p>
+</div>
+<h5 id="_device_tree_modifications" class="discrete">Device Tree modifications</h5>
+<div class="paragraph">
+<p>Once the device tree according to the chosen configuration is loaded
+into the proper place, the device tree is "fixed up" with these changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A <code>/memory</code> node is added/modified to containing the memory size
+according to the platform NS DDR location and size.</p>
+</li>
+<li>
+<p>If the device tree property <code>/chosen/bootargs</code> is not present,
+a default command line according to the platform is added.
+(LAN969X: <code>console=ttyAT0,115200 root=/dev/mmcblk0p5 rw rootwait loglevel=8</code>).</p>
+</li>
+<li>
+<p>The load and entry address information in the kernel node is changed to match
+the current SoC.  This is needed as the FIT image produced by the BSP supports
+both the Sparx5 and LAN969x SoCs.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">FIT example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">/dts-v1/;
+/ {
+	description = "Image Tree Source file for Sparx5/LAN969x";
+	#address-cells = &lt;1&gt;;
+
+	images {
+		kernel {
+			description = "Kernel";
+			data = /incbin/("images/mscc-linux-kernel.bin.gz");
+			type = "kernel";
+			arch = "arm64";
+			os = "linux";
+			compression = "gzip";
+			load = /bits/ 64 &lt;0x700080000&gt; /* Change this to 0x60000000 for lan969x */;
+			entry = /bits/ 64 &lt;0x700080000&gt; /* Change this to 0x60000000 for lan969x */;
+		};
+
+		fdt_pcb134 {
+			description = "Flattened Device Tree";
+			data = /incbin/("images/sparx5_pcb134.dtb");
+			type = "flat_dt";
+			arch = "arm64";
+			compression = "none";
+		};
+
+		... more device trees ...
+
+		ramdisk {
+			description = "Ramdisk";
+			data = /incbin/("rootfs.squashfs");
+			type = "ramdisk";
+			arch = "arm64";
+			os = "linux";
+			compression = "none";
+		};
+
+	};
+
+	configurations {
+		default = "pcb134";
+
+		pcb134 {
+			description = "Kernel with DT fdt_pcb134";
+			kernel = "kernel";
+			fdt = "fdt_pcb134";
+			ramdisk = "ramdisk";
+		};
+
+		lan9698_ev23x71a_0_at_lan969x {
+			description = "Kernel with DT fdt_lan9698_ev23x71a_0_at_lan969x";
+			kernel = "kernel";
+			fdt = "fdt_lan9698_ev23x71a_0_at_lan969x";
+			ramdisk = "ramdisk";
+		};
+
+		... more configuration nodes for other device trees ...
+
+	};
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The unpacking of the <code>fit</code> image will display trace log messages if
+trace is enabled. And example is shown here.</p>
+</div>
+<div class="listingblock">
+<div class="title">FIT boot trace log</div>
+<div class="content">
+<pre>NOTICE:  BL1: Booting BL31
+INFO:    Entry point address = 0x200000
+INFO:    SPSR = 0x3cd
+NOTICE:  BL31: lts-v2.8.8(debug):v2.6-mchp1-2067-g2609d6b5a
+NOTICE:  BL31: Built : 11:36:08, Dec  4 2023
+NOTICE:  Preparing to boot 64-bit Linux kernel
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_authentication_keys"><a class="anchor" href="#_authentication_keys"></a>2.3.3. Authentication keys</h4>
+<div class="paragraph">
+<p>By default the keys used for authentication are loaded from the files in the
+<code>./keys</code> folder. The following table provides an overview of the command-line
+options, the default file and a description of its usage:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CMD-option</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--rot</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/rotprivk_ecdsa.pem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confidential key used to sign the <code>TRUSTED_BOOT_FW_CERT</code> and the <code>TRUSTED_KEY_CERT</code>. This file contains the <code>ROT_PRIV_KEY</code> and the <code>ROT_PUB_KEY</code>. The public key is embedded into the both the <code>TRUSTED_BOOT_FW_CERT</code> and the <code>TRUSTED_KEY_CERT</code> - which makes these certificates self-signed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--rot_pub</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/rotpk_ecdsa.der</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non-confidential public key derived from <code>keys/rotprivk_ecdsa.pem</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--rot_sha</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/rotpk_ecdsa_sha256.bin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non-confidential SHA of the public key. This is the key which needs to be loaded into the <code>OTP_TBBR_ROTPK</code> otp field.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--bl31_key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/bl31_ecdsa.pem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confidential key used to sign the <code>bl31</code> blob (<code>BL31_IMAGE_ID</code>). This file contains the <code>TRUSTED_OS_FW_CONTENT_CERT_PRIV_KEY</code> and the <code>TRUSTED_OS_FW_CONTENT_CERT_PUB_KEY</code>. The public key is embedded into the <code>TRUSTED_OS_FW_KEY_CERT</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--bl32_key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/bl32_ecdsa.pem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not in use for LAN969x, but part of TF-A framework.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--bl33_key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/bl33_ecdsa.pem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confidential key used to sign the <code>bl33</code> blob (<code>BL33_IMAGE_ID</code>). This file contains the <code>NON_TRUSTED_FW_CONTENT_CERT_PRIV_KEY</code> and the <code>NON_TRUSTED_FW_CONTENT_CERT_PUB_KEY</code>. The public key is embedded into the <code>NON_TRUSTED_FW_KEY_CERT</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--non_trusted_world_key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/non_trusted_world_ecdsa.pem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confidential key used to sign the <code>NON_TRUSTED_FW_KEY_CERT</code> certificate. This file contains the <code>NON_TRUSTED_WORLD_PRIV_KEY</code> and the <code>NON_TRUSTED_WORLD_PUB_KEY</code>. The public key is embedded into the <code>TRUSTED_KEY_CERT</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--scp_bl2_key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/scp_bl2_ecdsa.pem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not in use for LAN969x, but part of TF-A framework.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--trusted_world_key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keys/trusted_world_ecdsa.pem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confidential key used to sign the <code>TRUSTED_OS_FW_CONTENT_CERT</code> certificate.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The list of keys above are provided in <em>demo</em> versions as part of the sources
+and build artifacts. The demo keys are not kept confidential (in fact they are
+published), and must be replaced with a new set of keys.</p>
+</div>
+<div class="paragraph">
+<p>To generate new keys, delete they above keys in the <code>./keys</code> folder, and run the
+build script with the <code>--create_keys</code> options, like show below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr ./scripts/build.rb --create_keys</pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The tool will not update existing keys. Existing keys must be deleted
+before new keys can be generated.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Check the time stamp and the content of the newly generated keys to confirm that
+they have been updated.</p>
+</div>
+<div class="paragraph">
+<p>The key content can be show using the <code>openssl</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr openssl ec -in ./keys/rotprivk_ecdsa.pem -text
+read EC key
+Private-Key: (256 bit)
+priv:
+    cb:eb:29:43:74:12:54:96:43:e6:42:48:13:8f:5b:
+    cf:8d:c7:8b:da:b8:c8:64:ae:f7:43:c1:94:ce:a6:
+    11:fb
+pub:
+    04:02:a6:68:7e:f2:fe:c9:07:1a:2c:a9:c2:33:b4:
+    bb:89:34:99:7d:b6:30:f9:1f:6c:a8:ae:5c:6d:c5:
+    28:04:48:47:66:1e:e4:36:26:ad:5d:1d:83:45:41:
+    7d:f2:62:e6:e1:a9:2e:d1:c7:cd:0e:c2:62:01:db:
+    94:53:ca:46:c5
+ASN1 OID: prime256v1
+NIST CURVE: P-256
+writing EC key
+-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIMvrKUN0ElSWQ+ZCSBOPW8+Nx4vauMhkrvdDwZTOphH7oAoGCCqGSM49
+AwEHoUQDQgAEAqZofvL+yQcaLKnCM7S7iTSZfbYw+R9sqK5cbcUoBEhHZh7kNiat
+XR2DRUF98mLm4aku0cfNDsJiAduUU8pGxQ==
+-----END EC PRIVATE KEY-----</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rollback_protection_nv_counters"><a class="anchor" href="#_rollback_protection_nv_counters"></a>2.3.4. Rollback protection (NV-Counters)</h4>
+<div class="paragraph">
+<p>By default the build script is using the default trusted and
+non-trusted counters for the platform. (<code>2</code> and <code>3</code> for LAN969X).</p>
+</div>
+<div class="paragraph">
+<p>In order to create a new firmware version that cannot be downgraded,
+you can set the specifically by incrementing the counter for the
+environment that has been fixed.</p>
+</div>
+<div class="paragraph">
+<p>Use</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>--fw-nvctr &lt;counter&gt;</code> to explicitly set the "Trusted FW NV
+counter"</p>
+</li>
+<li>
+<p><code>--ntfw-nvctr &lt;counter&gt;</code> to explicitly set the "Non-Trusted FW NV
+counter"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>to explictly set the version counter embedded in the FIP.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr ./scripts/build.rb -p lan969x_a0 --fw-nvctr 3 --ntfw-nvctr 4</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_image_encryption"><a class="anchor" href="#_image_encryption"></a>2.3.5. Image encryption</h4>
+<div class="paragraph">
+<p>By default images are signed but not encrypted. Image encryption can be enabled
+using the <code>--encrypt-images &lt;imagelist&gt;</code> argument. The listed images will then
+be encrypted using the key provided with <code>--encrypt-ssk &lt;keyfile&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr ./scripts/build.rb -p lan969x_a0                  \
+                        --encrypt-images BL2,BL32,BL33 \
+                        --encrypt-ssk ./keys/ssk.bin</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>ssk</code> key is symmetric, which means that the same key used for encryption
+must also be programmed into the OTP (<code>OTP_TBBR_SSK</code>) where it is used for
+decryption. The key can be any 32byte value, and is typically randomly
+generated.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The <code>build.rb</code> tool offer a <code>--encrypt-bssk</code> flag. This is for
+debug/development usage and should never be used in production. Instead the
+image should be bound by the <code>bl2u</code> utility or via <code>bl32</code> using the <code>HUK</code>
+generated in OTP.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_image_generation"><a class="anchor" href="#_image_generation"></a>2.3.6. Image generation</h4>
+<div class="paragraph">
+<p>The <code>build.rb</code> script will always build a <code>FIP</code> image. This <code>FIP</code> can be
+programmed directly into the NOR image, but to be able to boot from eMMC, the
+eMMC image needs to be prepared with a partition table (<code>gpt</code>) , and the <code>FIP</code>
+needs to be written into a partition (as opposed to being written to a fixed offset
+in the eMMC). The build script can prepare a complete image file with <code>gpt</code>
+partition table and the <code>FIP</code> image filled in the <code>fip</code> and the <code>fip.bak</code>
+partition.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+the <code>-n, --[no-]norimg</code> is only for internal prototypes and should not be
+used.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tf_a_in_details"><a class="anchor" href="#_tf_a_in_details"></a>3. TF-A in Details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter provides a more in-depth description of TF-A technology used in
+LAN969x. Understanding these details are the essential prerequisites to design
+secure products based on LAN969x, and to understand the following sections with
+LAN969x specific implementation.</p>
+</div>
+<div class="sect2">
+<h3 id="_certificate_hierarchy"><a class="anchor" href="#_certificate_hierarchy"></a>3.1. Certificate hierarchy</h3>
+<div class="paragraph">
+<p>TF-A uses a hierarchy of certificates to authenticate the different images in
+the FIP.  This hierarchy is shown at the following image:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/auth_trust_relationship-v8.svg" alt="Bootflow" width="100%">
+</div>
+</div>
+<div class="paragraph">
+<p>As shown on the drawing, BL2 is authenticated by <code>TRUSTED_BOOT_FW_CERT</code>.
+<code>TRUSTED_BOOT_FW_CERT</code> is authenticated by the root of trust (the
+<code>ROT_PUB_KEY</code>). And the <code>ROT_PUB_KEY</code> is finally <em>authenticated</em> by the OTP SHA
+provided by the platform.</p>
+</div>
+<div class="paragraph">
+<p>The key hierarchy limits the usage of the root key, and therefore also the attack
+surface. If one of the downstream keys is leaked, it is possible to do key
+revocation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_revocation_and_rollback_protection"><a class="anchor" href="#_revocation_and_rollback_protection"></a>3.2. Revocation and Rollback protection</h3>
+<div class="paragraph">
+<p>Besides the certificate based authentication, the authentication framework
+will also check the version number of the certificates against a non-volatile
+counter, provided by the platform. The version number in the certificate is
+covered by the signature which ensures the integrity, and the platform provides
+non-volatile counters that are created in such way that they can only increment.</p>
+</div>
+<div class="paragraph">
+<p>The authentication process will first validate the signature and then continue to
+compare the version of the certificate against the platform counter. Here is how
+the comparison is performed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>certificate_version == platform_counter</code>: All is good: The boot process can
+continue.</p>
+</li>
+<li>
+<p><code>certificate_version &gt; platform_counter</code>: The <code>platform_counter</code> will be
+incremented to the value of <code>certificate_version</code>: The boot process can continue.</p>
+</li>
+<li>
+<p><code>certificate_version &lt; platform_counter</code>: Fail as this is considered
+a rollback attack: The boot process will stop here, and the system
+needs to be updated with a new image matching the version of the platform
+counter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The purpose of this mechanism is to have a way of performing revocation of
+certificates. If one of the private keys has been revealed, new certificates
+needs to be issued and provisioned. But the old firmware will still pass the
+public key authentication, and the only way to prevent an attacker from rolling
+back the firmware, is to have such a counter.</p>
+</div>
+<div class="paragraph">
+<p>The ROT (root of trust) key does not have any version numbers as it cannot be
+updated.</p>
+</div>
+<div class="paragraph">
+<p>TF-A uses 2 none-volatile counters: <code>trusted_nv_ctr</code> and <code>non_trusted_nv_ctr</code>.
+The <code>non_trusted_fw_key_cert</code> and <code>non_trusted_fw_content_cert</code> certificates are
+checked against the <code>non_trusted_nv_ctr</code>, all other (except <code>ROT</code>) are evaluated
+against <code>trusted_nv_ctr</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_image_signing_in_details"><a class="anchor" href="#_image_signing_in_details"></a>3.3. Image signing in details</h3>
+<div class="paragraph">
+<p>To sign a certificate the private key is needed, but to authenticate a
+certificate only the public key is needed. The <code>cert_create</code> tool needs access
+to both the public and private keys. The public keys are needed, because they are
+aggregated into the certificates, and the private keys are needed to do the
+signing.</p>
+</div>
+<div class="paragraph">
+<p>The following picture illustrates the entire signing process done by
+<code>cert_create</code>.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/auth_signing-v8.svg" alt="Bootflow" width="100%">
+</div>
+</div>
+<div class="paragraph">
+<p>The green boxes are binaries generated by the compiler. <code>cert_create</code> will
+calculate the SHA, feed the SHA into the certificate, and sign the certificate.
+The trusted and non-trusted counters is version numbers. These version numbers
+are given at the command-line, and will be stored in the certificates as well.
+The trust hierarchy is created by feeding the SHA of 1 public key, into a parent
+certificate. The 2 certificates: <code>TRUSTED_BOOT_FW_CERT</code> and <code>TRUSTED_KEY_CERT</code>
+are authenticated by the root-of-trust public certificate.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bl1_chain_of_trust_verification"><a class="anchor" href="#_bl1_chain_of_trust_verification"></a>3.4. BL1 Chain of Trust verification</h3>
+<div class="paragraph">
+<p>When <code>BL1</code> loads the <code>BL2</code> and the <code>FW_CONFIG</code> images from the FIP, it needs to
+authenticate the images, and the related certificates to establish a chain of
+trust. This is shown in the image below:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/auth_loading_bl1.svg" alt="Bootflow" width="60%">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bl2_chain_of_trust_verification"><a class="anchor" href="#_bl2_chain_of_trust_verification"></a>3.5. BL2 Chain of Trust verification</h3>
+<div class="paragraph">
+<p>When <code>BL2</code> loads the <code>BL31</code> and <code>BL33</code> images from the FIP, it needs to
+authenticate the images, and the related certificates to establish a chain of
+trust. This is shown in the image below:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/auth_loading_bl2-v8.svg" alt="Bootflow" width="100%">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_firmware_encryption"><a class="anchor" href="#_firmware_encryption"></a>3.6. Firmware encryption</h3>
+<div class="paragraph">
+<p>Firmware encryption can be used to keep the firmware confidential, and protect
+against an attacker reading the content of the flash devices and extracting
+information from that.</p>
+</div>
+<div class="paragraph">
+<p>When enabled, firmware will be encrypted using AES-128-GCM, which uses symmetric
+keys.</p>
+</div>
+<div class="paragraph">
+<p>Two types of firmware keys are supported:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>ssk</code> (secret symmetric key): Here the same key is used to encrypt the firmware
+(when creating the FIP image) and decrypting the firmware when loading running
+on the target.</p>
+</li>
+<li>
+<p><code>bssk</code> (binding secret symmetric key): Here the <code>ssk</code> is used when encrypting the
+image and generating the FIP. But when the image is loaded on the board, it is
+bound to the board before it is being programmed to the flash. The binding
+operation will use the <code>ssk</code> to decrypt the image in memory, and then encrypt
+the image using a key derived from the <code>huk</code> (hardware unique key). When the
+system is booting, the BL1/BL2 will decrypt the image using the key derived
+from the <code>huk</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Only the individual images are encrypted, but the FIP container stays
+unencrypted. This is not a security risk, as the FIP is just a container that
+does not have any sensitive information.</p>
+</div>
+<div class="paragraph">
+<p>When images are encrypted an encryption header is prepended to the
+image. This header contains a flag indicating if the image has been
+bound or not. (Indicating using <code>ssk</code> or <code>bssk</code>).</p>
+</div>
+<div class="paragraph">
+<p>Using <code>bssk</code> for firmware encryption instead of <code>ssk</code> have the following
+advantages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Firmware cannot be copied/cloned from one board to another using an external
+flash programmer. If the firmware are licensed to a specific board, then it is
+an advantage to ensure that board firmware cannot be copied.</p>
+</li>
+<li>
+<p>If the <code>ssk</code> is leaked, an attacker cannot decrypt the image found in the
+flash memory of a board - the attacker will have to find another way to get
+the image before it is programmed (intercept an update session).</p>
+</li>
+<li>
+<p>If a <code>bssk</code> key is leaked, it will only impact one board.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The disadvantage of using <code>bssk</code> is the additional complications of
+manufacturing the boards, as it is not possible to do this with pre-programmed
+images.</p>
+</div>
+<div class="paragraph">
+<p>Firmware binding can be done from the <code>fwu.html</code> tool.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lan969x_tf_a_platform_support"><a class="anchor" href="#_lan969x_tf_a_platform_support"></a>4. LAN969x TF-A Platform support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The core of TF-A is platform independent, and each platform needs to provide the
+platform specific implementation and drivers.</p>
+</div>
+<div class="paragraph">
+<p>The platform specific layer defines how the SW (and ROM) interface with the
+hardware, and how the keys in the system are kept safe.</p>
+</div>
+<div class="sect2">
+<h3 id="_strapping_modes"><a class="anchor" href="#_strapping_modes"></a>4.1. Strapping modes</h3>
+<div class="paragraph">
+<p>See table in <a href="lan969x-boot.html#pin_modes" class="xref page">LAN969x Strapping Pins</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_booting"><a class="anchor" href="#_booting"></a>4.2. Booting</h3>
+<div class="paragraph">
+<p>See <a href="lan969x-boot.html#booting" class="xref page">this section</a> and the following.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_otp"><a class="anchor" href="#_otp"></a>4.3. OTP</h3>
+<div class="paragraph">
+<p>The one-time-programmable memory provided by the SoC is an important source of
+configuration data. It is the only persistent memory not depending on any
+external components and it is used for many different purposes.</p>
+</div>
+<div class="paragraph">
+<p>The OTP can be divided into regions, and each region can be write protected, and
+if write-protected, also read-protected.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The OTP contains secret keys, which must be protected to keep
+firmware confidential. The offered mechanism to keep such keys confidential is
+the <code>read-protect</code> setting on the given region. The region containing the keys
+must be marked as read-protected by the BL2 before it hands over control to BL31.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Each OTP region contains a number of OTP attributes, which may then contain a
+number of OTP fields.</p>
+</div>
+<div class="paragraph">
+<p>This is all covered in the following subsections.</p>
+</div>
+<div class="sect3">
+<h4 id="_otp_regions"><a class="anchor" href="#_otp_regions"></a>4.3.1. OTP Regions</h4>
+<div class="paragraph">
+<p>The OTP shall be divided into the following 8 regions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>REG.  START   END     Secure  Description
+----  ------  ------  ------  -----------------------------------------
+0     0x0000  0x003F  No      Manufacturing data
+1     0x0040  0x0043  No      OTP Write protect
+2     0x0044  0x0063  No      OTP Region Definitions
+3     0x0064  0x00FF  No      Insecure configuration without emulation
+4     0x0100  0x01FF  Yes     Keys and other security related
+5     0x0200  0x023F  No      Non-volatile secure counters
+6     0x0240  0x07FF  No      Fixed position user-space / custom usage
+7     0x0800  0x2000  No      Key-value store (semi-updateable)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>secure</code> flag indicates if the area contains secret information, and
+hence must be configured to remove read access before leaving the BL2.</p>
+</div>
+<div class="paragraph">
+<p>The following sub-section documents the intended use of the regions, and
+highlights some important points for each of these.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The configuration of OTP-regions are kept in the OTP itself. It is
+the customer responsibility to program the regions. The Linux user-space otp
+tool can be used for this purpose.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_otp_attributes"><a class="anchor" href="#_otp_attributes"></a>4.3.2. OTP attributes</h4>
+<div class="paragraph">
+<p>The following OTP table shows the pre-defined OTP attributes, used by either HW,
+BL1 and/or BL2.</p>
+</div>
+<div class="paragraph">
+<p>BL3x, U-Boot, Linux or other clients can also access the OTP, if the access
+control of the given regions allow it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Begin    End     Size  RTL  EMU  REG.  Name
+------   ------  ----  ---  ---  ----  ----------------
+0x0000   0x0003     4    X          0  OTP_PRG
+0x0004   0x0004     1    X          0  FEAT_DIS
+0x0005*  0x0006     2    X          0  PARTID
+0x0007   0x0007     1               0  TST_TRK
+0x0008   0x000f     8               0  SERIAL_NUMBER
+0x0010   0x0013     4    X          0  SECURE_JTAG
+0x0014   0x001a     7               0  WAFER_TRK
+reserved 5 bytes
+0x0020   0x0029    10    X          0  JTAG_UUID
+reserved 6 bytes
+0x0030   0x0037     8               0  TRIM
+reserved 8 bytes
+0x0040   0x0043     4    X          1  PROTECT_OTP_WRITE
+0x0044   0x0063    32    X          2  PROTECT_REGION_ADDR
+0x0064   0x0067     4               3  Reserved
+0x0068   0x006B     4               3  Reserved
+0x006c   0x0073     8               3  Reserved
+0x0074   0x009b    40               3  Reserved
+reserved 100 bytes
+0x0100   0x011f    32         X     4  OTP_TBBR_ROTPK
+0x0120   0x013f    32         X     4  OTP_TBBR_HUK
+0x0140   0x015f    32         X     4  OTP_TBBR_EK
+0x0160   0x017f    32         X     4  OTP_TBBR_SSK
+0x0180   0x019f    32         X     4  OTP_SJTAG_SSK
+reserved 4 bytes
+0x01a4   0x01a5     2         X     4  OTP_STRAP_DISABLE_MASK
+reserved 90 bytes
+0x0200   0x021f    32         X     5  OTP_TBBR_NTNVCT
+0x0220   0x023f    32         X     5  OTP_TBBR_TNVCT</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above table the <code>RTL</code> column indicate that the OTP value is read and used
+by the digital HW in the SoC before SW is running (under reset).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_otp_attribute_otp_strap_disable_mask"><a class="anchor" href="#_otp_attribute_otp_strap_disable_mask"></a>4.3.3. OTP attribute: OTP_STRAP_DISABLE_MASK</h4>
+<div class="paragraph">
+<p>This attribute is a 16 bit mask. Each bit in the mask corresponds to one of the
+strapping modes. By default the mask is set to all zeroes which means that all
+strapping modes are allowed.
+If a customer wants to disable one or more strapping modes the corresponding bits
+can be set in the mask and the ROM code will refuse to boot into the indicated
+modes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_otp_attribute_trim"><a class="anchor" href="#_otp_attribute_trim"></a>4.3.4. OTP attribute: TRIM</h4>
+<div class="paragraph">
+<p>This 8 byte attribute consists of a set of bitfields that are programmed in the
+factory at production time, based on measurements on the device.</p>
+</div>
+<div class="paragraph">
+<p>These values will be read at boot and applied as 'corrections' to various
+hardware features.</p>
+</div>
+<div class="paragraph">
+<p>This is the table of bitfields in the TRIM attribute:</p>
+</div>
+<table class="tableblock frame-all grid-rows stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bits</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>63:43</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Reserved</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not programmed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>42:37</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UVOV_GPIOB_TRIM</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trimming value for <code>UVOV_GPIOB</code>.  Corresponding register: <code>UVOV:UVOV_CFG[0]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>36:31</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UVOV_BOOT_TRIM</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trimming value for <code>UVOV_BOOT</code>. Corresponding register: <code>UVOV:UVOV_CFG[1]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>30:25</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UVOV_RGMII_TRIM</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trimming value for <code>UVOV_RGMII</code>. Corresponding register: <code>UVOV:UVOV_CFG[4]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>24:19</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UVOV_GPIOA_TRIM</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trimming value for <code>UVOV_GPIOA</code>. Corresponding register: <code>UVOV:UVOV_CFG[5]</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_firmware_config_fw_config"><a class="anchor" href="#_firmware_config_fw_config"></a>4.4. Firmware Config (<code>FW_CONFIG</code>)</h3>
+<div class="paragraph">
+<p>In LAN969x, the <code>FW_CONFIG</code> is a DTB (Device Tree Blob), created from
+DTS (Device Tree Source) files during firmware compilation.</p>
+</div>
+<div class="paragraph">
+<p>The <code>FW_CONFIG</code> file is loaded by the BL1 stage, but only used by the
+BL2 stage. As such, the BL1 stage use device settings according to
+defaults and device strapping
+(<a href="lan969x-boot.html#pin_modes" class="xref page">LAN969x Strapping Pins</a>).</p>
+</div>
+<div class="paragraph">
+<p>The device tree sources are collected from the
+<code>plat/microchip/lan969x/&lt;target&gt;/fdts</code> directory, where <code>&lt;target&gt;</code>
+selects the actual target, for example <code>lan969x_a0</code>.</p>
+</div>
+<div class="paragraph">
+<p>The target DTS may (will) also refer the common platform DTS files located in
+the <code>plat/microchip/lan969x/fdts</code> directory.</p>
+</div>
+<div class="paragraph">
+<p>An example file is shown below.</p>
+</div>
+<div class="listingblock">
+<div class="title">FW_CONFIG example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">/*
+ * Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+/dts-v1/;
+
+#include "lan969x.dtsi"
+#include "lan969x-ddr.dtsi"
+
+&amp;emmc_clk {
+	clock-frequency = &lt;100000000&gt;;
+};
+
+&amp;sdmmc0 {
+	status = "okay";
+	bus-width = &lt;8&gt;;
+};
+
+&amp;qspi0 {
+	status = "okay";
+	spi-flash@0 {
+		compatible = "jedec,spi-nor";
+		reg = &lt;0&gt;;
+		spi-max-frequency = &lt;100000000&gt;;
+		spi-tx-bus-width = &lt;4&gt;;
+		spi-rx-bus-width = &lt;4&gt;;
+	};
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>FW_CONFIG</code> DTB is used to configure device properties which
+cannot be probed, and where hardcoding firmware is not desired.</p>
+</div>
+<div class="paragraph">
+<p>The properties currently used to configure the TFA firmware for
+LAN969X are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>eMMC device properties. Clock frequency, bus width.</p>
+</li>
+<li>
+<p>SPI-NOR properties. Max speed, bus width.</p>
+</li>
+<li>
+<p>DDR. DDR configuration, if TFA is used to initialize and use DDR memory.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For DDR configuration, there is a supporting tool located in
+<a href="https://github.com/microchip-ung/ddr-umctl" class="bare">https://github.com/microchip-ung/ddr-umctl</a>. Please refer to this for
+more information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_secure_ram"><a class="anchor" href="#_secure_ram"></a>4.5. Secure RAM</h3>
+<div class="paragraph">
+<p>To ensure that keys are kept private, and that the execution of BL1, BL2 and
+BL31 cannot be tampered with these images must be run from secure memory.</p>
+</div>
+<div class="paragraph">
+<p>LAN969x have 2MB of on-chip SRAM (Secure RAM), and on-the-fly DDR memory
+encryption.</p>
+</div>
+<div class="paragraph">
+<p>BL1 executes from ROM directly, but uses the SRAM for static RW data and
+stack. BL1 will then load BL2 from flash memory into SRAM, and BL2 will then
+execute from SRAM and also use it for its static RW data and stack.</p>
+</div>
+<div class="paragraph">
+<p>BL2 will initialize the DDR memory, and setup a secure and a non-secure partition.
+The secure partition uses on-the-fly DDR encryption, and can only be accessed from
+the secure world. Once completed the BL2 loads the BL31 from flash memory into
+the secure DDR memory.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+DDR encryption causes a longer latency to the DDR memory, and is therefore
+not used for the entire DDR memory.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>BL31, which is executing from secure DDR memory, will then wipe the contents
+of the SRAM, and reconfigure the Trust Zone Controller to let all of the SRAM be
+accessible from the Non-Secure world.</p>
+</div>
+<div class="paragraph">
+<p>This is important for users of the RTE, as the RTE feature needs access to the
+SRAM.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_secure_jtag"><a class="anchor" href="#_secure_jtag"></a>4.6. Secure JTAG</h3>
+<div class="paragraph">
+<p>LAN969x supports a secure JTAG port which is configured via the <code>SECURE_JTAG</code> OTP
+attribute. The data-sheet documents the encoding of <code>SECURE_JTAG</code>. Once
+programmed the JTAG port HW will wake up in one of the following modes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open: The JTAG port is operating normally.</p>
+</li>
+<li>
+<p>Secure mode 1: The JTAG port will respond to a boundary scan, but is otherwise
+unresponsive (locked down).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In this mode it is possible to unlock the port (move the JTAG port to the
+open state) using a challenge-response mechanism running over JTAG.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Secure mode 2: The JTAG port will be completely unresponsive (locked down).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In this mode it is possible to unlock it (move it to open state) using a
+challenge-response mechanism running over JTAG.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Closed: The JTAG port is disabled and cannot be enabled.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If one of the secure-modes is enabled, then the JTAG port can be unlocked using a
+challenge/response. The challenges is a random 32 byte blob generated by the
+LAN996x device, and the response to unlock is a <code>sha256(challenge-data<br>
+OTP_SJTAG_SSK)</code> (where <code>OTP_SJTAG_SSK</code> is the content of the OTP field, and <code>+</code>
+is a concatenation of the 2 blobs).</p>
+</div>
+<div class="paragraph">
+<p>The <code>scripts/sjtag-challenge.rb</code> in the TF-A repository can be used to calculate
+the response to a challenge.</p>
+</div>
+<div class="paragraph">
+<p>The <code>fwu.html</code> tool can be used to generate the challenge and unlock the JTAG
+port if the correct response is given.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="secureartifacts"><a class="anchor" href="#secureartifacts"></a>5. Guidelines for preparing secure artifacts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The TF-A project for LAN969x provides a template to lower the effort
+to build a set of secure artifacts. But the deliverables from
+Microchip are from an open and transparent system, which with a few
+changes can be turned into a secure set of artifacts.</p>
+</div>
+<div class="paragraph">
+<p>Following is a set of guidelines on how to turn the open-system into a set of
+secure boot artifacts:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Understand what you are doing, and do not blindly trust us.</p>
+</li>
+<li>
+<p>Generate new keys and keep the private and the shared/symmetric keys secret
+(but still available as they will be needed to build potential new versions).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Review how keys are generated, and evaluate if the methods provided in here
+are good enough for you need.</p>
+</li>
+<li>
+<p>How to keep keys secret is beyond the scope of this document, but look for
+good praxis in the industry.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Use the certificate hierarchy to limit the exposure of the private keys. The
+root-of-trust should only be used very rarely and can be kept offline.</p>
+</li>
+<li>
+<p>Only increment the NV counters when a released version poses a security
+breach.</p>
+</li>
+<li>
+<p>The BL2U functionality provided in this project is a potential security
+breach, as it can expose the content of the OTP. Do one of the following:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Change it to make it such that it will not be able to dump the OTP content.</p>
+</li>
+<li>
+<p>Do not generate it (delete it after each build).</p>
+</li>
+<li>
+<p>Treat it as a shared/symmetric key as it can be used to read out the keys
+from OTP. Do not give it to anyone who do not have these keys already.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_guideline_secure_provisioning"><a class="anchor" href="#_guideline_secure_provisioning"></a>6. Guideline Secure provisioning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To build a secure product the manufacturing procedure must include the steps to
+program the OTP with needed keys and settings.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+A pre-request for this is to generate the keys and secure artifacts
+as explained in <a href="#secureartifacts">Secure artifacts</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Move to a trusted environment, where private and shared keys can be handled
+without risk of leaks.</p>
+</li>
+<li>
+<p>Initialize the OTP with the following content (either via <code>BL2U</code> / <code>fwu.html</code> or
+my using the <code>otp</code> Linux user-space utility.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Regions must be defined (program <code>PROTECT_REGION_ADDR</code>)</p>
+</li>
+<li>
+<p>Following keys shall be programmed with the prepared content:
+<code>OTP_TBBR_ROTPK</code>, <code>OTP_TBBR_SSK</code> and <code>OTP_SJTAG_SSK</code>.</p>
+</li>
+<li>
+<p>Enable secure JTAG by programming <code>SECURE_JTAG</code>.</p>
+</li>
+<li>
+<p>Program the <code>OTP_TBBR_HUK</code> with unknown random data.</p>
+</li>
+<li>
+<p>Optional: disable any strap modes not needed by writing
+<code>OTP_STRAP_DISABLE_MASK</code>.</p>
+</li>
+<li>
+<p>Write protect region 4 by updating the content of <code>PROTECT_OTP_WRITE</code>.</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>IMPORTANT: This is not only for write-protect, this is also needed to
+prevent non-secure read-access of region <code>4</code>.</p>
+</li>
+<li>
+<p>NOTE: Additional regions can be write protected, but region 5 <em>must</em> remain
+writeable!</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Provision the firmware image in flash as needed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="term"><a class="anchor" href="#term"></a>7. TERMS and ABBREVIATIONS</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>AES             Advanced Encryption Standards
+ATE             Automatic Test Equipment. Device used in SoC production and test.
+BL1             Boot Loader 1: In secure immutable ROM (Trusted ROM Firmware)
+BL2             Boot Loader 2: In secure on-chip RAM, temporary (Trusted Boot
+                Firmware)
+BL31            Boot Loader 31: Resident secure services (ARM v8)
+BL32            Boot Loader 32: Resident secure services (ARM v7)
+BL33            Boot Loader 33: Typically U-Boot.
+                trusted Firmware)
+BSSK            Binding Secret Symmetric Key
+DT              Device Tree
+eMMC            Embedded MultiMediaCard
+FIP             Firmware Image Package
+FIT             Flattened Image Tree
+GPT             GUID Partition Table
+HUK             Hardware Unique Key
+JTAG            Joint Test Action Group, interface for testing and debugging
+NS              Non-Secure World
+OP-TEE          Open Portable Trusted Execution Environment
+OS              Operation System
+OTP             One-Time-Programmable Memory
+PCIe            Peripheral Component Interconnect Express
+PSCI            Power State Coordination Interface
+RNG             Random Number Generator
+ROT             Root of Trust
+RTE             Real-Time Engine. Device used for real-time equipment control.
+RTL             Register-Transfer Level
+S               Secure World
+SD-Card         Secure Digital Card
+SHA             Secure Hash Algorithm family
+SJTAG           Secure JTAG
+SPI             Serial Peripheral Interface
+SRAM            Secure Ram
+SSK             Secret Symmetric Key
+TBBR            Trusted Board Boot Requirements
+TF-A            Trusted Firmware for ARM
+UART            Universal Asynchronous Receiver-Transmitter</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license"><a class="anchor" href="#_license"></a>8. License</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document is provided under the BSP-3-Clause license (where swoftware is
+replaced with document). The BSD-3-Clause license has been chosen here as it is
+the same license used by the TF-A project.</p>
+</div>
+<div class="paragraph">
+<p>Here is the license covering this file/document:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+-  Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+-  Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+-  Neither the name of Arm nor the names of its contributors may be used to
+endorse or promote products derived from this document without specific
+prior written permission.
+
+THIS DOCUMENT IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+DOCUMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

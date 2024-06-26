@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CFM functional description :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li><a href="cfm.html">CFM</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="cfm.html">2024.06</a>
+    <a class="version" href="../2024.03/cfm.html">2024.03</a>
+    <a class="version" href="../2024.03-1/cfm.html">2024.03-1</a>
+    <a class="version" href="../2023.12/cfm.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">CFM functional description</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>CFM is Connectivity Fault Management as described in 802.1Q section 20.</p>
+</div>
+<div class="paragraph">
+<p>The Microchip switch has a HW Engine that supports a range of functionality that
+is related to the handling of OAM frames at both ingress and egress directions.<br>
+What is supported differs depending on the exact platform.
+If a described functionality is not supported on all platforms it will be stated.<br></p>
+</div>
+<div class="ulist">
+<div class="title">Currently, the following is supported:</div>
+<ul>
+<li>
+<p>Creating/Deleting a Port domain MEP</p>
+</li>
+<li>
+<p>Enable/Disable CCM PDU handling.</p>
+</li>
+<li>
+<p>Adding/Removing Peer MEPs.</p>
+</li>
+<li>
+<p>CCM PDU handling.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">The MEP handling has an impact on the frame on ingress:</div>
+<ul>
+<li>
+<p>MEG level filtering</p>
+</li>
+<li>
+<p>CCM Frame reception interval monitoring.</p>
+</li>
+<li>
+<p>CCM defect (LOC) generation.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">The MEP handling has an impact on the frame on egress:</div>
+<ul>
+<li>
+<p>MEG level filtering</p>
+</li>
+<li>
+<p>CCM Frame Transmission.</p>
+</li>
+<li>
+<p>CCM Frame updating with RDI.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One Down Port domain MEP can be created per bridge device (port).<br>
+The MEP will prevent any leaking of OAM PDU in and out of the MEG.<br>
+Ingress CCM frames on the configured MEG level and below will be handled by the MEP.<br>
+CCM frame will be transmitted with the configured MEG level.</p>
+</div>
+<div class="paragraph">
+<p>This is a model of the possible MEP configuration:<br></p>
+</div>
+<div class="paragraph">
+<div class="title">MEP Model</div>
+<p><span class="image"><img src="_images/mep-model.svg" alt="mep model"></span></p>
+</div>
+<div class="paragraph">
+<p>First a bridge must be created and devices (ports) must be added:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ip link add name br0 type bridge
+ip link set dev eth0 master br0
+ip link set dev eth1 master br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code> with <code>eth0</code> and <code>eth1</code> as devices (ports)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mep_create_and_delete"><a class="anchor" href="#_mep_create_and_delete"></a>2. MEP Create and Delete</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is creating a MEP instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm mep-create bridge br0 instance 10 domain port direction down port eth0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+The device (port) is <code>eth0</code>.<br>
+Instance number is <code>10</code>.<br>
+Domain is <code>port</code>.<br>
+Direction is <code>down</code><br>
+<br>
+The MEP is in the Port domain meaning OAM frames are untagged and not related to any VLAN.<br></p>
+</div>
+<div class="paragraph">
+<p>This is deleting a MEP instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm mep-delete bridge br0 instance 10</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mep_configuration"><a class="anchor" href="#_mep_configuration"></a>3. MEP Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a MEP is created, there are some attributes that can be configured with this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm mep-config bridge br0 instance 10 mac 00-00-00-03-00-00 level 5 mepid 8</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+MAC address of the MEP is <code>00-00-00-03-00-00</code>.<br>
+MEG Level of the MEP is <code>5</code>.<br>
+MEP ID of the MEP is <code>8</code>.<br></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_peer_mep_add_and_remove"><a class="anchor" href="#_peer_mep_add_and_remove"></a>4. Peer MEP Add and Remove.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a MEP is created, Peer MEPs can be added and removed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm cc-peer bridge br0 instance 10 mepid 9
+cfm cc-peer bridge br0 instance 10 mepid 8</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+Peer MEP with ID <code>8</code> and <code>9</code> are added.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm cc-peer bridge br0 instance 10 remove 1 mepid 8</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+Peer MEP with ID <code>8</code> is removed.<br></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mep_cc_configuration"><a class="anchor" href="#_mep_cc_configuration"></a>5. MEP CC Configuration.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a MEP is created, the Continuity Check functionality can be enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm cc-config bridge br0 instance 10 enable 1 interval 1s domain-name ABCDEFGHIJ short-name KLMNOPQRST</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+CC is <code>enable</code>.<br>
+CCM Expected reception interval and transmission interval is <code>1s</code> - one frame per second.<br>
+MAID Domain name is <code>ABCDEFGHIJ</code>.<br>
+MAID Short name is <code>KLMNOPQRST</code>.<br>
+<br>
+The MAID Domain name can be omitted to configure MAID with no Domain name.<br>
+<br>
+When CC is enabled CCM Frame reception interval is monitored for all add Peer MEPs.</p>
+</div>
+<div class="paragraph">
+<p>When a MEP is created, the Continuity Check functionality can be disabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm cc-config bridge br0 instance 10 enable 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+CC is not <code>enable</code>.<br></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mep_ccm_transmission"><a class="anchor" href="#_mep_ccm_transmission"></a>6. MEP CCM transmission.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a MEP is created, transmission of CCM frames can be enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm cc-ccm-tx bridge br0 instance 10 dmac 01-80-C2-00-00-30 sequence 1 \
+              period 5 iftlv 1 iftlv-value 100 porttlv 1 porttlv-value 200</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+CCM destination MAC is <code>01-80-C2-00-00-30</code>.<br>
+CCM insertion of <code>sequence</code> numbers is enabled.<br>
+CCM is transmitted for a period of <code>5</code> seconds<br>
+CCM insertion of Interface TLV is enabled and the value is <code>100</code>.<br>
+CCM insertion of Port TLV is enabled and the value is <code>200</code>.<br></p>
+</div>
+<div class="paragraph">
+<p>Within 5 seconds this function must be called again in order to keep transmission alive.</p>
+</div>
+<div class="paragraph">
+<p>When a MEP is created and transmission of CCM frames is enabled,
+the state of the inserted RDI can be controlled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm cc-rdi bridge br0 instance 10 rdi 1"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+CCM inserted RDI is set tp <code>1</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mep_and_peer_mep_show_status"><a class="anchor" href="#_mep_and_peer_mep_show_status"></a>7. MEP and peer MEP show status.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The below command will show the status for all created MEPs on the bridge.<br>
+For each MEP it will show the status for all added Peer MEPs.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm mep-status-show bridge br0
+
+    CFM MEP status:
+    Instance 10
+    Opcode unexp seen 0
+    Version unexp seen 0
+    Rx level low seen 0
+
+    CFM CC peer status:
+    Instance 10
+    Peer-mep 9
+    CCM defect 1
+    Rdi 0
+    Port tlv 0
+    If tlv 0
+    CCM seen 0
+    Tlv seen 0
+    Seq unexp seen 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge is <code>br0</code>.<br>
+Instance number is <code>10</code>.<br>
+Peer MEP ID is <code>9</code>.<br></p>
+</div>
+<div class="paragraph">
+<p><code>Opcode unexp seen</code> is 1 when OAM PDU with unknown opcode is received.<br>
+<code>Version unexp seen</code> is 1 when OAM PDU with unknown version is received.<br>
+<code>Rx level low seen</code>  is 1 when OAM PDU with low MEG level is received.<br>
+<br>
+<code>CCM defect</code> is 1 when no CCM frame is received for 3,25 * CC interval.<br>
+<code>Rdi</code> is 1 when CCM frame is received with RDI,<br>
+<code>Port tlv</code> is the value of the received Port TLV value.<br>
+<code>If tlv</code> is the value of the received Interface TLV value.<br>
+<code>CCM seen</code> is 1 when CCM frame is received.<br>
+<code>Tlv seen</code> is 1 when CCM frame with TLV is received.<br>
+<code>Seq unexp seen</code> is 1 when CCM frame with an unexpected sequence number is received.<br>
+<br>
+All status named "seen" will be cleared when the command is called.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mep_and_peer_mep_show_configuration"><a class="anchor" href="#_mep_and_peer_mep_show_configuration"></a>8. MEP and peer MEP show configuration.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The below command will show the configuration for all created MEPs on the bridge.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm mep-config-show bridge br0</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mep_notifications"><a class="anchor" href="#_mep_notifications"></a>9. MEP notifications.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The below command will start a NETLINK CFM notification server that will print out
+Peer MEP CCM defect status change.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cfm_server &amp;</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
