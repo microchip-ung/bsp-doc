@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Booting LAN966x :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.09">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.09</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="lan966x.html">LAN966x</a></li>
+    <li><a href="lan966x-boot.html">Booting</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.09</button>
+  <div class="version-menu">
+    <a class="version is-current" href="lan966x-boot.html">2024.09</a>
+    <a class="version" href="../../2024.06/supported-hw/lan966x-boot.html">2024.06</a>
+    <a class="version" href="../../2024.03/supported-hw/lan966x-boot.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/supported-hw/lan966x-boot.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/supported-hw/lan966x-boot.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Booting LAN966x</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The LAN966x family comprises the following SKUs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN9662 - 2 port end-node TSN Gigabit Ethernet switch device.</p>
+</li>
+<li>
+<p>LAN9668 - 8 port TSN Gigabit Ethernet switch device.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This document will focus on the LAN966x SoCs, but to fully explain the boot
+process and boot facilities it is also necessary to consider the flash memories
+available on the board. The upcoming sections will briefly describe the boot
+media supported by the LAN966x, and then describe which of these media is
+available on the various evaluation boards offered by Microchip.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This document uses many abbreviations, see the
+<a href="#term">terms and abbreviations</a> section for details.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This document is specific to the B0 revision of LAN966x. A A0
+revision also exists, but is not considered here.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="anchor" href="#overview"></a>2. Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LAN966x offers secure boot, which is based on ARM Trusted Firmware (TF-A). The
+TF-A architecture heavily influence the boot-sequence, and to understand how
+LAN966x boots, a bit of TF-A understanding is also needed.</p>
+</div>
+<div class="paragraph">
+<p>Following is an illustration of a typical lan966x boot sequence using UBoot and
+Linux:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/boot-lan966x-uboot.svg" alt="Bootflow with UBoot" width="100%">
+</div>
+</div>
+<div class="paragraph">
+<p>It is possible to skip UBoot, if this case the boot sequence will look like
+this:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/boot-lan966x-linux-as-bl33.svg" alt="Bootflow without UBoot" width="100%">
+</div>
+</div>
+<div class="paragraph">
+<p>TF-A and LAN966x goes through the following boot steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>TF-A/BL1</strong> This is ROM code embedded inside the chip. LAN966x always start by boot
+TF-A/BL1 from ROM. TF-A/BL1 loads the next bootloader (BL2) from one of the support
+boot-medias. The strapping pins are used to configure which of the supported
+boot-media to use.</p>
+</li>
+<li>
+<p><strong>BL2</strong> This is a second stage boot-loader also part of TF-A. This bootloader
+runs from an on-chip SRAM, it setup the trust-zones, configure DDR memory and
+other basic platform initialization. Once the platform is initialized, it will
+load BL32 and BL33 from the configured boot-media into DDR memory.</p>
+</li>
+<li>
+<p><strong>BL32</strong> This is a called "EL3 Runtime Software", also part of TF-A. This stage
+does not influence the boot-flow directly, and will not be covered here.</p>
+</li>
+<li>
+<p><strong>BL33</strong> In TF-A terminology, this is the unsecure firmware. It is not part of
+the TF-A project, but is signed and distributed together with TF-A. TF-A
+imports this as a BLOB. Typically this is either UBoot or a special version of
+the kernel which can run without UBoot.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The above list of update-able images (BL2, BL32 and BL33), plus relevant
+certificates and relevant support files are packed in a <code>FIP</code> (Firmware Image
+Packet), which is a storage format defined by TF-A. The FIP containing these
+images must be stored raw in the designed boot-media. In some cases it must be
+put at a specific address, while in other it is stored in a partition with a
+predefined name.</p>
+</div>
+<div class="paragraph">
+<p>This document will not go into the details of TF-A, but just assume that the FIP
+is available and describe where and how it can be programmed. Two different FIPs
+will be used, one with UBoot as BL33, and another one with Linux-kernel as BL33.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pin_modes"><a class="anchor" href="#pin_modes"></a>3. Boot media configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The strapping pins are configuring the initial boot mode. The table below lists
+the supported modes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Strapping Pins</th>
+<th class="tableblock halign-left valign-top">LAN966x B0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0000 (0x0)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eMMC + FC3 (for trace)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0001 (0x1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QSPI0 + FC3 (for trace)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0010 (0x2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SDCard + FC3 (for trace)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0011 (0x3)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eMMC</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100 (0x4)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QSPI0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0101 (0x5)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SDCard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0110 (0x6)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PCIe EndPoint</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0111 (0x7)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000 (0x8)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UART Monitor at FC3 + QSPI0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1001 (0x9)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1010 (0xa)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1011 (0xb)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1100 (0xc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1101 (0xd)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1110 (0xe)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1111 (0xf)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SPI Client</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The strapping configuration is read by TF-A/BL1, which uses it to select select
+the boot-media, and thereby determinate where the FIP is loaded from. UBoot will
+also use the strapping pins to determinate which flash to load the environment
+configuration from.</p>
+</div>
+<div class="sect2">
+<h3 id="_uart_traces"><a class="anchor" href="#_uart_traces"></a>3.1. UART Traces</h3>
+<div class="paragraph">
+<p>When booting from flash the TF-A loaders can be configured to emit trace
+messages on the UART provided by FlexCom3. The following table show the
+strapping configurations with and without traces enables.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Trace enable</th>
+<th class="tableblock halign-left valign-top">Trace disable</th>
+<th class="tableblock halign-left valign-top">Flash type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0011</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eMMC</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QSPI/NOR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SDCard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Boards which do not have a compatible HW configuration shall avoid this strap
+mode.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Be aware that traces to the UART impact boot time and should only be
+activated when debugging is needed or the startup time is not important.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="booting"><a class="anchor" href="#booting"></a>3.2. Booting from eMMC/SDCard (0000, 0010, 0011 or 0101)</h3>
+<div class="paragraph">
+<p>When booting from eMMC/SDCard, a valid GUID Partition Table (GPT) must be used. The
+TF-A/BL1 ROM will look for a partition called <code>fip</code> and <code>fip.bak</code> and use then
+accordingly. The table below provide an example of a partition table. The page
+size for the eMMC/SDCard device is 0x200/512 bytes.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Part-idx</th>
+<th class="tableblock halign-left valign-top">Part-name</th>
+<th class="tableblock halign-left valign-top">Offset/name</th>
+<th class="tableblock halign-left valign-top">Partition size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPT (PartTable)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x40       (32kb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TF-A FIP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fip</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x40000    (128mb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TF-A FIP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fip.bak</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x40040</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x40000    (128mb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBoot (Env)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Env</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x80040</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1000     (2mb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBoot (Env)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Env.bak</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x81040</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1000     (2mb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ext4 (rootfs)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boot0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x82040</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x200000   (1gb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ext4 (rootfs)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boot1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x282040</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x200000   (1gb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ext4 (data)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page 0x482040</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>until end</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>SDCard doesn&#8217;t support redundant environment.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The <strong>bold</strong> parts are the items which is hard-coded in either TF-A/BL1 or
+in UBoot. If it relates to UBoot then it can be changed, but requires changes to
+UBoot as well. Everything else is just an example which can be changed according
+to customer needs.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_booting_from_nor_0001_or_0100"><a class="anchor" href="#_booting_from_nor_0001_or_0100"></a>3.3. Booting from NOR (0001 or 0100)</h3>
+<div class="paragraph">
+<p>The following table contains the offsets used by TF-A and UBoot when booting
+from QSPI/NOR:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Offset/name</th>
+<th class="tableblock halign-left valign-top">Max size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TF-A FIP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>0x0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x00180000 (1536kb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBoot (Env)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>0x180000</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x00040000 (256kb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBoot (Env-bak)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>0x1C0000</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x00040000 (256kb)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_pcie_end_point_0110"><a class="anchor" href="#_pcie_end_point_0110"></a>3.4. PCIe End Point (0110)</h3>
+<div class="paragraph">
+<p>This mode is used to initialize the SoC as a PCIe end-point. This mode can pull
+certain configuration options from OTP. Using this mode does not require any
+flash or DDR memory to be mounted at the board.</p>
+</div>
+<div class="paragraph">
+<p>After the PCIe end-point is configured the internal CPU will go to sleep.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="uart_monitor"><a class="anchor" href="#uart_monitor"></a>3.5. UART Monitor (1000)</h3>
+<div class="paragraph">
+<p>This mode will boot into a UART monitor using FlexCom3. This can be used to
+program the OTP and to load firmware into flash. This mode can be used without
+any valid content in the flash, and is therefore useful for de-brick or even
+production scenarios.</p>
+</div>
+<div class="paragraph">
+<p>The UART Monitor implement a machine interface and should not be used
+interactively with a terminal. Instead use the HTML5 client provided as part of
+the TF-A project.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For any other use-case, the UART console terminal needs to be configured
+to 115200/8/N/1
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_spi_client_pin_mode_1111"><a class="anchor" href="#_spi_client_pin_mode_1111"></a>3.6. SPI Client (pin mode 1111)</h3>
+<div class="paragraph">
+<p>In this strapping mode, the CPU is not booting at all. This means the (TF-A is not
+running. A SPI client will be initialized instead. This SPI interface allows a
+host CPU to read/write register in the switch-core.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beyond_tf_a"><a class="anchor" href="#_beyond_tf_a"></a>4. Beyond TF-A</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So far we have concentrated on configuring the HW and boot media. Once put in
+place, TF-A/BL2, BL2 and BL32 will boot, and eventually reach TF-A/BL33.
+TF-A/BL33 is the boot-step after TF-A, and can be UBoot, Linux kernel or some
+other OS. The following chapters covers this in more details.</p>
+</div>
+<div class="sect2">
+<h3 id="_tf_aubootlinux"><a class="anchor" href="#_tf_aubootlinux"></a>4.1. TF-A/UBoot/Linux</h3>
+<div class="paragraph">
+<p>In this mode the UBoot binary is embedded in into the FIP as TF-A/BL33. TF-A
+will do the platform initialization, load images (and authenticate them), DDR
+initialization etc. Once done, it will boot UBoot, which then control the next
+steps in boot flow.</p>
+</div>
+<div class="paragraph">
+<p>UBoot will take care of loading the ITB and the rootfs and boot up into the
+Linux.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is the so called <strong>normal-boot mode</strong>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tf_alinux"><a class="anchor" href="#_tf_alinux"></a>4.2. TF-A/Linux</h3>
+<div class="paragraph">
+<p>In this mode a Linux kernel binary is embedded in into the FIP as TF-A/BL33. TF-A
+will do the platform initialization, load images (and authenticate them), DDR
+initialization etc. Once done, it will boot the Linux kernel directly.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is the so called <strong>fast-boot mode</strong>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_images_and_artifacts"><a class="anchor" href="#_images_and_artifacts"></a>5. Images and artifacts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The referenced images and archives can all found on public servers. Therefore,
+the following description will provide all needed information.</p>
+</div>
+<div class="sect2">
+<h3 id="_tfa_images"><a class="anchor" href="#_tfa_images"></a>5.1. TFA images</h3>
+<div class="paragraph">
+<p>The TFA (FIPs) images can be found under following link:<br>
+<a href="https://github.com/microchip-ung/arm-trusted-firmware/releases" class="bare">https://github.com/microchip-ung/arm-trusted-firmware/releases</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_buildroot_artifacts"><a class="anchor" href="#_buildroot_artifacts"></a>5.2. Buildroot artifacts</h3>
+<div class="paragraph">
+<p>The build artifacts (UBoot, kernel, rootfs etc.) can be found on following public server:<br>
+<a href="http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp" class="bare">http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp</a></p>
+</div>
+<div class="paragraph">
+<p>Download the proper architecture and build version. For example:<br>
+mscc-brsdk-arm-yyyy.version.tar.gz</p>
+</div>
+<div class="paragraph">
+<p>After extracting the *.tar.gz file, all rootfs and ITB related files can be found
+inside following folder:<br>
+<code>mscc-brsdk-arm-yyyy.version/arm-cortex_a8-linux-gnu/standalone/release</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_artifacts"><a class="anchor" href="#_artifacts"></a>5.3. Artifacts</h3>
+<div class="paragraph">
+<p>The following subchapter gives a rough overview of the common used terms in
+the context of the available images and build artifacts.</p>
+</div>
+<div class="sect3">
+<h4 id="_tfa_images_2"><a class="anchor" href="#_tfa_images_2"></a>5.3.1. TFA images</h4>
+<div class="paragraph">
+<p>The upcoming table is describing the most important files extracted from the TFA
+artifacts archive:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">File name</th>
+<th class="tableblock halign-left valign-top">File type</th>
+<th class="tableblock halign-left valign-top">BL33 data</th>
+<th class="tableblock halign-left valign-top">Flash</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fwu-lan966x_b0-release.html</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Firmware update tool for MS Edge or Chrome</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan966x_b0-release.fip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FIP file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBoot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NOR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cleartext FIP, directly for NOR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan966x_b0-release.fip.gz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FIP file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBoot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NOR*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compressed FIP (from above)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan966x_b0-release-fwu_fip.bin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FWU FIP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FWU FIP for boot monitor bootstrap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan966x_b0-release-linux.fip.gz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FIP file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MMC*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compressed Linux FIP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan966x_b0-release-mmc.gpt.gz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPT image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBoot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MMC*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compressed GPT image for MMC/UBoot</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan966x_b0-release-mmc-linux.gpt.gz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPT image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MMC*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compressed GPT image for MMC/Linux</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+(*) The compressed images must be uncompressed before flashing to
+NOR/MMC. This is done on the fly by the FWU HTML tool.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_buildroot_artifacts_2"><a class="anchor" href="#_buildroot_artifacts_2"></a>5.3.2. Buildroot artifacts</h4>
+<div class="paragraph">
+<p>Following table is describing the available ITB and filesystem related binaries
+inside the buildroot artifacts archive:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">File name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>brsdk_standalone_arm.ext4.gz</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ext4 rootfs with ITB, located in the root directory.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>brsdk_standalone_arm.itb</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ITB only, used in the *.gz file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fit.itb</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ITB with Kernel and squashfs filesystem. Suitable for network boot.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rootfs.ext2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ext2 rootfs standalone</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rootfs.ext4</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ext4 rootfs standalone</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rootfs.squashfs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">squashfs filesystem standalone</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rootfs.tar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rootfs/tar standalone</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_kernel"><a class="anchor" href="#_kernel"></a>5.3.3. Kernel</h4>
+<div class="paragraph">
+<p>The ITB files from the build artifacts archive including always the latest
+available kernel files.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dts"><a class="anchor" href="#_dts"></a>5.3.4. DTS</h4>
+<div class="paragraph">
+<p>The device tree sources are a set of text files in the Linux kernel source tree.
+They describe the hardware properties for a specific platform.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dtb"><a class="anchor" href="#_dtb"></a>5.3.5. DTB</h4>
+<div class="paragraph">
+<p>For processing the DTS, a Device Tree Compiler is used. Mainly, the compiler
+takes as input a device-tree in a given format and outputs a device-tree in
+another format.</p>
+</div>
+<div class="paragraph">
+<p>Since the DTS represents the device-tree data in a human readable format, it is
+the preferred input format.<br>
+The output result of the DTC results is a <code>.dtb</code> file.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rootfs"><a class="anchor" href="#_rootfs"></a>5.3.6. rootfs</h4>
+<div class="paragraph">
+<p>Various types of root filesystem builds are provided inside the build artifact
+archive.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rootfstar"><a class="anchor" href="#_rootfstar"></a>5.3.7. rootfs/tar</h4>
+<div class="paragraph">
+<p>The rootfs/tar is accumulating a large collection of files into a single archive
+file, while preserving filesystem informations such as user/group permissions,
+dates, files, inodes and directory structures.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There is no tarball compression method used.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A tarball build of the rootfs/tar can be found inside the build artifacts
+archive. Please have a look for a binary which is named to <code>rootfs.tar</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_squashfs"><a class="anchor" href="#_squashfs"></a>5.3.8. squashfs</h4>
+<div class="paragraph">
+<p>The squashfs filesystem is a zlib compressed read-only filesystem (e.g. files,
+inodes and directories) for Linux.
+SquashFS gives more flexibility and performance speed than a tarball archive.</p>
+</div>
+<div class="paragraph">
+<p>The <code>rootfs.squashfs</code> based build can be found inside the build artifacts archive.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ext4"><a class="anchor" href="#_ext4"></a>5.3.9. ext4</h4>
+<div class="paragraph">
+<p>The ext4 filesystem is also supported by the LAN966x system. There are different
+flavours of the ext4 builds inside the build artifacts archive available.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fit"><a class="anchor" href="#_fit"></a>5.4. FIT</h3>
+<div class="paragraph">
+<p>The Flattened Image Tree is a format for combining different binary elements
+such as the kernel, initramfs and DTB into a single <code>.itb</code> file.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Bootloaders like e.g. UBoot can read and process the FIT metadata to boot
+an embedded Linux system.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_itb_full"><a class="anchor" href="#_itb_full"></a>5.4.1. ITB full</h4>
+<div class="paragraph">
+<p>This type of the FIT is containing the kernel files, device tree(s) and a root
+filesystem.
+Beside the FIP file, only one further single binary needs to be maintained and
+flashed to the target system.
+The drawback is the longer bootup time, caused by the the bigger image size.</p>
+</div>
+<div class="paragraph">
+<p>The according binary, which includes a 'squashfs' root filesystem, can be found
+in the build artifacts archive named by 'fit.itb'.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ext4_2"><a class="anchor" href="#_ext4_2"></a>5.5. ext4</h3>
+<div class="paragraph">
+<p>Beside of the rootfs/tar and the squashfs, there is also the usage of an ext4 root
+filesystem possible.
+The following section should give a rough overview about some ext4 based use-cases.</p>
+</div>
+<div class="sect3">
+<h4 id="_ext4_with_embedded_itb_bare_on_fs"><a class="anchor" href="#_ext4_with_embedded_itb_bare_on_fs"></a>5.5.1. ext4 with embedded ITB bare on FS</h4>
+<div class="paragraph">
+<p>This variant of the ext4 build is containing the ext4 filesystem and additionally
+an ITB located inside root directory of the ext4 filesystem.
+For example, UBoot is capable to load filesystem and execute the ITB found in the
+root directory.</p>
+</div>
+<div class="paragraph">
+<p>This build variant is available inside the build artifacts archive. It is named
+to 'brsdk_standalone_arm.ext4.gz'.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fip"><a class="anchor" href="#_fip"></a>5.6. FIP</h3>
+<div class="paragraph">
+<p>The FIP binary, so called 'fip.bin', is containing all parts of the TF-A firmware build. Basically,
+following components can be found there:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>BL2</p>
+</li>
+<li>
+<p>BL32 or BL33</p>
+</li>
+<li>
+<p>certificates</p>
+</li>
+<li>
+<p>support files</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The different FIP builds can be found inside the build artifacts archive.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gpt_image"><a class="anchor" href="#_gpt_image"></a>5.7. GPT image</h3>
+<div class="paragraph">
+<p>The GPT image is used for configuring basically the flash device structure. This
+means writing the GPT, creating all needed partitions and do some further setup
+work.</p>
+</div>
+<div class="paragraph">
+<p>The boot partition named to 'fip' will contain afterwards a 'fip.bin' file for the
+first system startup.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="part_table"><a class="anchor" href="#part_table"></a>5.8. eMMC/SDCard default partition schema</h3>
+<div class="paragraph">
+<p>The following table is showing the default partition scheme for the MMC flash
+devices. This means this table is valid for the eMMC and the SDCard device.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>offset (pages)    size (pages)       Name/desc
+==============    ===============    =====================
+0x0               0x40     (32kb)    GPT (partition table)
+0x40              0x40000  (128mb)   fip
+0x40040           0x40000  (128mb)   fip.bak
+0x80040           0x1000   (2mb)     Env
+0x81040           0x1000   (2mb)     Env.bak
+0x82040           0x200000 (1gb)     Boot0
+0x282040          0x200000 (1gb)     Boot1
+0x482040          0x300000 (1.5gb)   Data</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When eMMC or SDCard is selected as boot media, the TF-A expects in the first
+32kb of the flash pages a GPT.</p>
+</div>
+<div class="paragraph">
+<p>The ROM code will look for a partition called <code>fip</code>. It will now try to boot
+from this partition.
+If the booting from the <code>fip</code> partition fails, it will try to load the firmware
+image from the <code>fip.bak</code> recovery partition.</p>
+</div>
+<div class="paragraph">
+<p>If the boot attempt from the recovery partition is failing, no fallback approach is offered here.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_boot_configurations"><a class="anchor" href="#_boot_configurations"></a>6. Boot configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Possible boot methods will be described in the upcoming sections.</p>
+</div>
+<div class="sect2">
+<h3 id="_network_boot"><a class="anchor" href="#_network_boot"></a>6.1. Network-boot</h3>
+<div class="paragraph">
+<p>Before using the network boot feature, it needs to be ensured that the UBoot
+bootlader is made available inside the BL33.</p>
+</div>
+<div class="paragraph">
+<p>After startup and entering UBoot console, the network stack on the target needs
+to be configured. This can be done by using static network settings or using a
+dynamic ip address provisioning like DHCP.</p>
+</div>
+<div class="paragraph">
+<p>On the host system a TFTP server needs to be established. Host and target needs
+to be located in the same subnet. Afterwards the files can be transmitted over
+network to the target system memory.</p>
+</div>
+<div class="paragraph">
+<p>For the network boot scenario a 'fit.itb' file needs to be provisioned by the
+TFTP server. After configuration of the UBoot, the file can be uploaded to the
+platform and will be executed directly from the target memory.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nor"><a class="anchor" href="#_nor"></a>6.2. NOR</h3>
+<div class="paragraph">
+<p>When QSPI/NOR is selected as boot media, the TF-A expect that the NOR flash
+is used in raw mode. This means in comparison to the eMMC/SDCard approach, there
+is no filesystem applied here.</p>
+</div>
+<div class="paragraph">
+<p>The NOR flash device can usually programmed with a standard SPI flash programmer.
+Before attaching the programmer, check the usage of the proper pin header and
+use the correct SPI pins on the eval board.
+But here, there is also another further way for updating the NOR flash device
+possible. This will be described in the upcoming chapters.</p>
+</div>
+<div class="paragraph">
+<p>Take care to write the 'fip.bin' file to a NOR memory address of 0x0 (zero).+
+Because of the NOR size limitation on the LAN966x eval boards, only the
+'fip.bin' file can be stored.</p>
+</div>
+<div class="paragraph">
+<p>For a full booting Linux system, the missing ITB and the rootfs needs to be
+stored on an additionally flash device. Afterwards the bootloader needs to be
+configured properly for recognizing the FS and the ITB.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_emmc"><a class="anchor" href="#_emmc"></a>6.3. eMMC</h3>
+<div class="paragraph">
+<p>For the eMMC boot operation mode, the 'fip.bin' file needs to be located
+mandatory on a partition section named to 'fip' or 'fip.bak'.</p>
+</div>
+<div class="paragraph">
+<p>In this example, the UBoot needs to be part of the 'fip.bin'. This is required for
+uploading and writing the ITB and FS data via DHCP/TFTP to the correct eMMC
+partition sections.</p>
+</div>
+<div class="paragraph">
+<p>Afterwards the environment variables of UBoot needs to be setup properly for a
+full boot.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_linuxbl33"><a class="anchor" href="#_linuxbl33"></a>6.4. Linux@BL33</h3>
+<div class="paragraph">
+<p>This is the so called fast-boot mode. TF-A is loading in the BL33 stage
+directly the rootfs and ITB file. After the kernel is up and running, the FS
+will be mounted.</p>
+</div>
+<div class="paragraph">
+<p>In this mode, there is no further bootstage (like UBoot) involved here. This will
+decrease the bootup time in comparison to the previously described scenarios.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_cases"><a class="anchor" href="#_use_cases"></a>7. Use-cases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_debrick_or_blank_flash"><a class="anchor" href="#_debrick_or_blank_flash"></a>7.1. Debrick or blank flash</h3>
+<div class="paragraph">
+<p>In case of a blank eMMC or NOR device, following the instructions in
+<a href="restore-secureboot.html" class="xref page">Restore SecureBoot Images</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uboot"><a class="anchor" href="#_uboot"></a>7.2. UBoot</h3>
+<div class="paragraph">
+<p>According the flashed FIP or GPT file, UBoot is available during system boot and
+can be used for customizing e.g. the ITB and rootfs related components.
+Furthermore, it can be used for updating existing GPT images or FIP files on
+the flash device.</p>
+</div>
+<div class="paragraph">
+<p>The flash images will use either UBoot or Linux as (final) boot firmware.
+The string of <strong>'-linux-'</strong> in the FIP or GPT filename identifies the
+availability of the Linux or UBoot feature.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes it makes also to use the command of 'help', which provides a huge
+collection of all available commands and features.
+For example, the command of 'env print' can be used for dumping all available
+and initialized variables on the system.</p>
+</div>
+<div class="sect3">
+<h4 id="_working_with_mmc_subsystem"><a class="anchor" href="#_working_with_mmc_subsystem"></a>7.2.1. Working with MMC subsystem</h4>
+<div class="paragraph">
+<p>For setting up the UBoot mode, following steps needs to be applied:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set the strapping mode to 0x0 (eMMC + FC3). See <a href="#pin_modes">Boot media configuration</a>.</p>
+</li>
+<li>
+<p>Attach the board via usb cable to the host workstation</p>
+</li>
+<li>
+<p>Configure a serial console application like e.g. putty (settings 115200/8/N/1)</p>
+</li>
+<li>
+<p>Attach console application to /dev/ttyACM0</p>
+</li>
+<li>
+<p>Reset the board and interrupt the UBoot autoboot before timeout.</p>
+</li>
+<li>
+<p>On UBoot console, the command 'mmc info' will return the emmc device properties.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; mmc info
+Device: sdhci-host@e0830000
+Manufacturer ID: 9d
+OEM: 101
+Name: IS008
+Bus Speed: 30000000
+Mode : MMC High Speed (52MHz)
+Rd Block Len: 512
+MMC version 5.0
+High Capacity: Yes
+Capacity: 7.3 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 KiB
+HC WP Group Size: 8 MiB
+User Capacity: 7.3 GiB WRREL
+Boot Capacity: 4 MiB ENH
+RPMB Capacity: 4 MiB ENH</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The UBoot command of 'mmc help' will provide an overview of all available mmc
+sub system related commands.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; mmc help
+mmc - MMC sub system
+
+Usage:
+mmc info - display info of the current MMC device
+mmc read addr blk# cnt
+mmc write addr blk# cnt
+mmc erase blk# cnt
+mmc rescan
+mmc part - lists available partition on current mmc device
+mmc dev [dev] [part] - show or set current mmc device [partition]
+mmc list - lists available devices
+mmc hwpartition [args...] - does hardware partitioning
+  arguments (sizes in 512-byte blocks):
+    [user [enh start cnt] [wrrel {on|off}]] - sets user data area attributes
+    [gp1|gp2|gp3|gp4 cnt [enh] [wrrel {on|off}]] - general purpose partition
+    [check|set|complete] - mode, complete set partitioning completed
+  WARNING: Partitioning is a write-once setting once it is set to complete.
+  Power cycling is required to initialize partitions after set to complete.
+mmc bootbus dev boot_bus_width reset_boot_bus_width boot_mode
+ - Set the BOOT_BUS_WIDTH field of the specified device
+mmc bootpart-resize &lt;dev&gt; &lt;boot part size MB&gt; &lt;RPMB part size MB&gt;
+ - Change sizes of boot and RPMB partitions of specified device
+mmc partconf dev [boot_ack boot_partition partition_access]
+ - Show or change the bits of the PARTITION_CONFIG field of the specified device
+mmc rst-function dev value
+ - Change the RST_n_FUNCTION field of the specified device
+   WARNING: This is a write-once field and 0 / 1 / 2 are the only valid values.
+mmc setdsr &lt;value&gt; - set DSR register value</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example, the MMC command of 'mmc write' will primarily used for storing the
+data content on the flash device.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_working_with_nor_subsystem"><a class="anchor" href="#_working_with_nor_subsystem"></a>7.2.2. Working with NOR subsystem</h4>
+<div class="paragraph">
+<p>For setting up the UBoot mode, following steps needs to be applied:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set the strapping mode to 0x1 (QSPI + FC3). See <a href="#pin_modes">Boot media configuration</a>.</p>
+</li>
+<li>
+<p>Attach the board via usb cable to the host workstation</p>
+</li>
+<li>
+<p>Configure a serial console application like e.g. putty (settings 115200/8/N/1)</p>
+</li>
+<li>
+<p>Attach putty to /dev/ttyACM0</p>
+</li>
+<li>
+<p>Reset the board and interrupt the UBoot autoboot before timeout</p>
+</li>
+<li>
+<p>On the UBoot console, the command 'sf probe' will return the spi flash device
+properties</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; sf probe
+SF: Detected sst26vf016b with page size 256 Bytes, erase size 4 KiB, total 2 MiB</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The UBoot command of 'sf help' will provide an overview of all available spi flash
+related sub system commands.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; sf help
+sf - SPI flash sub-system
+
+Usage:
+sf probe [[bus:]cs] [hz] [mode] - init flash device on given SPI bus
+                                  and chip select
+sf read addr offset|partition len       - read `len' bytes starting at
+                                          `offset' or from start of mtd
+                                          `partition'to memory at `addr'
+sf write addr offset|partition len      - write `len' bytes from memory
+                                          at `addr' to flash at `offset'
+                                          or to start of mtd `partition'
+sf erase offset|partition [+]len        - erase `len' bytes from `offset'
+                                          or from start of mtd `partition'
+                                         `+len' round up `len' to block size
+sf update addr offset|partition len     - erase and write `len' bytes from memory
+                                          at `addr' to flash at `offset'
+                                          or to start of mtd `partition'
+sf protect lock/unlock sector len       - protect/unprotect 'len' bytes starting
+                                          at address 'sector'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The SPI flash command of 'sf write' or 'sf update' will primarily used for
+storing FIP data content on the SPI flash device.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="load_files_network"><a class="anchor" href="#load_files_network"></a>7.2.3. Loading files from network</h4>
+<div class="paragraph">
+<p>UBoot can also configured for using the network stack for file transmission. A
+common practice is to enable the DHCP server on the host and using the UBoot
+'dhcp' command. After recognizing a valid IP address, a file transmission using
+TFTP wil be established.</p>
+</div>
+<div class="paragraph">
+<p>In case of using a static IP setup on the target, the following example can be
+applied via UBoot console. Adjust the values to the individual network
+environment.</p>
+</div>
+<div class="paragraph">
+<p>The command of 'tftpboot' can be used then afterwards on the UBoot console.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>env set 'ipaddr 192.168.0.10'
+env set 'netmask 255.255.255.0'
+env set 'serverip 192.168.0.1'
+saveenv
+
+m =&gt; help tftp
+tftpboot - boot image via network using TFTP protocol
+
+Usage:
+tftpboot [loadAddress] [[hostIPaddr:]bootfilename]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In case of a available DHCP server in the network, the UBoot command of 'dhcp'
+can be used. It will setup the network configuration and establish afterwards
+the TFTP based file transmission.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; help dhcp
+dhcp - boot image via network using DHCP/TFTP protocol
+
+Usage:
+dhcp [loadAddress] [[hostIPaddr:]bootfilename]</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The DHCP server, TFTP server and the target needs to be reside in the same
+ network.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Hereby, a test binary called 'fip.bin' will be now transmitted from the TFTP
+server via network to the target device memory. The used address of 0x64000000
+is chosen randomly and points to an unused DDR memory section.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; dhcp 0x64000000 fip.bin
+port0 Waiting for PHY auto negotiation to complete........ done
+Using port0 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.20
+Filename 'fip.bin'.
+Load address: 0x64000000
+Loading: ######################################
+         106.4 KiB/s
+done
+Bytes transferred = 553376 (871a0 hex)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, the 'fip.bin' data is copied the target memory and can be e.g. written into
+an eMMC partition or in NOR flash device.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_boot_image"><a class="anchor" href="#_boot_image"></a>7.2.4. Boot image</h4>
+<div class="paragraph">
+<p>This chapter shows some update examples.</p>
+</div>
+<div class="paragraph">
+<p>In the first step, we have to check the UBoot environment variables inside the
+UBoot console. Therefore enter UBooot console by following routine:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Reset the board and wait for the UBoot autoboot stage</p>
+</li>
+<li>
+<p>Press any key to stop autoboot timer in order to get a U-Boot console prompt.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Make sure that following environment variables are available as shown.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; env print
+
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+baudrate=115200
+bootdelay=3
+bootcmd=run mmc_boot
+loadaddr=0x64000000
+mmc_unzip_loadaddr=0x80000000
+mmc_bak=6
+mmc_boot=run mmc_tryboot; run mmc_swap; run mmc_tryboot
+mmc_cur=5
+mmc_dev=mmc 0
+mmc_format=gpt guid ${mmc_dev} mmc_guid; gpt write ${mmc_dev} ${mmc_part}; env save
+mmc_part=uuid_disk=${mmc_guid}; name=fip,start=32K,size=128MiB,type=system; name=fip.bak,size=128MiB,type=system; name=Env,size=2MiB,type=data; name=Env.bak,size=2MiB,type=data; name=Boot0,size=1GiB,type=linux; name=Boot1,size=1GiB,type=linux; name=Data,size=-,type=linux;
+mmc_swap=env set _mmc_tmp ${mmc_bak}; env set mmc_bak ${mmc_cur}; env set mmc_cur ${_mmc_tmp}; env set _mmc_tmp; env save
+mmc_tryboot=run mmc_load; if test $? = 0; then setenv mtdroot root_next=/dev/mmcblk0p${mmc_cur}; run ramboot; fi;
+mmc_load=ext4load ${mmc_dev}:${mmc_cur} ${loadaddr} Image.itb
+ramboot=bootm start ${loadaddr}#${pcb}; bootm loados ${loadaddr}#${pcb}; bootm ramdisk ${loadaddr}#${pcb}; run set_rootargs; run setup; bootm fdt ${loadaddr}#${pcb}; bootm prep ${loadaddr}#${pcb}; bootm go ${loadaddr}#${pcb}
+setup=setenv bootargs console=${console} ${mtdparts} ${rootargs} ${mtdroot} fis_act=${active} ${bootargs_extra}
+rootargs_mmc=setenv rootargs root=/dev/mmcblk0p${mmc_cur} ro rootwait
+rootargs_ram=setenv rootargs root=/dev/ram0 ro rootwait
+set_rootargs=if test $initrd_start = 0; then run rootargs_mmc; else; run rootargs_ram; fi;
+div_512=setexpr _tmp_ ${filesize} + 0x1ff; setexpr filesize_512 ${_tmp_} / 0x200; env set _tmp_
+fip_fw=lan966x_b0.fip
+fip_fw_dl=dhcp ${loadaddr} ${fip_fw}
+nor_boot=sf probe; env set active linux; run nor_tryboot; env set active linux.bk; run nor_tryboot
+nor_dlup=dhcp ${nor_image}; run nor_update
+nor_fip_upd=sf probe; sf update ${loadaddr} 0 ${filesize}
+nor_fip_dlup=run fip_fw_dl; run nor_fip_upd
+nor_image=brsdk_standalone_arm.itb
+nor_only=env set mtdparts mtdparts=${nor_parts};env set bootcmd run nor_boot;env save
+nor_parts=spi0:1536k(fip),256k(Env),256k(Env.bk),25m(linux),25m(linux.bk),12m(rootfs_data)
+nor_tryboot=sf read ${loadaddr} 200000 1900000; run ramboot
+nor_update=sf probe; sf update ${fileaddr} 200000 ${filesize}
+mmc_fip0_upd=run div_512; mmc write ${loadaddr} ${mmc_offset_fip0} ${filesize_512}
+mmc_fip0_dlup=run fip_fw_dl; run mmc_fip0_upd
+mmc_fip1_upd=run div_512; mmc write ${loadaddr} ${mmc_offset_fip1} ${filesize_512}
+mmc_fip1_dlup=run fip_fw_dl; run mmc_fip1_upd
+mmc_fip01_dlup=run fip_fw_dl; run mmc_fip0_upd; run mmc_fip1_upd
+mmc_fw=brsdk_standalone_arm.ext4.gz
+mmc_dl=dhcp ${loadaddr} ${mmc_fw}; unzip ${loadaddr} ${mmc_unzip_loadaddr}
+mmc_boot0_upd=run div_512; mmc write ${mmc_unzip_loadaddr} ${mmc_offset_boot0} ${filesize_512}
+mmc_boot0_dlup=run mmc_dl; run mmc_boot0_upd
+mmc_boot1_upd=run div_512; mmc write ${mmc_unzip_loadaddr} ${mmc_offset_boot1} ${filesize_512}
+mmc_boot1_dlup=run mmc_dl; run mmc_boot1_upd
+mmc_boot01_dlup=run mmc_dl; run mmc_boot0_upd; run mmc_boot1_upd
+mmc_offset_fip0=0x40
+mmc_offset_fip1=0x40040
+mmc_offset_boot0=0x82040
+mmc_offset_boot1=0x282040
+mmc_offset_data=0x482040
+console=ttyS0,115200n8
+mtdparts=mtdparts=spi0:1536k(fip),256k(Env),256k(Env.bak)
+bootargs_extra=uio_pdrv_genirq.of_id=generic-uio loglevel=1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use the <code>env set</code> command if something is wrong or missing and remember to use
+the <code>env save</code> command when you are done.
+There might be other environment variables defined, but you can safely ignore them.</p>
+</div>
+<div class="paragraph">
+<p>Some explanation for the predefined environment variables and for what they are
+used for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fdt_high</code> - The value 0xffffffff prevents an extra copy of the flattened device tree.</p>
+</li>
+<li>
+<p><code>initrd_high</code> - The value 0xffffffff prevents an extra copy of the ramdisk.</p>
+</li>
+<li>
+<p><code>baudrate</code> - U-Boot console baudrate.</p>
+</li>
+<li>
+<p><code>bootdelay</code> - Number of seconds to wait for user input before running bootcmd.</p>
+</li>
+<li>
+<p><code>bootcmd</code> - Command to run automatically at boot. Default is set to <code>run mmc_boot</code>.</p>
+</li>
+<li>
+<p><code>loadaddr</code> - Temporary address to use when loading images via TFTP or from eMMC.</p>
+</li>
+<li>
+<p><code>mmc_unzip_loadaddr</code> - Temporarily used address for uncompressing images</p>
+</li>
+<li>
+<p><code>mmc_bak</code> - The backup partition index for boot1</p>
+</li>
+<li>
+<p><code>mmc_boot</code> - Try first to load 'brsdk_standalone_arm.ext4.gz' from active partition. If failing then backup partition will be tried</p>
+</li>
+<li>
+<p><code>mmc_cur</code> - The default partition index for boot0</p>
+</li>
+<li>
+<p><code>mmc_dev</code> - eMMC device to use in read/write commands.</p>
+</li>
+<li>
+<p><code>mmc_format</code> - Format eMMC device according defined partition layout</p>
+</li>
+<li>
+<p><code>mmc_part</code> - Partition layout definitions to use in 'mmc_format'.</p>
+</li>
+<li>
+<p><code>mmc_swap</code> - Change active partition from 'Boot0' to 'Boot1' and vice versa</p>
+</li>
+<li>
+<p><code>mmc_tryboot</code> - Seeking for available boot images</p>
+</li>
+<li>
+<p><code>mmc_load</code> - Try to load an ITB image from the active partition</p>
+</li>
+<li>
+<p><code>ramboot</code> - Try to load an run an ITB image from memory</p>
+</li>
+<li>
+<p><code>setup</code> - Configuring bootargs environment variable</p>
+</li>
+<li>
+<p><code>rootargs_mmc</code> - Configuration for rootfs in eMMC</p>
+</li>
+<li>
+<p><code>rootargs_ram</code>- Configuration for rootfs in ram</p>
+</li>
+<li>
+<p><code>set_rootargs</code> - Set correct configuration for root file system</p>
+</li>
+<li>
+<p><code>div_512</code> - Calculates the number of required flash pages (512 bytes)</p>
+</li>
+<li>
+<p><code>fip_fw</code> - Defines the name of the FIP file used for eMMC and NOR update</p>
+</li>
+<li>
+<p><code>fip_fw_dl</code> - Configuring and starting the DHCP request for file download</p>
+</li>
+<li>
+<p><code>nor_fip_upd</code> - Writes the FIP data to the NOR flash device</p>
+</li>
+<li>
+<p><code>nor_fip_dlup</code> - Download and write the FIP data to NOR flash device</p>
+</li>
+<li>
+<p><code>mmc_fip0_upd</code> - Writes FIP data to the eMMC device in partition 'fip'</p>
+</li>
+<li>
+<p><code>mmc_fip_dlup</code> - Download and write the FIP data to eMMC device</p>
+</li>
+<li>
+<p><code>mmc_fip1_upd</code> - Writes FIP data to the eMMC device in partition 'fip.bak'</p>
+</li>
+<li>
+<p><code>mmc_fip1_dlup</code> - Download and write the FIP data to eMMC device</p>
+</li>
+<li>
+<p><code>mmc_fip01_dlup</code> - Download FIP and write data to partition 'fip0' and 'fip1'</p>
+</li>
+<li>
+<p><code>mmc_fw</code> - Defines the name of the ext4.gz file for eMMC update</p>
+</li>
+<li>
+<p><code>mmc_dl</code> - Download ext4.gz file and uncompress data into target memory</p>
+</li>
+<li>
+<p><code>mmc_boot0_upd</code> - Writes the uncompressed data to the eMMC device in partition 'boot0'</p>
+</li>
+<li>
+<p><code>mmc_boot0_dlup</code> - Download, uncompress and write the image data to eMMC device</p>
+</li>
+<li>
+<p><code>mmc_boot1_upd</code> - Writes the uncompressed data to the eMMC device in partition 'boot1'</p>
+</li>
+<li>
+<p><code>mmc_boot1_dlup</code> - Download, uncompress and write the image data to eMMC device</p>
+</li>
+<li>
+<p><code>mmc_boot01_dlup</code> - Download, uncompress and write data to partition 'boot0' and 'boot1'</p>
+</li>
+<li>
+<p><code>mmc_offset_fip0</code> - GPT address offset of the 'fip' partition</p>
+</li>
+<li>
+<p><code>mmc_offset_fip1</code> - GPT address offset of the 'fip.bak' partition</p>
+</li>
+<li>
+<p><code>mmc_offset_boot0</code> - GPT address offset of the 'boot0' partition</p>
+</li>
+<li>
+<p><code>mmc_offset_boot1</code> - GPT address offset of the 'boot1' partition</p>
+</li>
+<li>
+<p><code>mmc_offset_data</code> - GPT address offset of the 'data' partition</p>
+</li>
+<li>
+<p><code>console</code> - Configuration settings for the console terminal</p>
+</li>
+<li>
+<p><code>mtdparts</code> - NOR flash partition configuration</p>
+</li>
+<li>
+<p><code>bootargs_extra</code> - Additional UBoot arguments</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following examples assumes that the build artifacts of
+<code>brsdk_standalone_arm.ext4.gz</code> and/or <code>lan966x_b0.fip</code> are available on the
+TFTP server.</p>
+</div>
+<div class="sect4">
+<h5 id="_from_emmc"><a class="anchor" href="#_from_emmc"></a>7.2.4.1. from eMMC</h5>
+<div class="paragraph">
+<p>For a successful eMMC boot, a special partition layout needs to be make
+available on the flash device. This can be achieved by following two approaches:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Use the already defined UBoot console command of 'mmc_format':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; run mmc_format
+success!
+Writing GPT: success!
+Saving Environment to MMC... Writing to redundant MMC(0)... OK</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>or<br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Write a GPT image directly to the blank eMMC device, like described in the
+<a href="restore-secureboot.html#emmc_gpt" class="xref page">eMMC GPT</a> section.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For checking the partition layout, use the UBoot command of 'mmc part'.This is
+the expected partition layout here:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; mmc part
+
+Partition Map for MMC device 0  --   Partition Type: EFI
+
+Part    Start LBA       End LBA         Name
+        Attributes
+        Type GUID
+        Partition GUID
+  1     0x00000040      0x0004003f      "fip"
+        attrs:  0x0000000000000000
+        type:   ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        guid:   00042021-0408-4601-9dcc-a8c51255994f
+  2     0x00040040      0x0008003f      "fip.bak"
+        attrs:  0x0000000000000000
+        type:   ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        guid:   8ef917d1-2c6f-4bd0-a5b2-331a19f91cb2
+  3     0x00080040      0x0008103f      "Env"
+        attrs:  0x0000000000000000
+        type:   ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        guid:   77877125-add0-4374-9e60-02cb591c9737
+  4     0x00081040      0x0008203f      "Env.bak"
+        attrs:  0x0000000000000000
+        type:   ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        guid:   b4b84b8a-04e3-48ae-8536-aff5c9c495b1
+  5     0x00082040      0x0028203f      "Boot0"
+        attrs:  0x0000000000000000
+        type:   ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        guid:   35219908-c613-4b08-9322-3391ff571e19
+  6     0x00282040      0x0048203f      "Boot1"
+        attrs:  0x0000000000000000
+        type:   ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        guid:   8e123a33-e3d3-4db9-92f4-d3ebd9b3224f
+  7     0x00482040      0x00e8ffde      "Data"
+        attrs:  0x0000000000000000
+        type:   ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        guid:   02a90af2-5d1c-4a29-9177-97a513e3cae4</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that <code>Start LBA</code> in each partition equals the partition addresses in the
+corresponding environment variable <code>mmc_p&lt;n&gt;</code>. Please see also chapter
+<a href="#part_table">eMMC/SDCard default partition schema</a>.</p>
+</div>
+<div class="paragraph">
+<p>The following scenario will now upload an <code>brsdk_standalone_arm.ext4.gz</code> file,
+which is containing an ext4 rootfs and including an ITB in the root directory.</p>
+</div>
+<div class="paragraph">
+<p>Following steps needs to be applied therefore:</p>
+</div>
+<div class="paragraph">
+<p>Run the <code>mmc_boot0_dlup</code> command to load the <code>brsdk_standalone_arm.ext4.gz</code> file
+via DHCP to the target memory. Afterwards, the file will be uncompressed and
+written into the eMMC partition 'Boot0'.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; run mmc_boot0_dlup
+port0 Waiting for PHY auto negotiation to complete........ done
+Using port0 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.10
+Filename 'brsdk_standalone_arm.ext4.gz'.
+Load address: 0x64000000
+Loading: #################################################################
+         ###### ...........
+         #################################################################
+         #########################
+         6.2 MiB/s
+done
+Bytes transferred = 106115072 (6533000 hex)
+
+MMC write: dev # 0, block # 8192, count 208960 ... 208960 blocks written: OK</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If UBoot run in its default configuration, it will do now all needed actions,
+and make the rootfs and ITB available in the expected eMMC partition.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_from_network"><a class="anchor" href="#_from_network"></a>7.2.4.2. from network</h5>
+<div class="paragraph">
+<p>Running the <code>fip_fw_dl</code> command will upload the <code>lan966x_b0.fip</code> file
+using the DHCP/TFTP connection.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; fip_fw_dl
+port0 Waiting for PHY auto negotiation to complete........ done
+Using port0 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.10
+Filename 'lan966x_b0.fip'.
+Load address: 0x64000000
+Loading: #################################################################
+         ###### ...........
+         #################################################################
+         #########################################
+         2.9 MiB/s
+done
+Bytes transferred = 22538412 (157e8ac hex)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Afterwards the command of <code>ramboot</code> will execute the image inside
+the memory. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>## Loading kernel from FIT Image at 64000000 ...
+
+Using Device Tree in place at 67d00000, end 67d07977
+
+Starting kernel ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For configuring the device permanently to the network boot mode, set the
+environment variable of <code>bootcmd</code> as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; setenv bootcmd 'run fip_fw_dl; run ramboot'
+m =&gt; saveenv
+m =&gt; reset</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After reset, UBoot will run the sequence of <code>bootcmd</code> on every target startup.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_from_nor"><a class="anchor" href="#_from_nor"></a>7.2.4.3. from NOR</h5>
+<div class="paragraph">
+<p>No matter if you have a eMMC equipped evaluation board you can also select to
+store the boot image in SPI NOR flash only and use this image as the boot media.</p>
+</div>
+<div class="paragraph">
+<p>This will not be as fast as booting from eMMC but can be used as a
+fallback solution in case the first option is not available for some other
+reason.</p>
+</div>
+<div class="paragraph">
+<p>To set the u-boot env to boot from nor it is required to run this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; run nor_only</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will partitioned the NOR like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; mtd list
+List of MTD devices:
+* nor0
+  - device: spi-flash@0
+  - parent: qspi@e0834000
+  - driver: jedec_spi_nor
+  - path: /ahb/apb/qspi@e0834000/spi-flash@0
+  - type: NOR flash
+  - block size: 0x1000 bytes
+  - min I/O: 0x1 bytes
+  - 0x000000000000-0x000000200000 : "nor0"
+          - 0x000000000000-0x000000180000 : "fip"
+          - 0x000000180000-0x0000001c0000 : "Env"
+          - 0x0000001c0000-0x000000200000 : "Env.bk"
+          - 0x000000200000-0x000001a00000 : "linux"
+          - 0x000001a00000-0x000003400000 : "linux.bk"
+          - 0x000003400000-0x000004000000 : "rootfs_data"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see there are two 25MB linux partitions (a main and a backup) that
+can be used to store a FIT image.</p>
+</div>
+<div class="paragraph">
+<p>To add an image in the NOR flash it is required to download the image and write
+it in the NOR using the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; run nor_dlup</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can boot the system with the <code>run nor_boot</code> command.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_program_image"><a class="anchor" href="#_program_image"></a>7.2.5. Program image</h4>
+<div class="paragraph">
+<p>The UBoot console can also be used for programming a new image. This can be the
+case for some update reasons. But therefore, a running system with UBoot needs
+to be available on the target.</p>
+</div>
+<div class="sect4">
+<h5 id="_to_emmc"><a class="anchor" href="#_to_emmc"></a>7.2.5.1. to eMMC</h5>
+<div class="paragraph">
+<p>In the first step, we have to boot into UBoot console like following description:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Reset the board and wait for the UBoot autoboot stage</p>
+</li>
+<li>
+<p>Press any key to stop autoboot timer in order to get a U-Boot console prompt.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now we will upload a GPT image like e.g. <code>lan966x_b0-release-mmc.gpt</code>
+to the target memory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; dhcp 0x64000000 lan966x_b0-release-mmc.gpt
+port0 Waiting for PHY auto negotiation to complete........ done
+Using port0 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.10
+Filename 'lan966x_b0-release-mmc.gpt'.
+Load address: 0x64000000
+Loading: #################################################################
+         #################################################################
+         ###### ...........
+         #################################################################
+         #######
+         6.1 MiB/s
+done
+Bytes transferred = 104890368 (6408000 hex)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now the image data is uploaded to the target memory and can be written to the
+flash device.</p>
+</div>
+<div class="paragraph">
+<p>Lets focus on the next two upcoming commands.
+The first command converts the uploaded filesize to the required number of
+flash pages (512 byte). The second command is writing the image data to the
+eMMC flash device.</p>
+</div>
+<div class="paragraph">
+<p>Important is here, to set the write offset address of 0x0 (zero) for the flash.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>m =&gt; run div_512
+m =&gt; mmc write ${loadaddr} 0x0 ${filesize_512}
+
+MMC write: dev # 0, block # 0, count 208960 ... 208960 blocks written: OK</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_update_image_from_linux"><a class="anchor" href="#_update_image_from_linux"></a>7.3. Update image from Linux</h3>
+<div class="paragraph">
+<p>A running Linux system on the target can also be used for image update purpose.
+Therefore a network connection from the target to the host system needs to be
+established first.
+Afterwards a working TFTP server needs to make available in the same network.</p>
+</div>
+<div class="paragraph">
+<p>Using the <code>fdisk</code> command will dump the available partitions on the eMMC. This
+is useful for checking the proper partition index identifier.</p>
+</div>
+<div class="paragraph">
+<p>The device /dev/mmcblk0p&lt;n&gt; corresponds to partition &lt;n&gt;.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># fdisk -l
+Found valid GPT with protective MBR; using GPT
+
+Disk /dev/mmcblk0: 15269888 sectors, 3360M
+Logical sector size: 512
+Disk identifier (GUID): 671e9526-c34a-4bc9-9670-bfebb6dba410
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 15269854
+
+Number  Start (sector)    End (sector)  Size Name
+     1              64          262207  128M fip
+     2          262208          524351  128M fip.bak
+     3          524352          528447 2048K Env
+     4          528448          532543 2048K Env.bak
+     5          532544         2629695 1024M Boot0
+     6         2629696         4726847 1024M Boot1
+     7         4726848        15269854 5147M Data</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_update_fip"><a class="anchor" href="#_update_fip"></a>7.3.1. Update FIP</h4>
+<div class="paragraph">
+<p>One way to upload the e.g. <code>lan966x_b0-release.fip</code> file, is to
+use a TFTP client inside the running Linux.</p>
+</div>
+<div class="paragraph">
+<p>Therefore attach the putty console to the target and upload the FIP file using
+the 'dhcp' or 'tftp' command in an e.g. <code>/temp</code> folder on the target.</p>
+</div>
+<div class="paragraph">
+<p>Afterwards the file can be written by using the <code>dd</code> command into the proper
+device partition.</p>
+</div>
+<div class="paragraph">
+<p>In this example, we will write the data into the partition named to <code>fip</code> which
+can be mapped to <code>/dev/mmcblk0p1</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dd if=/temp/lan966x_b0-release.fip of=/dev/mmcblk0p1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After rebooting of the target, the updated file will be executed now.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_update_ext4_img"><a class="anchor" href="#_update_ext4_img"></a>7.3.2. Update ext4-img</h4>
+<div class="paragraph">
+<p>The same approach as described before, can be applied also for updating the
+<code>brsdk_standalone_arm.ext4.gz</code> binary.</p>
+</div>
+<div class="paragraph">
+<p>Upload the file using e.g. TFTP to a <code>/temp</code> folder or to a destination folder
+of your preference. In this folder, it needs to be unzipped first.</p>
+</div>
+<div class="paragraph">
+<p>Afterwards write the file by using the <code>dd</code> command to the proper device partition.</p>
+</div>
+<div class="paragraph">
+<p>In this example, we will write the data into the partition named to <code>Boot0</code> which
+can be mapped to <code>/dev/mmcblk0p5</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dd if=/temp/ext4-itb-bare.ext4 of=/dev/mmcblk0p5</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After rebooting of the target, the updated file will be executed now.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="term"><a class="anchor" href="#term"></a>8. TERMS and ABBREVIATIONS</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>BL1             Boot Loader 1: In secure immutable ROM (Trusted ROM Firmware)
+BL2             Boot Loader 2: In secure on-chip RAM, temporary (Trusted Boot
+                Firmware)
+BL31            Boot Loader 31: Resident secure services (ARM v8)
+BL32            Boot Loader 32: Resident secure services (ARM v7)
+BL33            Boot Loader 33: Typically U-Boot.
+BSSK            Binding Secret Symmetric Key
+CLI             Command line interface
+DDR             Double Data Rate, memory type
+DHCP            Dynamic Host Configuration Protocol
+DTB             Device Tree Blob
+DTC             Device Tree Compiler
+DTS             Device Tree Source files
+eMMC            Embedded MultiMediaCard
+FCx             Flex Com Interface #x
+FIP             Firmware Image Package
+FIT             Flattened Image Tree
+FS              Filesystem
+FW              Firmware
+GPT             GUID Partition Table
+JTAG            Joint Test Action Group, interface for testing and debugging
+KERNEL          The Linux kernel
+LBA             Logical Block Address
+OTP             One-Time-Programmable Memory
+PCIe            Peripheral Component Interconnect Express
+PSCI            Power State Coordination Interface
+ROOTFS          ROOT File System, used in Linux context
+ROT             Root of Trust
+ROT-PK          Root of Trust Public Key
+ROT-PK-SHA      Root of Trust Public Key SHA (SHA of the public key of the ROT)
+ROT-PRIVATE     Root of Trust Private Key
+SDCard          Secure Digital Card
+SJTAG           Secure JTAG
+SoC             System on Chip
+SPI             Serial Peripheral Interface
+SRAM            Secure Ram
+SSK             Secret Symmetric Key
+TBBR            Trusted Board Boot Requirements
+TF-A            Trusted Firmware for ARMv7 and ARMv8
+TFTP            Trivial File Transfer Protocol
+UART            Universal Asynchronous Receiver-Transmitter</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

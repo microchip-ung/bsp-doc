@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>L3 Unicast Routing :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.09">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.09</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li>L2 Bridge</li>
+    <li><a href="l3_unicast_routing.html">L3 Unicast Routing</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.09</button>
+  <div class="version-menu">
+    <a class="version is-current" href="l3_unicast_routing.html">2024.09</a>
+    <a class="version" href="../2024.06/l3_unicast_routing.html">2024.06</a>
+    <a class="version is-missing" href="../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">L3 Unicast Routing</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The hardware is capable of L3 forwarding at wire speed. The <code>ip</code> command is used to manage the routing configuration in the Linux kernel and is part of the <code>iproute2</code> tool suite.
+<code>ip</code> makes it simple to configure the Linux Kernel, and offloading to hardware happens automatically.</p>
+</div>
+<div class="paragraph">
+<p>However, the <code>ip</code> command exposes many configuration options which are not handled in hardware. The specific constraints will be described in the relevant sections below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_settings"><a class="anchor" href="#_basic_settings"></a>1. Basic settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Forwarding must be enabled in the kernel. There are separate settings for IPv4 and IPv6:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.ip_forward=1
+$ sysctl -w net.ipv6.conf.all.forwarding=1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The hardware only supports L3 forwarding on a VLAN-aware bridge. To enable L3 forwarding, create a VLAN-aware bridge.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip link add name br0 type bridge vlan_filtering 1
+$ bridge vlan
+port              vlan-id
+br0               1 PVID Egress Untagged</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, all bridge ports are part of VID 1. If this is undesirable, you can create a bridge without default VLANs:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip link add name br0 type bridge vlan_filtering 1 vlan_default_pvid 0</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_router_interfaces"><a class="anchor" href="#_router_interfaces"></a>2. Router interfaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To enable routing, specific interfaces must be created. We add <code>VLAN 9</code> and <code>VLAN 10</code> to the
+bridge. For each VLAN we add upper VLAN interfaces, <code>br0.10</code> and <code>br0.9</code>, on top of the bridge.
+These will become our router interfaces.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ bridge vlan add dev br0 vid 10 self
+$ bridge vlan add dev br0 vid 9 self
+
+$ ip link add link br0 name br0.10 type vlan id 10
+$ ip link add link br0 name br0.9 type vlan id 9
+
+$ ip link set up dev br0.10
+$ ip link set up dev br0.9</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A router interface is associated with a specific VLAN ID. With the example above, the interface <code>br0.10</code> is associated with <code>VLAN 10</code>.
+Router interfaces are created in hardware by assigning IP addresses to these interfaces.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip addr add 1.0.10.1/24 dev br0.10
+$ ip addr add 1.0.9.1/24 dev br0.9
+$ ip route
+1.0.9.0/24 dev br0.9 proto kernel scope link src 1.0.9.1 rt_offload
+1.0.10.0/24 dev br0.10 proto kernel scope link src 1.0.10.1 rt_offload</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Routes that are offloaded are marked with <code>rt_offload</code>.
+Routes that are offloaded, but sent to the CPU, are marked with <code>rt_trap</code>. As an example, traffic sent to the device itself is trapped:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip route show table local
+local 1.0.9.1 dev br0.9 proto kernel scope host src 1.0.9.1 rt_offload rt_trap
+local 1.0.10.1 dev br0.10 proto kernel scope host src 1.0.10.1 rt_offload rt_trap</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See <a href="#l3_examples">L3 Examples</a> for full examples.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nexthop_routes_and_ecmp"><a class="anchor" href="#_nexthop_routes_and_ecmp"></a>3. Nexthop routes and ECMP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nexthop routes are added in the usual manner.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip route replace 6.6.0.0/16 nexthop via 1.0.9.50 nexthop via 1.0.10.50
+$ ip route
+6.6.0.0/16 rt_offload
+	nexthop via 1.0.9.50 dev br0.9 weight 1
+	nexthop via 1.0.10.50 dev br0.10 weight 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Not all possible nexthop routes are offloadable, due to hardware or driver constraints. The following requirements must be met:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Total number of nexthops is at most 16.</p>
+</li>
+<li>
+<p>Only main and local routing tables are offloaded.</p>
+</li>
+<li>
+<p>Nexthop objects are not offloaded.</p>
+</li>
+<li>
+<p>Nexthop gateway egress device must be a router interface.</p>
+</li>
+<li>
+<p>Nexthop weight must be 1.</p>
+</li>
+<li>
+<p>Multicast not supported.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For the route to be offloaded, the requirements must be met for all nexthops in a route.</p>
+</div>
+<div class="sect2">
+<h3 id="_ecmp_hashing_algorithm"><a class="anchor" href="#_ecmp_hashing_algorithm"></a>3.1. ECMP hashing algorithm</h3>
+<div class="paragraph">
+<p>The hashing algorithm used in hardware, to select nexthop, is different from the kernel default algorithm.
+The following protocol fields contribute to the nexthop choice:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Source IP for IPv4 and IPv6 frames.</p>
+</li>
+<li>
+<p>IPv6 flow label.</p>
+</li>
+<li>
+<p>TCP/UDP source and destination ports for TCP/UDP frames.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All contributions are 4-bit XOR&#8217;ed. As an example suppose we receive a UDP frame with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>SIP      = 0x01030507
+SRC_PORT = 0x1004
+DST_PORT = 0x1003
+
+ECMP_CODE = (0x0 ^ 0x1 ^ 0x0 ^ 0x3 ^ 0x0 ^ 0x5 ^ 0x0 ^ 0x7) ^
+            (0x1 ^ 0x0 ^ 0x0 ^ 0x4) ^
+            (0x1 ^ 0x0 ^ 0x0 ^ 0x3)
+          = 0x7</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For a nexthop route with N nexthops, the final nexthop is found by taking this code modulo N.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_blackhole_routes"><a class="anchor" href="#_blackhole_routes"></a>4. Blackhole Routes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A blackhole route is a route where incoming traffic is silently discarded. The
+source is not notified in any way. Blackhole routes are sometimes called null routes or discard routes.</p>
+</div>
+<div class="paragraph">
+<p>The hardware supports adding <code>blackhole</code> routes, which means frames are dropped
+efficiently in hardware, without putting pressure on the CPU system. The <code>ip</code>
+command makes it simple to add blackhole routes.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip route add blackhole 6.7.0.0/16
+$ ip route
+blackhole 6.7.0.0/16 rt_offload</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, any IP frame received which is addressed to the subnet 6.7.0.0/16, is
+dropped and never routed.</p>
+</div>
+<div class="paragraph">
+<p>Likewise, the <code>prohibit</code> and <code>unreachable</code> route types are also supported. They also drop frames,
+but will respond with ICMP frames.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip route replace prohibit 6.7.0.0/16
+$ ip route
+prohibit 6.7.0.0/16 rt_offload rt_trap
+$ ip route replace unreachable 6.7.0.0/16
+$ ip route
+unreachable 6.7.0.0/16 rt_offload rt_trap</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As is seen above, these types are trapped and thus handled by the CPU. This is necessary to respond with the correct ICMP frames.</p>
+</div>
+<div class="paragraph">
+<p>For IPv4, these routes respond with the following ICMPv4 messages:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>prohibit</code>: type Destination Unreachable (<code>0x03</code>) and code Communication administratively prohibited (<code>0x0d</code>).</p>
+</li>
+<li>
+<p><code>unreachable</code>: type Destination Unreachable (<code>0x03</code>) and code Destination host unreachable (<code>0x01</code>).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For IPv6, these routes respond with the following ICMPv6 messages:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>prohibit</code>: type Destination Unreachable (<code>0x01</code>) and code Communication with destination administratively prohibited (<code>0x01</code>).</p>
+</li>
+<li>
+<p><code>unreachable</code>: type Destination Unreachable (<code>0x01</code>) and code No route to destination  (<code>0x00</code>).</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The kernel may ratelimit responses, so not all frames matching the route will receive an ICMP response.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nexthop_objects_not_supported"><a class="anchor" href="#_nexthop_objects_not_supported"></a>5. Nexthop objects not supported</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nexthop objects can be managed with the <code>ip nexthop</code> subcommand. The device does not support nexthop objects, and routes added referring to nexthop objects will not be offloaded.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_neighbours"><a class="anchor" href="#_neighbours"></a>6. Neighbours</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Neighbours discovered by the kernel, which reside in offloaded subnets are offloaded automatically.
+Offloaded neighbours are marked with <code>offload</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip nei
+1.0.10.2 dev br0.10 lladdr 90:e2:ba:63:78:de offload STALE
+1.0.9.2 dev br0.9 lladdr 90:e2:ba:63:78:dc offload STALE</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is possible to add permanent neighbours explicitly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip nei replace to 1.0.10.2 lladdr 90:e2:ba:63:78:de dev br0.10
+$ ip nei replace to 1.0.9.2 lladdr 90:e2:ba:63:78:dc dev br0.9
+$ ip nei
+1.0.9.2 dev br0.9 lladdr 90:e2:ba:63:78:dc offload PERMANENT
+1.0.10.2 dev br0.10 lladdr 90:e2:ba:63:78:de offload PERMANENT</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When a nexthop route is added/replaced, the neighbours are added and the ARP/ND process is initiated.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip route replace 100.99.0.0/16 \
+&gt;         nexthop via 1.0.10.101 \
+&gt;         nexthop via 1.0.10.103 \
+&gt;         nexthop via 1.0.10.104
+$ ip nei
+1.0.10.101 dev br0.10 INCOMPLETE
+1.0.10.104 dev br0.10 INCOMPLETE
+1.0.10.103 dev br0.10 INCOMPLETE</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The neighbour state is updated as ARP/ND responses are processed by the kernel.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ipv6_vs_ipv4_api_differences"><a class="anchor" href="#_ipv6_vs_ipv4_api_differences"></a>7. IPv6 vs IPv4 API differences</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The kernel interface for IPv6 is slightly different from IPv4. For IPv4 you use the commands</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ip route add</code></p>
+</li>
+<li>
+<p><code>ip route replace</code></p>
+</li>
+<li>
+<p><code>ip route delete</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The entire nexthop group is always replaced/deleted. However, for IPv6 it is possible to add/remove single nexthops from a nexthop group using <code>append/delete</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip -6 route replace 2001:db8::1/56 \
+&gt;         nexthop via 2001:db8:1:20::100 \
+&gt;         nexthop via 2001:db8:1:10::100
+$ ip -6 route
+2001:db8::/56 metric 1024 rt_offload pref medium
+	nexthop via 2001:db8:1:20::100 dev br0.9 weight 1
+	nexthop via 2001:db8:1:10::100 dev br0.10 weight 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add two new nexthops to the route:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip -6 route append 2001:db8::1/56 \
+&gt;         nexthop via 2001:db8:1:20::101 \
+&gt;         nexthop via 2001:db8:1:10::101
+$ ip -6 route
+2001:db8::/56 metric 1024 rt_offload pref medium
+	nexthop via 2001:db8:1:20::100 dev br0.9 weight 1
+	nexthop via 2001:db8:1:10::100 dev br0.10 weight 1
+	nexthop via 2001:db8:1:20::101 dev br0.9 weight 1
+	nexthop via 2001:db8:1:10::101 dev br0.10 weight 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Delete two nexthops from the route:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip -6 route delete 2001:db8::1/56 \
+&gt;         nexthop via 2001:db8:1:20::100 \
+&gt;         nexthop via 2001:db8:1:10::101
+$ ip -6 route
+2001:db8::/56 metric 1024 rt_offload pref medium
+	nexthop via 2001:db8:1:10::100 dev br0.10 weight 1
+	nexthop via 2001:db8:1:20::101 dev br0.9 weight 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace the entire nexthop group:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip -6 route replace 2001:db8::1/56 \
+&gt;         nexthop via 2001:db8:1:20::110 \
+&gt;         nexthop via 2001:db8:1:10::110
+$ ip -6 route
+2001:db8::/56 metric 1024 rt_offload pref medium
+	nexthop via 2001:db8:1:20::110 dev br0.9 weight 1
+	nexthop via 2001:db8:1:10::110 dev br0.10 weight 1</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_router_mac"><a class="anchor" href="#_router_mac"></a>8. Router MAC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The VLAN interfaces on top of the bridge interface all share MAC addresses with the bridge interface. The specific MAC assigned to a bridge depends on configuration.</p>
+</div>
+<div class="paragraph">
+<p>The default Linux behaviour is to use the minimal MAC for all interfaces joined to the bridge. This means the MAC changes dynamically as ports join and leave the bridge.
+Alternatively, the bridge MAC can be explicitly set by the user.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_useful_sysctl_options"><a class="anchor" href="#_useful_sysctl_options"></a>9. Useful sysctl options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is a list of options which are either necessary or useful. The kernel defaults may not be aligned with the default hardware behaviour.</p>
+</div>
+<div class="sect2">
+<h3 id="_enable_forwarding"><a class="anchor" href="#_enable_forwarding"></a>9.1. Enable Forwarding</h3>
+<div class="paragraph">
+<p>Enable IPv4 and IPv6 forwarding.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.ip_forward=1
+$ sysctl -w net.ipv6.conf.all.forwarding=1
+$ sysctl -w net.ipv6.conf.default.forwarding=1</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ipv6_interface_down"><a class="anchor" href="#_ipv6_interface_down"></a>9.2. IPv6 Interface down</h3>
+<div class="paragraph">
+<p>The kernel flushes IPv6 addresses when an interface is brought down, which destroys the router interfaces in hardware.
+This behaviour differs from IPv4, where addresses are kept when an interface is brought down.
+To get the same behavior for IPv6 you can use:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv6.conf.all.keep_addr_on_down=1
+$ sysctl -w net.ipv6.conf.default.keep_addr_on_down=1</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_neighbour_advertisement_on_interface_down"><a class="anchor" href="#_neighbour_advertisement_on_interface_down"></a>9.3. Neighbour advertisement on interface down</h3>
+<div class="paragraph">
+<p>Generate unsolicited neighbour advertisements when a device is brought up or hardware address changes.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv6.conf.all.ndisc_notify=1
+$ sysctl -w net.ipv6.conf.default.ndisc_notify=1</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reverse_path_filtering"><a class="anchor" href="#_reverse_path_filtering"></a>9.4. Reverse Path Filtering</h3>
+<div class="paragraph">
+<p>The kernel IPv4 network stack supports three RP filtering modes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>No filtering, <code>rp_filter=0</code>.</p>
+</li>
+<li>
+<p>Strict mode (RFC 3704), <code>rp_filter=1</code>.</p>
+</li>
+<li>
+<p>Loose mode (RFC 3704), <code>rp_filter=2</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The hardware can support all modes, however the driver does not implement this at the moment.
+In practice this means the source IP does not matter for the purpose of routing decisions in hardware.
+Disable rp_filter in the kernel, to be consistent with hardware behaviour.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.conf.all.rp_filter=0
+$ sysctl -w net.ipv4.conf.default.rp_filter=0</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ipv6_netlink_events_on_interface_down"><a class="anchor" href="#_ipv6_netlink_events_on_interface_down"></a>9.5. IPv6 netlink events on interface down</h3>
+<div class="paragraph">
+<p>Controls whether an <code>RTM_DELROUTE</code> message is generated for routes removed when a device is taken down or deleted. IPv4 does not generate this message; IPv6 does by default.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv6.route.skip_notify_on_dev_down=1</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_neighbour_gc_thresholds"><a class="anchor" href="#_neighbour_gc_thresholds"></a>9.6. Neighbour GC thresholds</h3>
+<div class="sect3">
+<h4 id="_gc_thresh1"><a class="anchor" href="#_gc_thresh1"></a>9.6.1. gc.thresh1</h4>
+<div class="paragraph">
+<p>Minimum number of entries to keep. The garbage collector will not purge entries if there are fewer than this number.
+The default is 128.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.neigh.default.gc_thresh1=128
+$ sysctl -w net.ipv6.neigh.default.gc_thresh1=128</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_gc_thresh2"><a class="anchor" href="#_gc_thresh2"></a>9.6.2. gc.thresh2</h4>
+<div class="paragraph">
+<p>Threshold when garbage collector becomes more aggressive about purging entries. Entries older than 5 seconds will be cleared when over this number.
+The default is 512.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.neigh.default.gc_thresh2=2048
+$ sysctl -w net.ipv6.neigh.default.gc_thresh2=2048</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_gc_thresh3"><a class="anchor" href="#_gc_thresh3"></a>9.6.3. gc.thresh3</h4>
+<div class="paragraph">
+<p>Maximum number of non-PERMANENT neighbor entries allowed. Increase this when using large numbers of interfaces and when communicating with large numbers of directly connected peers.
+The default is 1024.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.neigh.default.gc_thresh3=4096
+$ sysctl -w net.ipv6.neigh.default.gc_thresh3=4096</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_icmp_redirects"><a class="anchor" href="#_icmp_redirects"></a>9.7. ICMP redirects</h3>
+<div class="paragraph">
+<p>The kernel will not always determine if two hosts are in the same broadcast domain. When routing between such hosts, it will incorrectly dispatch an ICMP redirect.
+To avoid this redirects can be disabled.</p>
+</div>
+<div class="sect3">
+<h4 id="_ipv4"><a class="anchor" href="#_ipv4"></a>9.7.1. IPv4</h4>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.conf.all.send_redirects=0
+$ sysctl -w net.ipv4.conf.default.send_redirects=0
+$ sysctl -w net.ipv4.conf.${INTERFACE}.send_redirects=0</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ipv6"><a class="anchor" href="#_ipv6"></a>9.7.2. IPv6</h4>
+<div class="paragraph">
+<p>For IPv6 ICMP redirects can not be disabled with sysctl, but it is possible to use iptables:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip6tables -A OUTPUT -p icmpv6 --icmpv6-type redirect -j DROP</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_limitations_to_hardware_routing"><a class="anchor" href="#_limitations_to_hardware_routing"></a>10. Limitations to hardware routing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Routing in hardware is subject to limitations. The following frame types are not eligible for routing in hardware.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>IPv4 packets must not contain options.</p>
+</li>
+<li>
+<p>IPv6 packets must not contain hop-by-hop options.</p>
+</li>
+<li>
+<p>IPv4 header checksum must be correct.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The default configuration will trap these frames to the CPU, leaving it up to the kernel configuration to decide how to handle them.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_debugging"><a class="anchor" href="#_debugging"></a>11. Debugging</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Do not use the <code>vcap</code> tool to manipulate the LPM VCAP when routing is enabled. It is critical for proper functioning that the hardware state is in sync with the kernel state.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If the DebugFS is enabled, it is possible to inspect the hardware routing table.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cat /sys/kernel/debug/sparx5/vcaps/lpm_0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a route has been hit in HW, the sticky bit will be set:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>...
+rule: 6, addr: [18426,18426], X1, ctr[0]: 0, hit: 1
+  chain_id: 6000000
+  user: 5
+  priority: 96
+  state: permanent
+  keysets: VCAP_KFS_SGL_IP4
+  keyset_sw: 1
+  keyset_sw_regs: 2
+    DST_FLAG: W1: 1/1
+    IP4_XIP: W32: 1.0.10.2/255.255.255.255
+  actionset: VCAP_AFS_ARP_ENTRY
+  actionset_sw: 1
+  actionset_sw_regs: 3
+    ARP_ENA: W1: 1
+    MAC_LSB: W32: 0xba6378de
+    MAC_MSB: W16: 0x90e2
+    TYPE: W2: 2
+...</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The VCAP counters do not exist for the LPM VCAP.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="l3_examples"><a class="anchor" href="#l3_examples"></a>12. Full examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ipv4_2"><a class="anchor" href="#_ipv4_2"></a>12.1. IPv4</h3>
+<div class="paragraph">
+<p>Suppose we have two VLANs configured on the switch, each with a subnet assigned.
+We wish to route L3 traffic between the VLANs.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>       bridge                     host0
++-------------+ pvid 9      +-----------------------+
+|             | untagged   ethp0    1.0.9.2         |
+|  br0.9      +------------&gt;|                       |
+|            eth0           |1.0.10.0/24 via 1.0.9.1|
+| 1.0.9.1/24  |             +-----------------------+
+|             |
+|             |
+|   br0       |
+|             |                     host1
+|             | pvid 10     +-----------------------+
+|             | untagged   ethp1     1.0.10.2       |
+|  br0.10     +------------&gt;|                       |
+|             eth1          |1.0.9.0/24 via 1.0.10.1|
+| 1.0.10.1/24 |             +-----------------------+
+|             |
++-------------+</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_switch_configuration"><a class="anchor" href="#_switch_configuration"></a>12.1.1. Switch configuration</h4>
+<div class="paragraph">
+<p>Add the bridge and enable forwarding.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip link add name br0 type bridge vlan_filtering 1 vlan_default_pvid 0
+$ sysctl -w net.ipv4.ip_forward=1
+$ sysctl -w net.ipv4.conf.all.forwarding=1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Disable ICMP redirects.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sysctl -w net.ipv4.conf.all.send_redirects=0
+$ sysctl -w net.ipv4.conf.br0.send_redirects=0
+$ sysctl -w net.ipv4.conf.eth0.send_redirects=0
+$ sysctl -w net.ipv4.conf.eth1.send_redirects=0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Join the two port interfaces to the bridge, and add VLAN configuration.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip link set eth0 master br0 up
+$ ip link set eth1 master br0 up
+$ ip link set up dev br0
+$ bridge vlan add dev br0 vid 9 self
+$ bridge vlan add dev br0 vid 10 self
+$ bridge vlan add dev eth0 vid 9 pvid untagged
+$ bridge vlan add dev eth1 vid 10 pvid untagged</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For each VLAN, we add an VLAN upper interface to the bridge.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip link add link br0 name br0.9 type vlan id 9
+$ ip link add link br0 name br0.10 type vlan id 10
+$ ip link set up dev br0.9
+$ ip link set up dev br0.10</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create gateways in each VLAN, by assigning a subnet to each interface.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip addr add 1.0.9.1/24 dev br0.9
+$ ip addr add 1.0.10.1/24 dev br0.10</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_host_configuration"><a class="anchor" href="#_host_configuration"></a>12.1.2. Host configuration</h4>
+<div class="paragraph">
+<p>For each host, we configure an IP in the subnet, and set a gateway for the opposite subnet.</p>
+</div>
+<div class="paragraph">
+<p>For host 0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip addr add 1.0.9.2/24 dev ethp0
+$ ip link set up dev ethp0
+$ ip route add 1.0.10.0/24 via 1.0.9.1 dev ethp0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For host 1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip addr add 1.0.10.2/24 dev ethp1
+$ ip link set up dev ethp1
+$ ip route add 1.0.9.0/24 via 1.0.10.1 dev ethp1</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ping"><a class="anchor" href="#_ping"></a>12.1.3. Ping</h4>
+<div class="paragraph">
+<p>If we ping from 1.0.9.2 to 1.0.10.2 will, the switch kernel will initiate ARP for both hosts, install the neighbours in hardware and offload dataplane to hardware.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>host0# ping -c 3 1.0.10.2
+PING 1.0.10.2 (1.0.10.2) 56(84) bytes of data.
+64 bytes from 1.0.10.2: icmp_seq=1 ttl=63 time=0.975 ms
+64 bytes from 1.0.10.2: icmp_seq=2 ttl=63 time=0.342 ms
+64 bytes from 1.0.10.2: icmp_seq=3 ttl=63 time=0.350 ms</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Looking at the switch neighbour table, shows the offloaded neighbours:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ip nei
+1.0.10.2 dev br0.10 lladdr 90:e2:ba:63:78:de offload STALE
+1.0.9.2 dev br0.9 lladdr 90:e2:ba:63:78:dc offload STALE</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

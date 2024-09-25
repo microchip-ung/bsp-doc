@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TC and VCAP :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.09">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.09</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li><a href="tc-flower-vcap.html">TC and VCAP</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.09</button>
+  <div class="version-menu">
+    <a class="version is-current" href="tc-flower-vcap.html">2024.09</a>
+    <a class="version" href="../../2024.06/tc/tc-flower-vcap.html">2024.06</a>
+    <a class="version" href="../../2024.03/tc/tc-flower-vcap.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/tc/tc-flower-vcap.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/tc/tc-flower-vcap.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">TC and VCAP</h1>
+<div class="sect1">
+<h2 id="tc_vcap_intro"><a class="anchor" href="#tc_vcap_intro"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The abbreviation VCAP stands for Versatile Content-Aware Processor.</p>
+</div>
+<div class="paragraph">
+<p>A VCAP is approximately the same as a TCAM (ternary content-addressable memory) with configurable key, action and a
+counter.</p>
+</div>
+<div class="paragraph">
+<p>A VCAP is used to match frames using a selection of keys and then execute one or more actions on the matched frames.</p>
+</div>
+<div class="paragraph">
+<p>Each VCAP may have one or more lookups that can be used individually.  The lookups are typically serviced in order of
+increasing lookup id.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vcap_info"><a class="anchor" href="#vcap_info"></a>2. VCAP Information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is an overview of which VCAPs are supported on the different switches,
+where each (VCAP, lookup) combination is assigned to a specific chain index:</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="_sparx5_and_lan969x_vcaps"><a class="anchor" href="#_sparx5_and_lan969x_vcaps"></a>2.1. Sparx5 and LAN969x VCAPs</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VCAP Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Sparx5 Addresses</th>
+<th class="tableblock halign-left valign-top">LAN969x Addresses</th>
+<th class="tableblock halign-left valign-top">Counter</th>
+<th class="tableblock halign-left valign-top">Lookups</th>
+<th class="tableblock halign-left valign-top">Chain Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">IS0</p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">Ingress Classification</p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">18432</p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">9216</p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">1 bit</p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L0: 1000000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L1: 1100000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L2: 1200000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L3: 1300000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L4: 1400000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L5: 1500000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">IS2</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Ingress Access Control</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">12288</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">9216</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Ext 32 bit</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L0: 8000000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L1: 8100000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L2: 8200000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L3: 8300000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ES0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egress Rewriter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4096</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1536</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 bit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L0: 10000000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">ES2</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Egress Access Control</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">12288</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">1024</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Ext 32 bit</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L0: 20000000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L1: 20100000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The 6 lookups in IS0 are done serially and returns an action for each enabled VCAP lookup. If the lookup matches an
+entry in the IS0 VCAP, the associated action is returned.</p>
+</div>
+<div class="paragraph">
+<p>For IS2 the first and the third lookups are done in parallel. The same applies to the second and the fourth lookups.
+Consequently, the actions from the first and the third lookups are processed before the actions from the second and the
+fourth lookups.
+Most actions are ordered so that the last action processed takes precedence, but some are sticky meaning they cannot be
+undone.  The datasheet contains a list of these actions in section 4.20.1.7 Processing of VCAP IS2 Actions.</p>
+</div>
+<div class="paragraph">
+<p>For ES2 the two lookups are done in parallel.  If both result in an action then the second takes precedence, but there
+is a FWD_MODE action that has a special resolution table, and there are actions that a sticky meaning they cannot be
+overwritten by later actions.  Section 4.25.1.5 Processing Actions in the datasheet contains the details.</p>
+</div>
+<div class="paragraph">
+<p>All counters in the 4 VCAPs have 1 bit counters, but it is possible to use external 32 bit counters in IS2 and ES2, so
+this is what is currently being configured.  Each rule in all VCAPs is given a unique rule id, which also serves as a
+counter id for the external counters.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The IS0 VCAP is sometimes referred to as CLM in the datasheet.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The LAN969x switch provides the same VCAPs with the same number of lookups, but have fewer address blocks for the VCAP
+instances.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lan966x_vcaps"><a class="anchor" href="#_lan966x_vcaps"></a>2.2. LAN966x VCAPs</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VCAP Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Addresses</th>
+<th class="tableblock halign-left valign-top">Counter</th>
+<th class="tableblock halign-left valign-top">Lookups</th>
+<th class="tableblock halign-left valign-top">Chain Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">IS1</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Ingress Classification</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">768</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">32 bit</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L0: 1000000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L1: 1100000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L2: 1200000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">IS2</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Ingress Access Control</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">256</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">32 bit</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L0: 8000000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L1: 8100000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ES0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egress Rewriter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 bit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L0: 10000000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The three lookups in IS1 are done simultaneously and the potentially three IS1
+action vectors are applied in three steps. If the actions overlap the last
+lookup wins.</p>
+</div>
+<div class="paragraph">
+<p>Then the two lookups in IS2 are done simultaneously and the potentially two IS2
+action vectors are applied in two steps. Consult the datasheet to see how the
+two lookups are combined.</p>
+</div>
+<div class="paragraph">
+<p>When the switch has selected on which port(s) to forward the packet, a single
+lookup in ES0 is done and the potential action vectors are applied before the
+packet is transmitted on the egress port(s).</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_commands"><a class="anchor" href="#_tc_commands"></a>3. TC commands</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here we will show how to use a combination of <code>tc</code> commands to configure VCAPs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The examples in the remainder of this section uses the LAN966x VCAP as examples.  You can perform the same
+operations on Sparx5 but the VCAPs have other names and in some cases the key support is different.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/tc-chains-is1-is2.svg" alt="tc chains is1 is2">
+</div>
+<div class="title">Figure 1. Ingress pipeline for LAN966x IS1 and IS2:</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/tc-chains-es0.svg" alt="tc chains es0">
+</div>
+<div class="title">Figure 2. Egress pipeline for LAN966x ES0:</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_initial_setup"><a class="anchor" href="#_tc_initial_setup"></a>4. TC initial setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tc rules operate in general on a single interface only.</p>
+</div>
+<div class="paragraph">
+<p>Microchip switches support <a href="tc-intro.html#shared_filter_blocks" class="xref page">Shared Filter Blocks</a>
+on the ingress side but for now, we will use eth0 as the single interface.</p>
+</div>
+<div class="paragraph">
+<p>Start by creating a clsact qdisc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc qdisc add dev eth0 clsact</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the qdisc where all filters are attached. A filter refers to this qdisc
+by using the keyword 'ingress' or 'egress'.</p>
+</div>
+<div class="paragraph">
+<p>In order to simulate the VCAP functionality on a SW target you must create the
+following default rules:</p>
+</div>
+<div class="paragraph">
+<p>Create a default lowest priority matchall rule in chain 0, which is the default
+chain, with a goto chain 1000000 (IS1 lookup 0) as the only action:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 matchall \
+     action goto chain 1000000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a default lowest priority flower rule in chain 1000000 (IS1 lookup 0) with
+a goto chain 1100000 (IS1 lookup 1) as the only action:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 chain 1000000 flower \
+     action goto chain 1100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a default lowest priority flower rule in chain 1100000 (IS1 lookup 1) with
+a goto chain 1200000 (IS1 lookup 2) as the only action:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 chain 1100000 flower \
+     action goto chain 1200000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a default lowest priority flower rule in chain 1200000 (IS1 lookup 2) with
+a goto chain 8000000 (IS2 lookup 0) as the only action:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 chain 1200000 flower \
+     action goto chain 8000000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a default lowest priority flower rule in chain 8000000 (IS2 lookup 0) with
+a goto chain 8100000 (IS2 lookup 1) as the only action:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 chain 8000000 flower \
+     action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a default lowest priority flower rule in every chain you plan to use from
+8000001 to 8000255 (IS2 lookup 0) with a goto chain 8100000 (IS2 lookup 1) as the only
+action:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 chain 8000001 flower \
+     action goto chain 8100000
+$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 chain 800007 flower \
+     action goto chain 8100000
+$ tc filter add dev eth0 ingress protocol all prio 0xffff handle 0 chain 800042 flower \
+     action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is not necessary to create a default rule in chain 8100000 (IS2 lookup 1) as
+the VCAP stops processing after this lookup.</p>
+</div>
+<div class="paragraph">
+<p>All user-defined flower rules must end with a goto &lt;next chain&gt; action in order
+to stop further processing if there is a match.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linking_tc_filters_between_vcaps"><a class="anchor" href="#_linking_tc_filters_between_vcaps"></a>5. Linking TC filters between VCAPs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The switch allows filters to be linked between the IS0/IS1 and the other VCAPs by specifying a 'offset' to the usual
+chain value.</p>
+</div>
+<div class="paragraph">
+<p>In the source filter the goto action must specify the lookup chain id plus an offset value from 1 to 255 (larger values
+are available for other chains) and similarly the destination filter must be added on the same chain id.</p>
+</div>
+<div class="paragraph">
+<p>Example of a source filter action specification using an offset of 21:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">action goto chain 8000021</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example of a destination filter chain specification using the same offset as above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">tc filter add dev eth12 ingress chain 8000021 ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In e.g the IS0/IS1 VCAP this is done by adding an action in the source filter that sets the 8 bit wide PAG (Policy
+Association Group) value in the frame metadata when the filter matches the frame, and then add a key match on the same
+PAG value in the destination filter in the IS2 VCAP, so the second filter only matches if also the first (source) filter
+was matched.</p>
+</div>
+<div class="paragraph">
+<p>Here is an overview of the link keys between the VCAPs:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Source</th>
+<th class="tableblock halign-left valign-top">Destination</th>
+<th class="tableblock halign-center valign-top">Key</th>
+<th class="tableblock halign-center valign-top">Size</th>
+<th class="tableblock halign-center valign-top">Sparx5</th>
+<th class="tableblock halign-center valign-top">LAN966x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IS0/IS1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IS2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">PAG</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8 bit</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IS0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ES0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ISDX</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">12 bit</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IS0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ES2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ISDX</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">12 bit</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here is an example of a source filter that uses chain 1200000 (IS1 lookup 2) and chains to IS2 lookup 0 with PAG 1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol ip prio 10 handle 0 chain 1200000 flower \
+     dst_mac 00:11:22:33:44:55 \
+     dst_ip 10.10.0.42 \
+     action skbedit priority 6\
+     action goto chain 8000001</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example assigns priority 6 to all ipv4 packets that match dst_mac and
+dst_ip and then go to chain 8000001 which corresponds to PAG 1.</p>
+</div>
+<div class="paragraph">
+<p>When running on the target, the PAG is derived from the goto chain number and
+assigned as a VCAP action in IS1 lookup 2, The PAG is assigned as a key in IS2
+lookup 0 and depends on the selected chain.</p>
+</div>
+<div class="paragraph">
+<p>Currently, it is not enforced that you set up all the default chains when running
+on target but it is expected that we will enforce this going forward.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_flower_syntax"><a class="anchor" href="#_tc_flower_syntax"></a>6. TC flower syntax</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The tc filter and flower syntax can be shown with these commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter help
+$ tc filter add flower help</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to modify an existing filter you can use the 'change' or 'replace'
+option:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol ip prio 10 handle 0 chain 1200000 flower \
+     dst_mac 00:11:22:33:44:55 \
+     dst_ip 10.10.0.42 \
+     action skbedit priority 6 \
+     action goto chain 8000001
+
+$ tc filter change dev eth0 ingress protocol ip prio 10 handle 0 chain 1200000 flower \
+     dst_mac 00:11:22:33:44:55 \
+     dst_ip 10.10.0.84 \
+     action skbedit priority 6 \
+     action goto chain 8000001</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, dst_ip was changed from 10.10.0.42 to 10.10.0.84.</p>
+</div>
+<div class="paragraph">
+<p>Each VCAP supports different protocols, keys, and actions which will be explained
+in the following sections.</p>
+</div>
+<div class="paragraph">
+<p>The following options are common for all flower filters:</p>
+</div>
+<div class="sect2">
+<h3 id="_prio"><a class="anchor" href="#_prio"></a>6.1. Prio</h3>
+<div class="paragraph">
+<p>prio &lt;PRIO&gt; (or pref &lt;PRIO&gt;) sets the sequence of filters.</p>
+</div>
+<div class="paragraph">
+<p>Filters with lower numbers are examined first and thus have higher priority.</p>
+</div>
+<div class="paragraph">
+<p>PRIO is a number from 0 to 0xffff.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_handle"><a class="anchor" href="#_handle"></a>6.2. Handle</h3>
+<div class="paragraph">
+<p>handle &lt;FILTERID&gt; is a reference to the filter. Use this is if you need to
+reference the filter later.</p>
+</div>
+<div class="paragraph">
+<p>FILTERID is a number from 0 to 0xffffffff.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chain"><a class="anchor" href="#_chain"></a>6.3. Chain</h3>
+<div class="paragraph">
+<p>chain &lt;CHAIN_INDEX&gt; is the chain to use for this filter.</p>
+</div>
+<div class="paragraph">
+<p>Chain 0 is the default chain if this option is missing.</p>
+</div>
+<div class="paragraph">
+<p>CHAIN_INDEX is a number from 0 to 0xffffffff.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lan966x_is1"><a class="anchor" href="#_lan966x_is1"></a>7. LAN966x IS1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All three IS1 lookups generate by default an S1_7TUPLE key which defines the possible match keys.</p>
+</div>
+<div class="paragraph">
+<p>If another key than S1_7TUPLE is needed, a chain template must be used.
+See page <a href="tc-is1.html" class="xref page">Classification (IS0/IS1)</a>, where the different IS1 keys are documented.</p>
+</div>
+<div class="sect2">
+<h3 id="_protocol"><a class="anchor" href="#_protocol"></a>7.1. Protocol</h3>
+<div class="paragraph">
+<p>protocol &lt;PROTO&gt; is the protocol to match.</p>
+</div>
+<div class="paragraph">
+<p>PROTO can be one of: all, 802_2 (LLC), snap, 802.1q (ctag), 802.1ad (stag),
+0xf1c1 (rtag), arp, ip, ipv6, or a 16-bit number &gt;= 0x0600 for EtherType.</p>
+</div>
+<div class="paragraph">
+<p>protocol is always the EtherType after mac addresses or vlan tag(s).</p>
+</div>
+<div class="paragraph">
+<p>Set protocol to all if you want to match on all kind of packets.</p>
+</div>
+<div class="paragraph">
+<p>Setting protocol to other than all limits the matches to the specific kind of
+packets.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keys"><a class="anchor" href="#_keys"></a>7.2. Keys</h3>
+<div class="paragraph">
+<p>Most match keys can be specified as a value or a value/mask. A missing match key
+is the same as a wildcard (mask is all zeros).</p>
+</div>
+<div class="paragraph">
+<p>The following match keys are supported in all protocols:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dst_mac &lt;MAC&gt; - Match on DMAC. Value only: xx:xx:xx:xx:xx:xx or value/mask:
+xx:xx:xx:xx:xx:xx/yy:yy:yy:yy:yy:yy.</p>
+</li>
+<li>
+<p>src_mac &lt;MAC&gt; - Match on SMAC. Same as dst_mac.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following match keys are supported when protocol is 802.1q (ctag) or 802.1ad
+(stag). They match on the outer VLAN tag:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vlan_id &lt;VID&gt; - Match on outer VLAN ID. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>vlan_prio &lt;PCP&gt; - Match on outer VLAN PCP. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>vlan_ethtype &lt;PROTO&gt; - Match on EtherType after outer VLAN.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some of the IS1 keys support matching a second VLAN tag.
+The match keys for the second VLAN tag are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>cvlan_id &lt;VID&gt; - Match on inner VLAN ID. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>cvlan_prio &lt;PCP&gt; - Match on inner VLAN PCP. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>cvlan_ethtype &lt;PROTO&gt; - Match on EtherType after inner VLAN.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See page <a href="tc-is1.html" class="xref page">Classification (IS0/IS1)</a> for documentation regarding supported match keys in the different IS1 keys.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_actions"><a class="anchor" href="#_actions"></a>7.3. Actions</h3>
+<div class="paragraph">
+<p>The supported actions in IS1 are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>pass - a do-nothing action used to stop lookup in the VCAP.</p>
+</li>
+<li>
+<p>vlan modify id &lt;VID&gt; [priority &lt;PCP&gt;] - set the classified VID and PCP.
+Classified PCP is set to 0 if priority is not present.</p>
+</li>
+<li>
+<p>skbedit priority &lt;PRIO&gt; - set the classified priority to PRIO</p>
+</li>
+<li>
+<p>goto chain &lt;CHAIN_INDEX&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Every flower filter requires a goto as the last action and this is enforced by
+the driver.</p>
+</div>
+<div class="paragraph">
+<p>On a SW target, these goto&#8217;s are needed in order to simulate the behaviour of the
+VCAP, where the search stops after the first match.</p>
+</div>
+<div class="paragraph">
+<p>On the HW target, these goto&#8217;s are actually only needed in IS1 Lookup 2, where
+the PAG (Policy Association Group) value is assigned based on the goto action.</p>
+</div>
+<div class="paragraph">
+<p>To keep the same configuration on both kinds of platforms the goto is required in
+all flower filters.</p>
+</div>
+<div class="paragraph">
+<p>At IS2 Lookup 1 and ES0 Lookup 0, where the pipeline ends, there is no next
+chain to go to. In this case, a goto with a chain number greater than the current
+one is accepted and required by the driver.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You cannot goto a chain with a lower number than the current one. This is
+enforced when running on the HW target but cannot be enforced on the SW target.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>7.4. Examples</h3>
+<div class="paragraph">
+<p>Here is an example that contains almost all possible keys and actions and goto chain 8000001 (IS2 lookup 0 PAG 1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol 802.1ad prio 10 handle 0 chain 1200000 flower \
+     dst_mac 00:11:22:33:44:55 \
+     src_mac 00:44:55:00:00:00/ff:ff:ff:0:0:0 \
+     vlan_id 100 \
+     vlan_prio 1 \
+     vlan_ethtype 802.1q \
+     cvlan_id 200 \
+     cvlan_prio 2 \
+     cvlan_ethtype ip \
+     dst_ip 10.10.20.42 \
+     src_ip 10.10.30.00/255.255.255.0 \
+     ip_flags frag/nofirstfrag \
+     ip_tos 0x0f/0x3f \
+     ip_proto tcp \
+     dst_port 1000 \
+     src_port 2000 \
+     action skbedit priority 6 \
+     action vlan modify id 300 3 \
+     action goto chain 8000001</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can match a ctag after an stag tag by setting protocol to 802.1ad and vlan_ethtype to 802.1q.<br>
+You can match an rtag after a ctag tag by setting protocol to 802.1q and vlan_ethtype to 0xf1c1.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lan966x_is2"><a class="anchor" href="#_lan966x_is2"></a>8. LAN966x IS2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Both IS2 lookups generate a key based on the content of the frame.
+The current default configuration is that IPv6 packets are matched against
+IP4_TCP_UDP or IP4_OTHER entries in both lookups.</p>
+</div>
+<div class="sect2">
+<h3 id="_protocol_2"><a class="anchor" href="#_protocol_2"></a>8.1. Protocol</h3>
+<div class="paragraph">
+<p>protocol &lt;PROTO&gt; is the protocol to match.</p>
+</div>
+<div class="paragraph">
+<p>PROTO can be one of: all, 802_2 (LLC), snap, 802.1q, arp, rarp, ip, ipv6 or a 16
+bit number for EtherType. + Specifying 0x8809, 0x88ee, or 0x8902 will be treated
+as OAM packets and will match for all of them.</p>
+</div>
+<div class="paragraph">
+<p>protocol is always the EtherType after mac addresses or vlan tag(s).</p>
+</div>
+<div class="paragraph">
+<p>Set protocol to 'all' if you want to match on all kinds of packets.</p>
+</div>
+<div class="paragraph">
+<p>Setting protocol to other than all limits the matches to the specific kind of
+packets.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you set protocol to all you cannot match on any fields, which means
+that all packets are matched. + If you set protocol to 802.1q and vlan_ethtype
+to all, you can match on all packets on a specific VLAN.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keys_2"><a class="anchor" href="#_keys_2"></a>8.2. Keys</h3>
+<div class="paragraph">
+<p>Most match keys can be specified as a value or a value/mask. A missing key is the same
+as a wildcard (mask is all zeros).</p>
+</div>
+<div class="paragraph">
+<p>The following match keys are supported when the protocol is 802.1q.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vlan_id &lt;VID&gt; - Match on classified VLAN ID. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>vlan_prio &lt;PCP&gt; - Match on classified VLAN PCP. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>vlan_ethtype &lt;PROTO&gt; - Match on EtherType after outer VLAN.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See page <a href="tc-is2.html" class="xref page">ACL (IS2)</a> for documentation regarding supported match keys in the different IS2 keys.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_actions_2"><a class="anchor" href="#_actions_2"></a>8.3. Actions</h3>
+<div class="paragraph">
+<p>The supported actions in IS2 are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>pass - a do-nothing action used to stop lookup in the VCAP.</p>
+</li>
+<li>
+<p>trap - send the packet to CPU</p>
+</li>
+<li>
+<p>drop - drop the packet</p>
+</li>
+<li>
+<p>police rate &lt;BPS&gt; burst &lt;BYTES&gt; - police packets. Set rate to BPS bits per
+second and burst to BYTES bytes. Policers are only supported in the first lookup.</p>
+</li>
+<li>
+<p>mirred - mirror packet on the monitor port</p>
+</li>
+<li>
+<p>goto chain &lt;CHAIN_INDEX&gt;</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples_2"><a class="anchor" href="#_examples_2"></a>8.4. Examples</h3>
+<div class="paragraph">
+<p>Here is an example that polices all packets on VLAN 100 with rate 1Mbps and goto
+chain 8100000 (IS2 lookup 1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol 802.1q prio 10 handle 0 chain 8000000 flower \
+     vlan_id 100 \
+     vlan_ethtype all \
+     action police rate 1000000 burst 16000 \
+     action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example that mirrors all snap packets with DMAC 00:44:55:66:77:88 on monitor port eth3 and
+goto chain 8100000 (IS2 lookup 1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol snap prio 10 handle 0 chain 8000000 flower \
+     dst_mac 00:44:55:66:77:88 \
+     action mirred egress mirror dev eth3 \
+     action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example that drops all snap packets with DMAC 00:44:55:XX:XX:XX and
+goto chain 8100000 (IS2 lookup 1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol snap prio 10 handle 0 chain 8000000 flower \
+     dst_mac 00:44:55:00:00:00/ff:ff:ff:0:0:0 \
+     action drop \
+     action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an enhancement of the example above that drops all snap packets with DMAC 00:44:55:XX:XX:XX
+except DMAC 00:44:55:66:77:88 and goto chain 8100000 (IS2 lookup 1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol snap prio 9 handle 0 chain 8000000 flower \
+     dst_mac 00:44:55:66:77:88 \
+     action pass \
+     action goto chain 8100000
+
+$ tc filter add dev eth0 ingress protocol snap prio 10 handle 0 chain 8000000 flower \
+     dst_mac 00:44:55:00:00:00/ff:ff:ff:0:0:0 \
+     action drop \
+     action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example that traps all arp request packets with SMAC
+00:11:22:33:44:55 and goto chain 8100000 (IS2 lookup 1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol arp prio 10 handle 0 chain 8000000 flower \
+     src_mac 00:11:22:33:44:55 \
+     arp_op request \
+     action trap \
+     action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example that drops specific ip/udp packets on VLAN 100 and goto chain
+8100000 (IS2 lookup 1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 ingress protocol 802.1q prio 10 handle 0 chain 8000000 flower \
+     vlan_id 100 \
+     vlan_ethtype ip \
+     dst_ip 10.10.20.42 \
+     src_ip 10.10.30.00/255.255.255.0 \
+     ip_flags frag/nofirstfrag \
+     ip_tos 0x0f/0x3f \
+     ip_proto udp \
+     dst_port 1000 \
+     src_port 2000 \
+     action drop \
+     action goto chain 8100000</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lan966x_es0"><a class="anchor" href="#_lan966x_es0"></a>9. LAN966x ES0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ES0 has only one lookup (chain 10000000) and the filters are assigned to the egress
+part of the clsact qdisc. ES0 can only match on the classified VID and PCP
+values. Note that these values can be different from the values in the packet.</p>
+</div>
+<div class="sect2">
+<h3 id="_protocol_3"><a class="anchor" href="#_protocol_3"></a>9.1. Protocol</h3>
+<div class="paragraph">
+<p>protocol &lt;PROTO&gt; is the protocol to match.</p>
+</div>
+<div class="paragraph">
+<p>PROTO can be one of: all or 802.1q.</p>
+</div>
+<div class="paragraph">
+<p>Set protocol to 'all' if you want to match on all kinds of packets.<br>
+If you set protocol to 'all' you cannot match on any fields, which means that all packets are matched.<br>
+If you set protocol to '802.1q' and vlan_ethtype to 'all', you can match on all packets on a specific VLAN.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keys_3"><a class="anchor" href="#_keys_3"></a>9.2. Keys</h3>
+<div class="paragraph">
+<p>Most keys can be specified as a value or a value/mask.
+A missing key is the same as a wildcard (mask is all zeros).</p>
+</div>
+<div class="paragraph">
+<p>The following keys are supported when the protocol is 802.1q.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vlan_id &lt;VID&gt; - Match on classified VLAN ID. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>vlan_prio &lt;PCP&gt; - Match on classified VLAN PCP. Value only: x or value/mask: x/y.</p>
+</li>
+<li>
+<p>vlan_ethtype &lt;PROTO&gt; - Match on EtherType after outer VLAN.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See page <a href="tc-es0.html" class="xref page">Rewriter VLAN Tagging (ES0)</a> for documentation regarding supported match keys.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_actions_3"><a class="anchor" href="#_actions_3"></a>9.3. Actions</h3>
+<div class="paragraph">
+<p>The supported actions in ES0 are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vlan pop - pop vlan tag</p>
+</li>
+<li>
+<p>vlan modify [ protocol &lt;PROTO&gt; ] id &lt;VID&gt; [ priority &lt;PCP&gt; ] - modify VID and
+PCP. &lt;PROTO&gt; is one of 802.1q (default) or 802.1ad</p>
+</li>
+<li>
+<p>vlan push [ protocol &lt;PROTO&gt; ] id &lt;VID&gt; [ priority &lt;PCP&gt; ] - push a new vlan
+tag. &lt;PROTO&gt; is one of 802.1q (default) or 802.1ad</p>
+</li>
+<li>
+<p>goto chain &lt;CHAIN_INDEX&gt;</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples_3"><a class="anchor" href="#_examples_3"></a>9.4. Examples</h3>
+<div class="paragraph">
+<p>Here is an example that matches on VLAN 100, pops it, and goes to chain 10000001 (Dummy lookup):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 egress protocol 802.1q prio 10 handle 0 chain 10000000 flower \
+     vlan_id 100 \
+     vlan_ethtype all \
+     action vlan pop \
+     action goto chain 300001</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example that matches on VLAN 100, modifies it to VLAN 200 c-tag, and
+goes to chain 10000001 (Dummy lookup):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 egress protocol 802.1q prio 10 handle 0 chain 10000000 flower \
+     vlan_id 100 \
+     vlan_ethtype all \
+     action vlan modify id 200 priority 0 \
+     action goto chain 300001</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example that matches on VLAN 100, pushes VLAN 200 as outer s-tag, and
+goes to chain 10000001 (Dummy lookup):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tc filter add dev eth0 egress protocol 802.1q prio 10 handle 0 chain 10000000 flower \
+     vlan_id 100 \
+     vlan_ethtype all \
+     action vlan push protocol 802.1ad id 200 priority 0 \
+     action goto chain 300001</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
