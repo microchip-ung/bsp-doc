@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LAN966x USART :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.12">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.12</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="lan966x.html">LAN966x</a></li>
+    <li><a href="lan966x-usart.html">USART</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.12</button>
+  <div class="version-menu">
+    <a class="version is-current" href="lan966x-usart.html">2024.12</a>
+    <a class="version" href="../../2024.09/supported-hw/lan966x-usart.html">2024.09</a>
+    <a class="version" href="../../2024.06/supported-hw/lan966x-usart.html">2024.06</a>
+    <a class="version" href="../../2024.03/supported-hw/lan966x-usart.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/supported-hw/lan966x-usart.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/supported-hw/lan966x-usart.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LAN966x USART</h1>
+<div class="sect1">
+<h2 id="_soc_resources"><a class="anchor" href="#_soc_resources"></a>SoC Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LAN966X SoC have 5 FLEXCOMs (Flexible Serial Communication Controller).
+In order to use the Flexcom USART interface, a specific flexcom instance must be
+configured in USART mode.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kernel_configurations"><a class="anchor" href="#_kernel_configurations"></a>Kernel configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Following kernel config options should be enabled to use LAN966x flexcom
+USART interface:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CONFIG_MFD_AT91_USART</code> - USART driver config option.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_devicetree_configuration"><a class="anchor" href="#_devicetree_configuration"></a>Devicetree Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use Flexcom USART interface, following configurations are required in device tree.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each of the flexcom flx0, flx1, flx2, flx3 and flx4 nodes can be configured in
+USART mode <code>ATMEL_FLEXCOM_MODE_USART</code> to use USART interface.</p>
+</li>
+<li>
+<p><code>compatible</code> string must be set to atmel,at91sam9260-usart.</p>
+</li>
+<li>
+<p><code>reg</code> property must be set with register address and length as <code>&lt;0x200 0x200&gt;</code>.</p>
+</li>
+<li>
+<p>GPIO pins for TXD and RXD pins should be configured to <code>pinctrl-0</code> property.
+Also add <code>cts</code> and <code>rts</code> pins, if present.
+List of possible TXD and RXD pin mappings are as in below table:</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">FLEXCOM Node</th>
+<th class="tableblock halign-left valign-top">DT RXD node</th>
+<th class="tableblock halign-left valign-top">RXD pin</th>
+<th class="tableblock halign-left valign-top">DT TXD node</th>
+<th class="tableblock halign-left valign-top">TXD pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc0_a_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc0_a_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc0_b_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc0_b_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO26</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc0_c_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc0_c_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO63</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc1_a_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc1_a_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO13</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc1_b_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO34</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc1_b_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO35</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc1_c_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO47</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc1_c_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO48</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc2_a_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc2_a_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc2_b_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc2_b_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO45</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc3_a_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc3_a_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO19</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc3_b_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO52</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc3_b_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO53</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc3_c_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc3_c_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO32</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc4_a_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc4_a_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO22</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc4_b_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc4_b_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO58</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc4_c_rxd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO65</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fc4_c_txd_pins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPIO66</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><code>interrupts</code> property must set with interrupt details.
+Interrupt number[CPU INTR] corresponding to a flexcom must be configured as
+defined in below table:</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">FLEXCOM ID</th>
+<th class="tableblock halign-left valign-top">Shared Peripheral Interrupt</th>
+<th class="tableblock halign-left valign-top">CPU INTR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">48</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">49</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">82</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flx4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">84</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note that Shared peripheral interrupt lines start at index ID32. So, CPU INTR
+must be calculated as [Shared peripheral interrupt number - 32].</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Input clock <code>clocks</code> property must be set to <code>&amp;nic_clk</code>. Note that NIC
+clock(200Mhz) is clock used by AXI, AHB fabric and APB bridges which connects
+all th peripherals.
+<code>clock-names</code> must be set to <code>usart</code>.</p>
+</li>
+<li>
+<p>GPIO flexcom shared pins should be configured as per board design.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
+<div class="paragraph">
+<p>Following example shows how a flexcom USART should be defined in PCB8291 DT.
+On PCB8291, Flexcom3 USART is used as console.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>chosen {
+    stdout-path = "serial0:115200n8";
+};
+
+aliases {
+    serial0 = &amp;usart3;
+};
+
+flx3: flexcom@e0064000 {
+    compatible = "atmel,sama5d2-flexcom";
+    reg = &lt;0xe0064000 0x100&gt;;
+    clocks = &lt;&amp;clks GCK_ID_FLEXCOM3&gt;;
+    #address-cells = &lt;1&gt;;
+    #size-cells = &lt;1&gt;;
+    ranges = &lt;0x0 0xe0064000 0x800&gt;;
+    status = "disabled";
+
+    usart3: serial@200 {
+        compatible = "atmel,at91sam9260-usart";
+        reg = &lt;0x200 0x200&gt;;
+        interrupts = &lt;GIC_SPI 51 IRQ_TYPE_LEVEL_HIGH&gt;;
+        dmas = &lt;&amp;dma0 AT91_XDMAC_DT_PERID(9)&gt;,
+               &lt;&amp;dma0 AT91_XDMAC_DT_PERID(8)&gt;;
+        dma-names = "tx", "rx";
+        clocks = &lt;&amp;nic_clk&gt;;
+        clock-names = "usart";
+        atmel,fifo-size = &lt;32&gt;;
+        status = "disabled";
+    };
+};
+
+&amp;gpio {
+    fc3_b_pins: fc3-b-pins {
+        /* RX, TX */
+        pins = "GPIO_52", "GPIO_53";
+        function = "fc3_b";
+    };
+};
+
+&amp;flx3 {
+    atmel,flexcom-mode = &lt;ATMEL_FLEXCOM_MODE_USART&gt;;
+    status = "okay";
+
+    usart3: serial@200 {
+        pinctrl-0 = &lt;&amp;fc3_b_pins&gt;;
+        pinctrl-names = "default";
+        status = "okay";
+    };
+};</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_userspace"><a class="anchor" href="#_userspace"></a>UserSpace</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_confirm_instances_are_created"><a class="anchor" href="#_confirm_instances_are_created"></a>Confirm instances are created</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Check if a tty device is created in <code>/dev/</code> directory.
+This can be also be verified by executing <code>dmesg | tail</code> (on host PC) once
+the board is powered-up.</p>
+</li>
+<li>
+<p>Connect to console using <code>minicom -s /dev/ttyACM0</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_on_how_to_use"><a class="anchor" href="#_example_on_how_to_use"></a>Example on how to use</h3>
+<div class="paragraph">
+<p>Following demonstrates above DT flexcom examples on PCB8291 board: Using Flexcom3 as a console.</p>
+</div>
+<div class="sect3">
+<h4 id="_flexcom_usart_as_console"><a class="anchor" href="#_flexcom_usart_as_console"></a>FLEXCOM USART as console</h4>
+<div class="paragraph">
+<p>In order to use flexcom3 USART as console,
+add <code>console=ttyS1,115200</code> to uboot <code>bootargs</code> environment variable and
+pass it to the kernel, then this usart will become the console.</p>
+</div>
+<div class="paragraph">
+<p>First identify and connect to /dev/ttyACMx (Here x is port number) on Host machine.
+For Linux users, minicom application can be used to connect to console.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># dmesg | tail
+[1043817.472935] usb 3-9: USB disconnect, device number 33
+[1043817.762295] debugfs: Directory '09' with parent 'devices' already present!
+[1043817.890248] usb 3-9: new high-speed USB device number 35 using xhci_hcd
+[1043818.038704] usb 3-9: New USB device found, idVendor=03eb, idProduct=6124, bcdDevice= 1.10
+[1043818.038707] usb 3-9: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[1043818.039989] cdc_acm 3-9:1.0: ttyACM0: USB ACM device
+[1043818.230372] igb 0000:01:00.0 eth10: igb: eth10 NIC Link is Down
+[1043822.614597] igb 0000:01:00.0 eth10: igb: eth10 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX/TX
+#
+# minicom -s /dev/ttyACM0
+[?&lt;debug_uart&gt; Trying to boot from SPI
+
+
+U-Boot 2019.04-linux4sam_6.2-icp-00228-g2bdd7b58fc-dirty (Apr 28 2021 - 08:28:52 +0200)
+
+CPU: SAMA7
+Crystal frequency:        0 MHz
+CPU clock        :        0 MHz
+Master clock     :        0 MHz
+DRAM:  1 GiB
+lan966x_pinctrl_probe done 0
+MMC:   sdhci-host@e0830000: 0, emmc@e0830000: 1
+Loading Environment from SPI Flash... SF: Detected sst26vf016b with page size 256 Bytes, erase size 4 KiB, total 2 MiB
+OK
+In:    serial
+Out:   serial
+Err:   serial
+Net:
+Warning: switch@0 (eth0) using random MAC address - a2:17:30:13:8a:46
+eth0: switch@0
+m =&gt; dhcp 0x64000000 fit_icpu.itb
+BOOTP broadcast 1
+BOOTP broadcast 2
+BOOTP broadcast 3
+DHCP client bound to address 10.99.10.174 (940 ms)
+Using switch@0 device
+TFTP from server 10.99.10.1; our IP address is 10.99.10.174
+Filename 'fit_icpu.itb'.
+Load address: 0x64000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #############
+         8.9 MiB/s
+done
+Bytes transferred = 17356055 (108d517 hex)
+m =&gt; printenv
+baudrate=115200
+bootargs=console=ttyS1,115200 root=/dev/ram0 loglevel=7 uio_pdrv_genirq.of_id=generic-uio
+bootdelay=3
+bootfile=fit_icpu_build_623.itb
+dnsip=10.99.10.1
+ethact=switch@0
+fdt_high=0xffffffff
+fdtcontroladdr=9fb7e068
+fileaddr=64000000
+filesize=108d517
+gatewayip=10.99.10.1
+initrd_high=0xffffffff
+ipaddr=10.99.10.174
+netmask=255.255.255.0
+serverip=10.99.10.1
+
+Environment size: 369/65532 bytes
+m =&gt; bootm 0x64000000#lan9662_ung8291_0_at_lan966x
+## Loading kernel from FIT Image at 64000000 ...
+   Using 'lan9662_ung8291_0_at_lan966x' configuration
+   Trying 'kernel' kernel subimage
+     Description:  Kernel
+     Type:         Kernel Image
+     Compression:  gzip compressed
+     Data Start:   0x640000c8
+     Data Size:    4114018 Bytes = 3.9 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x60208000
+     Entry Point:  0x60208000
+   Verifying Hash Integrity ... OK
+## Loading ramdisk from FIT Image at 64000000 ...
+   Using 'lan9662_ung8291_0_at_lan966x' configuration
+   Trying 'ramdisk' ramdisk subimage
+     Description:  Ramdisk
+     Type:         RAMDisk Image
+     Compression:  uncompressed
+     Data Start:   0x64404c74
+     Data Size:    13139968 Bytes = 12.5 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x68000000
+     Entry Point:  unavailable
+   Verifying Hash Integrity ... OK
+   Loading ramdisk from 0x64404c74 to 0x68000000
+## Loading fdt from FIT Image at 64000000 ...
+   Using 'lan9662_ung8291_0_at_lan966x' configuration
+   Trying 'fdt_lan9662_ung8291_0_at_lan966x' fdt subimage
+     Description:  Flattened Device Tree
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x643ec7f4
+     Data Size:    18808 Bytes = 18.4 KiB
+     Architecture: ARM
+     Load Address: 0x67e00000
+   Verifying Hash Integrity ... OK
+   Loading fdt from 0x643ec7f4 to 0x67e00000
+   Booting using the fdt blob at 0x67e00000
+   Uncompressing Kernel Image ... OK
+   Using Device Tree in place at 67e00000, end 67e07977
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 5.15.25-18810-g70353fd4af6b-dirty (root@kavya-HP-Compaq-6000-Pro-SFF-PC) (arm-linux-gnueabi-gcc (Ubuntu/L2
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Microchip EVB - LAN9662
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 128 MiB at 0x98000000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000060000000-0x000000008fffffff]
+[    0.000000]   HighMem  [mem 0x0000000090000000-0x000000009fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000060000000-0x000000009fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000060000000-0x000000009fffffff]
+[    0.000000] percpu: Embedded 11 pages/cpu s14668 r8192 d22196 u45056
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 260608
+[    0.000000] Kernel command line: console=ttyS1,115200 root=/dev/ram0 loglevel=7 uio_pdrv_genirq.of_id=generic-uio
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 888780K/1048576K available (8192K kernel code, 608K rwdata, 2928K rodata, 1024K init, 185K bss, 28724K reserved)
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu:     RCU event tracing is enabled.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] random: get_random_bytes called from start_kernel+0x40c/0x628 with crng_init=0
+[    0.000000] arch_timer: cp15 timer(s) running at 37.50MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x8a60dd6a9, max_idle_ns: 440795204056 ns
+[    0.000002] sched_clock: 56 bits at 37MHz, resolution 26ns, wraps every 2199023255540ns
+[    0.000030] Switching to timer-based delay loop, resolution 26ns
+[    0.001238] Console: colour dummy device 80x30
+[    0.001319] Calibrating delay loop (skipped), value calculated using timer frequency.. 75.00 BogoMIPS (lpj=375000)
+[    0.001351] pid_max: default: 32768 minimum: 301
+[    0.001578] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.001613] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.002610] CPU: Testing write buffer coherency: ok
+[    0.002979] CPU0: update cpu_capacity 1024
+[    0.003007] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.003788] Setting up static identity map for 0x60100000 - 0x60100078
+[    0.003978] rcu: Hierarchical SRCU implementation.
+[    0.005018] smp: Bringing up secondary CPUs ...
+[    0.005048] smp: Brought up 1 node, 1 CPU
+[    0.005068] SMP: Total of 1 processors activated (75.00 BogoMIPS).
+[    0.005085] CPU: All CPU(s) started in SVC mode.
+[    0.005721] devtmpfs: initialized
+[    0.011129] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.011480] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.011523] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.018739] pinctrl core: initialized pinctrl subsystem
+[    0.020545] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.038201] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.039214] audit: initializing netlink subsys (disabled)
+[    0.056097] No ATAGs?
+[    0.068134] audit: type=2000 audit(0.030:1): state=initialized audit_enabled=0 res=1
+[    0.071785] at_xdmac e0068000.dma-controller: 16 channels, mapped at 0x(ptrval)
+[    0.073849] iommu: Default domain type: Translated
+[    0.073876] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.074680] SCSI subsystem initialized
+[    0.074984] usbcore: registered new interface driver usbfs
+[    0.075068] usbcore: registered new interface driver hub
+[    0.075146] usbcore: registered new device driver usb
+[    0.075686] pps_core: LinuxPPS API ver. 1 registered
+[    0.075706] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti &lt;giometti@linux.it&gt;
+[    0.075745] PTP clock support registered
+[    0.077565] clocksource: Switched to clocksource arch_sys_counter
+[    0.089125] NET: Registered PF_INET protocol family
+[    0.089426] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.091357] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+[    0.091434] TCP established hash table entries: 8192 (order: 3, 32768 bytes, linear)
+[    0.091574] TCP bind hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.091773] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.091925] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.092011] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.092282] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.093295] RPC: Registered named UNIX socket transport module.
+[    0.093332] RPC: Registered udp transport module.
+[    0.093346] RPC: Registered tcp transport module.
+[    0.093357] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.093736] NetWinder Floating Point Emulator V0.97 (double precision)
+[    0.094901] workingset: timestamp_bits=30 max_order=18 bucket_order=0
+[    0.095596] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.096286] Trying to unpack rootfs image as initramfs...
+[    0.109411] bounce: pool size: 64 pages
+[    0.109541] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+[    0.109563] io scheduler mq-deadline registered
+[    0.109579] io scheduler kyber registered
+[    0.116059] pinctrl-ocelot e2004064.pinctrl: driver registered
+[    0.131516] brd: module loaded
+[    0.149642] loop: module loaded
+[    0.151731] atmel_usart_serial atmel_usart_serial.0.auto: Using FIFO (32 data)
+[    0.152052] atmel_usart_serial.0.auto: ttyS0 at MMIO 0xe0040200 (irq = 43, base_baud = 12500000) is a ATMEL_SERIAL
+[    0.160318] atmel_usart_serial atmel_usart_serial.1.auto: Using FIFO (32 data)
+[    0.160646] atmel_usart_serial.1.auto: ttyS1 at MMIO 0xe0064200 (irq = 44, base_baud = 12500000) is a ATMEL_SERIAL
+[    0.988484] Freeing initrd memory: 5504K
+[    1.196259] printk: console [ttyS1] enabled
+[    1.202400] SPI driver spidev has no spi_device_id for mchp,synce_builtin
+[    1.209227] SPI driver spidev has no spi_device_id for mchp,synce_dpll
+[    1.215711] SPI driver spidev has no spi_device_id for mchp,cpld
+[    1.221749] SPI driver spidev has no spi_device_id for mchp,cpld_fifo
+[    1.228197] SPI driver spidev has no spi_device_id for mchp,t1e1j1
+[    1.234372] SPI driver spidev has no spi_device_id for spidev
+[    1.245566] spi-nor spi0.0: sst26vf016b (2048 Kbytes)
+[    1.270532] CAN device driver interface
+[    1.275507] lan966x-switch e2000000.switch: Use register extraction
+[    1.281833] MAC addr was not set, use random MAC
+[    1.298073] pps pps0: new PPS source ptp0
+[    1.302487] pps pps1: new PPS source ptp1
+[    1.306830] pps pps2: new PPS source ptp2
+[    1.321451] uio_sparx5_irqmux e0000000.mscc_switch: IO is enabled
+[    1.327624] uio_sparx5_irqmux e0000000.mscc_switch: Mapped 0 irqs
+[    1.335771] uio_sparx5_irqmux e0000000.mscc_switch: Mapping [mem 0xe0000000-0xe3ffffff]
+[    1.344024] uio_sparx5_irqmux 100000.mscc_sram: IO is enabled
+[    1.349790] uio_sparx5_irqmux 100000.mscc_sram: Mapped 0 irqs
+[    1.355788] uio_sparx5_irqmux 100000.mscc_sram: Mapping [mem 0x00100000-0x0011ffff]
+[    1.365823] dwc3 300000.usb_dwc3: Configuration mismatch. dr_mode forced to host
+[    1.374036] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.380611] ehci-atmel: EHCI Atmel driver
+[    1.384741] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.390928] ohci-platform: OHCI generic platform driver
+[    1.396271] ohci-atmel: OHCI Atmel driver
+[    1.400953] xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    1.406430] xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 1
+[    1.414869] xhci-hcd xhci-hcd.2.auto: hcc params 0x0220fe6c hci version 0x110 quirks 0x0000000000010010
+[    1.424392] xhci-hcd xhci-hcd.2.auto: irq 45, io mem 0x00300000
+[    1.430830] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+[    1.439110] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.446313] usb usb1: Product: xHCI Host Controller
+[    1.451216] usb usb1: Manufacturer: Linux 5.15.25-18810-g70353fd4af6b-dirty xhci-hcd
+[    1.458973] usb usb1: SerialNumber: xhci-hcd.2.auto
+[    1.464744] hub 1-0:1.0: USB hub found
+[    1.468595] hub 1-0:1.0: 1 port detected
+[    1.473078] xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    1.478607] xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 2
+[    1.486250] xhci-hcd xhci-hcd.2.auto: Host supports USB 3.0 SuperSpeed
+[    1.492940] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.501392] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.15
+[    1.509668] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.516876] usb usb2: Product: xHCI Host Controller
+[    1.521776] usb usb2: Manufacturer: Linux 5.15.25-18810-g70353fd4af6b-dirty xhci-hcd
+[    1.529545] usb usb2: SerialNumber: xhci-hcd.2.auto
+[    1.535227] hub 2-0:1.0: USB hub found
+[    1.539058] hub 2-0:1.0: config failed, hub doesn't have any ports! (err -19)
+[    1.546594] usbcore: registered new interface driver usbtmc
+[    1.552306] usbcore: registered new interface driver usb-storage
+[    1.558447] usbcore: registered new interface driver usbserial_generic
+[    1.564974] usbserial: USB Serial support registered for generic
+[    1.571042] usbcore: registered new interface driver ftdi_sio
+[    1.576779] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.584252] usbcore: registered new interface driver usb_serial_simple
+[    1.590802] usbserial: USB Serial support registered for carelink
+[    1.596882] usbserial: USB Serial support registered for zio
+[    1.602596] usbserial: USB Serial support registered for funsoft
+[    1.608608] usbserial: USB Serial support registered for flashloader
+[    1.614951] usbserial: USB Serial support registered for google
+[    1.620901] usbserial: USB Serial support registered for libtransistor
+[    1.627421] usbserial: USB Serial support registered for vivopay
+[    1.633458] usbserial: USB Serial support registered for moto_modem
+[    1.639750] usbserial: USB Serial support registered for motorola_tetra
+[    1.646351] usbserial: USB Serial support registered for novatel_gps
+[    1.652739] usbserial: USB Serial support registered for hp4x
+[    1.658492] usbserial: USB Serial support registered for suunto
+[    1.664411] usbserial: USB Serial support registered for siemens_mpi
+[    1.670937] usbcore: registered new interface driver usbtest
+[    1.676707] i2c_dev: i2c /dev entries driver
+[    1.682931] sdhci: Secure Digital Host Controller Interface driver
+[    1.689159] sdhci: Copyright(c) Pierre Ossman
+[    1.693462] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.700925] atmel_aes e004c000.aes: version: 0x702
+[    1.743909] mmc0: SDHCI controller on e0830000.sdio-host [e0830000.sdio-host] using ADMA
+[    1.755492] atmel_aes e004c000.aes: Atmel AES - Using dma0chan0, dma0chan1 for DMA transfers
+[    1.764722] atmel_sha e006c000.sha: version: 0x700
+[    1.770160] atmel_sha e006c000.sha: using dma0chan2 for DMA transfers
+[    1.812938] atmel_sha e006c000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+[    1.820576] hid: raw HID events driver (C) Jiri Kosina
+[    1.825872] usbcore: registered new interface driver usbhid
+[    1.831462] usbhid: USB HID core driver
+[    1.836710] GACT probability NOT on
+[    1.840241] Mirror/redirect action on
+[    1.844374] NET: Registered PF_INET6 protocol family
+[    1.851579] Segment Routing with IPv6
+[    1.855245] In-situ OAM (IOAM) with IPv6
+[    1.859386] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.866229] NET: Registered PF_PACKET protocol family
+[    1.871416] Bridge firewalling registered
+[    1.875396] can: controller area network core
+[    1.879842] NET: Registered PF_CAN protocol family
+[    1.884589] can: raw protocol
+[    1.887586] can: broadcast manager protocol
+[    1.891749] can: netlink gateway - max_hops=1
+[    1.896163] 8021q: 802.1Q VLAN Support v1.8
+[    1.900630] ThumbEE CPU extension supported.
+[    1.904863] Registering SWP/SWPB emulation handler
+[    1.913635] of_cfs_init
+[    1.916173] of_cfs_init: OK
+[    1.921314] Freeing unused kernel image (initmem) memory: 1024K
+[    1.937894] Run /init as init process
+[    1.939755] mmc0: new high speed MMC card at address 0001
+[    1.948336] mmcblk0: mmc0:0001 IS004G 3.64 GiB
+[    1.958150]  mmcblk0:
+[    1.958863] mmcblk0boot0: mmc0:0001 IS004G 2.00 MiB
+[    1.970417] mmcblk0boot1: mmc0:0001 IS004G 2.00 MiB
+[    1.979285] mmcblk0rpmb: mmc0:0001 IS004G 512 KiB, chardev (247:0)
+Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: OK
+Saving random seed: [    2.165688] random: dd: uninitialized urandom read (512 bytes read)
+OK
+Starting rngd: OK
+Starting network: OK
+
+Welcome to Buildroot
+buildroot login: root</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

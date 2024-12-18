@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VCAP Tool :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2024.12">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="network_overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2024.12</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li>Network</li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li><a href="vcap_tool.html">VCAP tool</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2024.12</button>
+  <div class="version-menu">
+    <a class="version is-current" href="vcap_tool.html">2024.12</a>
+    <a class="version" href="../2024.09/vcap_tool.html">2024.09</a>
+    <a class="version" href="../2024.06/vcap_tool.html">2024.06</a>
+    <a class="version" href="../2024.03/vcap_tool.html">2024.03</a>
+    <a class="version" href="../2024.03-1/vcap_tool.html">2024.03-1</a>
+    <a class="version" href="../2023.12/vcap_tool.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">VCAP Tool</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The VCAP tool is a low-level interface that can be used to configure and query the VCAPs.</p>
+</div>
+<div class="paragraph">
+<p>With this tool, it is possible to configure all key and action fields in the VCAPs.<br>
+This is needed in cases where a specific VCAP configuration is not possible via the <code>tc</code> commands,
+such as IEEE 802.1CB Frame Replication and Elimination for Reliability (FRER).</p>
+</div>
+<div class="paragraph">
+<p>The layout of the VCAPs depends on the actual hardware. Please consult the datasheet for details.</p>
+</div>
+<div class="paragraph">
+<p>The following examples are for the LAN966X platform.</p>
+</div>
+<div class="paragraph">
+<p>Use <code>vcap -h</code> to see the usage:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Create, modify, get and delete VCAP rules
+
+Usage:
+
+        vcap [options] [command] [arguments]
+
+
+Options:
+        -h                                      This help
+        -p                                      Get platform information
+        -v VCAP_NAME                            Get vcap information
+        -o VCAP_NAME                            Get vcap port information
+        -l LEVEL                                Rule information level: 3=FULL, 2=SOME, 1=MINIMAL, 0=NONE
+
+
+Command:
+
+        add     RULE_ID                         Add a new rule with id, keys and actions
+        del     RULE_ID                         Delete an existing
+        get     RULE_ID                         Get and display an existing rule
+        mod     RULE_ID                         Modify keys and actions of an existing rule
+        reset   RULE_ID                         Reset the counter of an existing rule
+        list                                    List all known rules
+
+
+Arguments to the add or mod commands:
+
+        VCAP_NAME                               Name of VCAP. Found in platform information
+        PRIORITY                                Rule priority
+        VCAP_LOOKUP                             VCAP lookup index
+
+        KEYSET_NAME                             Found in vcap information
+        (KEY_NAME key_value key_mask)*          Found in vcap keyset information
+                                                A '=' value/mask sets all bits
+
+        [-]                                     Get a list of possible actionsets or actions
+
+        ACTIONSET_NAME                          Found in vcap information
+        (ACTION_NAME action_value)*             Found in vcap actionset information</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is possible to query the platform information, like e.g. showing the supported VCAPs:</p>
+</div>
+<div class="paragraph">
+<p>Use <code>vcap -p</code> to get the platform information:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Platform: lan966x
+  - [0]: es0
+  - [3]: is1
+  - [4]: is2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More details are available for each of the VCAP, by getting the VCAP information:</p>
+</div>
+<div class="paragraph">
+<p>Use <code>vcap -v is2</code> to get the IS2 VCAP information:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>VCAP[4]: is2
+  instance: 0
+    name: is2
+    rows: 64
+    sw_count: 4
+    sw_width: 96
+    sticky_width: 32
+    act_width: 31
+    default_cnt: 11
+    require_cnt_dis: 1
+    version: 1
+    vtype: 4
+    vinst: 0
+    first_cid: 8000000
+    last_cid: 8199999
+    lookups: 2
+    first_valid_addr: 0
+    last_valid_addr: 255
+    last_used_addr: 256
+  keyset: [4]: VCAP_KFS_ARP
+    key: [5]: 8021Q_DEI_CLS, type: BIT, width: 1
+    key: [9]: 8021Q_PCP_CLS, type: U32, width: 3
+    key: [17]: 8021Q_VID_CLS, type: U32, width: 12
+    key: [19]: 8021Q_VLAN_TAGGED_IS, type: BIT, width: 1
+    key: [21]: ARP_ADDR_SPACE_OK_IS, type: BIT, width: 1
+    key: [22]: ARP_LEN_OK_IS, type: BIT, width: 1
+    key: [23]: ARP_OPCODE, type: U32, width: 2
+    key: [24]: ARP_OPCODE_UNKNOWN_IS, type: BIT, width: 1
+    key: [25]: ARP_PROTO_SPACE_OK_IS, type: BIT, width: 1
+    key: [26]: ARP_SENDER_MATCH_IS, type: BIT, width: 1
+    key: [27]: ARP_TGT_MATCH_IS, type: BIT, width: 1
+    key: [31]: HOST_MATCH, type: BIT, width: 1
+    key: [35]: IF_IGR_PORT_MASK, type: U32, width: 9
+    key: [46]: ISDX_GT0_IS, type: BIT, width: 1
+    key: [47]: L2_BC_IS, type: BIT, width: 1
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each port on the switch has its keyset configuration per lookup.  You can inspect this information.</p>
+</div>
+<div class="paragraph">
+<p>Use vcap -o is2 to get the port configuration for IS2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>is2:
+
+  port[00] (eth2):
+    state: on
+      L:0:
+            snap: mac_snap
+            arp: arp
+            oam: oam
+            ipv4_tcp_udp: ipv4_tcp_udp
+            ipv4_other: ipv4_other
+            ipv6: ipv6_tcp_udp or ipv6_other
+      L:1:
+            snap: mac_snap
+            arp: arp
+            oam: oam
+            ipv4_tcp_udp: ipv4_tcp_udp
+            ipv4_other: ipv4_other
+            ipv6: ipv6_tcp_udp or ipv6_other
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+To add a rule in IS1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add 1 is1 10 0 \
+  VCAP_KFS_7TUPLE L2_DMAC 00:00:00:00:00:11 = \
+  VCAP_AFS_S1 QOS_ENA 1 QOS_VAL 5</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The second line defines the keys and the third line defines the actions.
+The <code>=</code> is a shorthand notation that set the mask to all ones (all bits in the key value is used for matching)</p>
+</div>
+<div class="paragraph">
+<p><br>
+To modify the above rule in IS1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap mod 1 L2_DMAC 00:00:00:00:00:22 =</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the rule must exist and you cannot change the size of the key and action.</p>
+</div>
+<div class="paragraph">
+<p><br>
+To read the hit counter in the above rule in IS1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap get 1
+Rule: 1, is1, priority: 10, lookup: 0, address: 764-767 (X4), Counter: 42, Hit: 1
+  Keyset: VCAP_KFS_7TUPLE
+    KEY: IF_IGR_PORT_MASK: W9, 0x000/0x1fe
+    KEY: L2_DMAC: W48, 0:0:0:0:0:22/ff:ff:ff:ff:ff:ff
+    KEY: LOOKUP_INDEX: W2, 0x0/0x3
+    KEY: TYPE: W2, 0x1/0x3
+  Actionset: VCAP_AFS_S1
+    ACTION: QOS_ENA: W1, 1
+    ACTION: QOS_VAL: W3, 0x5
+    ACTION: TYPE: W1, 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This shows that the rule have been hit 42 times.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Some counters are only one bit wide, so you can only see if they have been hit or not. See
+<a href="tc/tc-flower-vcap.html#vcap_info" class="xref page">VCAP Information</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can reset the counter with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap reset 1
+Rule 1 counter reset</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+To delete the above rule in IS1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap del 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vcap_debug"><a class="anchor" href="#vcap_debug"></a>1. VCAP Debugging tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Besides the vcap tool you can also dump VCAP specific information in <code>debugfs</code>.</p>
+</div>
+<div class="paragraph">
+<p>Show administration info for IS1 on LAN966x:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /sys/kernel/debug/lan966x/vcaps/is1_0
+name: is1
+rows: 192
+sw_count: 4
+sw_width: 96
+sticky_width: 32
+act_width: 123
+default_cnt: 0
+require_cnt_dis: 1
+version: 1
+vtype: 3
+vinst: 0
+first_cid: 1000000
+last_cid: 1299999
+lookups: 3
+first_valid_addr: 0
+last_valid_addr: 767
+last_used_addr: 767
+#</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If there are rules present in the IS1 VCAP they will also be listed in a format like shown with the vcap tool.</p>
+</div>
+<div class="paragraph">
+<p><br>
+It is also possible to see the raw rule data, and in this case just one line is printed per rule.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /sys/kernel/debug/lan966x/vcaps/raw_is1_0
+  addr: 760, X4 rule, keyset: VCAP_KFS_7TUPLE (3)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A VCAP rule occupies 1, 2, 3, 4, 6 or 12 addresses and is called and X1 to X12 correspondingly.  Only Sparx5 uses the
+X3, X6 and X12 size rules.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>X1 rules can be located on any address</p>
+</li>
+<li>
+<p>Xn rules can only be located on address values modulo n</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You cannot specify the address when you add a rule.<br>
+The location depends on the size and the priority.<br>
+The rules are added in size order, so that larger rules are added first (on the higher number addresses).
+Rules with a priority of low numerical value have the highest priority and are located first within their size group.</p>
+</div>
+<div class="paragraph">
+<p>If you add a rule with the same priority, the last added rule has the highest priority (located first).</p>
+</div>
+<div class="paragraph">
+<p><br>
+The LAN966x IS1 VCAP generates an 7TUPLE keyset on all combinations of ports and lookups by default.
+If you want to use another keyset on a specific combination of port and lookup you must change the generated key by
+using a <code>tc chain</code> template. See the <a href="tc/tc-intro.html#tc_chain" class="xref page">Chain</a> section on the TC Introduction page on how to
+set up a <code>tc chain</code> template.</p>
+</div>
+<div class="paragraph">
+<p>To see the current mapping from frame type to keys in LAN966x IS1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /sys/kernel/debug/lan966x/ports
+...
+is1:
+...
+  port[02] (eth0):
+    state: on
+      L:0:
+            other: 7tuple
+            ipv4: 7tuple
+            ipv6: 7tuple
+            rt: follow_other
+      L:1:
+            other: 7tuple
+            ipv4: 7tuple
+            ipv6: 7tuple
+            rt: follow_other
+      L:2:
+            other: 7tuple
+            ipv4: 7tuple
+            ipv6: 7tuple
+            rt: follow_other
+....</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To change the IPv4 keyset generation for IS1 Lookup 0, you can add a chain that selects this protocol, where the
+src and dst IP keys will ensure that a different keyset will be selected.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tc chain add dev eth0 ingress chain 1000000 prio 10000 handle 10000 protocol ipv4 flower skip_sw \
+   src_ip 0.0.0.0 dst_ip 0.0.0.0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Looking at the mapping again shows that the keyset has changed to 5tuple_ipv4:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /sys/kernel/debug/lan966x/ports
+...
+is1:
+...
+  port[02] (eth0):
+    state: on
+      L:0:
+            other: 7tuple
+            ipv4: 5tuple_ipv4
+            ipv6: 7tuple
+            rt: follow_other
+      L:1:
+            other: 7tuple
+            ipv4: 7tuple
+            ipv6: 7tuple
+            rt: follow_other
+      L:2:
+            other: 7tuple
+            ipv4: 7tuple
+            ipv6: 7tuple
+            rt: follow_other</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+It is not necessary to use <code>tc chain</code> templates on Sparx5 ES0 and LAN966x IS2 and ES0 VCAPs as the keys generated here
+only depends on the frame type.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
