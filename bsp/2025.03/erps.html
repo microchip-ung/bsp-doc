@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ERPS functional description :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.03">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.03</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="erps.html">ERPS functional description</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.03</button>
+  <div class="version-menu">
+    <a class="version is-current" href="erps.html">2025.03</a>
+    <a class="version" href="../2024.12/erps.html">2024.12</a>
+    <a class="version" href="../2024.09/erps.html">2024.09</a>
+    <a class="version" href="../2024.06/erps.html">2024.06</a>
+    <a class="version" href="../2024.03/erps.html">2024.03</a>
+    <a class="version" href="../2024.03-1/erps.html">2024.03-1</a>
+    <a class="version" href="../2023.12/erps.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">ERPS functional description</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ethernet Ring Protection Switching as described in ITU G.8032 is supported by the BSP.
+The feature is implemented partly in the Linux kernel and partly in user-space application.
+The kernel portion is not fully up-streamed, and the associated application will only work with a pre-patched kernel.<br>
+<br>
+There is an 'erps_server' that must run in the background.<br>
+There is a 'erps' user space client application that based on arguments can be used to issue commands to create and configure ERPS instances.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Multiple ERPS instances can be created sharing same port as ring link interface.
+The control VLAN and the protected VLANs must be unique per ERPS instance.</p>
+</div>
+<div class="paragraph">
+<p>There can be a ERPS-MAX number of ERPS instances created. The maximum is 64.</p>
+</div>
+<div class="paragraph">
+<p>There is a number of ERPS user space commands that enables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create and delete of ERPS instances.</p>
+</li>
+<li>
+<p>Set configuration.</p>
+</li>
+<li>
+<p>Set administrative commands.</p>
+</li>
+<li>
+<p>Get configuration.</p>
+</li>
+<li>
+<p>Get status information.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CFM (Connectivity Fault Management) is described in IEEE Std 802.1Q-2018 section 19-21
+CFM MIP instances are required to be created on control VLAN interfaces to do the handling of received RAPS frames in the control VLAN.<br>
+CFM MEP instance can be created on ports to do ring link monitoring based on CCM.<br></p>
+</div>
+<div class="paragraph">
+<p>CFM can be found here: <a href="https://github.com/microchip-ung/cfm" class="bare">https://github.com/microchip-ung/cfm</a></p>
+</div>
+<div class="paragraph">
+<p>This is a model of a ERPS configuration:<br></p>
+</div>
+<div class="paragraph">
+<div class="title">ERPS Model</div>
+<p><span class="image"><img src="_images/ERPS-configuration.svg" alt="ERPS configuration"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erps_commands"><a class="anchor" href="#_erps_commands"></a>2. ERPS commands</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The below commands are for ERPS currently without interconnected rings.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ERPS commands:
+erps create bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; version &lt;1-2&gt; port0 &lt;device&gt; port1 &lt;device&gt;
+erps delete bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt;
+erps control bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; mdlevel &lt;0-7&gt; vlanif0 &lt;device&gt;
+     vlanif1 &lt;device&gt;
+erps rpl bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; role &lt;none,owner,neighbor&gt; port &lt;0,1&gt;
+erps vlans &lt;add,delete,show&gt; bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; &lt;list&gt;
+erps node-id bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; &lt;uc-mac&gt;
+erps ring-id bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; &lt;1-239&gt;
+erps command bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; command &lt;manual,force,clear&gt; port &lt;0,1&gt;
+erps revertive &lt;enable,disable&gt; bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; timer &lt;1-12&gt;
+erps hold bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; timer &lt;0-10000&gt;
+erps guard bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; timer &lt;1-2000&gt;
+erps config-show bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt;
+erps status-show bridge &lt;device&gt; instance &lt;1-ERPS-MAX&gt; &lt;all,state&gt;</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_create"><a class="anchor" href="#_erps_create"></a>2.1. erps create</h3>
+<div class="paragraph">
+<p>An ERPS instance is created.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>version: Specify whether to use G.8032v1 or G.8032v2 of the RAPS protocol. Values &lt;1-2&gt;.</p>
+</li>
+<li>
+<p>port0: Ring port0 device name.</p>
+</li>
+<li>
+<p>port1: Ring port1 device name.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_delete"><a class="anchor" href="#_erps_delete"></a>2.2. erps delete</h3>
+<div class="paragraph">
+<p>An ERPS instance is deleted.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_control"><a class="anchor" href="#_erps_control"></a>2.3. erps control</h3>
+<div class="paragraph">
+<p>The ERPS control VLAN configuration.<br>
+The OAM level where RAPS frames are transmitted and received and the VLAN interfaces.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>mdlevel: The OAM Maintenance Domain level. Values &lt;0-7&gt;.</p>
+</li>
+<li>
+<p>vlanif0: The Ring port0 control VLAN interface device name.</p>
+</li>
+<li>
+<p>vlanif1: The Ring port1 control VLAN interface device name.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default mdlevel is 7.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_rpl"><a class="anchor" href="#_erps_rpl"></a>2.4. erps rpl</h3>
+<div class="paragraph">
+<p>The ERPS Ring Protection Link role configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>role: The RPL role. Values &lt;none,owner,neighbor&gt;.</p>
+</li>
+<li>
+<p>port: The RPL ring port number. Values &lt;0,1&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default role is none.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_vlans"><a class="anchor" href="#_erps_vlans"></a>2.5. erps vlans</h3>
+<div class="paragraph">
+<p>The ERPS protected VLANs configuration.
+ERPS protected VLANs can be added or deleted. The added VLANs can be shown.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vlan operation. Values &lt;add,delete,show&gt;.</p>
+</li>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>The list of VLANs, e.g. 2-10,123-456,4044.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default is no protected VLANs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_node_id"><a class="anchor" href="#_erps_node_id"></a>2.6. erps node-id</h3>
+<div class="paragraph">
+<p>The ERPS node ID configuration.<br>
+This is inserted in the RAPS PDU.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>The node ID. Values is a UC MAC.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default is the bridge MAC. Configuring 00:00:00:00:00:00 gives the bridge MAC.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_ring_id"><a class="anchor" href="#_erps_ring_id"></a>2.7. erps ring-id</h3>
+<div class="paragraph">
+<p>The ERPS ring ID configuration.<br>
+This is the last octet in the DMAC of the RAPS frame.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>The ring ID. Values &lt;1-239&gt;.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default ring ID is 1.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_command"><a class="anchor" href="#_erps_command"></a>2.8. erps command</h3>
+<div class="paragraph">
+<p>The ERPS administrative commands.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>command: The administrative command. Values &lt;manual,force,clear&gt;.</p>
+</li>
+<li>
+<p>port: The command ring port number. Values &lt;0,1&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The command port is the port where control VLAN and the protected traffic VLANs are blocked.
+The clear command will clear any manual or forced switch command.<br>
+The clear command will terminate any running WTR or WTB timer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_revertive"><a class="anchor" href="#_erps_revertive"></a>2.9. erps revertive</h3>
+<div class="paragraph">
+<p>The ERPS revertive configuration.<br>
+When revertive is enabled the WTR timer is used to revert ERPS state to IDEL when any switch condition has cleared.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Revertive behavior. Values &lt;enable,disable&gt;.</p>
+</li>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>timer: WTR timer. Values &lt;1-12&gt;. Resolution 1min.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default revertive is disable.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_hold"><a class="anchor" href="#_erps_hold"></a>2.10. erps hold</h3>
+<div class="paragraph">
+<p>The ERPS hold-off timer configuration.<br>
+When a new (or more severe) defect occurs, action will not be executed until the hold-off timer expires.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>The hold-off timer. Values &lt;0-10000&gt;. Resolution 1ms. 0 means no holdoff.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default is 0.
+The hold off timer value must be divisible by 100.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_guard"><a class="anchor" href="#_erps_guard"></a>2.11. erps guard</h3>
+<div class="paragraph">
+<p>The ERPS guard timer configuration.<br>
+The guard timer is used to prevent ring nodes from acting upon outdated RAPS PDUs upon topology changes.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>The guard timer. Values &lt;1-2000&gt;. Resolution 1ms.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Default is 500ms.
+The guard timer value must be divisible by 10.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_config_show"><a class="anchor" href="#_erps_config_show"></a>2.12. erps config-show</h3>
+<div class="paragraph">
+<p>The ERPS configuration is shown.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erps_status_show"><a class="anchor" href="#_erps_status_show"></a>2.13. erps status-show</h3>
+<div class="paragraph">
+<p>The ERPS status is shown.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bridge: Bridge device name.</p>
+</li>
+<li>
+<p>instance: Instance number. Values &lt;1-ERPS-MAX&gt;.</p>
+</li>
+<li>
+<p>status information to show. Values &lt;all,state&gt;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erps_ring_configuration"><a class="anchor" href="#_erps_ring_configuration"></a>3. ERPS Ring Configuration.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to configure a three node ring with MEPs for ring
+link monitoring based on CCM-DEFECT detection.<br>
+The ring link interfaces are eth0 and eth1.<br>
+The service frame add/drop port is eth3.<br>
+Protected VLANs are 100, 200, 300.<br>
+Control VLAN is 400.<br>
+Control OAM level is 7.<br></p>
+</div>
+<div class="paragraph">
+<p>Nodes are physically connected like this:<br>
+<span class="image"><img src="_images/ERPS-ring-topo.svg" alt="ERPS ring topo"></span></p>
+</div>
+<div class="paragraph">
+<p>It is recommended that the ring protocol functionality is tested before adding protected VLAN to the ring.</p>
+</div>
+<div class="sect2">
+<h3 id="_control_vlan_configuration"><a class="anchor" href="#_control_vlan_configuration"></a>3.1. Control VLAN configuration</h3>
+<div class="paragraph">
+<p>On all nodes bridge br0 must be created and the Control VLAN interfaces must be added.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Bridge configuration:
+
+ip link add name br0 type bridge
+ip link set dev br0 up
+ip link set dev br0 type bridge vlan_filtering 1
+ip link set dev eth0 master br0
+ip link set dev eth1 master br0
+ip link set dev eth2 master br0</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Adding control VLAN interfaces on ring ports:
+
+ip link add link eth0 name eth0.400 type vlan id 400
+ip link add link eth1 name eth1.400 type vlan id 400
+ip link set dev eth0.400 up
+ip link set dev eth1.400 up</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Adding RAPS frame handling MIPs on the control VLAN interfaces:
+
+cfm mip-create bridge br0 instance 1 direction down port eth0 vlan eth0.400
+cfm mip-create bridge br0 instance 2 direction down port eth1 vlan eth1.400
+cfm mip-config bridge br0 instance 2 mac 00-00-00-03-00-02 level 4 raps redirect
+cfm mip-config bridge br0 instance 1 mac 00-00-00-03-00-01 level 4 raps redirect</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_node_1"><a class="anchor" href="#_node_1"></a>3.2. Node 1</h3>
+<div class="paragraph">
+<p>This node is the RPL owner.<br>
+RPL is on eth0</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>MEP configuration:
+
+cfm mep-create bridge br0 instance 1 domain port direction down port eth0
+cfm mep-config bridge br0 instance 1 mac 00-00-00-00-01-00 level 7 mepid 10
+cfm cc-config bridge br0 instance 1 enable 1 interval 3ms3
+              domain-name ABCDEFGHIJ short-name KLMNOPQRST
+cfm cc-peer bridge br0 instance 1 mepid 31
+cfm cc-ccm-tx bridge br0 instance 1 dmac 01-80-C2-00-00-30 period 1000
+
+cfm mep-create bridge br0 instance 2 domain port direction down port eth1
+cfm mep-config bridge br0 instance 2 mac 00-00-00-00-01-01 level 7 mepid 11
+cfm cc-config bridge br0 instance 2 enable 1 interval 3ms3
+              domain-name ABCDEFGHIJ short-name KLMNOPQRST
+cfm cc-peer bridge br0 instance 2 mepid 20
+cfm cc-ccm-tx bridge br0 instance 2 dmac 01-80-C2-00-00-30 period 1000</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ERPS configuration:
+
+erps_server &amp;
+erps create bridge br0 instance 1 version 1 port0 eth0 port1 eth1
+erps ring-id bridge br0 instance 1 11
+erps rpl bridge br0 instance 1 role owner port 0
+erps control bridge br0 instance 1 mdlevel 4 vlanif0 eth0.400 vlanif1 eth1.400</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that no protected VLANS are added to the ERPS.
+This is done when the full ring is enabled and tested for protocol functionality.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_node_2"><a class="anchor" href="#_node_2"></a>3.3. Node 2</h3>
+<div class="paragraph">
+<p>This node is a normal node - not connected to RPL.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>MEP configuration:
+
+cfm mep-create bridge br0 instance 1 domain port direction down port eth0
+cfm mep-config bridge br0 instance 1 mac 00-00-00-00-02-00 level 7 mepid 20
+cfm cc-config bridge br0 instance 1 enable 1 interval 3ms3
+              domain-name ABCDEFGHIJ short-name KLMNOPQRST
+cfm cc-peer bridge br0 instance 1 mepid 11
+cfm cc-ccm-tx bridge br0 instance 1 dmac 01-80-C2-00-00-30 period 1000
+
+cfm mep-create bridge br0 instance 2 domain port direction down port eth1
+cfm mep-config bridge br0 instance 2 mac 00-00-00-00-02-01 level 7 mepid 21
+cfm cc-config bridge br0 instance 2 enable 1 interval 3ms3
+              domain-name ABCDEFGHIJ short-name KLMNOPQRST
+cfm cc-peer bridge br0 instance 2 mepid 30
+cfm cc-ccm-tx bridge br0 instance 2 dmac 01-80-C2-00-00-30 period 1000</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ERPS configuration:
+
+erps create bridge br0 instance 1 version 1 port0 eth0 port1 eth1
+erps ring-id bridge br0 instance 1 22
+erps control bridge br0 instance 1 mdlevel 4 vlanif0 eth0.400 vlanif1 eth1.400</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that no protected VLANS are added to the ERPS.
+This is done when the full ring is enabled at tested for protocol functionality.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_node_3"><a class="anchor" href="#_node_3"></a>3.4. Node 3</h3>
+<div class="paragraph">
+<p>This node is the RPL neighbor.
+RPL is on eth1</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>MEP configuration:
+
+cfm mep-create bridge br0 instance 1 domain port direction down port eth0
+cfm mep-config bridge br0 instance 1 mac 00-00-00-00-03-00 level 7 mepid 30
+cfm cc-config bridge br0 instance 1 enable 1 interval 3ms3
+              domain-name ABCDEFGHIJ short-name KLMNOPQRST
+cfm cc-peer bridge br0 instance 1 mepid 21
+cfm cc-ccm-tx bridge br0 instance 1 dmac 01-80-C2-00-00-30 period 1000
+
+cfm mep-create bridge br0 instance 2 domain port direction down port eth1
+cfm mep-config bridge br0 instance 2 mac 00-00-00-00-03-01 level 7 mepid 31
+cfm cc-config bridge br0 instance 2 enable 1 interval 3ms3
+              domain-name ABCDEFGHIJ short-name KLMNOPQRST
+cfm cc-peer bridge br0 instance 2 mepid 10
+cfm cc-ccm-tx bridge br0 instance 2 dmac 01-80-C2-00-00-30 period 1000</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ERPS configuration:
+
+erps create bridge br0 instance 1 version 1 port0 eth0 port1 eth1
+erps ring-id bridge br0 instance 1 33
+erps rpl bridge br0 instance 1 role neighbor port 1
+erps control bridge br0 instance 1 mdlevel 4 vlanif0 eth0.400 vlanif1 eth1.400</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that no protected VLANS are added to the ERPS.
+This is done when the full ring is enabled at tested for protocol functionality.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_making_ring_operational"><a class="anchor" href="#_making_ring_operational"></a>3.5. Making ring operational</h3>
+<div class="paragraph">
+<p>When the ring is configured, to make it operational protecting VLANs, it must be tested for
+protocol functionality.<br>
+When ring has proved able to handle link failure and link restore and is in IDLE state
+it is ready to add protected VLANs.</p>
+</div>
+<div class="paragraph">
+<p>On all nodes 1-3:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Adding protected traffic VLANs to bridge:
+
+bridge vlan add dev br0 vid 100 self
+bridge vlan add dev br0 vid 200 self
+bridge vlan add dev br0 vid 300 self
+
+Protected traffic VLANs on ring ports and traffic port:
+
+bridge vlan add dev eth0 vid 100
+bridge vlan add dev eth1 vid 100
+bridge vlan add dev eth2 vid 100
+bridge vlan add dev eth0 vid 200
+bridge vlan add dev eth1 vid 200
+bridge vlan add dev eth2 vid 200
+bridge vlan add dev eth0 vid 300
+bridge vlan add dev eth1 vid 300
+bridge vlan add dev eth2 vid 300</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Adding VLANs to the ERPS instance:
+
+erps vlans bridge br0 instance 1 100,200,300</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

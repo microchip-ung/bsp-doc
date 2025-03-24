@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting started :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.03">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.03</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="getting-started.html">Getting started</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.03</button>
+  <div class="version-menu">
+    <a class="version is-current" href="getting-started.html">2025.03</a>
+    <a class="version" href="../2024.12/getting-started.html">2024.12</a>
+    <a class="version" href="../2024.09/getting-started.html">2024.09</a>
+    <a class="version" href="../2024.06/getting-started.html">2024.06</a>
+    <a class="version" href="../2024.03/getting-started.html">2024.03</a>
+    <a class="version" href="../2024.03-1/getting-started.html">2024.03-1</a>
+    <a class="version" href="../2023.12/getting-started.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Getting started</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to download and build the Microchip BSP from sources.</p>
+</div>
+<div class="paragraph">
+<p>A reference board is required in order to test the resulting artifacts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="terms"><a class="anchor" href="#terms"></a>1. Terms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following terms are used to describe the generated artifacts throughout this document:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ITB - Image Tree Blob. An image using the FIT (Flattened Image Tree) format that can contain the Linux kernel,
+device tree blob, root file system image etc.</p>
+</li>
+<li>
+<p>ITB-Rootfs - An ITB containing kernel, a number of device trees and a full SquashFS as rootfs.</p>
+</li>
+<li>
+<p>ITB-Initramfs - An ITB containing kernel, a number of device trees and an initramfs containing a small stage2-loader.</p>
+</li>
+<li>
+<p>ITB-Bare - An ITB containing kernel, a number of device trees and no root file system.</p>
+</li>
+<li>
+<p>ext4-ITB-Bare - An ext4 filesystem containing an ITB-Bare in the boot folder.</p>
+</li>
+<li>
+<p>ext4-ITB-Initramfs - An ext4 filesystem containing an ITB-Initramfs in the boot folder.</p>
+</li>
+<li>
+<p>ext4-Bare - An ext4 filesystem without an ITB in the boot folder.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The images created by default are ITB_Rootfs and ext4-Bare.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development_environment"><a class="anchor" href="#_development_environment"></a>2. Development environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The development environment must support at least the packages required by Buildroot:
+<a href="https://buildroot.org/downloads/manual/manual.html#requirement" class="bare">https://buildroot.org/downloads/manual/manual.html#requirement</a></p>
+</div>
+<div class="paragraph">
+<p>On Ubuntu 20.04 LTS, the required packages can be installed like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sudo  apt-get install -y \
+    asciidoc \
+    astyle \
+    autoconf \
+    bc \
+    bison \
+    build-essential \
+    ccache \
+    cmake \
+    cmake-curses-gui \
+    cpio \
+    dblatex \
+    default-jre \
+    doxygen \
+    file \
+    flex \
+    gdisk \
+    genext2fs \
+    gettext-base \
+    git \
+    graphviz \
+    gzip \
+    help2man \
+    iproute2 \
+    iputils-ping \
+    libacl1-dev \
+    libelf-dev \
+    libglade2-0 \
+    libgtk2.0-0 \
+    libmpc-dev \
+    libncurses5 \
+    libncurses5-dev \
+    libncursesw5-dev \
+    libssl-dev \
+    libtool \
+    locales \
+    m4 \
+    mtd-utils \
+    parted \
+    patchelf \
+    python3 \
+    python3-pip \
+    rsync \
+    ruby-full \
+    ruby-parslet \
+    squashfs-tools \
+    sudo \
+    texinfo \
+    tree \
+    u-boot-tools \
+    udev \
+    util-linux \
+    vim \
+    w3m \
+    wget \
+    xz-utils \
+
+# Additional Ruby packages
+$ sudo gem install nokogiri asciidoctor
+
+# Enable use of `python` command instead of `python3`
+$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 100
+
+# Additional Python packages
+$ sudo python -m pip install matplotlib</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An alternative is to use the Docker image provided by Microchip which contains Ubuntu 20.04 LTS and all of the necessary packages.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See <a href="#using_docker">Using Docker</a>, for details on how to configure and use a Docker image.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_download"><a class="anchor" href="#_download"></a>3. Download</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bsp"><a class="anchor" href="#_bsp"></a>3.1. BSP</h3>
+<div class="paragraph">
+<p>Microchip BSPs are stored in Amazon Web Services (AWS) at this location:<br>
+<a href="http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp/" class="bare">http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp/</a></p>
+</div>
+<div class="paragraph">
+<p>Download e.g. mscc-brsdk-source-2024.09.tar.gz via browser or wget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd &lt;workspace-to-install-sources&gt;
+$ wget http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-source-2024.09.tar.gz
+$ ls
+mscc-brsdk-source-2024.09.tar.gz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the BSP has been downloaded it must be extracted.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tar xf mscc-brsdk-source-2024.09.tar.gz
+$ ls
+mscc-brsdk-source-2024.09 mscc-brsdk-source-2024.09.tar.gz</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="toolchain"><a class="anchor" href="#toolchain"></a>3.2. Toolchain</h3>
+<div class="paragraph">
+<p>Microchip BSPs requires an appropriate toolchain. They are stored in Amazon Web Services (AWS) at this location:<br>
+<a href="http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/toolchain/" class="bare">http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/toolchain/</a></p>
+</div>
+<div class="paragraph">
+<p>The toolchains can be downloaded as either binary or source. We always recommend to use the binary toolchain.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="#customizing_toolchain">Customizing the Toolchain</a> if you want to customize the toolchain.</p>
+</div>
+<div class="paragraph">
+<p>The BSP expects the toolchain to be located in the <code>/opt/mscc/</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>To identify the toolchain version that matches the BSP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd mscc-brsdk-source-2024.09
+$ cat ./external/support/misc/mscc-version | grep toolchain
+toolchain: 2024.02-105</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Download mscc-toolchain-bin-2024.02-105.tar.gz via browser or wget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ wget http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/toolchain/mscc-toolchain-bin-2024.02-105.tar.gz
+$ ls
+mscc-toolchain-bin-2024.02-105.tar.gz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the toolchain has been downloaded it must be extracted into <code>/opt/mscc</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ sudo mkdir -p /opt/mscc
+$ sudo tar xf mscc-toolchain-bin-2024.02-105.tar.gz -C /opt/mscc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Test the toolchain:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ /opt/mscc/mscc-toolchain-bin-2024.02-105/arm-cortex_a8-linux-gnueabihf/usr/bin/arm-cortex_a8-linux-gnueabihf-gcc --version
+arm-cortex_a8-linux-gnueabihf-gcc.br_real (Buildroot 2024.02) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bsp_structure"><a class="anchor" href="#_bsp_structure"></a>4. BSP structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is the structure used by the BSP:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./external</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This folder contains source that is not provided by the Buildroot project.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./external/&lt;package&gt;</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All packages added by Microchip are located in the <code>./external/package</code> folder.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./external/configs</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This folder contains all the defconfigs added by Microchip.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./dl/&lt;package&gt;</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All source code referenced by Buildroot or added by Microchip are available as compressed files in a
+folder in the <code>./dl</code> folder.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./output/build_&lt;name&gt;</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">These are the predefined build folders for each target.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./output/artifact</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This folder is created during build and contains the BSP package result.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./output/images</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This folder is created during build and contains the BSP binaries (before the final package is
+created).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Most of the other folders are described here: <a href="https://buildroot.org/downloads/manual/manual.html#_developer_guide" class="bare">https://buildroot.org/downloads/manual/manual.html#_developer_guide</a></p>
+</div>
+<div class="paragraph">
+<p>Building the BSP does not require any other downloads than the BSP and toolchain packages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="build"><a class="anchor" href="#build"></a>5. Building</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The BSP can be built by a script provided by Microchip or by the normal Buildroot <code>out-of-tree</code> procedure.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Buildroot is designed to be built as non-root. There is no need to be root to configure and build when using Buildroot.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_building_via_script"><a class="anchor" href="#_building_via_script"></a>5.1. Building via script</h3>
+<div class="paragraph">
+<p>The source package contains a Ruby script called <code>build.rb</code> which makes it very easy to build the BSP for one or more targets.</p>
+</div>
+<div class="paragraph">
+<p>Only targets defined by Microchip can be build with the <code>build.rb</code> script.</p>
+</div>
+<div class="paragraph">
+<p>The syntax is:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>./build.rb &lt;STEP&gt; [--configs &lt;TARGETS&gt;`]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where &lt;STEP&gt; is one of:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[ build | pack | relocate | all ]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and <code>&lt;TARGETS&gt;</code> is a regular expression that will be matched with the defconfigs located in the <code>./external/configs</code>
+folder, and only those that match will be built. All targets will be built if the <code>--configs</code> option is omitted.</p>
+</div>
+<div class="paragraph">
+<p>Using build step <code>all</code> executes all the above build steps in the following order: <code>build</code>, <code>pack</code>, <code>relocate</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For more options in the ./build.rb script, please use ./build.rb --help
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If your development system is not Ubuntu 2020.04 you can also use the <code>docker-run</code> tool to run the build in a
+docker container.  This is described in the <a href="#using_docker">Using Docker</a> section.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_build_step_build"><a class="anchor" href="#_build_step_build"></a>5.1.1. Build step <code>build</code></h4>
+<div class="paragraph">
+<p>This is an example on how to run the <code>build</code> step with the arm_standalone target:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ./build.rb build --configs arm_standalone_defconfig</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This step builds from the sources and stores its output in the corresponding target build folder.
+The output from the <code>build</code> command above is therefore located in <code>./output/build_arm_standalone</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>This folder contains several subfolders that are documented here:<br>
+<a href="https://buildroot.org/downloads/manual/manual.html#_buildroot_quick_start" class="bare">https://buildroot.org/downloads/manual/manual.html#_buildroot_quick_start</a></p>
+</div>
+<div class="paragraph">
+<p>The build process is logged in a file, <code>./output/build_arm_standalone/arm_standalone_defconfig.log</code>. You can monitor this file from
+another terminal during the build process using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tail -f ./output/build_arm_standalone/arm_standalone_defconfig.log</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_build_step_pack"><a class="anchor" href="#_build_step_pack"></a>5.1.2. Build step <code>pack</code></h4>
+<div class="paragraph">
+<p>This is an example on how to run the <code>pack</code> step with the arm_standalone target:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ./build.rb pack --configs arm_standalone_defconfig</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This step collects all the results and add them to a folder: <code>./output/mscc-brsdk-&lt;arch&gt;-&lt;version&gt;</code>.
+The output from the <code>pack</code> command above is therefore located in folder: <code>./output/mscc-brsdk-arm-2024.09</code>.</p>
+</div>
+<div class="paragraph">
+<p>Build step <code>pack</code> also saves the log file from the <code>build</code> step in file:<br>
+<code>./output/mscc-brsdk-logs-2024.09/arm_standalone_defconfig.log</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_build_step_relocate"><a class="anchor" href="#_build_step_relocate"></a>5.1.3. Build step <code>relocate</code></h4>
+<div class="paragraph">
+<p>This is an example on how to run the <code>relocate</code> step with the arm_standalone target:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ./build.rb relocate --configs arm_standalone_defconfig [--local]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This step creates an artifact folder, <code>./output/artifact</code>, that contains all artifacts needed for distribution of the
+binary BSP.</p>
+</div>
+<div class="paragraph">
+<p>The binary BSP is installed in <code>/opt/mscc</code> on the local PC if the <code>--local</code> option is present.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_for_xstax"><a class="anchor" href="#_building_for_xstax"></a>5.2. Building for XStaX</h3>
+<div class="paragraph">
+<p>In the previous sections the example showed how to build arm_standalone_defconfig.</p>
+</div>
+<div class="paragraph">
+<p>If you are building a BSP package for XStaX the procedure is the same, but the XStaX build also depends on artifacts
+provided by the bootloader, so to include these in the BSP package these you will need to combine these builds like this
+when building e.g. for the arm64 version:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ./build.rb all --configs arm64_xstax --configs arm64_bootloaders</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This build will collect artifacts from the two configurations, so the final BSP package will contain all the necessary
+artifacts to build the XStaX image.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_the_buildroot_way"><a class="anchor" href="#_building_the_buildroot_way"></a>5.3. Building the Buildroot way</h3>
+<div class="paragraph">
+<p>The BSP package has been designed to work with the <code>Building out-of-tree</code> concept described here:
+<a href="https://buildroot.org/downloads/manual/manual.html#_building_out_of_tree" class="bare">https://buildroot.org/downloads/manual/manual.html#_building_out_of_tree</a></p>
+</div>
+<div class="paragraph">
+<p>This means that you can switch into the build directory for the actual target and then just run e.g. <code>make menuconfig</code>
+or <code>make</code> without the need to pass <code>O=&lt;&#8230;&#8203;&gt; and -C &lt;&#8230;&#8203;&gt;</code>:</p>
+</div>
+<div class="paragraph">
+<p>Here is how to build for the same target as when using the build script above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd ./output/build_arm_standalone
+$ make menuconfig
+$ make</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output from the command above is located in folder: <code>./output/build_arm_standalone/images</code>:</p>
+</div>
+<div class="paragraph">
+<p>If you want to use another output folder you must prepare it first:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ make BR2_EXTERNAL=./external O=./output/mybuild arm_standalone_defconfig
+$ cd ./output/mybuild
+$ make menuconfig
+$ make</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When building in this way you cannot use the build script <code>./build.rb</code> to collect the artifacts. This must be done
+manually.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+If you create your own output folder structure and configuration files, please be aware that the folder
+structure must be two levels, corresponding to the <code>output/target</code> folder structure maintained with the <code>build.rb</code>
+tool. The reason for this limitation is that some of the references in the <code>defconfig</code> files uses relative folder
+references to point to build artifacts, so this must be respected unless you also update the <code>defconfig</code> file that you
+use.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using_docker"><a class="anchor" href="#using_docker"></a>5.4. Using Docker</h3>
+<div class="paragraph">
+<p>Both the BSP and the toolchain are based on Buildroot which requires a number of mandatory and optional packages
+installed in the build host.</p>
+</div>
+<div class="paragraph">
+<p>You can avoid installing all of these packages by using a Docker image together with a <code>dr</code> helper script provided by
+Microchip: <a href="https://github.com/microchip-ung/docker-run" class="bare">https://github.com/microchip-ung/docker-run</a></p>
+</div>
+<div class="paragraph">
+<p>Clone the repo and copy the <code>dr</code> script into a folder that is within your path, e.g. /usr/local/bin, and make it
+executable with <code>sudo chmod a+x /usr/local/bin/dr</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>dr</code> script requires a configuration file, <code>.docker.env</code>, which is included in the project root of both the BSP and
+the toolchain sources.</p>
+</div>
+<div class="paragraph">
+<p>This configuration file contains information about which Docker image to run and also a set of options to pass to the
+Docker image.</p>
+</div>
+<div class="paragraph">
+<p>You will need to install Docker in order to use the <code>dr</code> script. See <a href="https://docs.docker.com/engine/install/" class="bare">https://docs.docker.com/engine/install/</a> for
+instructions.</p>
+</div>
+<div class="paragraph">
+<p>The Docker image has been verified to work with Ubuntu 20.04 and Windows 10 with WSL2 and Ubuntu 20.04.</p>
+</div>
+<div class="paragraph">
+<p>Change current folder to the project root and try the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr bash
+&lt;username&gt;@d3aeab611408:/home/&lt;username&gt;/project/brsdk/mscc-brsdk-source-2024.09$</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Docker image will automatically be downloaded if it is the first time you use the <code>dr</code> script and it can take some
+time.</p>
+</div>
+<div class="paragraph">
+<p>The new prompt indicates that you are running bash inside the Docker container where all the packages required by
+Buildroot are available.</p>
+</div>
+<div class="paragraph">
+<p>Note that you are the same user inside the container as outside the container.</p>
+</div>
+<div class="paragraph">
+<p>The current folder is the same inside the container as outside the container.</p>
+</div>
+<div class="paragraph">
+<p>Everything within the project root is accessible inside the container.</p>
+</div>
+<div class="paragraph">
+<p>Type <code>exit</code> to leave the Docker container.</p>
+</div>
+<div class="paragraph">
+<p>It is now possible to run all kinds of commands inside the Docker container just by prepending the command with <code>dr</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ dr ./build.rb -all
+$ cd ./output/build_arm_standalone
+$ dr ls -al
+$ dr make menuconfig
+$ dr make</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you need to mount other folders in the container you can add them in the variable <code>MCHP_DOCKER_OPTIONS</code> in
+<code>.docker_env</code> from this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>MCHP_DOCKER_OPTIONS="-v $opt:$opt --tmpfs /tmp:exec -e BLD_USER=$(id -un) -e BLD_UID=$(id -u)"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>MCHP_DOCKER_OPTIONS="-v $opt:$opt --tmpfs /tmp:exec -e BLD_USER=$(id -un) -e BLD_UID=$(id -u) -v /usr/local/src/xyz:/usr/local/src/xyz"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can access the <code>/usr/local/src/xyz</code> folder both inside and outside the container.</p>
+</div>
+<div class="paragraph">
+<p>The following Docker related repos and corresponding Docker image are public available on GitHub:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>dr</code> script: <a href="https://github.com/microchip-ung/docker-run" class="bare">https://github.com/microchip-ung/docker-run</a></p>
+</li>
+<li>
+<p>Dockerfile etc.: <a href="https://github.com/microchip-ung/docker-bsp-buildenv" class="bare">https://github.com/microchip-ung/docker-bsp-buildenv</a></p>
+</li>
+<li>
+<p>Docker image: <a href="https://github.com/orgs/microchip-ung/packages/container/package/bsp-buildenv" class="bare">https://github.com/orgs/microchip-ung/packages/container/package/bsp-buildenv</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="selecting_artifacts"><a class="anchor" href="#selecting_artifacts"></a>6. Selecting artifacts to build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The artifact <a href="#terms">ITB-Rootfs</a> is built by default.</p>
+</div>
+<div class="paragraph">
+<p>This is done via a shell script that Buildroot calls after creating filesystem images.</p>
+</div>
+<div class="paragraph">
+<p>The configuration name is BR2_ROOTFS_POST_IMAGE_SCRIPT and is accessible via menuconfig:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd ./output/build_arm_standalone
+$ make menuconfig</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Select <code>System configuration</code> and <code>Custom scripts to run after creating filesystem images</code>
+and add the script to run.</p>
+</div>
+<div class="paragraph">
+<p>Most of the targets are initially configured to use a script called <code>post-image.sh</code>
+that is located somewhere under the ./board folder.</p>
+</div>
+<div class="paragraph">
+<p>In the next field, <code>Extra arguments passed to custom scripts</code>, you can configure
+which artifacts to build.</p>
+</div>
+<div class="paragraph">
+<p>Valid values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>itb-rootfs</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build fit.itb</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>itb-initramfs</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build itb-initramfs.itb</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>itb-bare</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build itb-bare.itb</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>ext4-itb-bare</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build ext4-itb-bare.ext4</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>ext4-itb-initramfs</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build ext4-itb-initramfs.ext4</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>ext4-bare</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build ext4-bare.ext4</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>ubifs-itb-bare</strong></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build a UBIFS image with a itb-bare.itb</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Add the artifacts to build separated by a space. If this field is empty then
+ITB-Rootfs is built by default.</p>
+</div>
+<div class="paragraph">
+<p>Some targets supports only a subset of the artifacts.</p>
+</div>
+<div class="paragraph">
+<p>The predefined post-image.sh scripts makes use of a helper script called <code>imggen.rb</code>,
+which is located in the <code>./external/support/scripts</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>To see how to use this script directly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ./external/support/scripts/imggen.rb --help</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing_the_build"><a class="anchor" href="#_changing_the_build"></a>7. Changing the build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The next sections explains how you can change the build or its content.</p>
+</div>
+<div class="sect2">
+<h3 id="_adding_new_packages"><a class="anchor" href="#_adding_new_packages"></a>7.1. Adding new packages</h3>
+<div class="paragraph">
+<p>If a new package is needed, it can be added by following the description here:
+<a href="https://buildroot.org/downloads/manual/manual.html#adding-packages" class="bare">https://buildroot.org/downloads/manual/manual.html#adding-packages</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modifying_a_package"><a class="anchor" href="#_modifying_a_package"></a>7.2. Modifying a package</h3>
+<div class="paragraph">
+<p>If a package needs to be modified, it is recommended to use the procedure described here:
+<a href="https://buildroot.org/downloads/manual/manual.html#_using_buildroot_during_development" class="bare">https://buildroot.org/downloads/manual/manual.html#_using_buildroot_during_development</a></p>
+</div>
+<div class="paragraph">
+<p>As an example, we will change the <code>ethtool</code> package in the arm_standalone target.</p>
+</div>
+<div class="paragraph">
+<p>First create a home for the <code>ethtool</code> sources:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ mkdir -p ./source/ethtool</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Locate the <code>ethtool</code> repo in the <code>./dl</code> folder:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ls ./dl/ethtool
+ethtool-5.10.tar.xz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unpack <code>ethtool</code> into its new home:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ tar xf ./dl/ethtool/ethtool-5.10.tar.xz -C ./source/ethtool</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add an override file <code>local.mk</code> in the output folder for the arm_standalone target with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ echo "ETHTOOL_OVERRIDE_SRCDIR = ./source/ethtool/ethtool-5.10" &gt; ./output/build_arm_standalone/local.mk</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is possible to override more than one package in <code>local.mk</code> by adding a line for each package.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now do the necessary modifications in <code>./source/ethtool/ethtool-5.10/&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>ethtool</code> package must be rebuilt after being modified:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd ./output/build_arm_standalone
+$ make ethtool-rebuild all</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the source folders are located outside of the BSP root and you use a Docker image you will have to mount the source folder(s) inside the Docker image.<br>
+See <a href="#using_docker">Using Docker</a>, for details on how to mount other folders inside the Docker image.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hello_world_example"><a class="anchor" href="#_hello_world_example"></a>7.3. Hello World example</h3>
+<div class="paragraph">
+<p>This is a step by step guide for adding a new CMake-based package called <code>Hello World</code>.</p>
+</div>
+<div class="paragraph">
+<p>More details can be found here:<br>
+<a href="https://buildroot.org/downloads/manual/manual.html#_infrastructure_for_cmake_based_packages" class="bare">https://buildroot.org/downloads/manual/manual.html#_infrastructure_for_cmake_based_packages</a></p>
+</div>
+<div class="paragraph">
+<p>The package is as simple as possible and contains only a CMake file and a .c file but the steps are the same for more complicated packages.</p>
+</div>
+<div class="paragraph">
+<p>First create a package directory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ mkdir ./external/package/mscc-hello-world</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create ./external/package/mscc-hello-world/Config.in with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>config BR2_PACKAGE_MSCC_HELLO_WORLD
+	bool "mscc-hello-world"
+	help
+	  Tool for configuring hello-world</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create ./external/package/mscc-hello-world/mscc-hello-world.mk with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>MSCC_HELLO_WORLD_VERSION = 1.0
+MSCC_HELLO_WORLD_SITE = http://www.hello-world.org/download
+MSCC_HELLO_WORLD_SOURCE = mscc-hello-world-$(MSCC_HELLO_WORLD_VERSION).tar.gz
+MSCC_HELLO_WORLD_INSTALL_STAGING = YES
+
+$(eval $(cmake-package))</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The macro assignments needs not to select an existing repository at this point but they must be present.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Include the new package directory at the bottom of the existing ./external/Config.in file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>.
+source "$BR2_EXTERNAL_MSCC_PATH/package/mscc-hello-world/Config.in"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a new home for the package sources:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mkdir /home/alice/mscc-hello-world</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create /home/alice/mscc-hello-world/CMakeLists.txt with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cmake_minimum_required(VERSION 3.4)
+
+PROJECT(HelloWorld)
+
+add_executable(hello-world hello-world.c)
+install(TARGETS hello-world DESTINATION bin)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create /home/alice/mscc-hello-world/hello-world.c with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>#include &lt;stdio.h&gt;
+int main() {
+        printf("Hello, World!");
+        return 0;
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create an override file for each target that must include the Hello World application.<br>
+This example uses the arm_standalone target.</p>
+</div>
+<div class="paragraph">
+<p>Create ./output/build_arm_standalone/local.mk with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>MSCC_HELLO_WORLD_OVERRIDE_SRCDIR = /home/alice/mscc-hello-world</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Change to the target directory in order to use the following make commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd ./output/build_arm_standalone</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enable mscc-hello-world (select External options and check mscc-hello-world):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ make menuconfig</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To build:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ make</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Modify source code and rebuild mscc-hello-world only:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ make mscc-hello-world-rebuild all</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If using Docker the source directory must be mounted in .docker.env, so change the MCHP_DOCKER_OPTIONS setting in the
+.docker.env file from this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>MCHP_DOCKER_OPTIONS="-v $opt:$opt --tmpfs /tmp:exec -e BLD_USER=$(id -un) -e BLD_UID=$(id -u)"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>MCHP_DOCKER_OPTIONS="-v $opt:$opt --tmpfs /tmp:exec -e BLD_USER=$(id -un) -e BLD_UID=$(id -u) -v /home/alice/mscc-hello-world:/home/alice/mscc-hello-world"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Hello World application is now part of the artifacts and can be tested on target.</p>
+</div>
+<div class="paragraph">
+<p>When the application has been tested and added into a repository the following steps must be done:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modify ./external/package/mscc-hello-world/mscc-hello-world.mk to point to the new repository.</p>
+</li>
+<li>
+<p>Remove the ./output/build_arm_standalone/local.mk file.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The new application has now been fully added to the Buildroot system.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="customizing_toolchain"><a class="anchor" href="#customizing_toolchain"></a>7.4. Customizing the Toolchain</h3>
+<div class="paragraph">
+<p>The toolchain contains cross-compilers that are utilized to compile on one architecture and get an output that can run
+on a different architecture. The toolchain is distributed both in binary and source format. To customize the toolchain,
+the sources are needed and must be downloaded.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="#toolchain">Toolchain</a> section for details on how to find the correct version of the toolchain.</p>
+</div>
+<div class="paragraph">
+<p>This tells us the toolchain version is <code>2024.02-105</code>. Get and install toolchain sources:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd &lt;workspace-to-install-sources&gt;
+$ wget http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/toolchain/mscc-toolchain-source-2024.02-105.tar.gz
+$ tar -xf mscc-toolchain-source-2024.02-105.tar.gz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Before starting to customize the toolchain, make sure it compiles without any
+modifications. The build process is automated by the <code>./build.rb</code> script.</p>
+</div>
+<div class="paragraph">
+<p>Here is how to build all toolchains:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd mscc-toolchain-source-2024.02-105
+$ ./build.rb all</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Lots of warnings are printed on the screen when compiling the toolchain.
+These are warnings in third-party code and can be ignored.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For more options in the <code>./build.rb</code> script, use <code>./build.rb --help</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If the build completes successfully, it stores the resulting binary toolchain in the <code>./output/artifact</code> folder.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ls ./output/artifact
+files.md5
+mscc-toolchain-bin-2024.02-105.tar.gz
+mscc-toolchain-logs-2024.02-105.tar.gz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now the toolchain is ready to be installed in <code>/opt/mscc</code>.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="#toolchain">Toolchain</a> section for details on how to extract and install the toolchain.</p>
+</div>
+<div class="sect3">
+<h4 id="_changing_the_toolchain_configuration"><a class="anchor" href="#_changing_the_toolchain_configuration"></a>7.4.1. Changing the toolchain configuration</h4>
+<div class="paragraph">
+<p>To alter e.g. the ARM toolchain:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd ./output/build_arm_toolchain
+$ make menuconfig
+$ cd ../..</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The toolchain package only contains the toolchain, so in case you need to
+add or remove non-toolchain related packages, refer to the <a href="#build">Build</a> section.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After this, rebuild the toolchain and pack everything to be able to use them:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ./build.rb build --configs arm_toolchain_defconfig
+$ ./build.rb pack
+$ ./build.rb relocate</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, the new toolchain is ready to be installed into <code>/opt/mscc</code> as described in the
+<a href="#toolchain">Toolchain</a> section.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

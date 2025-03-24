@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Scheduling :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.03">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.03</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li>Egress</li>
+    <li><a href="scheduling.html">Scheduling</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.03</button>
+  <div class="version-menu">
+    <a class="version is-current" href="scheduling.html">2025.03</a>
+    <a class="version" href="../2024.12/scheduling.html">2024.12</a>
+    <a class="version" href="../2024.09/scheduling.html">2024.09</a>
+    <a class="version" href="../2024.06/scheduling.html">2024.06</a>
+    <a class="version" href="../2024.03/scheduling.html">2024.03</a>
+    <a class="version" href="../2024.03-1/scheduling.html">2024.03-1</a>
+    <a class="version" href="../2023.12/scheduling.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Scheduling</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The classified priority is a number from 0 to 7 where 0 is the lowest priority and 7 is the highest priority.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mqprio_qdisc"><a class="anchor" href="#mqprio_qdisc"></a>1. Strict scheduling.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Strict scheduling is the default behaviour at egress.</p>
+</div>
+<div class="paragraph">
+<p>A port has eight priority queues and frames in the highest priority queue are always transmitted before frames in lower priority queues.</p>
+</div>
+<div class="paragraph">
+<p>If shapers are needed on one or more of these eight priority queues then the <code>mqprio qdisc</code> can be used.</p>
+</div>
+<div class="paragraph">
+<p>The <code>mqprio qdisc</code> does nothing by itself but serves as an attachment point for shapers.</p>
+</div>
+<div class="paragraph">
+<p>To create an <code>mqprio qdisc</code> on eth0 and attach a <code>cbs</code> shaper on priority queue 4:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 root handle 1:0 mqprio
+# tc qdisc replace dev eth0 parent 1:5 handle 2 cbs \
+  idleslope 10000 sendslope -990000 hicredit 15 locredit -990 offload 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The mqprio handle is 1:0 and the major part is 1. The minor part of a qdisc handle must always be 0.</p>
+</div>
+<div class="paragraph">
+<p>The cbs parent is 1:5 where the major part (1) must match the major part of the mqprio handle and the minor part (5) designates priority queue 4.</p>
+</div>
+<div class="paragraph">
+<p>The minor part is always offset by one and minor part 5, therefore, corresponds to priority queue 4.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="shaping.html#priority_shaping" class="xref page">Priority Shaping</a> section on the Shaping page for a description of the supported shapers and their parameters.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ets_qdisc"><a class="anchor" href="#ets_qdisc"></a>2. Strict and DWRR scheduling.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Default is that the frames are subject to the strict priority shaper algorithm.<br>
+It can be configured that priorities are subject to Enhanced Transmission Selection (ETS).
+These are the lowest priorities so that transmission from strict priorities are always
+done first.</p>
+</div>
+<div class="paragraph">
+<p>Configuration is done using the <code>tc qdisc add ets command</code>.<br>
+This command configures <code>bands</code> as either strict or bandwidth-sharing (DWRR).<br>
+According to tc-ets(8) man page:<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>When dequeuing, strict bands are tried first, if there are any. Band 0 is tried first.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This means that the first band - band 0 - has the highest priority.
+In the Microchip switch, there are 8 priorities 0-7 and it is priority 7 that has the highest priority.
+This is not configurable.<br>
+This means that Band 0 always equals to Priority 7.<br></p>
+</div>
+<div class="paragraph">
+<p>This command configures a mix of strict and ETS priorities:<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tc qdisc add dev eth0 handle 1: root ets bands 8 strict 5 quanta 1000 1000 1000 priomap 7 6 5 4 3 2 1 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The device (port) is <code>eth0</code>.<br>
+The handle for this tc is <code>1:</code><br>
+There are (always) <code>8</code> bands<br>
+The first <code>5</code> bands are strict.<br>
+The next 3 bands have an equal quanta of <code>1000</code>.<br>
+The priomap is (always) <code>7 6 5 4 3 2 1 0</code><br></p>
+</div>
+<div class="paragraph">
+<p>The <code>quanta</code> parameter gives the DWRR weight for each band. In this case 1/3 of the bandwidth to each band.<br>
+The <code>priomap</code> is configuring per priority what the related band is - Priority 0 is the first in the list.
+As Priority 0 has the lowest priority it maps to band 7 that is the band with the lowest priority.
+The <code>priomap</code> must always be configured as shown above.</p>
+</div>
+<div class="paragraph">
+<p>This command changes the <code>quantum</code> parameter for a specific band.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tc qdisc add dev eth0 handle 1: root ets bands 8 strict 5 quanta 600 300 100 priomap 7 6 5 4 3 2 1 0
+tc class change dev eth0 classid 1:6 ets quantum 800</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The device (port) is <code>eth0</code>.<br>
+The classid is <code>1:6</code><br>
+the quantum is <code>800</code></p>
+</div>
+<div class="paragraph">
+<p>According to tc-ets(8) man page:<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>The minor number of `classid` to use when referring to a band is the band number increased by one.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So in this case the changed band is 5 - the first bandwidth-sharing band.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="taprio_qdisc"><a class="anchor" href="#taprio_qdisc"></a>3. Time-Aware Scheduling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Time-aware scheduling, as described in IEEE Std 802.1Q-2018 Section 8.6.8.4, is implemented using the <code>taprio</code> qdisc.</p>
+</div>
+<div class="paragraph">
+<p>A cyclic schedule opens and closes each priority queue relative to a known timescale, e.g. controlled via PTP.</p>
+</div>
+<div class="paragraph">
+<p>When a queue is closed all frames are held back in the queue and when it opens again the frames are transmitted again in priority order.</p>
+</div>
+<div class="paragraph">
+<p>A taprio qdisc is created using the <code>tc qdisc</code> command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 root handle 1:0 taprio \
+  num_tc 8 queues 1@0 1@1 1@2 1@3 1@4 1@5 1@6 1@7 map 0 1 2 3 4 5 6 7 \
+  flags 2 base-time 0 cycle-time 50000000 \
+  sched-entry S 0x80 10000000 \
+  sched-entry S 0x7f 40000000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The taprio qdisc is a little more complicated to set up as the tc taprio command does not (yet) support the same defaults as the tc mqprio command.
+Here you must manually set up the number of traffic classes, the mapping from traffic class to priority, and flags that indicates HW offload.</p>
+</div>
+<div class="paragraph">
+<p>The rest of the parameters are for the time-aware scheduler configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>base-time</code> - The PTP time when the cycle should start. Set to 0 if the cycle should start immediately.</p>
+</li>
+<li>
+<p><code>cycle-time</code> - The total cycle-time in nanoseconds.</p>
+</li>
+<li>
+<p><code>sched-entry</code> - A single entry in the schedule where <code>S</code> is the command 'SetGateStates' followed by a mask that selects the queues to open
+(LSB is the lowest priority queue) and finally the duration of the entry in nanoseconds.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the example above the cycle-time is 50 milliseconds, queue 7 is open for 10 milliseconds and all other queues are open for 40 milliseconds.
+This cycle repeats forever.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to add a shaper on one or more of the eight priority queues in the same way as on the <code>mqprio qdisc</code>.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="shaping.html#priority_shaping" class="xref page">Priority Shaping</a> section on the Shaping page for a description of the supported shapers and their parameters.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
