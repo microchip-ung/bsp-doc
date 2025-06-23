@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Egress ACL :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="5">
+    <a class="nav-link" href="tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li><a href="../network_overview.html">Network</a></li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li>Egress</li>
+    <li><a href="tc-es2.html">Egress ACL (ES2)</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="tc-es2.html">2025.06</a>
+    <a class="version" href="../../2025.03/tc/tc-es2.html">2025.03</a>
+    <a class="version" href="../../2024.12/tc/tc-es2.html">2024.12</a>
+    <a class="version" href="../../2024.09/tc/tc-es2.html">2024.09</a>
+    <a class="version" href="../../2024.06/tc/tc-es2.html">2024.06</a>
+    <a class="version" href="../../2024.03/tc/tc-es2.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/tc/tc-es2.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/tc/tc-es2.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Egress ACL</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ES2 VCAP is part of EACL and enables egress access control lists using VCAP functionality.  The LAN966x does not
+have an ES2 VCAP.</p>
+</div>
+<div class="paragraph">
+<p>When a frame is egressing on a port it is classified into one of the following traffic types by the ES2 VCAP:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Traffic Type</th>
+<th class="tableblock halign-center valign-top">Sparx5</th>
+<th class="tableblock halign-center valign-top">LAN966x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IPv4</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IPv6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sparx5_is2_acl_frame_classification"><a class="anchor" href="#_sparx5_is2_acl_frame_classification"></a>1. Sparx5 IS2 ACL frame classification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The valid combinations of Sparx5 ES2 lookup keyset versus Traffic Type are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 42.8571%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Sparx5 ES2 keyset - Traffic Type</th>
+<th class="tableblock halign-center valign-top">Size</th>
+<th class="tableblock halign-center valign-top">IPv4</th>
+<th class="tableblock halign-center valign-top">IPv6</th>
+<th class="tableblock halign-center valign-top">Other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_arp">ARP</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_ip4_other">IP4_OTHER</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_ip4_tcp_udp">IP4_TCP_UDP</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_mac_etype">MAC_ETYPE</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_ip_7tuple">IP_7TUPLE</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In this release the Sparx5s port keyset configuration varies for the 2 ES2 lookups:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Sparx5 IS2 Lookup - Traffic Type</th>
+<th class="tableblock halign-center valign-top">IPv4</th>
+<th class="tableblock halign-center valign-top">IPv6</th>
+<th class="tableblock halign-center valign-top">Other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Lookup 0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MAC_ETYPE</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MAC_ETYPE</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MAC_ETYPE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Lookup 1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">IP4_TCP_UDP IP4_OTHER</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">IP_7TUPLE</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ARP</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This will most likely be changed so that both lookups use the same configuration in a future release, as it is possible
+to change the configuration by using a template.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sparx5_keysets"><a class="anchor" href="#_sparx5_keysets"></a>2. Sparx5 Keysets</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_arp"><a class="anchor" href="#_arp"></a>2.1. ARP</h3>
+<div class="paragraph">
+<p>This keyset is generated when Ethertype is 0x0806 (ARP) or 0x8035 (RARP).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;VID&gt; or &lt;VID&gt;/&lt;VID_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id&#160;1234 or vlan_id&#160;0x100/0xff0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PCP&gt; or &lt;PCP&gt;/&lt;PCP_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio&#160;3 or vlan_id&#160;0x0/0x1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype&#160;arp or vlan_ethtype&#160;rarp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_mac</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;MAC_ADDR&gt; or &lt;MAC_ADDR&gt;/&lt;MAC_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_mac 00:33:33:33:33:33 or src_mac&#160;00:33:33:00:00:00/ff:ff:ff:00:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arp_tip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv4_ADDR&gt; or &lt;IPv4_ADDR&gt;/&lt;IPv4_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arp_tip 10.10.10.10 or arp_tip&#160;10.10.0.0/255.255.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arp_sip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv4_ADDR&gt; or &lt;IPv4_ADDR&gt;/&lt;IPv4_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arp_sip 10.10.10.10 or arp_sip&#160;10.10.0.0/255.255.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arp_op</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">request or reply</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arp_op&#160;request or arp_op&#160;reply</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The filter below matches on classified VLAN tag, and all supported IPv4 fields.</p>
+</div>
+<div class="paragraph">
+<p>The filter in inserted into chain 20100000 (lookup 1), as this is were the ARP keyset is configured currently.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth12 clsact
+
+# tc filter add dev eth12 egress chain 20100000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype arp \
+  src_mac 00:33:33:33:33:33 \
+  arp_tip 10.10.10.10  \
+  arp_sip 20.20.20.20/255.255.0.0 \
+  arp_op reply \
+  action pass</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ip4_other"><a class="anchor" href="#_ip4_other"></a>2.2. IP4_OTHER</h3>
+<div class="paragraph">
+<p>This keyset is generated when Ethertype is 0x0800 and IP protocol is neither TCP (6) nor UDP (17).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;VID&gt; or &lt;VID&gt;/&lt;VID_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id&#160;1234 or vlan_id&#160;0x100/0xff0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PCP&gt; or &lt;PCP&gt;/&lt;PCP_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio&#160;3 or vlan_id&#160;0x0/0x1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype&#160;ipv4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_tos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;TOS&gt; or &lt;TOS&gt;/&lt;TOS_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_tos&#160;0x12 or ip_tos&#160;0x4/0x3f</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IP_FLAG&gt;[/&lt;IP_FLAG&gt;]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_flags { [no]frag | [no]firstfrag }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv4_ADDR&gt; or &lt;IPv4_ADDR&gt;/&lt;IPv4_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_ip 10.10.10.10 or src_ip&#160;10.10.0.0/255.255.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv4_ADDR&gt; or &lt;IPv4_ADDR&gt;/&lt;IPv4_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_ip 20.20.20.20, dst_ip&#160;20.20.0.0/255.255.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_proto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IP_PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_proto&#160;1 or ip_proto&#160;icmp.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This filter matches on classified VLAN tag, and all supported IPv4 fields.</p>
+</div>
+<div class="paragraph">
+<p>The filter in inserted into chain 20100000 (lookup 1), as this is were the IP4_OTHER keyset is configured currently.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth49 clsact
+
+# tc filter add dev eth49 egress chain 20100000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype ipv4 \
+  ip_tos 0xf/0x3f \
+  ip_flags frag/nofirstfrag \
+  src_ip 10.10.10.10  \
+  dst_ip 20.20.20.20/255.255.0.0 \
+  ip_proto icmp \
+  action pass</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ip4_tcp_udp"><a class="anchor" href="#_ip4_tcp_udp"></a>2.3. IP4_TCP_UDP</h3>
+<div class="paragraph">
+<p>This keyset is generated when Ethertype is 0x0800 and IP protocol is either TCP (6) or UDP (17).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;VID&gt; or &lt;VID&gt;/&lt;VID_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id&#160;1234 or vlan_id&#160;0x100/0xff0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PCP&gt; or &lt;PCP&gt;/&lt;PCP_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio&#160;3 or vlan_id&#160;0x0/0x1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype&#160;ipv4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_tos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;TOS&gt; or &lt;TOS&gt;/&lt;TOS_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_tos&#160;0x12 or ip_tos&#160;0x4/0x3f</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IP_FLAG&gt;[/&lt;IP_FLAG&gt;]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_flags { [no]frag | [no]firstfrag }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv4_ADDR&gt; or &lt;IPv4_ADDR&gt;/&lt;IPv4_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_ip 10.10.10.10 or src_ip&#160;10.10.0.0/255.255.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv4_ADDR&gt; or &lt;IPv4_ADDR&gt;/&lt;IPv4_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_ip 20.20.20.20, dst_ip&#160;20.20.0.0/255.255.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_proto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IP_PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_proto&#160;6, ip_proto&#160;tcp, ip_proto&#160;17 or ip_proto&#160;udp.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tcp_flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;FLAGS&gt; or &lt;FLAGS&gt;/&lt;FLAGS_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tcp_flags&#160;0x1a or tcp_flags&#160;0x10/0x3f</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PORT&gt; or &lt;PORT&gt;/&lt;PORT_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_port 1000 or src_port&#160;0x200/0xff0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PORT&gt; or &lt;PORT&gt;/&lt;PORT_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_port 2000 or dst_port&#160;0x100/0xff0</p>
+<p class="tableblock">NOTE: Sparx5: Use Lookup 1 as this is configured with the IP4_TCP_UDP keyset.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This filter matches on classified VLAN tag, and all supported IPv4/TCP fields.</p>
+</div>
+<div class="paragraph">
+<p>The filter in inserted into chain 20100000 (lookup 1), as this is were the IP4_TCP_UDP keyset is configured currently.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth12 clsact
+
+# tc filter add dev eth12 egress chain 20100000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype ipv4 \
+  ip_tos 0xf/0x3f \
+  ip_flags frag/nofirstfrag \
+  src_ip 10.10.10.10  \
+  dst_ip 20.20.20.20/255.255.0.0 \
+  ip_proto tcp \
+  tcp_flags 0x10/0x3f \
+  src_port 1000 \
+  dst_port 2000 \
+  action pass</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mac_etype"><a class="anchor" href="#_mac_etype"></a>2.4. MAC_ETYPE</h3>
+<div class="paragraph">
+<p>This keyset is generated when frame is not classified to one of the above keys.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;VID&gt; or &lt;VID&gt;/&lt;VID_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id&#160;1234 or vlan_id&#160;0x100/0xff0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PCP&gt; or &lt;PCP&gt;/&lt;PCP_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio&#160;3 or vlan_id&#160;0x0/0x1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype&#160;0x892f or vlan_ethtype&#160;hsr</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_mac</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;MAC_ADDR&gt; or &lt;MAC_ADDR&gt;/&lt;MAC_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_mac 00:33:33:33:33:33 or src_mac&#160;00:33:33:00:00:00/ff:ff:ff:00:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_mac</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;MAC_ADDR&gt; or &lt;MAC_ADDR&gt;/&lt;MAC_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_mac&#160;00:44:44:44:44:44 or dst_mac&#160;00:44:44:00:00:00/ff:ff:ff:00:00:00</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This filter matches on classified VLAN tag, and all supported ETYPE fields.</p>
+</div>
+<div class="paragraph">
+<p>The filter in inserted into chain 8000000 (first lookup), drops all matching packets and goes to second lookup in IS2 (chain 8100000).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+
+# tc filter add dev eth0 egress chain 20000000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype 0xdeed \
+  src_mac 00:33:33:33:33:33 \
+  dst_mac 00:44:44:44:00:00/ff:ff:ff:ff:00:00 \
+  action pass</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ip_7tuple"><a class="anchor" href="#_ip_7tuple"></a>2.5. IP_7TUPLE</h3>
+<div class="paragraph">
+<p>This keyset matches both IPv4 and IPv6 traffic.  It does not have IPv4 source and destination address keys.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_mac</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;MAC_ADDR&gt; or &lt;MAC_ADDR&gt;/&lt;MAC_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_mac 00:33:33:33:33:33 or src_mac&#160;00:33:33:00:00:00/ff:ff:ff:00:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_mac</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;MAC_ADDR&gt; or &lt;MAC_ADDR&gt;/&lt;MAC_ADDR_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_mac&#160;00:44:44:44:44:44 or dst_mac&#160;00:44:44:00:00:00/ff:ff:ff:00:00:00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;VID&gt; or &lt;VID&gt;/&lt;VID_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_id&#160;1234 or vlan_id&#160;0x100/0xff0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PCP&gt; or &lt;PCP&gt;/&lt;PCP_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_prio&#160;3 or vlan_id&#160;0x0/0x1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vlan_ethtype&#160;802.1q or vlan_ethtype&#160;ip</p>
+<p class="tableblock"><strong>Note: Supports the same values as in <code>tc filter</code> protocol field.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IP_FLAG&gt;[/&lt;IP_FLAG&gt;]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_flags { [no]frag | [no]firstfrag }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_tos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;TOS&gt; or &lt;TOS&gt;/&lt;TOS_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_tos&#160;0x12 or ip_tos&#160;0x4/0x3f.</p>
+<p class="tableblock"><strong>Note: Only the 6 LSBs can be matched in IS1 (The DSCP part).</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv6 ADDR&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_ip&#160;2001:0:0:0:e1de:2244:0ff8:0123</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IPv6 ADDR&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_ip&#160;2001:0:0:0:e1de:2244:0ff8:4567</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_proto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;IP_PROTO&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ip_proto&#160;6, ip_proto&#160;tcp, ip_proto&#160;17 or ip_proto&#160;udp.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PORT&gt; or &lt;PORT&gt;/&lt;PORT_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src_port 1000 or src_port&#160;0x200/0xff0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PORT&gt; or &lt;PORT&gt;/&lt;PORT_MASK&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dst_port 2000 or dst_port&#160;0x100/0xff0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This filter matches on classified VLAN tag, and all supported IPv6/TCP fields.</p>
+</div>
+<div class="paragraph">
+<p>The filter in inserted into chain 20100000 (lookup 1) as this is where the IP_7TUPLE keyset is currently configured.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth48 clsact
+
+# tc filter add dev eth48 egress chain 20100000 prio 10 handle 42 protocol 802.1q flower skip_sw \
+  vlan_id 100 \
+  vlan_prio 1 \
+  vlan_ethtype ipv6 \
+  ip_tos 0xf/0x3f \
+  src_ip 2001:0db8:3c4d:0015:e1de:2244:0ff8:0123 \
+  dst_ip 2001:0db8:3c4d:0015:e1de:2244:0ff8:4567/64 \
+  ip_proto tcp \
+  tcp_flags 0x10/0x3f \
+  src_port 1000 \
+  dst_port 2000 \
+  action pass</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="es2-actions"><a class="anchor" href="#es2-actions"></a>2.6. ES2 Actions</h3>
+<div class="paragraph">
+<p>The ES2 lookups supports the actions shown in this table.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 31.25%;">
+<col style="width: 31.25%;">
+<col style="width: 31.25%;">
+<col style="width: 3.125%;">
+<col style="width: 3.125%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flower action</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Sparx5</th>
+<th class="tableblock halign-center valign-top">LAN966x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action pass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is a no-op action.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">goto chain &lt;CHAIN&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action goto chain 20100000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Which chain to go to after this match.  Not needed for the last lookup.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="green">&#x2714;</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong class="red">&#x00b7;</strong></p>
+<p class="tableblock">NOTE: More actions are to be added in future releases.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

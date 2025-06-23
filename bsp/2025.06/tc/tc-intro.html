@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TC :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li><a href="../network_overview.html">Network</a></li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li><a href="tc-intro.html">TC Introduction</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="tc-intro.html">2025.06</a>
+    <a class="version" href="../../2025.03/tc/tc-intro.html">2025.03</a>
+    <a class="version" href="../../2024.12/tc/tc-intro.html">2024.12</a>
+    <a class="version" href="../../2024.09/tc/tc-intro.html">2024.09</a>
+    <a class="version" href="../../2024.06/tc/tc-intro.html">2024.06</a>
+    <a class="version" href="../../2024.03/tc/tc-intro.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/tc/tc-intro.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/tc/tc-intro.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">TC</h1>
+<div class="sect1">
+<h2 id="tc_intro"><a class="anchor" href="#tc_intro"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>tc</code> command is used to configure Traffic Control in the Linux kernel and is
+part of the <code>iproute2</code> package.</p>
+</div>
+<div class="paragraph">
+<p>The <code>tc</code> framework in Linux offers a very capable, flexible, and comprehensive
+set of features. <code>tc</code> in combination with SwitchDev or DSA, also offers hardware
+offloading.</p>
+</div>
+<div class="paragraph">
+<p>Comparing with more traditional Switch or Network OS&#8217;es, <code>tc</code> covers the
+following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Classifying</p>
+</li>
+<li>
+<p>Scheduling</p>
+</li>
+<li>
+<p>Shaping and policing</p>
+</li>
+<li>
+<p>ACLs</p>
+</li>
+<li>
+<p>Push/pop vlans</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When <code>tc</code> is running in SW without any HW offload, it offers an unlimited number
+of lookups, all shapers, policers, and filters are available with the full set of
+parameters. But the performance (both in terms of bandwidth, latency, real-time
+processing etc) is limited by the CPU and the connectivity between the network
+ports and the CPU. On the other hand, when <code>tc</code> is offloaded to HW, it can
+typically offer wire-speed processing, latency, and real-time performance are
+typically in nano-second granularity, but the features, scaling, and flexibility
+is limited by the capability of the under-laying HW.</p>
+</div>
+<div class="paragraph">
+<p>This documentation will focus on <code>tc</code> being used on platforms with SwitchDev/DSA
+offloading, and only cover the features which can be offloaded by the relevant
+Microchip switches.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tc_terminology_and_architecture"><a class="anchor" href="#_tc_terminology_and_architecture"></a>2. <code>tc</code> terminology and architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>tc</code> operates on a single network interface and was originally designed to work on egress only.</p>
+</div>
+<div class="paragraph">
+<p>Later on <code>tc</code> was enhanced to also work on ingress but with a more limited feature set.</p>
+</div>
+<div class="paragraph">
+<p>Each network interface has two hooks where <code>tc</code> can affect the traffic. These hooks are
+adjacent to the network interface as shown in the simplified illustration below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/tc-flow.svg" alt="tc flow">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Not all traffic is forwarded. The user application may consume the frame
+without further forwarding. Also, the user application may produce frames.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Other hooks, such as netfilter hooks, are located further away from the network interface,
+which means that <code>tc</code> is consulted first after receiving an Ethernet frame and last before
+transmitting an Ethernet frame. Other hooks than <code>tc</code> hooks are not supported by Microchip switches.</p>
+</div>
+<div class="paragraph">
+<p><code>tc</code> consists of the following components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Qdisc</p>
+</li>
+<li>
+<p>Class</p>
+</li>
+<li>
+<p>Filter</p>
+</li>
+<li>
+<p>Chain</p>
+</li>
+<li>
+<p>Shared filter blocks</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All components are identified by an ID that has the same syntax: <code>&lt;major&gt;:&lt;minor&gt;</code>.
+Both major and minor are hexadecimal numbers.</p>
+</div>
+<div class="paragraph">
+<p>The nameing conventions of the ID are different in each of the components and will be described under each component.</p>
+</div>
+<div class="sect2">
+<h3 id="_qdisc"><a class="anchor" href="#_qdisc"></a>2.1. Qdisc</h3>
+<div class="paragraph">
+<p>A qdisc (queuing discipline) is defined as a scheduler and/or shaper that decides which frame to send next.</p>
+</div>
+<div class="paragraph">
+<p>There are two qdiscs that do not adhere to this definition, namely the <code>ingress</code> qdisc and the <code>clsact</code> qdisc.
+These are not really queueing disciplines but creates a location where filters can be attached.
+The <code>ingress</code> qdisc works on ingress only while the <code>clsact</code> works on both ingress and egress.
+As the <code>clsact</code> qdisc is more general than the <code>ingress</code> qdisc all examples will use the <code>clsact</code> qdisc.</p>
+</div>
+<div class="paragraph">
+<p>The <code>clsact</code> qdisc can be used simultaneously with all other qdiscs that only work on egress.
+On ingress, the <code>clsact</code> qdisc is typically used for classifying, dropping, or policing frames.<br>
+On egress, the <code>clsact</code> qdisc is typically used to add, modify or delete VLAN tags.<br></p>
+</div>
+<div class="listingblock">
+<div class="title">The <code>clsact</code> qdisc is created by using the <code>tc qdisc</code> command:</div>
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The rest of the qdiscs are for egress only and can be subdivided into two types: Classful qdiscs and Classless qdiscs.
+Each interface has a default root egress qdisc attached that depends on the network interface.</p>
+</div>
+<div class="listingblock">
+<div class="title">The default root qdisc can be replaced with another qdisc by using the <code>tc qdisc</code> command:</div>
+<div class="content">
+<pre># tc qdisc add dev eth0 root handle 1:0 mqprio</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All qdiscs must be created with a parent and an optional handle. If no handle is specified the system will create one.</p>
+</div>
+<div class="paragraph">
+<p>The example above creates a new root qdisc of type mqprio and with <code>root</code> as the parent and a handle of <code>1:0</code>.</p>
+</div>
+<div class="paragraph">
+<p>The minor number of a qdisc must always be 0 (or simply omitted in which case handle can be specified as either <code>&lt;major&gt;:</code> or <code>&lt;major&gt;</code>).</p>
+</div>
+<div class="sect3">
+<h4 id="_classful_vs_classless_qdiscs"><a class="anchor" href="#_classful_vs_classless_qdiscs"></a>2.1.1. Classful vs Classless qdiscs</h4>
+<div class="paragraph">
+<p>Classful qdiscs allow you to create a separate policy for different traffic
+classes by assigning an arbitrary number of classes to the classful qdisc. These
+classes can again contain other classes or qdiscs. It is possible to create a
+very complex tree structure by combining classful qdiscs and classes. A filter
+attached to the root qdisc or to any of the classes is used to steer the traffic
+to a specific class.</p>
+</div>
+<div class="paragraph">
+<p>Classless qdiscs do not support classes and filters. The behavior of the qdisc
+is determined at creation time. Some of the classless qdiscs maps traffic flows
+to traffic classes but these are not real classes as in a classful qdisc. In
+most cases, it is possible to assign another qdisc to each of these traffic
+classes.</p>
+</div>
+<div class="paragraph">
+<p>It is the chosen implementation inside the kernel which decides if it is
+a classful or classless qdisc. When understanding the TC framework, and when choosing
+which qdiscs to use in a given configuration scenario, it is much more important
+to understand the concept of schedulers and shapers. The current implementation
+in the kernel offers different schedulers (some implemented as classful others
+as classless), likewise with shapers (some implemented as classful others as
+classless). The following sections provide an introduction to schedulers and
+shapers.</p>
+</div>
+<div class="paragraph">
+<p>The qdiscs in TC are very flexible, and allow to nest objects in a recursive
+way. HW on the other hand is fixed, and to allow HW offload we need to align with the
+limitation of the HW. The <code>skip_sw</code> flag will cause the driver to return an
+error if a given configuration cannot be offloaded.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schedulers"><a class="anchor" href="#_schedulers"></a>2.1.2. Schedulers</h4>
+<div class="paragraph">
+<p>A scheduler splits traffic into different traffic classes and decides which frame to send next.</p>
+</div>
+<div class="paragraph">
+<p>The schedulers supported for HW offload by Microchip switches are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mqprio</code> - Multiqueue Priority Qdisc (classless)</p>
+</li>
+<li>
+<p><code>taprio</code> - Time Aware Priority Shaper (classless)</p>
+</li>
+<li>
+<p><code>ets</code> - Enhanced Transmission Selection (classful)</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_mqprio"><a class="anchor" href="#_mqprio"></a>mqprio</h5>
+<div class="paragraph">
+<p>The <code>mqprio</code> qdisc is the most simple to understand.</p>
+</div>
+<div class="paragraph">
+<p>It basically splits traffic up into eight different queues based on the priority of the frame where frames in high priority queues are sent first.</p>
+</div>
+<div class="paragraph">
+<p>Adding an mqprio qdisc does nothing by itself as this is the way the egress interface works by default.</p>
+</div>
+<div class="paragraph">
+<p>The reason to use it is that it creates eight qdisc classes which map 1:1 to the eight priority queues.</p>
+</div>
+<div class="paragraph">
+<p>On each of these qdisc classes, it is possible to attach another qdisc such as a shaper.</p>
+</div>
+<div class="paragraph">
+<p>An mqprio qdisc can be illustrated like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/tc-mqprio.svg" alt="tc mqprio">
+</div>
+</div>
+<div class="paragraph">
+<p>In the example above a cbs shaper is attached on traffic class <code>1:5</code> (priority 4). A default qdisc is automatically attached to all the other traffic classes.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../scheduling.html#mqprio_qdisc" class="xref page">Strict scheduling</a> section on the Scheduling page to see how the example above can be implemented.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_taprio"><a class="anchor" href="#_taprio"></a>taprio</h5>
+<div class="paragraph">
+<p>The <code>taprio</code> qdisc is basically an mqprio qdisc with added support for scheduled traffic as described in IEEE Std 802.1Q-2018 Section 8.6.8.4,
+also known as Time-Aware Scheduling (TAS).</p>
+</div>
+<div class="paragraph">
+<p>A cyclic schedule opens and closes each priority queue relative to a known timescale, e.g. controlled via PTP.</p>
+</div>
+<div class="paragraph">
+<p>When a queue is closed all frames are held back in the queue and when it opens again the frames are transmitted again in priority order.</p>
+</div>
+<div class="paragraph">
+<p>This cycle repeats forever.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../scheduling.html#taprio_qdisc" class="xref page">Time Aware Scheduling</a> section on the Scheduling page to see how Time-Aware Scheduling can be implemented.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ets"><a class="anchor" href="#_ets"></a>ets</h5>
+<div class="paragraph">
+<p>The <code>ets</code> qdisc is basically an mqprio qdisc with added support for Enhanced Transmission Selection (ETS) as described in IEEE Std 802.1Q-2018 Section 37.</p>
+</div>
+<div class="paragraph">
+<p>With the ets qdisc, you can either have eight strict priority queues, in which case it works in the same way as the mqprio qdisc,
+or you can have up to eight weighted queues where you can configure each queue to have a guaranteed bandwidth in percent of the total bandwidth.</p>
+</div>
+<div class="paragraph">
+<p>If you have less than eight weighted queues the rest of the queues works as strict priority queues.</p>
+</div>
+<div class="paragraph">
+<p>The weighted queues are always allocated from the priority queues with the lowest priority.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../scheduling.html#ets_qdisc" class="xref page">Strict and DWRR scheduling</a> section on the Scheduling page to see how Enhanced Transmission Selection can be implemented.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_shapers"><a class="anchor" href="#_shapers"></a>2.1.3. Shapers</h4>
+<div class="paragraph">
+<p>A shaper sends out the traffic with a specified maximum bitrate and buffers all traffic that exceeds this bitrate.
+In other words: It smooths the traffic and removes bursts.</p>
+</div>
+<div class="paragraph">
+<p>Frames are never discarded unless the buffer is full.</p>
+</div>
+<div class="paragraph">
+<p>The shapers supported for HW offload by Microchip switches are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>tbf</code> - Token Bucket Filter (classful)</p>
+</li>
+<li>
+<p><code>cbs</code> - Credit Based Shaper (classless)</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_tbf"><a class="anchor" href="#_tbf"></a>tbf</h5>
+<div class="paragraph">
+<p>The <code>tbf</code> qdisc implements a shaper based on the Token Bucket algorithm.</p>
+</div>
+<div class="paragraph">
+<p>A tbf qdisc is created using the <code>tc qdisc</code> command and can be attached either to the root or to a traffic class in one of the supported schedulers mentioned above.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../shaping.html#priority_shaping" class="xref page">Priority Shaping</a> section on the Shaping page for a description of how to implement a <code>tbf</code> shaper.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_cbs"><a class="anchor" href="#_cbs"></a>cbs</h5>
+<div class="paragraph">
+<p>The <code>cbs</code> qdisc implements the shaper algorithm described in IEEE Std 802.1Q-2018 Section 8.6.8.2.</p>
+</div>
+<div class="paragraph">
+<p>A cbs qdisc is created using the <code>tc qdisc</code> command and can be attached to a traffic class in one of the supported schedulers mentioned above.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../shaping.html#priority_shaping" class="xref page">Priority Shaping</a> section on the Shaping page for a description of how to implement a <code>cbs</code> shaper.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_class"><a class="anchor" href="#_class"></a>2.2. Class</h3>
+<div class="paragraph">
+<p>Classes in the traffic control framework can be described by the following statements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A class represents a traffic class and can only exist inside a classful qdisc of the same type as the class.</p>
+</li>
+<li>
+<p>A class can contain other child classes or a single qdisc, which can be a classful or classless qdisc.</p>
+</li>
+<li>
+<p>A class that does not contain a child class is called a leaf class and will always contain a default
+simple classless qdisc unless another qdisc is assigned.</p>
+</li>
+<li>
+<p>A class must be assigned a parent and a class id when it is created.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following illustration shows an example of a classful qdisc with child classes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/tc-class.svg" alt="tc class">
+</div>
+</div>
+<div class="paragraph">
+<p>The different classes are selected by filters attached to the root qdiscs.</p>
+</div>
+<div class="paragraph">
+<p>Classful qdiscs with user-defined classes are not supported by Microchip switches.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_filter"><a class="anchor" href="#_filter"></a>2.3. Filter</h3>
+<div class="paragraph">
+<p>A <code>tc</code> filter is used to match frames in some way and apply actions on the matching frames.</p>
+</div>
+<div class="paragraph">
+<p>The filters supported for HW offload by Microchip switches are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>matchall</code> - Matches all frames</p>
+</li>
+<li>
+<p><code>flower</code> - Matches packets via a set of keys, such as <code>src_mac</code> and <code>dst_ip</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Microchip switches only support using filters on the <code>clsact</code> qdisc on either ingress or egress.</p>
+</div>
+<div class="paragraph">
+<p>Filters support several general parameters that are independent of the filter type:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>prio</code> (or <code>pref</code>) - The priority of the filter. The lowest value has the highest priority and are checked first.</p>
+</li>
+<li>
+<p><code>handle</code> - The filter ID to be used when modifying or deleting the filter.</p>
+</li>
+<li>
+<p><code>protocol</code> - The protocol to match, such as all, ip, ipv6 or 802.1q.</p>
+</li>
+<li>
+<p><code>skip_sw</code> - The filter is HW offloaded.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All examples expect that a <code>clsact</code> qdisc is created as shown in the Qdisc section.
+The <code>clsact</code> qdisc creates two new handles, <code>ingress</code> and <code>egress</code>, which are used as parents in the filter commands.</p>
+</div>
+<div class="sect3">
+<h4 id="_tc_filter_actions"><a class="anchor" href="#_tc_filter_actions"></a>2.3.1. tc filter actions</h4>
+<div class="paragraph">
+<p>Every filter contains one or more actions that are applied when the filter is hit.</p>
+</div>
+<div class="paragraph">
+<p>Not all kinds of actions are supported by each filter as it depends on both the
+context and the capabilities of the hardware.</p>
+</div>
+<div class="paragraph">
+<p>The following actions are supported in at least one configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>pass</code> - do nothing</p>
+</li>
+<li>
+<p><code>trap</code> - send packet to CPU</p>
+</li>
+<li>
+<p><code>drop</code> - drop packet</p>
+</li>
+<li>
+<p><code>skbedit priority &lt;PRIO&gt;</code> - modify packet priority to PRIO (qos class)</p>
+</li>
+<li>
+<p><code>vlan pop</code> - pop vlan tag</p>
+</li>
+<li>
+<p><code>vlan modify [ protocol &lt;PROTO&gt; ] id &lt;VID&gt; [ priority &lt;PCP&gt; ]</code> - modify <code>VID</code> and
+<code>PCP</code>. <code>&lt;PROTO&gt;</code> is one of 802.1q (default) or 802.1ad</p>
+</li>
+<li>
+<p><code>vlan push [ protocol &lt;PROTO&gt; ] id &lt;VID&gt; [ priority &lt;PCP&gt; ]</code> - push a new vlan
+tag. <code>&lt;PROTO&gt;</code> is one of 802.1q (default) or 802.1ad</p>
+</li>
+<li>
+<p><code>police rate &lt;BPS&gt; burst &lt;BYTES&gt;</code> - police traffic</p>
+</li>
+<li>
+<p><code>mirred egress mirror dev &lt;MONITOR_PORT&gt;</code> - mirror traffic on monitor port</p>
+</li>
+<li>
+<p><code>goto chain &lt;CHAIN_INDEX&gt;</code> - goto specified chain</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Actions are always added last in the filter-specific options.</p>
+</div>
+<div class="paragraph">
+<p>Use <code>tc filter add matchall action &lt;action&gt; help</code> to see all action parameters.</p>
+</div>
+<div class="paragraph">
+<p>The following sections describe briefly how to use <code>matchall</code> and <code>flower</code> filters.</p>
+</div>
+<div class="paragraph">
+<p>They will be described in more detail in the sections where the actual usage is shown.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_matchall_filter"><a class="anchor" href="#_matchall_filter"></a>2.3.2. matchall filter</h4>
+<div class="paragraph">
+<p>The <code>matchall</code> filter matches all packets and applies one or more actions.</p>
+</div>
+<div class="listingblock">
+<div class="title">Add matchall filter that sets the priority to 4 on all packets received on eth0:</div>
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+# tc filter add dev eth0 ingress prio 10 handle 1 matchall \
+  skip_sw \
+  action mirred egress mirror dev eth1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use <code>tc filter add matchall help</code> to see all parameters.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_flower_filter"><a class="anchor" href="#_flower_filter"></a>2.3.3. flower filter</h4>
+<div class="paragraph">
+<p>The <code>flower</code> filter is able to match packets using a set of keys and apply one or
+more actions on the matching packets</p>
+</div>
+<div class="listingblock">
+<div class="title">Add flower filter that matches on DMAC and drops the matching packets:</div>
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+# tc filter add dev eth0 ingress chain 0 prio 10000 handle 10000 matchall \
+  skip_sw \
+  action goto chain 8000000
+# tc filter add dev eth0 ingress chain 8000000 prio 20 handle 2 protocol all flower \
+  skip_sw \
+  dst_mac 00:11:22:33:44:55 \
+  action drop \
+  action goto chain 8100000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use <code>tc filter add flower help</code> to see all parameters.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tc_chain"><a class="anchor" href="#tc_chain"></a>2.4. Chain</h3>
+<div class="paragraph">
+<p><code>tc</code> filter chains allow us to jump from one filter chain to another using the
+<code>goto</code> action.</p>
+</div>
+<div class="paragraph">
+<div class="title">Here is an example that matches all in chain 0 (the default) and goto chain 10000.</div>
+<p>Chain 10000 contains a filter that matches on SMAC and drops the matching packets:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc filter add dev eth0 ingress prio 20 handle 2 protocol all matchall \
+  skip_sw \
+  action goto chain 10000
+
+# tc filter add dev eth0 ingress prio 21 handle 3 protocol all chain 10000 flower \
+  skip_sw \
+  src_mac 00:22:33:44:55:66 \
+  action drop</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Another use of chains is to use the <code>tc chain</code> command:</div>
+<div class="content">
+<pre># tc chain add dev eth0 ingress chain 10000 protocol ip flower \
+  dst_ip 0.0.0.0 \
+  ip_proto tcp</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The command above creates a chain template that will limit filters created
+in this chain to only specify protocol as ip and dst_ip and ip_proto as keys.</p>
+</div>
+<div class="paragraph">
+<p>The key parameters given in the chain template are not fixed, only the name of the keys.</p>
+</div>
+<div class="listingblock">
+<div class="title">This filter will be accepted:</div>
+<div class="content">
+<pre># tc filter add dev eth0 ingress prio 1 handle 1 protocol ip chain 10000 flower \
+  skip_sw \
+  dst_ip 10.10.10.10 \
+  ip_proto udp \
+  action drop</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">This filter will NOT be accepted as it violates the template:</div>
+<div class="content">
+<pre># tc filter add dev eth0 ingress prio 2 handle 2 protocol ip chain 10000 flower \
+  skip_sw \
+  src_ip 20.20.20.20 \
+  ip_proto udp \
+  action drop</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="shared_filter_blocks"><a class="anchor" href="#shared_filter_blocks"></a>2.5. Shared Filter Blocks</h3>
+<div class="paragraph">
+<p><code>tc</code> operates on a single interface only, but if two or more interfaces need exactly
+the same filter configuration then shared filter blocks are the rescue.</p>
+</div>
+<div class="paragraph">
+<p>The downside is that you cannot combine shared filter blocks with individual
+filters on a specific interface, so it is all or nothing.</p>
+</div>
+<div class="paragraph">
+<div class="title">Instead of creating the <code>clsact</code> qdisc directly on an interface we add</div>
+<p>the same ingress_block on the interfaces we want to share the filter configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 ingress_block 10 clsact
+# tc qdisc add dev eth1 ingress_block 10 clsact
+# tc qdisc add dev eth3 ingress_block 10 clsact</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Now create the filters in the shared block:</div>
+<div class="content">
+<pre># tc filter add block 10 chain 12000 prio 1 handle 1 protocol all flower skip_sw \
+  dst_mac 00:01:01:00:00:00/ff:ff:ff:00:00:00 \
+  src_mac 00:02:02:02:02:02 \
+  action goto chain 20002
+
+# tc filter add block 10 chain 20002 prio 2 handle 2 protocol all flower skip_sw \
+  action drop \
+  action goto chain 21000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The kernel will now apply all filters to each interface.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is possible to use a mask in many of the filter keys as shown above for <code>dst_mac</code>.<br>
+This allows us to match on only a subset of the key.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The primary reason for using shared filter blocks is that it allows optimizing the use of TCAM entries
+where the port mask would be the only difference between the entries. In the example above only one TCAM rule is needed.</p>
+</div>
+<div class="paragraph">
+<p>Secondary it makes it easier to setup the filters.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>3. References</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">More information about <code>tc</code> can be found in the man pages:</div>
+<div class="content">
+<pre>$ man tc
+$ man tc-mqprio
+$ man tc-taprio
+$ man tc-ets
+$ man tc-cbs
+$ man tc-tbf
+$ man tc-matchall
+$ man tc-flower</pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Various HOWTOs:</div>
+<p><a href="http://mirror.internode.on.net/pub/ldp/en/Traffic-Control-HOWTO/Traffic-Control-HOWTO.pdf" class="bare">http://mirror.internode.on.net/pub/ldp/en/Traffic-Control-HOWTO/Traffic-Control-HOWTO.pdf</a>
+<a href="https://tldp.org/HOWTO/Adv-Routing-HOWTO" class="bare">https://tldp.org/HOWTO/Adv-Routing-HOWTO</a>
+<a href="http://borg.uu3.net/traffic_shaping/index.html" class="bare">http://borg.uu3.net/traffic_shaping/index.html</a></p>
+</div>
+<div class="paragraph">
+<div class="title">An introduction to clsact qdisc:</div>
+<p><a href="https://lwn.net/Articles/671458/" class="bare">https://lwn.net/Articles/671458/</a></p>
+</div>
+<div class="paragraph">
+<div class="title">An introduction to tc filter chains:</div>
+<p><a href="https://lwn.net/Articles/723067/" class="bare">https://lwn.net/Articles/723067/</a></p>
+</div>
+<div class="paragraph">
+<div class="title">An introduction to tc shared filter blocks:</div>
+<p><a href="https://lwn.net/Articles/736338/" class="bare">https://lwn.net/Articles/736338/</a><br>
+<a href="https://lwn.net/Articles/743391/" class="bare">https://lwn.net/Articles/743391/</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

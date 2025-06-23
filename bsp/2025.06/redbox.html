@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HSR/PRP :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li><a href="redbox.html">HSR/PRP</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="redbox.html">2025.06</a>
+    <a class="version" href="../2025.03/redbox.html">2025.03</a>
+    <a class="version is-missing" href="../2024.12/index.html">2024.12</a>
+    <a class="version is-missing" href="../2024.09/index.html">2024.09</a>
+    <a class="version is-missing" href="../2024.06/index.html">2024.06</a>
+    <a class="version is-missing" href="../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">HSR/PRP</h1>
+<div id="preamble">
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REDBOX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Redundancy Box</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HSR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High-availability Seamless Redundancy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PRP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parallel Redundancy Protocol</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DANH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Doubly Attached Node in HSR mode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DANP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Doubly Attached Node in PRP mode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Doubly Attached Node</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SAN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Singly Attached Node</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LRE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link Redundancy Entity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RCT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Redundancy Control Trailer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMAC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source Media Access Control (address)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>HSR and PRP are two protocols used to implement zero-loss redundancy on wired
+Ethernet and are defined by International Electrotechnical Commission (IEC) in
+the 62439-3 standard, edition 4, 2021-12. Although similar, the two protocols
+uses different network topologies and tagging schemes (detailed in <a href="#_danh">DANH</a>
+and <a href="#_danp">DANP</a>).</p>
+</div>
+<div class="paragraph">
+<p>HSR and PRP are implemented in hardware, using RedBoxes. A RedBox is a 3-port
+device designed to connect PRP, HSR, or single-threaded networks, but can also
+operate as a standalone DANH or DANP endnode. Every RedBox contains a node table
+of SMACs learned on LRE ports, and a duplicate discard table of SMAC and
+sequence number pairs, seen on the LRE ports.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supported_redbox_modes"><a class="anchor" href="#_supported_redbox_modes"></a>1. Supported RedBox modes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following modes of operation are supported:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> DANH</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> DANP</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> HSR-SAN (requires iproute2 v6.10)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> PRP-SAN</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> HSR-HSR</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> HSR-PRP</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_danh"><a class="anchor" href="#_danh"></a>1.1. DANH</h3>
+<div class="paragraph">
+<p>HSR is designed to function in a ring topology, ensuring zero recovery time.
+An HSR ring is composed of DANs each equipped with two ring ports, as depicted
+in the subsequent figure. These specific DANs are referred to as DANHs. A DANH
+simultaneously sends the same frame through both LRE ports, resulting in two
+frame copies circulating both clockwise and counter-clockwise in the ring. A
+unicast frame, whose final destination is a node within the ring, travels in
+both directions around the ring until it reaches the destination node. The
+destination node forwards the first error-free frame copy to its higher layers
+or, in the case of HSR-SAN, to the bridge-side after removing the <a href="#_hsr_tag">HSR tag</a>.
+A unicast frame, whose final destination is not a node within the ring, is
+forwarded by every node in the ring until it reaches the originating node, where
+it is dropped.</p>
+</div>
+<div class="paragraph">
+<p>In DANH mode, the RedBox operates as a standalone DANH node, not forwarding any
+frames between the bridge side and the LRE side.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/RedBoxHSRSAN.png" alt="RedBoxHSRSAN" width="600">
+</div>
+<div class="title">Figure 1. HSR-SAN network</div>
+</div>
+<div class="sect3">
+<h4 id="_hsr_tag"><a class="anchor" href="#_hsr_tag"></a>1.1.1. HSR tag</h4>
+<div class="paragraph">
+<p>HSR frames are identified by their HSR tag, which consists of the following
+fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>16-bit Ethertype (HSR_EtherType = 0x892F)</p>
+</li>
+<li>
+<p>4-bit path identifier (PathId)</p>
+</li>
+<li>
+<p>12-bit frame size (LSDUsize)</p>
+</li>
+<li>
+<p>16-bit sequence number (SeqNr)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/RedBoxHSRTag.png" alt="RedBoxHSRTag" width="800">
+</div>
+<div class="title">Figure 2. HSR tag</div>
+</div>
+<div class="paragraph">
+<p>In case the frame contains a VLAN tag, the HSR tag is inserted after the VLAN
+tag.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_danp"><a class="anchor" href="#_danp"></a>1.2. DANP</h3>
+<div class="paragraph">
+<p>PRP is designed to offer fail-safe redundancy in Ethernet networks, ensuring
+immediate recovery of any failures. PRP introduces redundancy at the node level
+by connecting two network interfaces to two separate and disjoint parallel
+networks, LAN A and LAN B. These two ports are referred to as Link Redundancy
+Entity (LRE) ports. The LRE port connected to LAN A is known as Port A
+(or LREA), while the one connected to LAN B is termed Port B (or LREB). Nodes
+that are connected to both LAN A and LAN B are termed Doubly Attached Nodes
+(DANs), and within a PRP network, these DANs are referred to as DANPs.
+All DANPs and all RedBoxes in the network can communicate, and will still be
+able to communicate if one of their LRE ports goes down.</p>
+</div>
+<div class="paragraph">
+<p>A DANP sends the same frame simultaneously through its two LRE ports towards the
+destination node. A <a href="#_prp_tag">PRP tag</a> (Redundancy Control Trailer, RCT), containing a sequence number,
+is added to each frame copy to help the destination node distinguish between
+duplicate frames. The first error-free frame copy that arrives at the destination
+DANP node, gets the RCT removed and the destination DANP node sends the frame
+to its higher layers.</p>
+</div>
+<div class="paragraph">
+<p>In DANP mode, the RedBox operates as a standalone DANP node, not forwarding any
+frames between the bridge side and the LRE side.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/RedBoxPRPSAN.png" alt="RedBoxPRPSAN" width="600">
+</div>
+<div class="title">Figure 3. PRP-SAN network</div>
+</div>
+<div class="sect3">
+<h4 id="_prp_tag"><a class="anchor" href="#_prp_tag"></a>1.2.1. PRP tag</h4>
+<div class="paragraph">
+<p>PRP frames are identified by their RCT tag, which consists of the following
+fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>16-bit sequence number (SeqNr);</p>
+</li>
+<li>
+<p>4-bit LAN identifier (LanId);</p>
+</li>
+<li>
+<p>12-bit frame size (LSDUsize);</p>
+</li>
+<li>
+<p>16-bit suffix (PRPsuffix).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/RedBoxPRPTag.png" alt="RedBoxPRPTag" width="800">
+</div>
+<div class="title">Figure 4. PRP tag</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hsr_san"><a class="anchor" href="#_hsr_san"></a>1.3. HSR-SAN</h3>
+<div class="paragraph">
+<p>In HSR-SAN mode, the RedBox operates much like in DANH mode, except frames are
+also forwarded to/from the SAN, with tags pushed and popped. SANs are
+standard Ethernet devices with only one port. SANs cannot be directly attached
+to the HSR ring, since all devices within an HSR ring must be capable of
+processing HSR tags. Instead, it must be connected through a RedBox on the
+RedBox’s bridge-side. The RedBox is responsible for managing the pushing and
+popping of HSR tags on their behalf.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_node_table"><a class="anchor" href="#_node_table"></a>2. Node table</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To manage properties of nodes on the LRE-side, a RedBox maintains a node table.
+The node table tracks SMACs seen in frames received on LRE ports. Among other
+things, it contains a field that indicates whether a node is a SAN or a DAN.
+Frames are forwarded in the RedBox, depending on the node type of the matching
+(if any) table entry. Table entries are aged out after a certain amount of time
+of inactivity from an SMAC, and if no supervision frames mentioning that SMAC
+have been received on an LRE port. Besides the SAN/DAN flag, an entry in
+the table contains per LRE-port counters, for the number of data frames it has
+received.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discard_table"><a class="anchor" href="#_discard_table"></a>3. Discard table</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To determine if a frame is subject to duplicate discard, a RedBox maintains a
+duplicate discard table, that keeps track of SMACs and sequence numbers. If a
+frame, with the same sequence number has already been received from a node, the
+duplicate is discarded. Table entries are aged after a certain amount of time of
+inactivity.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supervision_frames"><a class="anchor" href="#_supervision_frames"></a>4. Supervision frames</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Supervision frames are periodically transmitted to notify other DANs connected
+to the PRP network or HSR ring about their or a SANs presence. A supervision
+frame is a multicast frame transmitted to DMAC 01-15-4E-00-01-xx, where xx is
+configurable. The EtherType of a supervision frame is 0x88FB.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration"><a class="anchor" href="#_configuration"></a>5. Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_danh_2"><a class="anchor" href="#_danh_2"></a>5.1. DANH</h3>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name hsr0 type hsr slave1 eth0 slave2 eth1
+# ip link set hsr0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates a new interface 'hsr0' and configures a new RedBox for DANH mode,
+with eth0 as LREA and eth1 as LREB.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_danp_2"><a class="anchor" href="#_danp_2"></a>5.2. DANP</h3>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name prp0 type hsr slave1 eth8 slave2 eth12 proto 1
+# ip link set prp0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates a new interface 'prp0' and configures a new RedBox for DANP mode,
+with eth8 as LREA and eth12 as LREB.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hsr_san_2"><a class="anchor" href="#_hsr_san_2"></a>5.3. HSR-SAN</h3>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name hsr_san0 type hsr slave1 eth16 slave2 eth20 interlink eth21
+# ip link set hsr_san0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates a new interface 'hsr_san0' and configures a new RedBox for HSR-SAN
+mode, with eth16 as LREA, eth20 as LREB and eth21 as LREC. The SAN is connected
+on the bridge side through LREC. Only one SAN can be connected on the bridge
+side.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_constraints"><a class="anchor" href="#_constraints"></a>5.4. Constraints</h3>
+<div class="paragraph">
+<p>Both LRE ports <strong>must</strong> be attached to the same taxi bus in hardware.
+The following shows a mapping between front ports and taxi bus. First row
+contains the front ports attached to taxi bus 0. Second row contains front ports
+attached to taxi bus 1, and so on.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 10%;">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_status"><a class="anchor" href="#_status"></a>6. Status</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is a number of debugfs entries, that can be queried to show RedBox
+configurations and node tables.</p>
+</div>
+<div class="sect2">
+<h3 id="_node_table_2"><a class="anchor" href="#_node_table_2"></a>6.1. Node table</h3>
+<div class="listingblock">
+<div class="content">
+<pre># echo &lt;instance&gt; &gt;/sys/kernel/debug/sparx5/redbox_idx
+# cat /sys/kernel/debug/sparx5/redbox_htable</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>                                   Rx                    Last Seen             Rx Wrong LAN
+                                   --------------------- --------------------- ---------------------
+Inst MAC Address       Node Type   Port A     Port B     Port A     Port B     Port A     Port B
+---- ----------------- ----------- ---------- ---------- ---------- ---------- ---------- ----------
+   0 a0:36:9f:67:c1:10 DAN                  5          0          2          7          0          0
+   0 8e:df:cf:d7:e8:02 LOCAL                0          0          0          0          0          0
+   0 8e:df:cf:d7:e8:01 LOCAL                0          0          0          0          0          0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Frames destined to an entry listed as LOCAL, are redirected to the CPU.
+Currently, the LREA and LREB ports are learned as LOCAL entries upon RedBox
+configuration. Rx is the number of frames received on the port. Rx Wrong LAN is
+the number of frames, where the lanid of the frame mismatches with the lanid
+of the LRE port it was received on. This is used to detect misconfigurations in
+the network. Last seen is a counter that is incremented each aging period.
+When the counter &gt;7 the entry is aged and removed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redbox_table"><a class="anchor" href="#_redbox_table"></a>6.2. RedBox table</h3>
+<div class="listingblock">
+<div class="content">
+<pre># cat /sys/kernel/debug/sparx5/redbox</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Inst Oper. State Taxi Mode    Port A     Port B     Port C     Warnings
+---- ----------- ---- ------- ---------- ---------- ---------- --------
+   0 Active         0    DANH eth0       eth1       N/A        no
+   1 Active         1    DANP eth8       eth12      N/A        no
+   2 Active         2 HSR-SAN eth16      eth29      eth21      no
+   3 Inactive</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Currently, any Rx Wrong LAN count above zero, will cause a warning notification
+for the RedBox.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
