@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PTP functional description :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.06-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.06-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../2025.06/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li><a href="ptp.html">PTP</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.06-1</button>
+  <div class="version-menu">
+    <a class="version" href="../2025.06/ptp.html">2025.06</a>
+    <a class="version is-current" href="ptp.html">2025.06-1</a>
+    <a class="version" href="../2025.03/ptp.html">2025.03</a>
+    <a class="version" href="../2024.12/ptp.html">2024.12</a>
+    <a class="version" href="../2024.09/ptp.html">2024.09</a>
+    <a class="version" href="../2024.06/ptp.html">2024.06</a>
+    <a class="version" href="../2024.03/ptp.html">2024.03</a>
+    <a class="version" href="../2024.03-1/ptp.html">2024.03-1</a>
+    <a class="version" href="../2023.12/ptp.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">PTP functional description</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>PTP is Precision Time Protocol as described by IEEE standard 1588.</p>
+</div>
+<div class="paragraph">
+<p>The purpose of this application is to allow to synchronize multiple clocks in
+the network. This software is based on the open source project
+<a href="https://github.com/richardcochran/linuxptp">linuxptp</a>. On top of which were added
+patches to add support for Relay as described in 8021.AS 2020. The plan is to
+have these patches upstream to the linuxptp project.
+The application that is part of the BSP has these extra patches.</p>
+</div>
+<div class="paragraph">
+<p>This project can be found
+here <a href="https://github.com/microchip-ung/ptp4l">ptp4l</a></p>
+</div>
+<div class="paragraph">
+<p>Ptp4l supports the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>hardware and software timestamping: 1-step and 2-step</p>
+</li>
+<li>
+<p>implements: ordinary, boundary, transparent clocks and AS bridge</p>
+</li>
+<li>
+<p>transport over UDP/IPv4, UDP/IPv6, raw Ethernet</p>
+</li>
+<li>
+<p>supports multiple servos: pi, linreq, ntpshm, nullf</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are multiple executable that are are used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ptp4l</code>: this is the daemon that adjusted the PHC(Physical Hardware Clock) such
+offset from master is 0.</p>
+</li>
+<li>
+<p><code>pmc</code>: short live application to interact with ptp4l to inspect status and
+allow certain configurations attributes to be updated without restarting the
+daemon</p>
+</li>
+<li>
+<p><code>phc2sys</code>: this is a daemon which is used to synchronize two or more clocks in
+the system. Typically is used to synchronize the system clock with a PTP
+hardware clock which itself is synchronized using ptp4l daemon.</p>
+</li>
+<li>
+<p><code>ts2phc</code>: this is a daemon which is used to synchronize a PTP hardware clock to
+GPS and or 1PPS.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is possible to pass the following arguments to ptp4l to the command line. The
+most important arguments are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-l</code>: to set the log level</p>
+</li>
+<li>
+<p><code>-m</code>: to print message to standard output</p>
+</li>
+<li>
+<p><code>-i</code>: interface on which to run</p>
+</li>
+<li>
+<p><code>-f</code>: to set the configuration file</p>
+</li>
+<li>
+<p><code>-p</code>: specify directly the PHC device</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When ptp4l is started, it has an option to read the configuration from a file.
+The most important configurations options are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delay_mechanism</code>: which can be P2P, Auto or E2E.</p>
+</li>
+<li>
+<p><code>network_transport</code>: which can be L2, UDPv4 or UDPv6.</p>
+</li>
+<li>
+<p><code>time_stamping</code>: which can be: hardware, software or legacy.</p>
+</li>
+<li>
+<p><code>clock_type</code>: which can be OC, BC or Relay</p>
+</li>
+<li>
+<p><code>slaveOnly</code>: force the node to behave as a slave only</p>
+</li>
+<li>
+<p><code>domainNumber</code>: represents the PTP domain number. Default is 0.</p>
+</li>
+<li>
+<p><code>twoStepFlag</code>: a value of 1 uses 2-step timestamping, while a value of 0 uses
+1-step timestamping</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more details about ptp4l run: man ptp4l</p>
+</div>
+<div class="paragraph">
+<p>Ptp4l is works on the physical interfaces and not on the bridge interface, so
+before starting the daemon, make sure that the interface is up using the
+command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ip link set dev eth0 up</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ptp4l"><a class="anchor" href="#_ptp4l"></a>1. PTP4L</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ordinary_clockoc"><a class="anchor" href="#_ordinary_clockoc"></a>1.1. Ordinary clock(OC)</h3>
+<div class="paragraph">
+<p>To run ptp4l as ordinary clock, the following configuration is needed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &gt; /tmp/linux.cfg
+[global]
+clock_type              OC
+delay_mechanism         E2E
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+
+[eth0]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And start ptp4l as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ptp4l -f /tmp/linux.cfg &amp;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boundary_clockbc"><a class="anchor" href="#_boundary_clockbc"></a>1.2. Boundary clock(BC)</h3>
+<div class="paragraph">
+<p>For the boundary clock, it is required at least 2 network interfaces. Because it
+is required have 1 slave and at least 1 master. Therefore the configuration file
+can look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &gt; /tmp/linux.cfg
+[global]
+clock_type              BC
+delay_mechanism         E2E
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And start ptp4l as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ptp4l -f /tmp/linux.cfg &amp;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transparent_clocktc"><a class="anchor" href="#_transparent_clocktc"></a>1.3. Transparent clock(TC)</h3>
+<div class="paragraph">
+<p>For the transparent clock, it is required at least 2 network interfaces. The
+frames will be forward in SW by the ptp4l application but the timestamps will be
+do by the HW. The configuration file can look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+priority1               254
+free_running            1
+freq_est_interval       3
+tc_spanning_tree        1
+summary_interval        1
+clock_type              P2P_TC
+network_transport       L2
+delay_mechanism         P2P
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And start ptp4l as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ptp4l -f /tmp/linux.cfg &amp;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_as_bridgerelay"><a class="anchor" href="#_as_bridgerelay"></a>1.4. AS Bridge(Relay)</h3>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+The support for this feature is not part of the upstream project.
+Therefore the implementation and the configuration might changed based on the
+requests received when this feature will be upstream.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The relay behaves similar to the transparent clock and to boundary clock.
+The ptp4l configuration for relay can be the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &gt; /tmp/linux.cfg
+[global]
+priority1               254
+priority2               254
+clock_type              RELAY
+network_transport       L2
+delay_mechanism         P2P
+path_trace_enabled      1
+transportSpecific       1
+follow_up_info          1
+ptp_dst_mac             01:80:C2:00:00:0E
+gmCapable               1
+logAnnounceInterval     0
+logSyncInterval         -3
+syncReceiptTimeout      3
+free_running            1
+summary_interval        1
+
+[eth0]
+[eth1]
+[eth2]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And start ptp4l as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ptp4l -f /tmp/linux.cfg &amp;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multiple_ptp_instances"><a class="anchor" href="#_multiple_ptp_instances"></a>1.5. Multiple PTP instances</h3>
+<div class="paragraph">
+<p>It is possible to run multiple ptp4l instances and each of them to control a
+different PHC. For example, let&#8217;s say that we want to control PHC0 and PHC1 and
+they have the PTP domains 0 and 20.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &gt; /tmp/ptp0.cfg
+[global]
+clock_type              OC
+delay_mechanism         E2E
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And start the first ptp4l using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ptp4l -p /dev/ptp0 -f /tmp/ptp0.cfg &amp;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And the second ptp4l will have the configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &gt; /tmp/ptp1.cfg
+[global]
+clock_type              OC
+delay_mechanism         E2E
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+domainNumber            20</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And start the second ptp4l using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ptp4l -p /dev/ptp1 -f /tmp/ptp0.cfg &amp;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If multiple ptp4l instances need to access the same PHC then it is possible and
+recommended to use the option <code>-i</code> instead of <code>-p</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dpll"><a class="anchor" href="#_dpll"></a>1.6. DPLL</h3>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+This feature is still in early stage and is not supported by all the
+platforms.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>DPLL (Digital Phased-Locked Loop) is a device that might exists on the boards.
+It is possible to expose this device as a HW clock (ptp device) but then it is
+required to configure this device when using ptp4l and not the other
+timestamping unit devices. If the HW doesn&#8217;t support this or the timestamping
+units (PHY or switch) doesn&#8217;t have 2 signals (1588 REF clock and 1PPS input)
+from the DPLL then it is not possible to use the DPLL. Before using this make
+sure that the HW supports this.</p>
+</div>
+<div class="paragraph">
+<p>The main advantage of the DPLL, is that it has a more stable clock and then it
+is not required to run phc2sys to synchronize different PTP clocks as the clocks
+will be synchronized using ts2phc every second.</p>
+</div>
+<div class="paragraph">
+<p>First it is required to synchronize the DPLL with the timestamping units, to
+achieve this, it is required to run ts2phc. As all the devices run on the same
+frequency it is just required to setup the time. To achieve this the following
+configuration can be used</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+clock_servo nullf
+first_step_threshold 0.000000001
+step_threshold 0.000000001
+ts2phc.pulsewidth 100000000
+
+[/dev/ptp1]
+ts2phc.pin_index 3
+
+[/dev/ptp2]
+ts2phc.pin_index 3
+
+[/dev/ptp3]
+ts2phc.pin_index 3
+
+[/dev/ptp10]
+ts2phc.master 1
+ts2phc.pin_index 0
+ts2phc.channel 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/dev/ptp10</code>: is the DPLL clock</p>
+</li>
+<li>
+<p><code>/dev/ptp1</code>: is the timestamping unit clock</p>
+</li>
+<li>
+<p><code>/dev/ptp2</code>: is the timestamping unit clock</p>
+</li>
+<li>
+<p><code>/dev/ptp3</code>: is the timestamping unit clock</p>
+</li>
+<li>
+<p><code>ts2phc.pin_index</code>: represents the pin on which the event is expected. For
+master it represents the pin on which to generate the 1PPS and for slave it
+represents the pin on which to receive the 1PPS.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is required for this program to run always in the background as all the
+devices need to always be in sync:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ts2phc -f /tmp/ts2phc.cfg -l 7 &amp;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once running this program, then all the devices will be in sync and once all of
+them are in sync then it is possible to start the ptp4l. The ptp4l configuration
+can be like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+clock_type              BC
+delay_mechanism         P2P
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.0000001
+step_threshold          0.0000001
+logAnnounceInterval     0
+logSyncInterval         0
+logMinPdelayReqInterval 0
+tx_timestamp_timeout    2000
+priority1               254
+priority2               254
+
+step_window             3
+
+[eth2]
+[eth4]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is an example of a boundary clock. The main configuration option are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>step_window</code>: represents how many sync frames to ignore after the time was
+adjusted, so this value needs to be in sync with logSyncInterval. It is
+recommend that total wait time to be 3 sec.</p>
+</li>
+<li>
+<p><code>logSyncInterval</code>: represents the log interval of the sync frames. This needs
+to be in sync with step_window.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>And to start the ptp4l is required to start it option '-p' which needs to point
+to the DPLL ptp clock, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ptp4l -m -l 7 -f /tmp/ptp4l.cfg -p /dev/ptp10</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pmc"><a class="anchor" href="#_pmc"></a>2. PMC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To be able to see the current status of the ptp4l daemon, it is possible to use
+the pmc application.</p>
+</div>
+<div class="paragraph">
+<p>For example to read the offset from master:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pmc -u -b 0 'GET CURRENT_DATA_SET'
+sending: GET CURRENT_DATA_SET
+        a0369f.fffe.67c4e6-0 seq 0 RESPONSE MANAGEMENT CURRENT_DATA_SET
+                stepsRemoved     1
+                offsetFromMaster 10.0
+                meanPathDelay    252.0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more details about pmc run: man pmc</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phc2sys"><a class="anchor" href="#_phc2sys"></a>3. PHC2SYS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To synchronize the system clock to one of the PHC, the following command can be
+used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>phc2sys -s /dev/ptp0 -c CLOCK_REALTIME -O 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Also it is possible to synchronize 2 PHC using the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>phc2sys -s /dev/ptp0 -c /dev/ptp1 -O 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-s</code>: represents the master clock</p>
+</li>
+<li>
+<p><code>-c</code>: represents the slave clock</p>
+</li>
+<li>
+<p><code>-O</code>: represents the offset between the slave and master times in seconds.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more details about phc2sys run: man phc2sys</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ts2phc"><a class="anchor" href="#_ts2phc"></a>4. TS2PHC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Synchronizes one or more PTP Hardware Clocks using external time stamps. It can
+synchronize to 1PPS or 1PPS providing TOD information.</p>
+</div>
+<div class="paragraph">
+<p>For more details about ts2phc run: man ts2phc</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testptp"><a class="anchor" href="#_testptp"></a>5. TESTPTP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Allows to test different features of the PHC. But it also allows to configure
+different pins of the PHC to have different functions like generating 1PPS or
+detect rising or falling edges of a signal that comes to the pin.</p>
+</div>
+<div class="paragraph">
+<p>For example to configure pin 3 to generate 1 PPS with the pulse witdh of 200ms.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>testptp -L 3,2;
+testptp -p 1000000000 -w 200000000 -H 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example to configure pin 2 to store the timestamp when seeing a rising or
+failling edge</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>testptp -L 2,1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more details about testptp run: testptp --help</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_default_configurations"><a class="anchor" href="#_default_configurations"></a>6. Default configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>IEEE1588 over Ethernet boundary clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+clock_type              BC
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over Ethernet transparent clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+clock_type              E2E_TC
+free_running            1
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over Ethernet ordinary clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       L2
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over IPv4 boundary clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       UDPv4
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+clock_type              BC
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over IPv4 transparent clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       UDPv4
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+clock_type              E2E_TC
+free_running            1
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over IPv4 ordinary clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       UDPv4
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over IPv6 boundary clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       UDPv6
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+clock_type              BC
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over IPv6 transparent clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       UDPv6
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+clock_type              E2E_TC
+free_running            1
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE1588 over IPv6 ordinary clock:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+delay_mechanism         E2E
+network_transport       UDPv6
+time_stamping           hardware
+first_step_threshold    0.000001
+step_threshold          0.000001
+logAnnounceInterval     0
+logSyncInterval         -4
+logMinDelayReqInterval  -2
+
+[eth0]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE802.1AS Relay</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+priority1               254
+priority2               254
+clock_type              RELAY
+network_transport       L2
+delay_mechanism         P2P
+path_trace_enabled      1
+transportSpecific       1
+follow_up_info          1
+ptp_dst_mac             01:80:C2:00:00:0E
+gmCapable               1
+logAnnounceInterval     0
+logSyncInterval         -3
+syncReceiptTimeout      3
+free_running            1
+summary_interval        1
+tc_spanning_tree        1
+
+[eth0]
+[eth1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IEEE802.1AS End-node</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[global]
+gmCapable               1
+priority1               248
+priority2               248
+logAnnounceInterval     0
+logSyncInterval         -3
+syncReceiptTimeout      3
+neighborPropDelayThresh 800
+min_neighbor_prop_delay -20000000
+assume_two_step         1
+path_trace_enabled      1
+follow_up_info          1
+transportSpecific       0x1
+ptp_dst_mac             01:80:C2:00:00:0E
+network_transport       L2
+delay_mechanism         P2P
+
+[eth0]</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

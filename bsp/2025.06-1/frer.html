@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FRER functional description :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.06-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.06-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../2025.06/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li>Egress</li>
+    <li><a href="frer.html">FRER</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.06-1</button>
+  <div class="version-menu">
+    <a class="version" href="../2025.06/frer.html">2025.06</a>
+    <a class="version is-current" href="frer.html">2025.06-1</a>
+    <a class="version" href="../2025.03/frer.html">2025.03</a>
+    <a class="version" href="../2024.12/frer.html">2024.12</a>
+    <a class="version" href="../2024.09/frer.html">2024.09</a>
+    <a class="version" href="../2024.06/frer.html">2024.06</a>
+    <a class="version" href="../2024.03/frer.html">2024.03</a>
+    <a class="version" href="../2024.03-1/frer.html">2024.03-1</a>
+    <a class="version" href="../2023.12/frer.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">FRER functional description</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Frame Replication and Elimination for Reliability (FRER) is defined in IEEE 802.1CB-2017.</p>
+</div>
+<div class="paragraph">
+<p>FRER reduces the probability of packet loss by replicating packets at the source, transmit these replicas over multiple paths, and finally removing the duplicate packets at the destination.</p>
+</div>
+<div class="paragraph">
+<p>A FRER enabled switch consists of the following building blocks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stream Identification - Identifies the stream based on and fields from the frame.</p>
+</li>
+<li>
+<p>Sequence Generation - Generates a sequence number for each packet in a Member Stream..</p>
+</li>
+<li>
+<p>Stream Split - Split a stream into multiple new Member Streams on different egress ports.</p>
+</li>
+<li>
+<p>Individual Recovery - Discards duplicate frames of a Member Stream.</p>
+</li>
+<li>
+<p>Sequence Recovery - Discards duplicate frames of a merged set of Member Streams.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Streams are transmitted in a separate VLAN, where forwarding is set up manually and flooding and learning is disabled.<br>
+Spanning Tree is used to avoid frames looping in other VLANs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frer_overview"><a class="anchor" href="#_frer_overview"></a>1. FRER Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The illustration below shows a stream from host A to host B via switches S1-S4. The stream is assigned to VLAN 10:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Host A is FRER-unaware and sends an untagged stream (0) with DMAC = MAC address of host B.</p>
+</li>
+<li>
+<p>Switch S1 does the following FRER functions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Stream Identification: The received frame from host A is identified as belonging to Member Stream 0 and is classified to VLAN 10.</p>
+</li>
+<li>
+<p>Sequence Generation: The sequence number for the frame is assigned.</p>
+</li>
+<li>
+<p>Splitting: The frame is forwarded to two Member Streams (1) and (2) using a C-tag with VID 10 and an R-tag with the sequence number.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Switch S2 does the following FRER functions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Stream Identification:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The received frame from S1 is identified as part of Member Stream 1.</p>
+</li>
+<li>
+<p>The received frame from S3 is identified as part of Member Stream 2.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Merge: Member Stream 1 and Member Stream 2 map to the same Compound Stream.</p>
+</li>
+<li>
+<p>Sequence Recovery: One of the received frames in the Compound Stream is discarded. The resulting Member Stream 3 is forwarded towards S4.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Switch S3 operates in a similar way as S2.</p>
+</li>
+<li>
+<p>Switch S4 does the following FRER functions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Stream Identification:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The received frame from S2 is identified as part of Member Stream 3.</p>
+</li>
+<li>
+<p>The received frame from S3 is identified as part of Member Stream 4.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Merge: Member Stream 3 and Member Stream 4 map to the same Compound Stream.</p>
+</li>
+<li>
+<p>Sequence Recovery: One of the received frames in the Compound Stream is discarded. The resulting stream is forwarded towards host B without C-tag and R-tag.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/frer-network.svg" alt="frer network"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stream_identification"><a class="anchor" href="#_stream_identification"></a>2. Stream Identification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Stream Identification configuration uses the <code>vcap</code> tool which is described on the <a href="vcap_tool.html" class="xref page">VCAP Tool</a> page.</p>
+</div>
+<div class="paragraph">
+<p>The stream identification can match on every field that is supported by IS1 but in the following examples, we will identify a stream by DMAC and VLAN. This is what is called a Null Stream identification in 802.1CB.</p>
+</div>
+<div class="paragraph">
+<p>We will also need to match on the ingress port because we need to hit a specific ingress flow for each ingress port.</p>
+</div>
+<div class="paragraph">
+<p>All ports generate 'S1_7TUPLE' IS1 keys by default. These keys are of type X4 and occupy 4 subwords in the VCAP.
+See page <a href="tc/tc-is1.html" class="xref page">Classification (IS0/IS1)</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p>As we only need to match on DMAC, VLAN, and port we can use a shorter key called 'S1_DMAC_VID' which is of type X1 and only occupies 1 subword. This saves space in the VCAP that can be used for other purposes.<br></p>
+</div>
+<div class="paragraph">
+<p>The <code>tc chain</code> template command can be used to change the generated key on a port for a given lookup.</p>
+</div>
+<div class="paragraph">
+<p>To change the generated IS1 key to 'S1_DMAC_VID' in the second lookup for all frames received on eth0 ('chain 11000' denotes the second lookup in IS1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+# tc chain add dev eth0 ingress chain 11000 protocol 802.1q flower skip_sw \
+  dst_mac 00:00:00:00:00:00 \
+  vlan_id 0 \
+  vlan_prio 0 \
+  vlan_ethtype all</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the <a href="tc/tc-intro.html#tc_chain" class="xref page">Chain</a> section on the TC Introduction page for more information about <code>tc chain</code> templates.</p>
+</div>
+<div class="paragraph">
+<p><br>
+The stream identification configuration depends on where the FRER functionality is located in the network.</p>
+</div>
+<div class="paragraph">
+<p><br>
+An example is switch S1 in the illustration above, where the stream transmitter, host A, has no FRER and VLAN functionality.</p>
+</div>
+<div class="paragraph">
+<p>Switch S1 must identify the stream by the ingress port eth0 and DMAC 00:00:00:dd:dd:dd and classify the stream to VLAN 10 and to ISDX 1.
+We will want to match only on frames that do NOT contain R-tag and C-tag.
+To configure the above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add is1 10 0 \
+  s1_dmac_vid lookup 0x01 0xff igr_port_mask 0x001 0x1ff \
+  r_tagged 0 vlan_tagged 0 l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff \
+  s1 vid_replace_ena 1 vid_add_val 10 isdx_replace_ena 1 isdx_add_val 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ISDX is a number between 1 and 255 that identifies the stream for later use. The maximum number if stream identifications in a switch is therefore 255.</p>
+</div>
+<div class="paragraph">
+<p><br>
+Another example is switch S2, where we will expect that the stream contains both R-tag and C-tag.</p>
+</div>
+<div class="paragraph">
+<p>Switch S2 must identify the stream by the ingress port eth0, DMAC 00:00:00:dd:dd:dd and VLAN 10 and classify the stream to ISDX 1.
+We will want to match only on frames that contain R-tag and C-tag.
+To configure the above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add is1 10 0 \
+  s1_dmac_vid lookup 0x01 0xff igr_port_mask 0x001 0x1ff \
+  r_tagged 1 vlan_tagged 1 vid 10 0xfff l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff \
+  s1 isdx_replace_ena 1 isdx_add_val 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br>
+To delete the stream identification above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap del is1 10 4</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frer_tool"><a class="anchor" href="#_frer_tool"></a>3. FRER tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>FRER is not yet supported via standard Linux user commands and therefore a proprietary tool called <code>frer</code> is provided:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer --help
+Usage: frer cs|msa|msf|ms|iflow|vlan [options]
+options:
+ --help                    Show this help text
+commands:
+cs:   cs cs_id [options]
+ --enable:                 Enable recovery
+ --alg:                    frerSeqRcvyAlgorithm (0: Vector, 1: Match)
+ --hlen:                   frerSeqRcvyHistoryLength
+ --reset_time:             frerSeqRcvyResetMSec
+ --take_no_seq:            frerSeqRcvyTakeNoSequence
+ --cnt:                    Show counters
+ --clr:                    Clear counters
+ --help:                   Show this help text
+
+msa:   msa dev1 [dev2] [options]
+ --help:                   Show this help text
+
+msf:   msf ms_id [options]
+ --help:                   Show this help text
+
+ms:   ms dev ms_id [options]
+ --enable:                 Enable recovery
+ --alg:                    frerSeqRcvyAlgorithm (0: Vector, 1: Match)
+ --hlen:                   frerSeqRcvyHistoryLength
+ --reset_time:             frerSeqRcvyResetMSec
+ --take_no_seq:            frerSeqRcvyTakeNoSequence
+ --cs_id:                  Compound stream ID
+ --cnt:                    Show counters
+ --clr:                    Clear counters
+ --help:                   Show this help text
+
+iflow:   iflow id [options]
+ --ms_enable:              Enable member stream
+ --ms_id:                  Allocated member stream ID
+ --generation:             Enable sequence generation
+ --pop:                    Enable popping of R-tag
+ --dev1:                   Split device 1 or '-'
+ --dev2:                   Split device 2 or '-'
+ --help:                   Show this help text
+
+vlan:   vlan vid [options]
+ --flood_disable:          Disable flooding in VLAN
+ --learn_disable:          Disable learning in VLAN
+ --help:                   Show this help text</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All frerSeqRcvXXXX parameters are defined and explained in IEEE 802.1CB-2017.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="_compound_stream"><a class="anchor" href="#_compound_stream"></a>3.1. Compound Stream</h3>
+<div class="paragraph">
+<p>The <code>frer cs</code> command is used to configure a compound stream which is needed when you want to merge several member streams into one compound stream.</p>
+</div>
+<div class="paragraph">
+<p>This is needed in switch S2, S3, and S4.</p>
+</div>
+<div class="paragraph">
+<p>A compound stream is identified by a cs_id which is a number between 0 and 255.</p>
+</div>
+<div class="paragraph">
+<p>See the FRER examples below on how to configure each switch.</p>
+</div>
+<div class="paragraph">
+<p>To show compound stream 3 configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer cs 3
+enable:               1
+alg:                  0
+hlen:                 4
+reset_time:        1000
+take_no_seq:          0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sequence recovery is enabled using Vector algorithm (alg = 0) with history length 4, ResetMSec is 1000 mS and TakeNoSequence is disabled.</p>
+</div>
+<div class="paragraph">
+<p>To show compound stream 3 counters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer cs 3 --cnt
+OutOfOrderPackets :                0
+RoguePackets      :                0
+PassedPackets     :                0
+DiscardedPackets  :                0
+LostPackets       :                0
+TaglessPackets    :                0
+Resets            :                0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To clear compound stream 3 counters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer cs 3 --clr</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_member_stream"><a class="anchor" href="#_member_stream"></a>3.2. Member Stream</h3>
+<div class="paragraph">
+<p>You will need a member stream if you want to enable individual recovery on a single stream and/or associate the stream with a compound stream in order to merge this stream with other streams.</p>
+</div>
+<div class="paragraph">
+<p>A member stream is needed for each combination of ingress port/egress port. The ingress port is indirectly given via the ISDX.</p>
+</div>
+<div class="paragraph">
+<p>This is needed in switch S2, S3, and S4.</p>
+</div>
+<div class="paragraph">
+<p>See the FRER examples below on how to configure each switch.</p>
+</div>
+<div class="paragraph">
+<p>A member stream is identified by a number returned by the 'frer msa' command (Member Stream Allocate).
+To allocate a member stream id for eth1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer msa eth1
+0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command returns the allocated member stream id associated with eth1.</p>
+</div>
+<div class="paragraph">
+<p>In case you will want to split a single stream into two egress ports, you must allocate the two ports together as they will need to be associated with the same ISDX:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer msa eth1 eth2
+0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command returns the allocated common member stream id associated with eth1 and eth2.</p>
+</div>
+<div class="paragraph">
+<p>To show member stream 0 configuration associated with eth1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer ms eth1 0
+enable:               1
+alg:                  1
+hlen:                 2
+reset_time:        1000
+take_no_seq:          0
+cs_id:                3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Individual recovery is enabled using Match algorithm (history length is N/A here), ResetMSec is 1000 mS and TakeNoSequence is disabled. This member stream is associated with compound stream 3.</p>
+</div>
+<div class="paragraph">
+<p>To show member stream 0 counters associated with eth1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer ms eth1 0 --cnt
+OutOfOrderPackets :                0
+RoguePackets      :                0
+PassedPackets     :                0
+DiscardedPackets  :                0
+LostPackets       :                0
+TaglessPackets    :                0
+Resets            :                0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To clear member stream 0 counters associated with eth1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer ms eth1 0 --clr</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To free member stream 0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer msf 0 --clr</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ingress_flow"><a class="anchor" href="#_ingress_flow"></a>3.3. Ingress Flow</h3>
+<div class="paragraph">
+<p>An ingress flow associates an ISDX with member stream(s), controls generation/removal of R-tag, and splitting of streams.</p>
+</div>
+<div class="paragraph">
+<p>There are some restrictions on an ingress flow:</p>
+</div>
+<div class="paragraph">
+<p>If sequence generation is enabled then member stream association and popping of R-tag is not allowed.</p>
+</div>
+<div class="paragraph">
+<p>See the FRER examples below on how to configure each switch.</p>
+</div>
+<div class="paragraph">
+<p>To show ingress flow for ISDX 1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer iflow 1
+ms_enable:            1
+ms_id:                0
+generation:           0
+pop:                  0
+dev1:              eth1
+dev2:              eth2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ISDX 1 is associated with member stream id 0 and the stream is split into eth1 and eth2.
+Neither sequence generation nor popping of R-tag is enabled.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vlan_configuration"><a class="anchor" href="#_vlan_configuration"></a>3.4. VLAN Configuration</h3>
+<div class="paragraph">
+<p>The VLAN configuration allows you to control flooding and learning per VLAN, which is not possible with the current standard Linux bridge vlan API.</p>
+</div>
+<div class="paragraph">
+<p>To show VLAN configuration for VLAN 10:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ frer vlan 10
+flood_disable:        1
+learn_disable:        1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Both flooding and learning are disabled in VLAN 10.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frer_examples"><a class="anchor" href="#_frer_examples"></a>4. FRER Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section described how to configure switch S1, S2, and S4 in the illustration shown above.
+Switch S3 operates in a similar way as switch S2.</p>
+</div>
+<div class="paragraph">
+<p>All examples require some common setup.</p>
+</div>
+<div class="paragraph">
+<p>Create a VLAN-aware bridge with port eth0, eth1, and eth2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name br0 type bridge
+# ip link set br0 type bridge vlan_filtering 1
+# ip link set eth0 master br0
+# ip link set eth1 master br0
+# ip link set eth2 master br0
+# ip link set eth0 up
+# ip link set eth1 up
+# ip link set eth2 up
+# ip link set br0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add VLAN 10 to all ports and disable flooding and learning:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan add dev eth0 vid 10
+# bridge vlan add dev eth1 vid 10
+# bridge vlan add dev eth2 vid 10
+# frer vlan 10 --flood_disable 1 --learn_disable 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a clsact qdisc and a chain template in order to use short 'S1_DMAC_VID' keys in the second lookup in IS1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+# tc chain add dev eth0 ingress chain 11000 protocol 802.1q flower skip_sw \
+  dst_mac 00:00:00:00:00:00 \
+  vlan_id 0 \
+  vlan_prio 0 \
+  vlan_ethtype all
+# tc qdisc add dev eth1 clsact
+# tc chain add dev eth1 ingress chain 11000 protocol 802.1q flower skip_sw \
+  dst_mac 00:00:00:00:00:00 \
+  vlan_id 0 \
+  vlan_prio 0 \
+  vlan_ethtype all
+# tc qdisc add dev eth2 clsact
+# tc chain add dev eth2 ingress chain 11000 protocol 802.1q flower skip_sw \
+  dst_mac 00:00:00:00:00:00 \
+  vlan_id 0 \
+  vlan_prio 0 \
+  vlan_ethtype all</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is only necessary on ports where we use stream identification.</p>
+</div>
+<div class="paragraph">
+<p>Now the different switches can be configured.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="_switch_s1"><a class="anchor" href="#_switch_s1"></a>4.1. Switch S1</h3>
+<div class="paragraph">
+<p>Switch S1 must:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify the untagged stream as stream 0 and associate it with ISDX 1 and VLAN 10</p>
+</li>
+<li>
+<p>Generate a sequence number to insert in an R-tag</p>
+</li>
+<li>
+<p>Split the traffic into two egress ports</p>
+</li>
+<li>
+<p>Add C-tag and R-tag on egress</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that individual and sequence recovery is not used in this setup.</p>
+</div>
+<div class="paragraph">
+<p>eth0 is connected to host A.<br>
+eth1 is connected to switch S2.<br>
+eth2 is connected to switch S3.</p>
+</div>
+<div class="paragraph">
+<p>Create a VCAP rule with priority 10 and handle 0 for stream identification and VLAN classification:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add is1 10 0 \
+  s1_dmac_vid lookup 0x01 0xff igr_port_mask 0x001 0x1ff \
+  r_tagged 0 vlan_tagged 0 l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff \
+  s1 vid_replace_ena 1 vid_add_val 10 isdx_replace_ena 1 isdx_add_val 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>s1_dmac_vid - IS1 key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lookup 0x01 0xff - Second lookup</p>
+</li>
+<li>
+<p>igr_port_mask 0x001 0x1ff - Match on eth0 (port 0)</p>
+</li>
+<li>
+<p>r_tagged 0 - Frame must be without an R-tag</p>
+</li>
+<li>
+<p>vlan_tagged 0 - Frame must be without a C-tag</p>
+</li>
+<li>
+<p>l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff - Match on all bits in host B MAC address</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>s1 - IS1 action</p>
+<div class="ulist">
+<ul>
+<li>
+<p>vid_replace_ena 1 - Enable replace VID classification</p>
+</li>
+<li>
+<p>vid_add_val 10 - VID to classify to</p>
+</li>
+<li>
+<p>isdx_replace_ena 1 - Enable replace ISDX classification</p>
+</li>
+<li>
+<p>isdx_add_val 1 - ISDX to classify to</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Setup the stream identified by ISDX 1 to generate R-tag (Sequence Generation) and transmit on eth1 and eth2 (Stream Split):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer iflow 1 --generation 1 --dev1 eth1 --dev2 eth2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_switch_s2"><a class="anchor" href="#_switch_s2"></a>4.2. Switch S2</h3>
+<div class="paragraph">
+<p>Switch S2 must:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify the C-tagged and R-tagged stream from switch S1 as part of member stream 1 and associate it with ISDX 1</p>
+</li>
+<li>
+<p>Identify the C-tagged and R-tagged stream from switch S3 as part of member stream 2 and associate it with ISDX 2</p>
+</li>
+<li>
+<p>Apply individual recovery to both member streams 1 and 2</p>
+</li>
+<li>
+<p>Split member stream 1 into two egress ports</p>
+</li>
+<li>
+<p>Merge member streams 1 and 2 by mapping them to the same compound stream</p>
+</li>
+<li>
+<p>Apply sequence recovery to the compound stream consisting of member streams 1 and 2 and discard one of the frames</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>eth0 is connected to switch S1.<br>
+eth1 is connected to switch S3.<br>
+eth2 is connected to switch S4.</p>
+</div>
+<div class="paragraph">
+<p>Create a VCAP rule with priority 10 and handle 0 for stream identification of stream (1):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add is1 10 0 \
+  s1_dmac_vid lookup 0x01 0xff igr_port_mask 0x001 0x1ff \
+  r_tagged 1 vlan_tagged 1 vid 10 0xfff l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff \
+  s1 isdx_replace_ena 1 isdx_add_val 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>s1_dmac_vid - IS1 key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lookup 0x01 0xff - Second lookup</p>
+</li>
+<li>
+<p>igr_port_mask 0x001 0x1ff - Match on eth0 (port 0)</p>
+</li>
+<li>
+<p>r_tagged 1 - Frame must contain an R-tag</p>
+</li>
+<li>
+<p>vlan_tagged 0 - Frame must contain a C-tag</p>
+</li>
+<li>
+<p>vid 10 0xfff - VID must be 10</p>
+</li>
+<li>
+<p>l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff - Match on all bits in host B MAC address</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>s1 - IS1 action</p>
+<div class="ulist">
+<ul>
+<li>
+<p>isdx_replace_ena 1 - Enable replace ISDX classification</p>
+</li>
+<li>
+<p>isdx_add_val 1 - ISDX to classify to</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Create a VCAP rule with priority 10 and handle 1 for stream identification of stream (2):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add is1 10 1 \
+  s1_dmac_vid lookup 0x01 0xff igr_port_mask 0x002 0x1ff \
+  r_tagged 1 vlan_tagged 1 vid 10 0xfff l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff \
+  s1 isdx_replace_ena 1 isdx_add_val 2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>s1_dmac_vid - IS1 key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lookup 0x01 0xff - Second lookup</p>
+</li>
+<li>
+<p>igr_port_mask 0x002 0x1ff - Match on eth1 (port 1)</p>
+</li>
+<li>
+<p>r_tagged 1 - Frame must contain an R-tag</p>
+</li>
+<li>
+<p>vlan_tagged 0 - Frame must contain a C-tag</p>
+</li>
+<li>
+<p>vid 10 0xfff - VID must be 10</p>
+</li>
+<li>
+<p>l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff - Match on all bits in host B MAC address</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>s1 - IS1 action</p>
+<div class="ulist">
+<ul>
+<li>
+<p>isdx_replace_ena 1 - Enable replace ISDX classification</p>
+</li>
+<li>
+<p>isdx_add_val 2 - ISDX to classify to</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Configure compound stream 3 with vector algorithm, history length 10, and reset_time 500 milliseconds</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer cs 3 --enable 1 --alg 0 --hlen 10 --reset_time 500</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Allocate member stream id for egress on eth1 and eth2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer msa eth1 eth2
+0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The number returned will later be used as ms_id for member stream 1</p>
+</div>
+<div class="paragraph">
+<p>Allocate member stream id for egress on eth2 only:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer msa eth2
+2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The number returned will later be used as ms_id for member stream 2</p>
+</div>
+<div class="paragraph">
+<p>Setup member stream 1 on eth1 (ms_id 0) with match algorithm, reset_time 500 milliseconds:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer ms eth1 0 --enable 1 --alg 1 --reset_time 500</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Setup member stream 1 on eth2 (ms_id 0) with match algorithm, reset_time 500 milliseconds, and compound stream 3:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer ms eth2 0 --enable 1 --alg 1 --reset_time 500 --cs_id 3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Setup member stream 2 on eth2 (ms_id 2) with match algorithm, reset_time 500 milliseconds, and compound stream 3:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer ms eth2 2 --enable 1 --alg 1 --reset_time 500 --cs_id 3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Associate ISDX 1 with member stream 1 (ms_id 0) and split the stream into eth1 and eth2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer iflow 1 --ms_enable 1 --ms_id 0 --dev1 eth1 --dev2 eth2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Associate ISDX 2 with member stream 2 (ms_id 2) and eth2 only:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer iflow 2 --ms_enable 1 --ms_id 2 --dev1 eth2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_switch_s4"><a class="anchor" href="#_switch_s4"></a>4.3. Switch S4</h3>
+<div class="paragraph">
+<p>Switch S4 must:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify the C-tagged and R-tagged stream from switch S2 as part of member stream 3 and associate it with ISDX 3</p>
+</li>
+<li>
+<p>Identify the C-tagged and R-tagged stream from switch S3 as part of member stream 4 and associate it with ISDX 4</p>
+</li>
+<li>
+<p>Apply individual recovery to both member stream 3 and 4</p>
+</li>
+<li>
+<p>Merge member stream 3 and 4 by mapping them to the same compound stream</p>
+</li>
+<li>
+<p>Apply sequence recovery to the compound stream consisting of member stream 3 and 4 and discard one of the frames</p>
+</li>
+<li>
+<p>Remove C-tag and R-tag</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>eth0 is connected to switch S2.<br>
+eth1 is connected to switch S3.<br>
+eth2 is connected to host B.</p>
+</div>
+<div class="paragraph">
+<p>Create a VCAP rule with priority 10 and handle 0 for stream identification of stream (3):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add is1 10 0 \
+  s1_dmac_vid lookup 0x01 0xff igr_port_mask 0x001 0x1ff \
+  r_tagged 1 vlan_tagged 1 vid 10 0xfff l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff \
+  s1 isdx_replace_ena 1 isdx_add_val 3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>s1_dmac_vid - IS1 key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lookup 0x01 0xff - Second lookup</p>
+</li>
+<li>
+<p>igr_port_mask 0x001 0x1ff - Match on eth0 (port 0)</p>
+</li>
+<li>
+<p>r_tagged 1 - Frame must contain an R-tag</p>
+</li>
+<li>
+<p>vlan_tagged 0 - Frame must contain a C-tag</p>
+</li>
+<li>
+<p>vid 10 0xfff - VID must be 10</p>
+</li>
+<li>
+<p>l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff - Match on all bits in host B MAC address</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>s1 - IS1 action</p>
+<div class="ulist">
+<ul>
+<li>
+<p>isdx_replace_ena 1 - Enable replace ISDX classification</p>
+</li>
+<li>
+<p>isdx_add_val 3 - ISDX to classify to</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Create a VCAP rule with priority 10 and handle 1 for stream identification of stream (4):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add is1 10 1 \
+  s1_dmac_vid lookup 0x01 0xff igr_port_mask 0x002 0x1ff \
+  r_tagged 1 vlan_tagged 1 vid 10 0xfff l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff \
+  s1 isdx_replace_ena 1 isdx_add_val 4</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>s1_dmac_vid - IS1 key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lookup 0x01 0xff - Second lookup</p>
+</li>
+<li>
+<p>igr_port_mask 0x002 0x1ff - Match on eth1 (port 1)</p>
+</li>
+<li>
+<p>r_tagged 1 - Frame must contain an R-tag</p>
+</li>
+<li>
+<p>vlan_tagged 0 - Frame must contain a C-tag</p>
+</li>
+<li>
+<p>vid 10 0xfff - VID must be 10</p>
+</li>
+<li>
+<p>l2_dmac 00:00:00:dd:dd:dd ff:ff:ff:ff:ff:ff - Match on all bits in host B MAC address</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>s1 - IS1 action</p>
+<div class="ulist">
+<ul>
+<li>
+<p>isdx_replace_ena 1 - Enable replace ISDX classification</p>
+</li>
+<li>
+<p>isdx_add_val 4 - ISDX to classify to</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Add static MAC address in VLAN 10 on eth2. This is needed if no splitting is involved:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge fdb add 00:00:00:dd:dd:dd dev eth2 static master vlan 10</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configure compound stream 0 with vector algorithm, history length 10, and reset_time 500 milliseconds</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer cs 0 --enable 1 --alg 0 --hlen 10 --reset_time 500</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Allocate member stream id for egress on eth2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer msa eth2
+0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The number returned will later be used as ms_id for member stream 3</p>
+</div>
+<div class="paragraph">
+<p>Allocate member stream id for egress on eth2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer msa eth2
+2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The number returned will later be used as ms_id for member stream 4</p>
+</div>
+<div class="paragraph">
+<p>Setup member stream 3 on eth2 (ms_id 0) with match algorithm, reset_time 500 milliseconds, and compound stream 0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer ms eth2 0 --enable 1 --alg 1 --reset_time 500 --cs_id 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Setup member stream 4 on eth2 (ms_id 2) with match algorithm, reset_time 500 milliseconds, and compound stream 0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer ms eth2 2 --enable 1 --alg 1 --reset_time 500 --cs_id 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Associate ISDX 3 with member stream 3 (ms_id 0), pop R-tag and set egress to eth2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer iflow 3 --ms_enable 1 --ms_id 0 --pop 1 --dev1 eth2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Associate ISDX 4 with member stream 4 (ms_id 2), pop R-tag and set egress to eth2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># frer iflow 4 --ms_enable 1 --ms_id 2 --pop 1 --dev1 eth2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a VCAP rule with priority 10 and handle 0 to remove the VLAN tag:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vcap add es0 10 0 \
+  vid egr_port 2 0xf vid 10 0xfff \
+  s0_vid push_outer_tag 3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vid - ES0 key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>egr_port 2 0xf - Match on egress on eth2 (port 2)</p>
+</li>
+<li>
+<p>vid 10 0xfff - VID must be 10</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>s0_vid - ES0 action</p>
+<div class="ulist">
+<ul>
+<li>
+<p>push_outer_tag 3 - Force untag</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

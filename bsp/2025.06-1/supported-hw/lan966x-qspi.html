@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LAN966x QSPI :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.06-1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sparx5-boot.html">Booting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.06-1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../2025.06/index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="lan966x.html">LAN966x</a></li>
+    <li><a href="lan966x-qspi.html">QSPI</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.06-1</button>
+  <div class="version-menu">
+    <a class="version" href="../../2025.06/supported-hw/lan966x-qspi.html">2025.06</a>
+    <a class="version is-current" href="lan966x-qspi.html">2025.06-1</a>
+    <a class="version" href="../../2025.03/supported-hw/lan966x-qspi.html">2025.03</a>
+    <a class="version" href="../../2024.12/supported-hw/lan966x-qspi.html">2024.12</a>
+    <a class="version" href="../../2024.09/supported-hw/lan966x-qspi.html">2024.09</a>
+    <a class="version" href="../../2024.06/supported-hw/lan966x-qspi.html">2024.06</a>
+    <a class="version" href="../../2024.03/supported-hw/lan966x-qspi.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/supported-hw/lan966x-qspi.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/supported-hw/lan966x-qspi.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LAN966x QSPI</h1>
+<div class="sect1">
+<h2 id="_soc_resources"><a class="anchor" href="#_soc_resources"></a>SoC Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LAN966x supports three QSPI interfaces - QSPI0, QSPI1 and QSPI2.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kernel_configurations"><a class="anchor" href="#_kernel_configurations"></a>Kernel configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Following kernel config options should be enabled to use LAN966x QSPI interface:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CONFIG_SPI_ATMEL_QUADSPI</code> - QSPI driver config option.</p>
+</li>
+<li>
+<p><code>CONFIG_MTD</code>, <code>CONFIG_MTD_SPI_NOR</code> or <code>CONFIG_MTD_SPI_NAND</code> based on NOR/NAND
+flash present.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_devicetree_configuration"><a class="anchor" href="#_devicetree_configuration"></a>Devicetree Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use QSPI interface, following configurations are required in device tree.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>compatible</code> string must be set to <code>microchip,lan966x-qspi</code>.</p>
+</li>
+<li>
+<p><code>reg</code> property must be set with base register address, AHB register address
+and their lengths.</p>
+</li>
+<li>
+<p><code>reg-names</code> must be set to <code>qspi_base</code> and <code>qspi_mmap</code>.</p>
+</li>
+<li>
+<p><code>pinctrl-0</code> property must be set with SCK, NCS, IO0, IO1, IO2, IO3 GPIO pins.
+Refer datasheet for QSPIx [where x is QSPI index (0-2)] pin details.</p>
+</li>
+<li>
+<p><code>interrupts</code> property must set with interrupt details.
+Interrupt number[CPU INTR] corresponding to QSPI index must be configured as
+defined in below table:</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">QSPI ID</th>
+<th class="tableblock halign-left valign-top">Shared Peripheral Interrupt</th>
+<th class="tableblock halign-left valign-top">CPU INTR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">qspi0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">77</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">qspi1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">97</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">65</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">qspi2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">68</p></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p>Shared peripheral interrupt lines start at index ID32. So, CPU INTR
+must be calculated as [Shared peripheral interrupt number - 32].</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Input clock <code>clocks</code> property must be set to GCK clock using phandle and GCK ID
+as <code>&lt;&amp;clk GCK_ID_QSPIx&gt;</code>, where x is QSPI index (0-2).</p>
+</li>
+<li>
+<p><code>clock-names</code> must be set to <code>pclk</code> and <code>gclk</code></p>
+</li>
+<li>
+<p><code>assigned-clocks</code> must be set to <code>&lt;&amp;clks GCK_ID_QSPIx&gt;</code>, where x is QSPI
+index (0-2).</p>
+</li>
+<li>
+<p><code>assigned-clock-rates</code> must be set to 20Mhz.</p>
+</li>
+<li>
+<p><code>dmas</code> must be set to phandle <code>dma0</code> and Peripheral ID as listed below:</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">QSPI ID</th>
+<th class="tableblock halign-left valign-top">Rx channel PerID</th>
+<th class="tableblock halign-left valign-top">Tx channel PerID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">qspi0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">qspi1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">qspi2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For example, <code>dmas</code> should be configured as <code>&lt;&amp;dma0 AT91_XDMAC_DT_PERID(17)&gt;</code> for
+Rx channel and <code>&lt;&amp;dma0 AT91_XDMAC_DT_PERID(18)&gt;</code> for Tx channel.
+* <code>dma-names</code> must be set to <code>rx</code> and <code>tx</code> respectively.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p><code>dmas</code> and <code>dma-names</code> are optional properties.</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_references"><a class="anchor" href="#_references"></a>References</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://elixir.bootlin.com/linux/latest/source/Documentation/devicetree/bindings/spi/atmel,quadspi.yaml">QSPI DT documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
+<div class="paragraph">
+<p>Following example shows how a QSPI should be defined in DT to use a SPI-NAND
+flash present on it:</p>
+</div>
+<div class="paragraph">
+<p>dtsi file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qspi2: spi@e0834000 {
+        compatible = "microchip,lan966x-qspi";
+        reg = &lt;QSPI_2_QSPI_REGS_ADDR QSPI_2_QSPI_REGS_SIZE&gt;,
+              &lt;0x30000000 0x04000000&gt;;
+        reg-names = "qspi_base", "qspi_mmap";
+        interrupts = &lt;GIC_SPI 68 IRQ_TYPE_LEVEL_HIGH&gt;;
+        clocks = &lt;&amp;clks GCK_ID_QSPI2&gt;, &lt;&amp;clks GCK_ID_QSPI2&gt;;
+        clock-names = "pclk", "gclk";
+        assigned-clocks = &lt;&amp;clks GCK_ID_QSPI2&gt;;
+        assigned-clock-rates = &lt;20000000&gt;;
+        dmas = &lt;&amp;dma0 AT91_XDMAC_DT_PERID(17)&gt;,
+               &lt;&amp;dma0 AT91_XDMAC_DT_PERID(18)&gt;;
+        dma-names = "rx", "tx";
+        #address-cells = &lt;1&gt;;
+        #size-cells = &lt;0&gt;;
+        status = "disabled";
+};</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>dts file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&amp;qspi2 {
+        pinctrl-0 = &lt;&amp;qspi2_pins&gt;;
+        pinctrl-names = "default";
+        status = "okay";
+
+        spi-flash@0 {
+                compatible = "spi-nand";
+                reg = &lt;0&gt;;
+                spi-max-frequency = &lt;20000000&gt;;
+                #address-cells = &lt;1&gt;;
+                #size-cells = &lt;1&gt;;
+                spi-tx-bus-width = &lt;4&gt;;
+                spi-rx-bus-width = &lt;4&gt;;
+        };
+};</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_userspace"><a class="anchor" href="#_userspace"></a>UserSpace</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>MTD utility in buildroot provides rich set of tests for validating
+QSPI NOR/NAND flashes.</p>
+</div>
+<div class="sect2">
+<h3 id="_confirm_instances_are_created"><a class="anchor" href="#_confirm_instances_are_created"></a>Confirm instances are created</h3>
+<div class="paragraph">
+<p>To confirm if qspi flash is created:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check if a mtd device is created in <code>/dev</code> directory.</p>
+</li>
+<li>
+<p>Run <code>mtd_debug info /dev/mtdx</code> (where x is index of mtd device)
+command to check flash details.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_on_how_to_use"><a class="anchor" href="#_example_on_how_to_use"></a>Example on how to use</h3>
+<div class="listingblock">
+<div class="content">
+<pre># dmesg | grep spi
+[    1.258369] atmel_qspi e0834000.spi: Using dma0chan1 (tx) and dma0chan0 (rx) for DMA transfers
+[    1.284563] spi-nand spi1.0: Winbond SPI NAND was found.
+[    1.289435] spi-nand spi1.0: 128 MiB, block size: 128 KiB, page size: 2048, OOB size: 64
+
+# mtd_debug info /dev/mtd1
+mtd.type = MTD_NANDFLASH
+mtd.flags = MTD_CAP_NANDFLASH
+mtd.size = 134217728 (128M)
+mtd.erasesize = 131072 (128K)
+mtd.writesize = 2048 (2K)
+mtd.oobsize = 64
+regions = 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erase/Read/Write test:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># flash_erase /dev/mtd1 0 0x10
+Erasing 128 Kibyte @ 1e0000 -- 100 % complete
+#
+#
+# mtd_debug read /dev/mtd1 0x1e0000 0x10 rd
+Copied 16 bytes from address 0x001e0000 in flash to rd
+# hexdump rd -C
+00000000  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+00000010
+# echo "lan966x" &gt; wr
+#
+#
+# mtd_debug write /dev/mtd1 0x1e0000 0x8 wr
+Copied 8 bytes from wr to address 0x001e0000 in flash
+#
+#
+# mtd_debug read /dev/mtd1 0x1e0000 0x10 rd
+Copied 16 bytes from address 0x001e0000 in flash to rd
+#
+#
+# hexdump rd -C
+00000000  6c 61 6e 39 36 36 78 0a  ff ff ff ff ff ff ff ff  |lan966x.........|
+00000010
+#
+# flash_erase /dev/mtd1 0 0x10
+Erasing 128 Kibyte @ 1e0000 -- 100 % complete
+# mtd_debug read /dev/mtd1 0x1e0000 0x10 rd
+Copied 16 bytes from address 0x001e0000 in flash to rd
+#
+#
+# hexdump rd -C
+00000000  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+00000010
+#
+
+# echo "The W25N01GV (1G-bit) Serial SLC NAND Flash Memory provides a storage so
+lution for system with lmtd space" &gt; wr1
+# ls -l wr1
+-rw-r--r--    1 root     root           106 Jan  1 00:17 wr1
+#
+# mtd_debug write /dev/mtd1 0x1e0000 106 wr1
+Copied 106 bytes from wr1 to address 0x001e0000 in flash
+#
+#
+# mtd_debug read /dev/mtd1 0x1e0000 106 rd
+Copied 106 bytes from address 0x001e0000 in flash to rd
+# hexdump rd -C
+00000000  54 68 65 20 57 32 35 4e  30 31 47 56 20 28 31 47  |The W25N01GV (1G|
+00000010  2d 62 69 74 29 20 53 65  72 69 61 6c 20 53 4c 43  |-bit) Serial SLC|
+00000020  20 4e 41 4e 44 20 46 6c  61 73 68 20 4d 65 6d 6f  | NAND Flash Memo|
+00000030  72 79 20 70 72 6f 76 69  64 65 73 20 61 20 73 74  |ry provides a st|
+00000040  6f 72 61 67 65 20 73 6f  6c 75 74 69 6f 6e 20 66  |orage solution f|
+00000050  6f 72 20 73 79 73 74 65  6d 20 77 69 74 68 20 6c  |or system with l|
+00000060  6d 74 64 20 73 70 61 63  65 0a                    |mtd space.|
+0000006a
+#
+# flash_erase /dev/mtd1 0 0x10
+Erasing 128 Kibyte @ 1e0000 -- 100 % complete
+# mtd_debug read /dev/mtd1 0x1e0000 0x106 rd
+Copied 262 bytes from address 0x001e0000 in flash to rd
+# hexdump rd -C
+00000000  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00000100
+#</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
