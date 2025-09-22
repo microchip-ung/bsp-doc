@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Basic QoS functional description :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.09">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.09</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li>Ingress</li>
+    <li><a href="basic_qos.html">Basic QoS</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.09</button>
+  <div class="version-menu">
+    <a class="version is-current" href="basic_qos.html">2025.09</a>
+    <a class="version" href="../2025.06/basic_qos.html">2025.06</a>
+    <a class="version" href="../2025.06-1/basic_qos.html">2025.06-1</a>
+    <a class="version" href="../2025.03/basic_qos.html">2025.03</a>
+    <a class="version" href="../2024.12/basic_qos.html">2024.12</a>
+    <a class="version" href="../2024.09/basic_qos.html">2024.09</a>
+    <a class="version" href="../2024.06/basic_qos.html">2024.06</a>
+    <a class="version" href="../2024.03/basic_qos.html">2024.03</a>
+    <a class="version" href="../2024.03-1/basic_qos.html">2024.03-1</a>
+    <a class="version" href="../2023.12/basic_qos.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Basic QoS functional description</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">The handling has impact on the frame on ingress:</div>
+<ul>
+<li>
+<p>Give frame classified Priority.</p>
+</li>
+<li>
+<p>Give frame classified DPL (Drop Precedence Level).</p>
+</li>
+<li>
+<p>Give frame classified PCP.</p>
+</li>
+<li>
+<p>Give frame classified DEI.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">The handling has impact on the frame on egress:</div>
+<ul>
+<li>
+<p>Scheduling the frame</p>
+</li>
+<li>
+<p>Shaping the frame</p>
+</li>
+<li>
+<p>Give the PCP and DEI value in the VLAN tag.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The consequences of frame classified values are generally described in the Frame Metadata section.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bridge_device_default_configuration"><a class="anchor" href="#_bridge_device_default_configuration"></a>1. Bridge device Default Configuration.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Default classified Priority, DPL, PCP and DEI can be configured per bridge device.
+The default PCP and DEI are only relevant for frames that are
+classified as untagged.<br>
+<br>
+The ingress default value can be given by this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_def eth0 --prio 5 --pcp 5 --dei 1 --dpl 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>eth0</code> - The device is eth0</p>
+</li>
+<li>
+<p><code>prio</code> - The default priority value.</p>
+</li>
+<li>
+<p><code>pcp</code>  - The default PCP value.</p>
+</li>
+<li>
+<p><code>dei</code>  - The default DEI value.</p>
+</li>
+<li>
+<p><code>dpl</code>  - The default Drop Precedence Level value.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A frame will get default PCP and DEI classified values.<br>
+A tagged frame will get Tag PCP and DEI as classified PCP and DEI values.<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+On LAN9645X it is necessary to set the environment variable MCHP_NETLINK_QOS=mchp_qos_9645x to help qos-utils connect to the right netlink backend.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frame_dscp_value_to_priodpl_mapping"><a class="anchor" href="#_frame_dscp_value_to_priodpl_mapping"></a>2. Frame DSCP value to Prio/DPL mapping.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A global table mapping the trusted DSCP value of an IP frame to the classified Priority and DPL
+can be configured. Per port it can be configured if mapping of DSCP should happen or not.<br>
+<br>
+A trusted DSCP value can be inserted in the table by this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_dscp_map 22 --enable 1 --prio 5 --dpl 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>22</code>       - The inserted trusted DSCP value is 22.</p>
+</li>
+<li>
+<p><code>enable 1</code> - The DSCP value is enabled in the table.</p>
+</li>
+<li>
+<p><code>prio</code>     - The mapped to priority value.</p>
+</li>
+<li>
+<p><code>dpl</code>      - The mapped to Drop Precedence Level value.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is overwriting the default classified values.<br></p>
+</div>
+<div class="paragraph">
+<p>A trusted DSCP value can be removed from the table by this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_dscp_map 22 --enable 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>22</code>       - The removed trusted DSCP value is 22.</p>
+</li>
+<li>
+<p><code>enable 0</code> - The DSCP value is removed from the table.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tag_pcpdei_to_priodpl_mapping"><a class="anchor" href="#_tag_pcpdei_to_priodpl_mapping"></a>3. Tag PCP/DEI to Prio/DPL mapping.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A table per bridge device, mapping the PCP and DEI values from a tagged ingress frame to classified Priority and DPL,
+can be configured.<br>
+<br>
+The ingress tag mapping table can be given by this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_tag_map eth0 --prio 0123456701234567 --dpl 0000000011111111</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>eth0</code> - The device is eth0</p>
+</li>
+<li>
+<p><code>prio</code> - The map of TAG PCP,DEI to Priority. PCP(0-7)/DEI(0) and PCP(0-7)/DEI(1)</p>
+</li>
+<li>
+<p><code>dpl</code>  - The map of TAG PCP,DEI to (color)DPL. PCP(0-7)/DEI(0) and PCP(0-7)/DEI(1)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The above command configures what is default:<br>
+PCP 0-7 is mapping to Prio 0-7 for both DEI 0 and 1.<br>
+PCP 0-7 is mapping to DPL 0 for DEI 0 and DPL 1 for DEI 1.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_tag_map eth0 --prio 22244477111333666 --dpl 1111111100000000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above command configures:<br>
+PCP 0-2 is mapping to Prio 2 for DEI 0,<br>
+PCP 3-5 is mapping to Prio 4 for DEI 0,<br>
+PCP 6-7 is mapping to Prio 7 for DEI 0,<br>
+PCP 0-2 is mapping to Prio 1 for DEI 1,<br>
+PCP 3-5 is mapping to Prio 3 for DEI 1,<br>
+PCP 6-7 is mapping to Prio 6 for DEI 1,<br>
+PCP 0-7 is mapping to DPL 1 for DEI 0 and DPL 0 for DEI 1.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ingress_mode"><a class="anchor" href="#_ingress_mode"></a>4. Ingress mode.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ingress mode per bridge device can be configured.<br>
+The ingress mode determines how the frame classified Priority and DPL values are given.
+<br>
+The ingress mode can be given by this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_mode eth0 --tag 0 --dscp 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>eth0</code> - The device is eth0</p>
+</li>
+<li>
+<p><code>tag</code>  - Mapping of TAG PCP/DEI is disabled.</p>
+</li>
+<li>
+<p><code>dscp</code> - Mapping of trusted DSCP is disabled.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The above command gives frame the default Prio/DPL values for the device as both mapping types are disabled.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_mode eth0 --tag 1 --dscp 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above command gives frames the tag PCP/DEI mapped to classified Prio/DPL values.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qos i_mode eth0 --tag 1 --dscp 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above command gives frames the tag PCP/DEI mapped to classified Prio/DPL values.
+Any IP frame with a DSCP value matching an entry in the global DSCP mapping table
+will get classified Prio/DPL values from the DSCP mapping table.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

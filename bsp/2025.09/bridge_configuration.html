@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bridge Configuration :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.09">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.09</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li>L2 Bridge</li>
+    <li><a href="bridge_configuration.html">Bridge Configuration</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.09</button>
+  <div class="version-menu">
+    <a class="version is-current" href="bridge_configuration.html">2025.09</a>
+    <a class="version" href="../2025.06/bridge_configuration.html">2025.06</a>
+    <a class="version" href="../2025.06-1/bridge_configuration.html">2025.06-1</a>
+    <a class="version" href="../2025.03/bridge_configuration.html">2025.03</a>
+    <a class="version" href="../2024.12/bridge_configuration.html">2024.12</a>
+    <a class="version" href="../2024.09/bridge_configuration.html">2024.09</a>
+    <a class="version" href="../2024.06/bridge_configuration.html">2024.06</a>
+    <a class="version" href="../2024.03/bridge_configuration.html">2024.03</a>
+    <a class="version" href="../2024.03-1/bridge_configuration.html">2024.03-1</a>
+    <a class="version" href="../2023.12/bridge_configuration.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Bridge Configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A switchdev enabled switch does not contain any bridge by default. All network interfaces works as standard Ethernet devices.</p>
+</div>
+<div class="paragraph">
+<p>Use the <code>ip link add</code> command to create a bridge called br0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name br0 type bridge</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is not possible to create more than one bridge at a time on Microchip switch products.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A bridge is VLAN-unaware by default, which means that it doesn&#8217;t recognizes VLAN tags.
+If the bridge should recognize VLAN tags and be able to insert/remove VLAN tags, it must be configured to be VLAN-aware:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set br0 type bridge vlan_filtering 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To change the bridge back to be VLAN-unaware:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set br0 type bridge vlan_filtering 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add the interfaces that should be part of the bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set eth0 master br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enable the interfaces and the bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set eth0 up
+# ip link set br0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use the <code>ip link del</code> command to delete a bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link del name br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The command above removes the interfaces from the bridge automatically but you can also remove them manually:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 nomaster</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following commands will create a vlan-aware bridge with four interfaces:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name br0 type bridge
+# ip link set br0 type bridge vlan_filtering 1
+# ip link set eth0 master br0
+# ip link set eth1 master br0
+# ip link set eth2 master br0
+# ip link set eth3 master br0
+# ip link set eth0 up
+# ip link set eth1 up
+# ip link set eth2 up
+# ip link set eth3 up
+# ip link set br0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge created above can be illustrated like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/bridge-ports.svg" alt="bridge ports"></span></p>
+</div>
+<div class="paragraph">
+<p>To see information about the interfaces:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link show
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+3: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9b brd ff:ff:ff:ff:ff:ff
+4: eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9c brd ff:ff:ff:ff:ff:ff
+5: eth2: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9d brd ff:ff:ff:ff:ff:ff
+6: eth3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9e brd ff:ff:ff:ff:ff:ff
+7: sit0@NONE: &lt;NOARP&gt; mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+8: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 00:40:42:04:98:9b brd ff:ff:ff:ff:ff:ff</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To see information about the bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge link show
+3: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 master br0 state forwarding priority 32 cost 4
+4: eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 master br0 state forwarding priority 32 cost 4
+5: eth2: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 master br0 state forwarding priority 32 cost 4
+6: eth3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 master br0 state forwarding priority 32 cost 4</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ip_address"><a class="anchor" href="#_ip_address"></a>1. IP address</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To allow communication between the CPU and hosts on any of the bridge ports, it is necessary to assign an IP address
+to the bridge itself and NOT to the individual interfaces.</p>
+</div>
+<div class="paragraph">
+<p>To assign an IP address on the bridge itself and check the status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip addr set dev br0 192.168.1.1
+# ip addr show dev br0
+8: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:00:00:01:00:00 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.1/24 scope global br0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::cc8f:1ff:fe4b:10c9/64 scope link
+        valid_lft forever preferred_lft forever</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is now possible to ping hosts on the same subnet:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ping 192.168.1.2
+PING 192.168.1.2 (192.168.1.2) 56(84) bytes of data.
+64 bytes from 192.168.1.2: icmp_seq=1 ttl=64 time=0.700 ms
+64 bytes from 192.168.1.2: icmp_seq=2 ttl=64 time=0.270 ms
+64 bytes from 192.168.1.2: icmp_seq=3 ttl=64 time=0.257 ms
+64 bytes from 192.168.1.2: icmp_seq=4 ttl=64 time=0.266 ms
+^C
+--- 192.168.1.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3077ms
+rtt min/avg/max/mdev = 0.257/0.373/0.700/0.188 ms</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bridge_vlan"><a class="anchor" href="#bridge_vlan"></a>2. VLAN</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a bridge is VLAN-aware it is possible to assign a port to one or more VLANs. By default all ports are member of VLAN 1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan show
+port              vlan-id
+eth0              1 PVID Egress Untagged
+eth1              1 PVID Egress Untagged
+eth2              1 PVID Egress Untagged
+eth3              1 PVID Egress Untagged
+br0               1 PVID Egress Untagged</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A VLAN can be associated with the following flags:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>PVID</code> - Port VID. Untagged frames received at ingress are assigned to this VLAN.</p>
+</li>
+<li>
+<p><code>Egress Untagged</code> - Untag on egress. Frames in this VLAN are sent as untagged at egress.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both <code>PVID</code> and <code>Egress Untagged</code> can only be assigned to one VLAN at a time, but it does not need to be the same VLAN.</p>
+</div>
+<div class="paragraph">
+<p>Add VLAN 100 on eth0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan add dev eth0 vid 100</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Delete VLAN 100 on eth0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan del dev eth0 vid 100</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to assign <code>PVID</code> and/or <code>Egress Untagged</code> to a new VLAN you must first delete the VLAN that currently own the flags.
+If you want to keep the old VLAN you must add it again without the flags:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan del dev eth0 vid 1
+# bridge vlan add dev eth0 vid 1
+# bridge vlan add dev eth0 vid 100 pvid untagged
+# bridge vlan del dev eth1 vid 1
+# bridge vlan add dev eth1 vid 1
+# bridge vlan add dev eth1 vid 100 pvid untagged
+# bridge vlan show
+port              vlan-id
+eth0              1
+                  100 PVID Egress Untagged
+eth1              1
+                  100 PVID Egress Untagged
+eth2              1 PVID Egress Untagged
+eth3              1 PVID Egress Untagged
+br0               1 PVID Egress Untagged</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want the CPU on the switch to be part of a VLAN you must add the VLAN to the bridge interface:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan del dev eth0 vid 1
+# bridge vlan add dev eth0 vid 1
+# bridge vlan add dev eth0 vid 100 pvid untagged
+# bridge vlan del dev eth1 vid 1
+# bridge vlan add dev eth1 vid 1
+# bridge vlan add dev eth1 vid 100 pvid untagged
+# bridge vlan del dev br0 vid 1 self
+# bridge vlan add dev br0 vid 1 self
+# bridge vlan add dev br0 vid 100 pvid untagged self
+# bridge vlan show
+port              vlan-id
+eth0              1
+                  100 PVID Egress Untagged
+eth1              1
+                  100 PVID Egress Untagged
+eth2              1 PVID Egress Untagged
+eth3              1 PVID Egress Untagged
+br0               1
+                  100 PVID Egress Untagged</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You must use the keyword <code>self</code> when assigning a VLAN to a bridge because it&#8217;s the bridge itself.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mac_table"><a class="anchor" href="#_mac_table"></a>3. MAC table</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The MAC table, also known as the Forwarding Data Base (FDB), contains entries that map the [MAC addresse, VID] tupple to a port.</p>
+</div>
+<div class="paragraph">
+<p>If the bridge is configured to be VLAN-unaware, the VID is 1 by default and does not need to be specified in any of the MAC table commands.</p>
+</div>
+<div class="paragraph">
+<p>The MAC table consists of different kind of entries and will normally be one of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>permanent</code> - Assigned by the system -  e.g. the MAC address of an interface.</p>
+</li>
+<li>
+<p><code>static</code> - Assigned by the user.</p>
+</li>
+<li>
+<p><code>dynamic</code> - Learned on one of the network interfaces and subject to ageing.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To add a static MAC entry:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge fdb add 00:11:11:11:11:11 dev eth1 vlan 1 master static</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To delete a static MAC entry:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge fdb del 00:11:11:11:11:11 dev eth1 vlan 1 master static</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dynamic MAC address entries are removed from the MAC table if the bridge has not seen the MAC address after a specific amount of time.</p>
+</div>
+<div class="paragraph">
+<p>This time is called the ageing time and is 300 seconds by default.</p>
+</div>
+<div class="paragraph">
+<p>To change the ageing time to 600 seconds:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set br0 type bridge ageing_time 60000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To show the content of the MAC table:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge fdb show
+00:22:22:22:22:22 dev eth0 vlan 1 extern_learn offload master br0
+00:40:42:04:98:9b dev eth0 master br0 permanent
+01:00:5e:00:00:01 dev eth0 self permanent
+00:11:11:11:11:11 dev eth1 vlan 1 master br0 static
+00:40:42:04:98:9c dev eth1 vlan 1 master br0 permanent
+00:40:42:04:98:9c dev eth1 master br0 permanent
+01:00:5e:00:00:01 dev eth1 self permanent
+00:40:42:04:98:9b dev eth2 vlan 1 offload master br0
+00:40:42:04:98:9d dev eth2 vlan 1 master br0 permanent
+00:40:42:04:98:9d dev eth2 master br0 permanent
+01:00:5e:00:00:01 dev eth2 self permanent
+00:40:42:04:98:9e dev eth3 vlan 1 master br0 permanent
+00:40:42:04:98:9e dev eth3 master br0 permanent
+01:00:5e:00:00:01 dev eth3 self permanent
+01:00:5e:00:00:6a dev br0 self permanent
+01:00:5e:00:00:01 dev br0 self permanent</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Static entries are marked as <code>static</code> and dynamic entries are market as <code>extern_learn offload</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mirroring"><a class="anchor" href="#_mirroring"></a>4. Mirroring</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mirroring is used to send a copy of received or transmitted frames seen on one or more ports to a monitor port.
+This is useful for debugging of network problems.</p>
+</div>
+<div class="paragraph">
+<p>Mirroring is controlled by a combination of <code>tc qdisc</code> and <code>tc filter</code> commands.
+See also the <a href="tc/tc-intro.html#tc_intro" class="xref page">TC Introduction</a> page for a general introduction to <code>tc</code> commands.</p>
+</div>
+<div class="paragraph">
+<p>Mirroring all ingress traffic on port eth0 to monitor port eth3:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth0 clsact
+# tc filter add dev eth0 ingress prio 1 handle 1 matchall skip_sw \
+  action mirred egress mirror dev eth3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To delete the mirroring above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc filter del dev eth0 ingress prio 1 handle 1 matchall
+# tc qdisc del dev eth0 clsact</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mirroring all egress traffic on port eth1 to monitor port eth3:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc qdisc add dev eth1 clsact
+# tc filter add dev eth1 egress prio 1 handle 1 matchall skip_sw \
+  action mirred egress mirror dev eth3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To delete the mirroring above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># tc filter del dev eth1 egress prio 1 handle 1 matchall
+# tc qdisc del dev eth1 clsact</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is not possible to use more than one monitor port. The <code>tc filter</code> command will fail if you try to configure a second monitor port.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>It is also possible to mirror selected ingress traffic on a port and this is described on the <a href="tc/tc-is2.html" class="xref page">ACL (IS2)</a> page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_link_aggregation"><a class="anchor" href="#_link_aggregation"></a>5. Link Aggregation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Link Aggregation is a way of combining two or more ports to act as a single port.</p>
+</div>
+<div class="paragraph">
+<p>It can be used to increase the throughput of a link or to provide redundancy.</p>
+</div>
+<div class="paragraph">
+<p>The ports that are combined are called a Link Aggregation Group (LAG).</p>
+</div>
+<div class="paragraph">
+<p>Link Aggregation is implemented by using bond interfaces on Microchip switch products.</p>
+</div>
+<div class="paragraph">
+<p>Two different modes are supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>balance-xor</code> - Select the egress interface by xor-ing different parts of the packet selected by the Transmit Hash Policy</p>
+</li>
+<li>
+<p><code>802.3ad</code> - Same as above supplemented with running the LACP protocol which actively checks the connectivity between the links.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To create a bond interface called bond0:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name bond0 type bond</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configure the bond interface to check link status on associated links every 100 milliseconds:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set bond0 type bond miimon 100</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configure the bond interface to use balance-xor mode:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set bond0 type bond mode balance-xor</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or configure the bond interface to use 802.3ad mode:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set bond0 type bond mode 802.3ad
+# ip link set bond0 type bond lacp_rate fast</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The LACP hello rate <code>lacp_rate</code> can be set to one of the following values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>slow</code> - Check the link connectivity every 30 seconds.</p>
+</li>
+<li>
+<p><code>fast</code> - Check the link connectivity every second.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Configure the Transmit Hash Policy to use fields from both layer 2 and 3 in the xor algorithm:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set bond0 type bond xmit_hash_policy layer2+3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Supported values are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>layer2</code> - XOR lower 12 bits of DMAC and SMAC.</p>
+</li>
+<li>
+<p><code>layer2+3</code> - XOR lower 12 bits of DMAC and SMAC and lower 8 bits of IPv4/IPv6 SIP and DIP.</p>
+</li>
+<li>
+<p><code>layer3+4</code> - XOR lower 8 bits of IPv4/IPv6 SIP and DIP and lower 8 bits of SPORT and DPORT.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enable the bond interface:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set bond0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add a port to the bond interface (the port must be down before adding it):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set eth0 down
+# ip link set eth0 master bond0
+# ip link set eth0 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following commands creates a bond interface, bond0, which contains the ports eth0, eth1 and eth2.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name bond0 type bond
+# ip link set bond0 type bond miimon 100
+# ip link set bond0 type bond mode balance-xor
+# ip link set bond0 type bond xmit_hash_policy layer2+3
+# ip link set bond0 up
+# ip link set eth0 down
+# ip link set eth1 down
+# ip link set eth2 down
+# ip link set eth0 master bond0
+# ip link set eth1 master bond0
+# ip link set eth2 master bond0
+# ip link set eth0 up
+# ip link set eth1 up
+# ip link set eth2 up</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now create a bridge with two interfaces - one is the bond interface created above and the other is eth3:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link add name br0 type bridge
+# ip link set dev br0 up
+# ip link set bond0 master br0
+# ip link set eth3 master br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridge/bond combination created above can be illustrated like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/lag-ports.svg" alt="lag ports"></span></p>
+</div>
+<div class="paragraph">
+<p>Show the bond status and the bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /proc/net/bonding/bond0
+Ethernet Channel Bonding Driver: v5.10.0-01203-gb80a6c394df4-dirty
+
+Bonding Mode: load balancing (xor)
+Transmit Hash Policy: layer2+3 (2)
+MII Status: up
+MII Polling Interval (ms): 100
+Up Delay (ms): 0
+Down Delay (ms): 0
+Peer Notification Delay (ms): 0
+
+Slave Interface: eth0
+MII Status: up
+Speed: 1000 Mbps
+Duplex: full
+Link Failure Count: 0
+Permanent HW addr: 00:40:42:04:98:9b
+Slave queue ID: 0
+
+Slave Interface: eth1
+MII Status: up
+Speed: 1000 Mbps
+Duplex: full
+Link Failure Count: 0
+Permanent HW addr: 00:40:42:04:98:9c
+Slave queue ID: 0
+
+Slave Interface: eth2
+MII Status: up
+Speed: 1000 Mbps
+Duplex: full
+Link Failure Count: 0
+Permanent HW addr: 00:40:42:04:98:9d
+Slave queue ID: 0
+
+# bridge link show
+6: eth3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 master br0 state forwarding priority 32 cost 4
+8: bond0: &lt;BROADCAST,MULTICAST,MASTER,UP,LOWER_UP&gt; mtu 1500 master br0 state forwarding priority 32 cost 4</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_igmpmld_snooping"><a class="anchor" href="#_igmpmld_snooping"></a>6. IGMP/MLD Snooping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>IGMP/MLD Snooping is a layer 2 mechanism for reducing multicast traffic in a network.</p>
+</div>
+<div class="paragraph">
+<p>IGMP is for IPv4 and MLD is for IPv6.</p>
+</div>
+<div class="paragraph">
+<p>The switch listens to IGMP/MLD conversations between hosts and routers and remembers the ports that are using IP multicast transmissions.</p>
+</div>
+<div class="paragraph">
+<p>The switch will only forward multicast traffic to ports where an interest has been seen. This will reduce both network traffic and the load on hosts.</p>
+</div>
+<div class="paragraph">
+<p>IGMP/MLD Snooping is enabled by default and ports are configured to automatically detect if a multicast router is present on the port.</p>
+</div>
+<div class="paragraph">
+<p>To disable IGMP/MLD Snooping:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev br0 type bridge mcast_snooping 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To permanently disable multicast routers on a port:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 type bridge_slave mcast_router 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To let the port detect the presence of multicast routers (default):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 type bridge_slave mcast_router 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To permanently enable multicast forwarding on a port, even if no multicast router is detected:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev eth0 type bridge_slave mcast_router 2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>IGMP Snooping supports IGMP version 2 and 3 where version 2 is default. To change to use IGMP version 3:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev br0 type bridge mcast_igmp_version 3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>MLD Snooping supports MLD version 1 and 2 where version 1 is default. To change to use MLD version 2:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev br0 type bridge mcast_mld_version 2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To enable a IGMP/MLD Querier on the bridge (default is disabled):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev br0 type bridge mcast_querier 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To see other IGMP/MLD related configuration options:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link help bridge</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Search for options starting with <code>mcast_</code></p>
+</div>
+<div class="paragraph">
+<p>It is possible also to enable/disable IGMP/MLD per vlan. First it is needed to
+enable mcast_vlan_snooping:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev br0 type bridge mcast_vlan_snooping 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then all the previous configurations that were added per bridge can be added
+also per vlan, for example enabling a IGMP/MLD Querier:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan global set dev br0 vid 256 mcast_querier 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To see other IGMP/MLD related configuration options per vlan:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># bridge vlan global help</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To see IGMP status/statistics:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /proc/net/igmp</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To see MLD status/statistics:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># cat /proc/net/igmp6</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spanning_tree_protocol"><a class="anchor" href="#_spanning_tree_protocol"></a>7. Spanning Tree Protocol</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spanning Tree Protocol is implemented by the open source user-space daemon <code>mstpd</code> which
+is automatically started when the Spanning Tree Protocol is enabled on a bridge.</p>
+</div>
+<div class="paragraph">
+<p><code>mstpd</code> supports Rapid Spanning Tree (RSTP) which is defined in IEEE 802.1w.</p>
+</div>
+<div class="paragraph">
+<p>The Linux kernel implementation of the Spanning Tree Protocol has no support for RSTP.</p>
+</div>
+<div class="paragraph">
+<p>RSTP is an improvement of the original Spanning Tree Protocol (STP) defined in IEEE 802.1D.
+It provides faster recovery in response to changes in the network topology.</p>
+</div>
+<div class="paragraph">
+<p><code>mstpd</code> runs RSTP by default but falls back to STP if it receives an STP BPDU.</p>
+</div>
+<div class="paragraph">
+<p>To enable Spanning Tree Protocol on a bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev br0 type bridge stp_state 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To disable Spanning Tree Protocol on a bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># ip link set dev br0 type bridge stp_state 0</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Spanning Tree Protocol on bridges managed by <code>mstpd</code> cannot be controlled by the <code>brctl</code> tool.<br>
+Use the <code>mstpctl</code> tool instead!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To show the current Spanning Tree Protocol status on a bridge:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># mstpctl showbridge
+# mstpctl showbridge br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To show the current Spanning Tree Protocol status on one or all port(s):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># mstpctl showport br0 eth0
+# mstpctl showport br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To show the current Spanning Tree Protocol statistics on one or all port(s):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># mstpctl showportdetail br0 eth0
+# mstpctl showportdetail br0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To force STP instead of RSTP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># mstpctl setforcevers br0 stp</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>RSTP normally works 'out of the box' when enabled but it is possible to use <code>mstpctl</code> to fine-tune the spanning tree settings.</p>
+</div>
+<div class="paragraph">
+<p>To see all the supported <code>mstpctl</code> options:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># mstpctl</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
