@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LAN969x :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.12">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption (deprecated)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption_upstream.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frer.html">FRER</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../cqf.html">CQF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.12</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2025.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.09/index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="lan969x.html">LAN969x</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.12</button>
+  <div class="version-menu">
+    <a class="version is-current" href="lan969x.html">2025.12</a>
+    <a class="version" href="../../2025.09/supported-hw/lan969x.html">2025.09</a>
+    <a class="version" href="../../2025.06/supported-hw/lan969x.html">2025.06</a>
+    <a class="version" href="../../2025.06-1/supported-hw/lan969x.html">2025.06-1</a>
+    <a class="version" href="../../2025.03/supported-hw/lan969x.html">2025.03</a>
+    <a class="version" href="../../2024.12/supported-hw/lan969x.html">2024.12</a>
+    <a class="version" href="../../2024.09/supported-hw/lan969x.html">2024.09</a>
+    <a class="version" href="../../2024.06/supported-hw/lan969x.html">2024.06</a>
+    <a class="version" href="../../2024.03/supported-hw/lan969x.html">2024.03</a>
+    <a class="version" href="../../2024.03-1/supported-hw/lan969x.html">2024.03-1</a>
+    <a class="version" href="../../2023.12/supported-hw/lan969x.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LAN969x</h1>
+<div class="sect1">
+<h2 id="_lan969x_family_overview"><a class="anchor" href="#_lan969x_family_overview"></a>1. LAN969x Family overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The LAN969x product consists of 4 product families:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN969x-XX family with basic switch support</p>
+</li>
+<li>
+<p>LAN969x-XX-VAO family with automotive features added</p>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN9691, LAN9692, LAN9693</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LAN969x-XX-TSN family with industrial features added</p>
+</li>
+<li>
+<p>LAN969x-XX-RED family with redundancy features added</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The XX in the above list is selected from this list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>100 Gbps switch capacity: LAN9698 / LAN9693</p>
+</li>
+<li>
+<p>60 Gbps switch capacity: LAN9696 / LAN9692</p>
+</li>
+<li>
+<p>40 Gbps switch capacity: LAN9694 / LAN9691</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_memory_map"><a class="anchor" href="#_memory_map"></a>2. Memory map</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The table below show the relevant areas of physical memory for the LAN969x.
+Please note that off-chip resources such as flash and DDR, depends on board
+design, so you must also check the schematics.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Name         On-Chip  Start       Max size              Size eval board
+=======      =======  ==========  ====================  ===================
+BOOTROM      Yes      0x00000000  0x00014000 (80KB)     0x00014000 (80KB)
+SRAM         Yes      0x00100000  0x00200000 (2MB)      0x00200000 (2MB)
+QSPI0-NOR    No       0x20000000  0x10000000 (256MB)    0x2000000  (2MB)
+DDR          No       0x60000000  0x80000000 (2048MB)   0x80000000 (2048MB)</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="refboards"><a class="anchor" href="#refboards"></a>3. EVB Overview:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes the different LAN969x Reference Boards.</p>
+</div>
+<div class="sect2">
+<h3 id="_evb_lan9696_24port"><a class="anchor" href="#_evb_lan9696_24port"></a>3.1. EVB-LAN9696-24port</h3>
+<div class="paragraph">
+<p>The EVB-LAN9696-24port is a 24 port evaluation board with 4 x 10GE SFP+ uplinks.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/EVB-LAN9696-24port.png" alt="EVB LAN9696 24port">
+</div>
+</div>
+<div class="paragraph">
+<p>The board features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN9696 66G TSN switch with PRP/HSR redundancy</p>
+</li>
+<li>
+<p>24 x 1000BASE-T ports using 6 x LAN8814 PHYs via Q-USGMII (PCH/MCH)</p>
+</li>
+<li>
+<p>4 x 10G SFP+ ports directly connected to LAN9696</p>
+</li>
+<li>
+<p>1 x 1000BASE-T Network management port using LAN8840 RGMII PHY</p>
+</li>
+<li>
+<p>Internal CPU running Linux/IStaX/SwitchDev/MESA</p>
+</li>
+<li>
+<p>Local management via USB2 serial port</p>
+</li>
+<li>
+<p>USB3343 ULPI USB transceiver for USB host interface</p>
+</li>
+<li>
+<p>Option for external CPU via PCIe cable or SPI</p>
+</li>
+<li>
+<p>Option for MCHP IEEE 802.3bt/UPoE add-on modules (EV14Y36A using PD69208T4,
+PD69210, IEEE 802.3af/at/bt Type 4 standard compliant)</p>
+</li>
+<li>
+<p>ZL80732C (Azurite) Sync-E/PTP clock synchronizer with reference clocks</p>
+</li>
+<li>
+<p>1GB DDR4 x16 RAM.</p>
+</li>
+<li>
+<p>SST26WF016B QSPI NOR boot flash</p>
+</li>
+<li>
+<p>4GB eMMC NAND flash.</p>
+</li>
+<li>
+<p>MCP2200 USB UART (USB powered) – with reset and boot mode control options</p>
+</li>
+<li>
+<p>10-pin 0.05” pitch pin header for JTAG/debug</p>
+</li>
+<li>
+<p>1 x RJ45 for 1000BASE-T local management</p>
+</li>
+<li>
+<p>2x SMA connectors for PTP IN/OUT</p>
+</li>
+<li>
+<p>2x SMA connectors for Station clock in/out</p>
+</li>
+<li>
+<p>2 x RJ45 connectors for RS422 Time interface in/out</p>
+</li>
+<li>
+<p>PCIe 1x cable connector (Oculink)</p>
+</li>
+<li>
+<p>40-pin 0.1” expansion pin header.</p>
+</li>
+<li>
+<p>DIP switch for strapping bits (for recovery mode etc)</p>
+</li>
+<li>
+<p>Reset button</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_evb_lan9698_10port"><a class="anchor" href="#_evb_lan9698_10port"></a>3.2. EVB-LAN9698-10port</h3>
+<div class="paragraph">
+<p>The EVB-LAN9698-10port is a 10 port evaluation board with 10 x 10GE SFP+ uplinks.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/evb-lan9698-10port.png" alt="evb lan9698 10port">
+</div>
+</div>
+<div class="paragraph">
+<p>These are the board features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN9698RED 100G TSN switch with PRP/HSR redundancy</p>
+</li>
+<li>
+<p>10 x SFP+ directly connected to LAN9698</p>
+</li>
+<li>
+<p>1 x 1000BASE-T Network management port using LAN8840 RGMII PHY</p>
+</li>
+<li>
+<p>Internal CPU running Linux/IStaX/SwitchDev/MESA</p>
+</li>
+<li>
+<p>Local management via USB2 serial port</p>
+</li>
+<li>
+<p>USB3343 ULPI USB transceiver for USB host interface</p>
+</li>
+<li>
+<p>Option for external CPU via PCIe cable or SPI</p>
+</li>
+<li>
+<p>ZL80732 (Azurite) Sync-E/PTP clock synchronizer with reference clocks</p>
+</li>
+<li>
+<p>1GB DDR4 x16 RAM.</p>
+</li>
+<li>
+<p>SST26WF016B QSPI NOR boot flash</p>
+</li>
+<li>
+<p>4GB eMMC NAND flash.</p>
+</li>
+<li>
+<p>MCP2200 USB UART (USB powered) – with reset and boot mode control options</p>
+</li>
+<li>
+<p>10-pin 0.05” pitch pin header for JTAG/debug</p>
+</li>
+<li>
+<p>1 x RJ45 for 1000BASE-T local management</p>
+</li>
+<li>
+<p>2x SMA connectors for PTP IN/OUT</p>
+</li>
+<li>
+<p>2x SMA connectors for Station clock in/out</p>
+</li>
+<li>
+<p>2 x RJ45 connectors for RS422 Time interface in/out</p>
+</li>
+<li>
+<p>PCIe 1x cable connector (Oculink)</p>
+</li>
+<li>
+<p>40-pin 0.1” expansion pin header.</p>
+</li>
+<li>
+<p>DIP switch for strapping bits (for recovery mode etc)</p>
+</li>
+<li>
+<p>Reset button</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_evb_lan9692_lm"><a class="anchor" href="#_evb_lan9692_lm"></a>3.3. EVB-LAN9692-LM</h3>
+<div class="paragraph">
+<p>The EVB-LAN9692-LM is 11 port evaluation board with 7 MATEnet connectors and 4
+SFP+.</p>
+</div>
+<div class="paragraph">
+<p>The board is without any DRAM as it is designed with VelocityDrive
+(LMStaX)/Confort management in mind because VelocityDrive will run within
+LAN9692 in its 2MB internal memory.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You cannot run IStaX/Linux on this board.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/evb-lan9692-lm.png" alt="evb lan9692 lm">
+</div>
+</div>
+<div class="paragraph">
+<p>The board features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN9692 (Laguna) 66G TSN switch.</p>
+</li>
+<li>
+<p>4x 10G SFP+ ports directly connected to LAN9692.</p>
+</li>
+<li>
+<p>7x 1000Base-T1 MATEnet ports using LAN8870 PHY.</p>
+</li>
+<li>
+<p>1x 1000BASE-Tx Network management port using LAN8840 RGMII PHY</p>
+</li>
+<li>
+<p>Internal CPU running VelocityDrive SP (LMStaX).</p>
+</li>
+<li>
+<p>Local management via USB-C serial port, when using U-boot and Secure Boot Manager.</p>
+</li>
+<li>
+<p>2x SMA connector for PTP IN/OUT.</p>
+</li>
+<li>
+<p>SST26WF064B QSPI NOR boot Flash, 8MB</p>
+</li>
+<li>
+<p>IS21ES04G-JQLI NAND Flash, eMMC type, 4GB</p>
+</li>
+<li>
+<p>USB-C connector using MCP2200 UART to USB2 for local Management.</p>
+</li>
+<li>
+<p>Oculink PCIe connector for external CPU management.</p>
+</li>
+<li>
+<p>2x5-pin, 0.05” pitch, header for JTAG/Debug.</p>
+</li>
+<li>
+<p>40-pin 0.1” expansion pin header.</p>
+</li>
+<li>
+<p>Reset button</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_board_name_overview"><a class="anchor" href="#_board_name_overview"></a>4. Board Name Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The name used in the device trees is the board order no, as
+this has been created at a very early stage of the project.</p>
+</div>
+<div class="paragraph">
+<p>To allow you to move between the different names that are in use, you can use
+the table found below:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 28.5714%;">
+<col style="width: 42.8572%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Internal Board Name</th>
+<th class="tableblock halign-center valign-top">Board Order No</th>
+<th class="tableblock halign-center valign-top">Board Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">UNG8398</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EV23x71a</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EVB-LAN9696-24port</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">UNG8422</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EV89P81a</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EVB-LAN9698-10port</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">UNG8420</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EV09P11a</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EVB-LAN9692-LM</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

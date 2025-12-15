@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>802.1X Port Security :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2025.12">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="policing.html">Policing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption (deprecated)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption_upstream.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frer.html">FRER</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="cqf.html">CQF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ptp.html">PTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2025.12</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2025.12</a>
+        </li>
+        <li class="version">
+          <a href="../2025.09/index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li><a href="port_security.html">802.1X Port Security</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2025.12</button>
+  <div class="version-menu">
+    <a class="version is-current" href="port_security.html">2025.12</a>
+    <a class="version" href="../2025.09/port_security.html">2025.09</a>
+    <a class="version is-missing" href="../2025.06/index.html">2025.06</a>
+    <a class="version is-missing" href="../2025.06-1/index.html">2025.06-1</a>
+    <a class="version is-missing" href="../2025.03/index.html">2025.03</a>
+    <a class="version is-missing" href="../2024.12/index.html">2024.12</a>
+    <a class="version is-missing" href="../2024.09/index.html">2024.09</a>
+    <a class="version is-missing" href="../2024.06/index.html">2024.06</a>
+    <a class="version is-missing" href="../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">802.1X Port Security</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>802.1X port security provides a framework for controlling access to a switched
+Ethernet network on a per-port basis. Ports can be configured to operate in a
+locked state. If a port is configured this way, all user traffic is blocked
+until authentication completes. Only special 802.1X control messages (EAPOL
+frames) are allowed to reach the authenticator software running on the host.</p>
+</div>
+<div class="paragraph">
+<p>The authenticator validates client credentials using Extensible Authentication
+Protocol (EAP) methods. This can be done locally by hostapd acting as an EAP
+server, or remotely through a RADIUS backend. Once the client is authenticated,
+its MAC address is explicitly installed into the forwarding database (FDB).
+From this point, normal Ethernet traffic for that MAC is permitted. All other
+sources remain blocked, ensuring that only authenticated devices can
+communicate through the switch.</p>
+</div>
+<div class="paragraph">
+<p>By combining hardware enforcement in the driver and dynamic authorization logic
+in user space, 802.1X port security ensures that unauthorized or rogue clients
+cannot send traffic onto the network. It also prevents accidental leaks by
+disabling flooding and learning until authentication has succeeded. This
+provides a strong security boundary at the first hop of the network.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup_overview"><a class="anchor" href="#_setup_overview"></a>Setup Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A setup could consist of three components working together:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Supplicant</strong> (<code>wpa_supplicant</code>) running on the client device.</p>
+</li>
+<li>
+<p><strong>Authenticator</strong> (<code>hostapd</code>) running on the switch. It processes EAPOL frames
+and validates credentials.</p>
+</li>
+<li>
+<p><strong>Switch driver + Linux bridge</strong>, which enforce the locked-port behavior and
+only allow traffic from authorized MAC addresses.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The authenticator uses <strong><code>hostapd_cli</code></strong>, a command-line client for hostapd’s
+control interface, in <strong>action mode</strong> to trigger a helper script. In this mode,
+<code>hostapd_cli</code> stays connected to hostapd and listens for events such as client
+connect, disconnect, or EAP success/failure. When an event occurs, it executes
+the helper script with the event details as arguments. The script then installs
+or removes FDB entries dynamically, ensuring that only authenticated MAC
+addresses are allowed to forward traffic.</p>
+</div>
+<div class="paragraph">
+<p>In the setup described here, hostapd is configured to act as the EAP server,
+validating client credentials directly. An alternative deployment is to have
+hostapd forward EAP requests to an external RADIUS server for authentication.
+This document focuses on the simpler case where hostapd itself provides the EAP
+server functionality.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ascii hljs" data-lang="ascii">+----------------+   +---------------------------------------------------------+
+|  Client host   |   |                      Switch host                        |
+|----------------|   |---------------------------------------------------------|
+|                |   |  +-------------------+      +-------------------------+ |
+|   Supplicant   |   |  |   Authenticator   |      | Switch Driver + Linux   | |
+|(wpa_supplicant)|   |  |    (hostapd)      |      | Bridge                  | |
+|                |   |  |                   |      | (FDB enforcement)       | |
+|                |   |  +-------------------+      +-------------------------+ |
++----------------+   +---------------------------------------------------------+
+         |                       |                           [Locked Port]
+         |   EAPOL frames        |                                 |
+         |----------------------&gt;|                                 |
+         |                       | Authentication decision         |
+         |                       |                                 |
+         |                       | hostapd_cli action script       |
+         |                       | runs "bridge fdb add"           |
+         |                       | (if authenticated)              |
+         |                       |--------------------------------&gt;|
+         |                       |                                 v
+         |                       |               [FDB add → Port Unlocked]
+         |                       |                                 |
+         |   Normal traffic now allowed (MAC authorized)           |
+         |&lt;--------------------------------------------------------|</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_client_supplicant"><a class="anchor" href="#_client_supplicant"></a>Client (Supplicant)</h3>
+<div class="paragraph">
+<p>The client must run a wired supplicant such as <strong>wpa_supplicant</strong>, which is
+responsible for sending 802.1X credentials to the switch. The credentials
+configured in the supplicant must match the EAP configuration defined in the
+authenticator.</p>
+</div>
+<div class="sect3">
+<h4 id="_wpa_supplicant_conf"><a class="anchor" href="#_wpa_supplicant_conf"></a>wpa_supplicant.conf</h4>
+<div class="paragraph">
+<p>Place this file at <code>/etc/wpa_supplicant/wpa_supplicant.conf</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">ctrl_interface=/var/run/wpa_supplicant
+ap_scan=0
+
+network={
+    key_mgmt=IEEE8021X
+    eap=MD5
+    identity="testuser"
+    password="password123"
+    eapol_flags=0
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_platform_authenticator"><a class="anchor" href="#_platform_authenticator"></a>Platform (Authenticator)</h3>
+<div class="paragraph">
+<p>On the switch, a user-space authenticator daemon such as <strong>hostapd</strong> must be
+running. Hostapd terminates EAPOL frames from the client and authenticates the
+credentials. When using the internal EAP server, no external RADIUS server is
+required.</p>
+</div>
+<div class="paragraph">
+<p>Hostapd listens for EAPOL frames, parses the EAP messages, and verifies them
+against its internal user database. When authentication succeeds, it installs
+the client’s MAC into the bridge FDB via a helper script. If authentication
+fails, the port remains locked.</p>
+</div>
+<div class="sect3">
+<h4 id="_hostapd_conf_internal_eap_server"><a class="anchor" href="#_hostapd_conf_internal_eap_server"></a>hostapd.conf (internal EAP server)</h4>
+<div class="paragraph">
+<p>Place this file at <code>/etc/hostapd/hostapd.conf</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">interface=eth1
+driver=none
+ieee8021x=1
+eapol_version=2
+
+# Enable internal EAP server
+eap_server=1
+
+# Define authentication method
+eap_user_file=/etc/hostapd.eap_user
+
+ctrl_interface=/var/run/hostapd
+logger_syslog=-1
+logger_stdout=1
+logger_stdout_level=2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hostapd_eap_user"><a class="anchor" href="#_hostapd_eap_user"></a>hostapd.eap_user</h4>
+<div class="paragraph">
+<p>Place this file at <code>/etc/hostapd.eap_user</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf"># identity   EAP method
+"testuser"   MD5    "password123"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hostapd_cli_action_script"><a class="anchor" href="#_hostapd_cli_action_script"></a>hostapd_cli Action Script</h4>
+<div class="paragraph">
+<p>To dynamically manage FDB entries based on authentication events, run hostapd
+with <code>hostapd_cli -a</code> pointing to an action script.</p>
+</div>
+<div class="paragraph">
+<p>Place the following script at <code>/usr/local/sbin/hostapd-fdb.sh</code> and make it
+executable (<code>chmod +x /usr/local/sbin/hostapd-fdb.sh</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/usr/bin/env bash
+set -euo pipefail
+
+BRIDGE="${BRIDGE:-br0}"
+VID="${VID:-}"
+LOG_TAG="hostapd-fdb"
+
+IFACE="${1:-}"
+EVENT="${2:-}"
+
+log() { logger -t "$LOG_TAG[$IFACE]" -- "$*"; }
+
+add_fdb() {
+  local mac="$1"
+  if [[ -n "$VID" ]]; then
+    bridge fdb add "$mac" dev "$IFACE" master static vlan "$VID" || true
+  else
+    bridge fdb add "$mac" dev "$IFACE" master static || true
+  fi
+  log "FDB ADD mac=$mac iface=$IFACE bridge=$BRIDGE vlan=${VID:-none}"
+}
+
+del_fdb() {
+  local mac="$1"
+  if [[ -n "$VID" ]]; then
+    bridge fdb del "$mac" dev "$IFACE" master vlan "$VID" || true
+  else
+    bridge fdb del "$mac" dev "$IFACE" master || true
+  fi
+  log "FDB DEL mac=$mac iface=$IFACE bridge=$BRIDGE vlan=${VID:-none}"
+}
+
+extract_mac() {
+  for token in $*; do
+    if [[ "$token" =~ ^([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}$ ]]; then
+      echo "$token"
+      return 0
+    fi
+  done
+  return 1
+}
+
+case "$EVENT" in
+  AP-STA-CONNECTED*|CTRL-EVENT-EAP-SUCCESS*)
+    if mac="$(extract_mac "$EVENT")"; then
+      add_fdb "$mac"
+    else
+      log "No MAC found in connect/success event: $EVENT"
+    fi
+    ;;
+  AP-STA-DISCONNECTED*|CTRL-EVENT-EAP-FAILURE*|CTRL-EVENT-DISCONNECTED*)
+    if mac="$(extract_mac "$EVENT")"; then
+      del_fdb "$mac"
+    else
+      log "No MAC found in disconnect/failure event: $EVENT"
+    fi
+    ;;
+  *)
+    ;;
+esac
+
+exit 0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Run it like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">hostapd_cli -i eth1 -a /usr/local/sbin/hostapd-fdb.sh -B</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_control_interface_hostapd_cli"><a class="anchor" href="#_control_interface_hostapd_cli"></a>Control Interface (hostapd_cli)</h3>
+<div class="paragraph">
+<p><strong>hostapd_cli</strong> is a command-line client that communicates with the hostapd
+control socket. It can be used to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Query station state and status information.</p>
+</li>
+<li>
+<p>Subscribe to events such as client connection, disconnection, or EAP
+success/failure.</p>
+</li>
+<li>
+<p>Run in <strong>action mode</strong> (<code>hostapd_cli -a &lt;script&gt;</code>) where it automatically
+executes a script when events occur.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the port security setup, <code>hostapd_cli</code> is primarily used in action mode
+together with an event script to add or remove FDB entries dynamically based on
+authentication state.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_lock_a_port"><a class="anchor" href="#_lock_a_port"></a>Lock a Port</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">bridge link set dev eth1 locked on</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_authorize_a_mac"><a class="anchor" href="#_authorize_a_mac"></a>Authorize a MAC</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">bridge fdb add 00:11:22:33:44:55 dev eth1 master static</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_remove_authorization"><a class="anchor" href="#_remove_authorization"></a>Remove Authorization</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">bridge fdb del 00:11:22:33:44:55 dev eth1 master</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_show_vlans_and_mac_table"><a class="anchor" href="#_show_vlans_and_mac_table"></a>Show VLANs and MAC Table</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">bridge vlan show dev eth1
+bridge fdb show dev br0</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run_the_supplicant"><a class="anchor" href="#_run_the_supplicant"></a>Run the Supplicant</h3>
+<div class="paragraph">
+<p>Start <strong>wpa_supplicant</strong> on the client:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo wpa_supplicant -i eth0 -c /etc/wpa_supplicant/wpa_supplicant.conf -d</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here <code>-i</code> specifies the client interface, <code>-c</code> points to the config file, and
+<code>-d</code> enables debug logging.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run_the_authenticator"><a class="anchor" href="#_run_the_authenticator"></a>Run the Authenticator</h3>
+<div class="paragraph">
+<p>Start <strong>hostapd</strong> on the switch:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo hostapd -dd /etc/hostapd/hostapd.conf</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>-dd</code> flag enables extra debug output for troubleshooting authentication.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
