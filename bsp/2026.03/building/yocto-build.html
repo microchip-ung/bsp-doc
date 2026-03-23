@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Building Yocto BSP from Source :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2026.03">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="buildroot-build.html">Buildroot Build</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="yocto-build.html">Yocto Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/peripherals_overview.html">Peripherals Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../dcb_qos.html">DCB QoS Classification</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../policing.html">Policing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../policing_bum_lan9645x.html">BUM Policer (LAN9645X)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption (deprecated)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption_upstream.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../frer.html">FRER</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../frer_lan966x.html">LAN966x FRER</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../frer_lan9645x.html">LAN9645x FRER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../cqf.html">CQF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ptp.html">PTP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ptp_over_hsr.html">PTP over HSR</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2026.03</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2026.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.12/index.html">2025.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.09/index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li><a href="../getting-started.html">Getting started</a></li>
+    <li><a href="yocto-build.html">Yocto Build</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2026.03</button>
+  <div class="version-menu">
+    <a class="version is-current" href="yocto-build.html">2026.03</a>
+    <a class="version is-missing" href="../../2025.12/index.html">2025.12</a>
+    <a class="version is-missing" href="../../2025.09/index.html">2025.09</a>
+    <a class="version is-missing" href="../../2025.06/index.html">2025.06</a>
+    <a class="version is-missing" href="../../2025.06-1/index.html">2025.06-1</a>
+    <a class="version is-missing" href="../../2025.03/index.html">2025.03</a>
+    <a class="version is-missing" href="../../2024.12/index.html">2024.12</a>
+    <a class="version is-missing" href="../../2024.09/index.html">2024.09</a>
+    <a class="version is-missing" href="../../2024.06/index.html">2024.06</a>
+    <a class="version is-missing" href="../../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Building Yocto BSP from Source</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to build the Microchip BSP from Yocto Project
+sources.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development_environment"><a class="anchor" href="#_development_environment"></a>1. Development environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The development environment must support at least the packages required by the
+Yocto Project: <a href="https://docs.yoctoproject.org/ref-manual/system-requirements.html" class="bare">https://docs.yoctoproject.org/ref-manual/system-requirements.html</a></p>
+</div>
+<div class="paragraph">
+<p>On Ubuntu 20.04 LTS or later, the required packages can be installed like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ sudo apt-get install -y \
+    build-essential \
+    chrpath \
+    cpio \
+    diffstat \
+    file \
+    gawk \
+    git \
+    lz4 \
+    python3 \
+    python3-pip \
+    texinfo \
+    wget \
+    zstd</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An alternative is to use the Docker image provided by Microchip which contains
+Ubuntu 24.04 LTS and all of the necessary packages.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See <a href="#using_docker">Using Docker</a> for
+details on how to configure and use a Docker image.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bsp_structure"><a class="anchor" href="#_bsp_structure"></a>2. BSP structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is the structure used by the Yocto BSP:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./openembedded-core</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core Yocto Project build system and metadata</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./meta-mchp/meta-mchp-ncs/</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main BSP layer containing machine
+configurations, recipes, and classes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./meta-mchp/meta-mchp-ncs/conf/machine/</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine configuration files for
+supported devices</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./meta-mchp/meta-mchp-ncs/recipes-kernel/</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux kernel recipe</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./meta-mchp/meta-mchp-ncs/recipes-bsp/</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bootloader recipes (U-Boot, TFA)</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./meta-mchp/meta-mchp-ncs/recipes-mchp/</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microchip-specific tools and
+utilities</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./meta-mchp/meta-mchp-ncs/recipes-mchp/images/</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image recipes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>./build/tmp/deploy/images/</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build output directory containing generated
+images</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The BSP layer follows the standard Yocto Project layer structure described
+here: <a href="https://docs.yoctoproject.org/dev-manual/layers.html" class="bare">https://docs.yoctoproject.org/dev-manual/layers.html</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supported_machines"><a class="anchor" href="#_supported_machines"></a>3. Supported Machines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Yocto BSP supports the following machines:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>lan966x</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN966x EVBs (ARMv7a Cortex-A8)</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>lan969x</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN969x EVBs (ARMv8a Cortex-A53) - default machine</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>sparx5</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparx5 EVBs (ARMv8a Cortex-A53)</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>rpi4cm</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Raspberry Pi 4 Compute Module with LAN966x/LAN969x daughterboards</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>vsc7514</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VSC7514 (Ocelot) EVBs (MIPS32r2)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_toolchain"><a class="anchor" href="#_toolchain"></a>4. Toolchain</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Yocto BSP builds its own cross-compilation toolchain as part of the standard build process. Unlike Buildroot, there is no need to download and install a separate toolchain - Yocto automatically generates the appropriate toolchain for the target architecture during the build.</p>
+</div>
+<div class="paragraph">
+<p>The toolchain is built into the <code>build/tmp/sysroots-components/</code> directory and is used internally by BitBake to compile all recipes for the target platform.</p>
+</div>
+<div class="sect2">
+<h3 id="_application_development_sdk"><a class="anchor" href="#_application_development_sdk"></a>4.1. Application Development SDK</h3>
+<div class="paragraph">
+<p>Yocto can also generate standalone SDKs (Software Development Kits) that can be installed on development machines for application development outside of the Yocto build environment. The SDK includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cross-compilation toolchain</p>
+</li>
+<li>
+<p>Libraries and headers for the target</p>
+</li>
+<li>
+<p>Development tools and utilities</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Building and using SDKs is beyond the scope of this documentation. For detailed information on generating and using Yocto SDKs, see the official Yocto Project documentation:
+<a href="https://docs.yoctoproject.org/sdk-manual/" class="bare">https://docs.yoctoproject.org/sdk-manual/</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="build"><a class="anchor" href="#build"></a>5. Building</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Yocto BSP uses the standard BitBake build system. The build environment is
+set up using the <code>oe-init-build-env</code> script.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Yocto builds should be done as a non-root user. There is no need to be
+root to configure and build.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_environment_setup"><a class="anchor" href="#_environment_setup"></a>5.1. Environment Setup</h3>
+<div class="paragraph">
+<p>Before building, you must initialize the build environment. Navigate to your
+Yocto build directory (the parent directory containing <code>openembedded-core</code> and
+<code>meta-*</code> layers):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will create a <code>build</code> directory and configure your shell environment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_images"><a class="anchor" href="#_building_images"></a>5.2. Building Images</h3>
+<div class="paragraph">
+<p>The Yocto BSP provides several image targets:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>mchp-standalone-image</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full-featured image with networking tools and
+switch management utilities (recommended)</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>mchp-standalone-dev-image</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developer image with additional profiling and debugging tools</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>mchp-standalone-mini-image</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimal BusyBox-based image</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>mchp-standalone-gpt-image</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPT-partitioned variant for eMMC/SD cards</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>mchp-standalone-dev-gpt-image</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPT-partitioned developer image variant</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><code>mchp-standalone-ubi-image</code></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBI (NAND flash) variant</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For a complete list of supported image targets per machine, their contents, and available build artifacts, see <code>meta-mchp/meta-mchp-ncs/conf/templates/default/conf-notes.txt</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To build the main standalone image (default machine is lan969x):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ bitbake mchp-standalone-image</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To build for a specific machine:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ MACHINE=lan966x bitbake mchp-standalone-image</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also set the machine in <code>build/conf/local.conf</code> to avoid specifying it
+each time:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">MACHINE = "lan966x"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_individual_recipes"><a class="anchor" href="#_building_individual_recipes"></a>5.3. Building Individual Recipes</h3>
+<div class="paragraph">
+<p>To build only the Linux kernel:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ MACHINE=lan966x bitbake linux-mchp</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To build only U-Boot:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ MACHINE=sparx5 bitbake u-boot-mchp</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cleaning_and_rebuilding"><a class="anchor" href="#_cleaning_and_rebuilding"></a>5.4. Cleaning and Rebuilding</h3>
+<div class="paragraph">
+<p>To clean and rebuild a specific recipe:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ bitbake &lt;recipe-name&gt; -c cleansstate
+$ bitbake &lt;recipe-name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To force a rebuild after making changes to a recipe:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ bitbake &lt;recipe-name&gt; -c compile -f
+$ bitbake &lt;recipe-name&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_build_output"><a class="anchor" href="#_build_output"></a>5.5. Build Output</h3>
+<div class="paragraph">
+<p>The build output is located in <code>build/tmp/deploy/images/</code> followed by the
+machine name. This directory contains:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>FIT images (kernel + device trees + initramfs)</p>
+</li>
+<li>
+<p>Root filesystem images (ext4, ubi, etc.)</p>
+</li>
+<li>
+<p>Bootloader binaries</p>
+</li>
+<li>
+<p>Firmware packages</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="artifacts"><a class="anchor" href="#artifacts"></a>6. Artifacts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following table shows which build targets are supported for each machine:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Machine</th>
+<th class="tableblock halign-left valign-top">Supported Targets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan969x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-image<br>
+mchp-standalone-dev-image<br>
+mchp-standalone-gpt-image<br>
+mchp-standalone-dev-gpt-image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lan966x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-image<br>
+mchp-standalone-dev-image<br>
+mchp-standalone-gpt-image<br>
+mchp-standalone-dev-gpt-image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sparx5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-image<br>
+mchp-standalone-dev-image<br>
+mchp-standalone-gpt-image<br>
+mchp-standalone-dev-gpt-image<br>
+mchp-standalone-ubi-image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rpi4cm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-image<br>
+mchp-standalone-dev-image<br>
+mchp-standalone-gpt-image<br>
+mchp-standalone-dev-gpt-image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vsc7514</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-mini-image</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For detailed information about image contents and complete artifact listings, see <code>meta-mchp/meta-mchp-ncs/conf/templates/default/conf-notes.txt</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After the build completes, the following artifacts are available in
+<code>build/tmp-mchp-glibc/deploy/images/&lt;machine&gt;</code>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Artifact Type</th>
+<th class="tableblock halign-left valign-top">File Name</th>
+<th class="tableblock halign-left valign-top">Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FIT Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fitImage-&lt;machine&gt;.bin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bare FIT Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image.itb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FIP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fip.bin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN969x, LAN966x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SquashFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-image-&lt;machine&gt;.rootfs.squashfs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ext4 Disk Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-gpt-image-&lt;machine&gt;.rootfs.ext4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All except VSC7514</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPT Disk Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-gpt-image-&lt;machine&gt;.rootfs.gpt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All except VSC7514</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBI Disk Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mchp-standalone-ubi-image-&lt;machine&gt;.rootfs.ubifs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparx5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U-Boot Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">u-boot-&lt;machine&gt;.bin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U-Boot Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">u-boot-&lt;machine&gt;.bin-emmc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparx5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U-Boot Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">u-boot-&lt;machine&gt;.bin-nand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparx5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U-Boot Env</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">u-boot-mchp-initial-env-&lt;machine&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U-Boot Env</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">u-boot-mchp-initial-env-&lt;machine&gt;-emmc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparx5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U-Boot Env</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">u-boot-mchp-initial-env-&lt;machine&gt;-nand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparx5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DT Overlays</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">overlays/*.dtbo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN969x, LAN966x</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Not all combinations of machine and target produce the same set of
+artifacts.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="selecting_artifacts"><a class="anchor" href="#selecting_artifacts"></a>7. Selecting artifacts to build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Yocto BSP uses custom FIT (Flattened Image Tree) images that bundle the
+kernel with multiple device tree binaries (DTBs) for different board variants.</p>
+</div>
+<div class="paragraph">
+<p>The artifact <a href="../getting-started.html#terms" class="xref page">ITB-Rootfs</a> is built by default
+for most images.</p>
+</div>
+<div class="paragraph">
+<p>The FIT image format is implemented in the <code>ncs-kernel-fitimage.bbclass</code> class
+and allows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Single kernel image containing multiple device tree binaries (DTBs)</p>
+</li>
+<li>
+<p>Boot configurations for different board variants</p>
+</li>
+<li>
+<p>Embedded initramfs</p>
+</li>
+<li>
+<p>Optional RSA2048 signing for secure boot</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Machine configurations define which DTBs to include via the <code>KERNEL_DEVICETREE</code>
+and <code>KERNEL_DEVICETREE_BUNDLE</code> variables.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing_the_build"><a class="anchor" href="#_changing_the_build"></a>8. Changing the build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The next sections explain how you can change the build or its content.</p>
+</div>
+<div class="sect2">
+<h3 id="_adding_new_packages"><a class="anchor" href="#_adding_new_packages"></a>8.1. Adding new packages</h3>
+<div class="paragraph">
+<p>To add a new package to the Yocto BSP, you can either:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use an existing recipe from OpenEmbedded layers</p>
+</li>
+<li>
+<p>Create a new recipe in the BSP layer</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For creating new recipes, follow the Yocto Project documentation:
+<a href="https://docs.yoctoproject.org/dev-manual/new-recipe.html" class="bare">https://docs.yoctoproject.org/dev-manual/new-recipe.html</a></p>
+</div>
+<div class="paragraph">
+<p>To add a package to an image, edit the image recipe in
+<code>meta-mchp-ncs/recipes-mchp/images/</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">IMAGE_INSTALL:append = " &lt;package-name&gt;"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For machine-specific additions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">IMAGE_INSTALL:append:lan966x = " otp pmac"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modifying_the_kernel"><a class="anchor" href="#_modifying_the_kernel"></a>8.2. Modifying the kernel</h3>
+<div class="paragraph">
+<p>The kernel uses <code>KCONFIG_MODE = "alldefconfig"</code> with machine-specific
+defconfigs.</p>
+</div>
+<div class="paragraph">
+<p>To modify the kernel configuration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Run the kernel menuconfig:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ MACHINE=lan966x bitbake linux-mchp -c menuconfig</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Make your changes and save</p>
+</li>
+<li>
+<p>Create a configuration fragment:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ bitbake linux-mchp -c diffconfig</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add the fragment to your kernel recipe or layer</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can create a configuration fragment file and add it to the
+kernel recipe&#8217;s <code>SRC_URI</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">SRC_URI:append = " file://my-kernel-config.cfg"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modifying_device_trees"><a class="anchor" href="#_modifying_device_trees"></a>8.3. Modifying device trees</h3>
+<div class="paragraph">
+<p>Device tree source files are built as part of the kernel. To modify device
+trees:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The device tree sources are located in the kernel source tree</p>
+</li>
+<li>
+<p>Make your changes to the <code>.dts</code> or <code>.dtsi</code> files</p>
+</li>
+<li>
+<p>Rebuild the kernel:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ bitbake linux-mchp -c compile -f
+$ bitbake linux-mchp</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To add or remove device trees from the build, modify the <code>KERNEL_DEVICETREE</code>
+variable in the machine configuration file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">KERNEL_DEVICETREE = " \
+    microchip/lan966x_evb.dtb \
+    microchip/lan966x_evb_aqr.dtb \
+"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multi_machine_recipe_pattern"><a class="anchor" href="#_multi_machine_recipe_pattern"></a>8.4. Multi-Machine Recipe Pattern</h3>
+<div class="paragraph">
+<p>Some recipes like <code>symreg.bb</code> build machine-specific variants from the same
+source using <code>EXTRA_OECMAKE</code> flags:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">EXTRA_OECMAKE:sparx5 = "-DBUILD_SPARX5=ON"
+EXTRA_OECMAKE:lan966x = "-DBUILD_LAN966X=ON -DBUILD_LAN9645X=ON"
+EXTRA_OECMAKE:lan969x = "-DBUILD_LAN969X=ON"
+EXTRA_OECMAKE:rpi4cm = "-DBUILD_LAN966X=ON -DBUILD_LAN969X=ON"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The recipe builds machine-specific binaries and creates a symlink:
+<code>symreg -&gt; symreg_${MACHINE}</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_a_new_machine"><a class="anchor" href="#_adding_a_new_machine"></a>8.5. Adding a New Machine</h3>
+<div class="paragraph">
+<p>To add a new machine to the Yocto BSP:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a machine configuration file in
+<code>meta-mchp-ncs/conf/machine/&lt;machine-name&gt;.conf</code></p>
+</li>
+<li>
+<p>Define the required variables:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">SOC_FAMILY = "microchip"
+MACHINEOVERRIDES =. "microchip:"
+DEFAULTTUNE = "cortexa8thf-neon"
+SERIAL_CONSOLES = "115200;ttyS0"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the kernel provider:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">PREFERRED_PROVIDER_virtual/kernel = "linux-mchp"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>List device trees:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">KERNEL_DEVICETREE = " \
+    microchip/my-board.dtb \
+"
+
+KERNEL_DEVICETREE_BUNDLE = " \
+    microchip/my-board.dtb:my-board \
+"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add the machine to <code>COMPATIBLE_MACHINE</code> in relevant recipes (linux-mchp,
+u-boot-mchp, etc.)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using_docker"><a class="anchor" href="#using_docker"></a>9. Using Docker</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Yocto BSP can be built using a Docker image provided by Microchip which
+contains Ubuntu 24.04 LTS and all necessary build packages.</p>
+</div>
+<div class="paragraph">
+<p>You can avoid installing all build dependencies by using the <code>dr</code> helper
+script: <a href="https://github.com/microchip-ung/docker-run" class="bare">https://github.com/microchip-ung/docker-run</a></p>
+</div>
+<div class="paragraph">
+<p>Clone the repo and copy the <code>dr</code> script into a folder that is within your path,
+e.g. /usr/local/bin:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ git clone https://github.com/microchip-ung/docker-run
+$ cd ./docker-run
+$ sudo cp dr /usr/local/bin/dr
+$ sudo chmod a+x /usr/local/bin/dr</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_docker_configuration"><a class="anchor" href="#_docker_configuration"></a>9.1. Docker Configuration</h3>
+<div class="paragraph">
+<p>The <code>dr</code> script requires a configuration file, <code>.docker.env</code>, which must be
+present somewhere between the current directory and the root of the file
+system.</p>
+</div>
+<div class="paragraph">
+<p>The <code>.docker.env</code> file must add user and uid in the environment to allow the
+container to run commands as a regular user (not root). Docker containers
+execute as root by default, but Yocto recommends running all commands as a
+regular user.</p>
+</div>
+<div class="paragraph">
+<p>Create a <code>.docker.env</code> file with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf"># Docker image configuration
+MCHP_DOCKER_NAME="microchiptech/yocto-builder"
+MCHP_DOCKER_TAG="latest"
+
+# Mount options - user/uid required for non-root execution
+MCHP_DOCKER_OPTIONS="--tmpfs /tmp:exec -e BLD_USER=$(id -un) -e BLD_UID=$(id -u)"</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>.docker.env</code> file can also map the user home folder into the
+container to access other software repositories stored on the local machine,
+such as the Linux kernel.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You will need to install Docker to use the <code>dr</code> script:
+<a href="https://docs.docker.com/engine/install/" class="bare">https://docs.docker.com/engine/install/</a></p>
+</div>
+<div class="paragraph">
+<p>Using the <code>dr</code> script enables automatic download of the Docker image from a
+container repository.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_with_docker"><a class="anchor" href="#_building_with_docker"></a>9.2. Building with Docker</h3>
+<div class="paragraph">
+<p>Alternative syntax using quotes is recommended to avoid shell interpretation
+issues:</p>
+</div>
+<div class="paragraph">
+<p>To build an image using Docker:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ dr "source openembedded-core/oe-init-build-env; bitbake mchp-standalone-image"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To build for a specific machine (e.g., LAN966x):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ dr "source openembedded-core/oe-init-build-env; MACHINE=lan966x bitbake mchp-standalone-image"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example for Sparx5:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ dr "source openembedded-core/oe-init-build-env; MACHINE=sparx5 bitbake mchp-standalone-image"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_interactive_docker_shell"><a class="anchor" href="#_interactive_docker_shell"></a>9.3. Interactive Docker Shell</h3>
+<div class="paragraph">
+<p>For manual commands and development work, you can start an interactive shell:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ dr bash</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inside the container:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ MACHINE=sparx5 bitbake mchp-standalone-image</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that you are the same user inside the container as outside, and the
+current folder is the same inside and outside the container.</p>
+</div>
+<div class="paragraph">
+<p>Type <code>exit</code> to leave the Docker container.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mounting_additional_directories"><a class="anchor" href="#_mounting_additional_directories"></a>9.4. Mounting Additional Directories</h3>
+<div class="paragraph">
+<p>The default configuration maps volumes to enable access to the current
+directory. If you need to mount other folders in the container (such as local
+source repositories), add them to the <code>MCHP_DOCKER_OPTIONS</code> variable in
+<code>.docker.env</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">MCHP_DOCKER_OPTIONS="--tmpfs /tmp:exec -e BLD_USER=$(id -un) -e BLD_UID=$(id -u) -v /path/to/sources:/path/to/sources"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can access the <code>/path/to/sources</code> folder both inside and outside the
+container.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development_workflow"><a class="anchor" href="#_development_workflow"></a>10. Development Workflow</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_modifying_recipes"><a class="anchor" href="#_modifying_recipes"></a>10.1. Modifying Recipes</h3>
+<div class="paragraph">
+<p>After modifying a recipe, rebuild it with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ bitbake &lt;recipe-name&gt; -c compile -f
+$ bitbake &lt;recipe-name&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_specific_bitbake_tasks"><a class="anchor" href="#_running_specific_bitbake_tasks"></a>10.2. Running Specific BitBake Tasks</h3>
+<div class="paragraph">
+<p>BitBake recipes consist of tasks that can be run individually:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ source openembedded-core/oe-init-build-env
+$ bitbake &lt;recipe-name&gt; -c &lt;task&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Common tasks include:
+* <code>fetch</code> - Download sources
+* <code>unpack</code> - Extract source archives
+* <code>patch</code> - Apply patches
+* <code>configure</code> - Run configuration scripts
+* <code>compile</code> - Build the software
+* <code>install</code> - Install to staging directory
+* <code>deploy</code> - Deploy to the deploy directory</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disabling_bitbake_tasks"><a class="anchor" href="#_disabling_bitbake_tasks"></a>10.3. Disabling BitBake Tasks</h3>
+<div class="paragraph">
+<p>To skip task execution (like <code>do_kernel_configcheck</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">do_&lt;taskname&gt;[noexec] = "1"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Place this <strong>after</strong> <code>inherit</code> statements to override inherited tasks.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_key_components"><a class="anchor" href="#_key_components"></a>11. Key Components</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_linux_kernel"><a class="anchor" href="#_linux_kernel"></a>11.1. Linux Kernel</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Recipe: <code>linux-mchp_6.%.bb</code></p>
+</li>
+<li>
+<p>Location: <code>meta-mchp-ncs/recipes-kernel/linux/</code></p>
+</li>
+<li>
+<p>Uses custom FIT image class for bundled kernel + DTB images</p>
+</li>
+<li>
+<p>Supports multiple device trees per machine</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bootloaders"><a class="anchor" href="#_bootloaders"></a>11.2. Bootloaders</h3>
+<div class="paragraph">
+<p>Three U-Boot versions for different platforms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>u-boot-mchp_v2019.10.bb</code> - VSC7514 (MIPS)</p>
+</li>
+<li>
+<p><code>u-boot-mchp_v2021.04.bb</code> - Raspberry Pi CM4</p>
+</li>
+<li>
+<p><code>u-boot-mchp_v2024.04.bb</code> - LAN966x, LAN969x, Sparx5</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trusted_firmware_arm64_only"><a class="anchor" href="#_trusted_firmware_arm64_only"></a>11.3. Trusted Firmware (ARM64 only)</h3>
+<div class="paragraph">
+<p>For ARM64 platforms (lan966x, lan969x, sparx5), the <code>tfa</code> recipe downloads
+pre-built FIP (Firmware Image Package) from GitHub and patches U-Boot as BL33
+payload.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_switch_management_tools"><a class="anchor" href="#_switch_management_tools"></a>11.4. Switch Management Tools</h3>
+<div class="paragraph">
+<p>The BSP includes various switch management tools:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>vcap</code> - VLAN Capability instance management</p>
+</li>
+<li>
+<p><code>symreg</code> - Register viewer/modifier via UIO (machine-specific builds)</p>
+</li>
+<li>
+<p><code>pmac</code> - PMAC table configuration (lan966x only)</p>
+</li>
+<li>
+<p><code>qos-utils</code> - QoS configuration</p>
+</li>
+<li>
+<p><code>cfm/mrp</code> - Layer 2 redundancy protocols</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_real_time_engine_stack_lan966x_only"><a class="anchor" href="#_real_time_engine_stack_lan966x_only"></a>11.5. Real-Time Engine Stack (lan966x only)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mera</code> - Microchip Ethernet RTE API for LAN9662</p>
+</li>
+<li>
+<p><code>osal</code> - OS abstraction layer</p>
+</li>
+<li>
+<p><code>rtlabs-pnet</code> - Profinet stack (depends on mera + osal)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_distribution_configuration"><a class="anchor" href="#_distribution_configuration"></a>12. Distribution Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>mchp-ncs-linux</code> distribution uses:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Init system</strong>: BusyBox with mdev (not systemd/udev)</p>
+</li>
+<li>
+<p><strong>Device management</strong>: Static <code>/dev</code> (<code>USE_DEVFS=0</code>)</p>
+</li>
+<li>
+<p><strong>Package format</strong>: IPK</p>
+</li>
+<li>
+<p><strong>Minimal DISTRO_FEATURES</strong>: No X11, Wayland, Bluetooth, WiFi - focused on
+embedded networking</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_build_optimization"><a class="anchor" href="#_build_optimization"></a>13. Build Optimization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The BSP includes several optimizations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Shallow Git</strong>: Enabled (<code>BB_GIT_SHALLOW=1</code>) to reduce clone sizes</p>
+</li>
+<li>
+<p><strong>Download mirror</strong>: Microchip Artifactory serves pre-fetched sources</p>
+</li>
+<li>
+<p><strong>Shared state cache</strong>: <code>SSTATE_DIR</code> for faster rebuilds across machines</p>
+</li>
+<li>
+<p><strong>Parallel builds</strong>: Configured via <code>BB_NUMBER_THREADS</code> and <code>PARALLEL_MAKE</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_resources"><a class="anchor" href="#_additional_resources"></a>14. Additional Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Yocto Project Documentation: <a href="https://docs.yoctoproject.org/" class="bare">https://docs.yoctoproject.org/</a></p>
+</li>
+<li>
+<p>BitBake User Manual: <a href="https://docs.yoctoproject.org/bitbake/" class="bare">https://docs.yoctoproject.org/bitbake/</a></p>
+</li>
+<li>
+<p>OpenEmbedded Layer Index: <a href="https://layers.openembedded.org/" class="bare">https://layers.openembedded.org/</a></p>
+</li>
+<li>
+<p>Microchip Docker Build Environment: <a href="https://github.com/microchip-ung/docker-run" class="bare">https://github.com/microchip-ung/docker-run</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

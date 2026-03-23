@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PTP over HSR :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2026.03">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building/buildroot-build.html">Buildroot Build</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building/yocto-build.html">Yocto Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/peripherals_overview.html">Peripherals Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="dcb_qos.html">DCB QoS Classification</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="policing.html">Policing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="policing_bum_lan9645x.html">BUM Policer (LAN9645X)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption (deprecated)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption_upstream.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="frer.html">FRER</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="frer_lan966x.html">LAN966x FRER</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="frer_lan9645x.html">LAN9645x FRER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="cqf.html">CQF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ptp.html">PTP</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="ptp_over_hsr.html">PTP over HSR</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2026.03</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2026.03</a>
+        </li>
+        <li class="version">
+          <a href="../2025.12/index.html">2025.12</a>
+        </li>
+        <li class="version">
+          <a href="../2025.09/index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li><a href="ptp.html">PTP</a></li>
+    <li><a href="ptp_over_hsr.html">PTP over HSR</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2026.03</button>
+  <div class="version-menu">
+    <a class="version is-current" href="ptp_over_hsr.html">2026.03</a>
+    <a class="version is-missing" href="../2025.12/index.html">2025.12</a>
+    <a class="version is-missing" href="../2025.09/index.html">2025.09</a>
+    <a class="version is-missing" href="../2025.06/index.html">2025.06</a>
+    <a class="version is-missing" href="../2025.06-1/index.html">2025.06-1</a>
+    <a class="version is-missing" href="../2025.03/index.html">2025.03</a>
+    <a class="version is-missing" href="../2024.12/index.html">2024.12</a>
+    <a class="version is-missing" href="../2024.09/index.html">2024.09</a>
+    <a class="version is-missing" href="../2024.06/index.html">2024.06</a>
+    <a class="version is-missing" href="../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">PTP over HSR</h1>
+<div id="preamble">
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PTP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Precision Time Protocol (IEEE 1588)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HSR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High-availability Seamless Redundancy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BMCA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best Master Clock Algorithm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transparent Clock</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ordinary Clock</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boundary Clock</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P2P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Peer-to-peer delay mechanism</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LREA/B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link Redundancy Entity A / B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DUT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Under Test</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLAVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Active PTP slave port state</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PASSIVE_SLAVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Passive redundant PTP slave port state</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This document describes support for running Precision Time Protocol (PTP)
+over High-availability Seamless Redundancy (HSR) networks.</p>
+</div>
+<div class="paragraph">
+<p>The implementation enables reliable and deterministic IEEE 1588 operation in
+HSR topologies, ensuring correct clock selection, synchronization, and
+transparent clock behavior in the presence of redundant network paths.</p>
+</div>
+<div class="paragraph">
+<p>PTP over HSR is compliant with IEEE 1588 and aligned with redundancy concepts
+defined in IEC 62439-3.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>1. Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HSR networks provide zero-loss redundancy by transmitting frames over two
+independent paths. When running PTP over HSR, special care is required to avoid
+incorrect clock selection, duplicate processing of messages, or unstable
+synchronization behavior.</p>
+</div>
+<div class="paragraph">
+<p>PTP over HSR addresses these challenges by making PTP operation aware of HSR
+redundancy, while preserving interoperability with non-redundant PTP devices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_key_properties"><a class="anchor" href="#_key_properties"></a>2. Key properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PTP over HSR provides the following properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Deterministic synchronization behavior over redundant paths</p>
+</li>
+<li>
+<p>Robust clock selection in the presence of duplicated PTP information</p>
+</li>
+<li>
+<p>Independent handling of the two HSR legs (LREA and LREB)</p>
+</li>
+<li>
+<p>Fast and stable behavior during link failures or recovery</p>
+</li>
+<li>
+<p>Compatibility with standard IEEE 1588 profiles and message formats</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clock_selection_bmca"><a class="anchor" href="#_clock_selection_bmca"></a>3. Clock selection (BMCA)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In HSR networks, equivalent PTP information may be received over multiple
+redundant paths. PTP over HSR ensures that this does not lead to ambiguous or
+unstable clock selection.</p>
+</div>
+<div class="paragraph">
+<p>Clock selection follows the standard IEEE 1588 BMCA rules, extended with
+redundancy-aware behavior. When two redundant paths present equivalent clock
+datasets, the system deterministically selects the path that provides the best
+synchronization quality.</p>
+</div>
+<div class="paragraph">
+<p>Path quality is evaluated using runtime reception characteristics, allowing
+the system to prefer the path with the most stable and reliable lock while
+continuously monitoring the alternative path.</p>
+</div>
+<div class="paragraph">
+<p>This approach avoids oscillation between redundant paths and ensures
+consistent BMCA decisions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_synchronization_behavior"><a class="anchor" href="#_synchronization_behavior"></a>4. Synchronization behavior</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At any given time, only one HSR leg is used for active synchronization.</p>
+</div>
+<div class="paragraph">
+<p>A leg with fewer missed SYNC messages is considered to provide higher
+synchronization quality, while a leg with an increasing number of missed
+SYNC messages is considered degraded. This information is used as an
+additional criterion during clock selection to deterministically prefer the
+most reliable path and to trigger fast, stable failover when the active leg
+becomes unreliable.</p>
+</div>
+<div class="paragraph">
+<p>The selected leg operates as the active PTP slave and is responsible for
+disciplining the local clock.</p>
+</div>
+<div class="paragraph">
+<p>The non-selected leg enters a dedicated <strong>PASSIVE_SLAVE</strong> state.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>PASSIVE_SLAVE</strong> state has the following properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Does not discipline the clock</p>
+</li>
+<li>
+<p>Does not generate synchronization state</p>
+</li>
+<li>
+<p>Does not influence the current synchronization lock</p>
+</li>
+<li>
+<p>Continues to participate in clock selection decisions</p>
+</li>
+<li>
+<p>Remains immediately available for failover</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This separation ensures stable synchronization while maintaining full
+redundancy awareness.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transparent_clock_support"><a class="anchor" href="#_transparent_clock_support"></a>5. Transparent clock support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PTP over HSR supports transparent clock (TC) operation in HSR networks.</p>
+</div>
+<div class="paragraph">
+<p>PTP messages are forwarded between HSR legs in a redundancy-aware manner,
+preserving correct timing behavior across the network.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supported_features"><a class="anchor" href="#_supported_features"></a>6. Supported features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following table summarizes supported PTP features when running over HSR:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 75%;">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 30%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clock type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delay mechanism</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ordinary Clock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1-step</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Peer-to-peer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ordinary Clock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2-step</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Peer-to-peer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transparent Clock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2-step</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Peer-to-peer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boundary Clock</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration"><a class="anchor" href="#_configuration"></a>7. Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PTP over HSR is enabled by running ptp4l on the HSR interface and enabling
+redundancy support in the configuration file.</p>
+</div>
+<div class="paragraph">
+<p>Example command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ ptp4l -f /tmp/ptp.cfg -i hsr0 -m -l7</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ordinary_clock_oc"><a class="anchor" href="#_ordinary_clock_oc"></a>7.1. Ordinary Clock (OC)</h3>
+<div class="paragraph">
+<p>Example configuration for running ptp4l as an Ordinary Clock over HSR:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">[hsr0]
+redundancy                   1
+delay_mechanism              P2P
+network_transport            L2
+
+[eth0]
+redundancy                   1
+redundancy_master_interface  hsr0
+redundancy_slave_number      1
+
+delay_mechanism              P2P
+network_transport            L2
+fault_reset_interval         0
+
+[eth1]
+redundancy                   1
+redundancy_master_interface  hsr0
+redundancy_slave_number      2
+
+delay_mechanism              P2P
+network_transport            L2
+fault_reset_interval         0</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transparent_clock_tc"><a class="anchor" href="#_transparent_clock_tc"></a>7.2. Transparent Clock (TC)</h3>
+<div class="paragraph">
+<p>Example configuration for running ptp4l as a Transparent Clock over HSR:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-conf hljs" data-lang="conf">[global]
+clock_type                   P2P_TC
+delay_mechanism              P2P
+
+[hsr0]
+redundancy                   1
+delay_mechanism              P2P
+network_transport            L2
+
+[eth0]
+redundancy                   1
+redundancy_master_interface  hsr0
+redundancy_slave_number      1
+
+delay_mechanism              P2P
+network_transport            L2
+fault_reset_interval         0
+
+[eth1]
+redundancy                   1
+redundancy_master_interface  hsr0
+redundancy_slave_number      2
+
+delay_mechanism              P2P
+network_transport            L2
+fault_reset_interval         0</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing"><a class="anchor" href="#_testing"></a>8. Testing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes recommended test setups for validating PTP over HSR
+operation and verifying correct synchronization and redundancy behavior.</p>
+</div>
+<div class="sect2">
+<h3 id="_ordinary_clock_oc_testing"><a class="anchor" href="#_ordinary_clock_oc_testing"></a>8.1. Ordinary Clock (OC) testing</h3>
+<div class="paragraph">
+<p>When testing PTP over HSR in Ordinary Clock mode, a two-device setup is used.</p>
+</div>
+<div class="paragraph">
+<p>Two devices under test (DUTs) are connected in an HSR ring. Each DUT operates as
+an HSR node with two ring ports, forming a closed loop.</p>
+</div>
+<div class="paragraph">
+<p>ASCII topology:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ascii hljs" data-lang="ascii">          (ring link)
+   +-----------------------+
+   |                       |
+   |  LREA           LREA  |
++--+--+                 +--+--+
+| DUT |                 | DUT |
+|  A  |                 |  B  |
++--+--+                 +--+--+
+   |  LREB           LREB  |
+   |                       |
+   +-----------------------+
+          (ring link)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Both DUTs are configured using the <strong>Ordinary Clock (OC)</strong> configuration
+example shown in the Configuration section</p>
+</li>
+<li>
+<p>The same configuration is applied to both DUTs</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Verification:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Verify synchronization by observing <code>ptp4l</code> output and confirming that
+<code>offsetFromMaster</code> converges toward zero and remains stable</p>
+</li>
+<li>
+<p>Observe the PTP port states on each DUT:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>One HSR leg should be in <code>SLAVE</code> state</p>
+</li>
+<li>
+<p>The other HSR leg should be in <code>PASSIVE_SLAVE</code> state</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Unplug the cable corresponding to the <strong><code>SLAVE</code></strong> port and verify that:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>PASSIVE_SLAVE</code> port transitions to <code>SLAVE</code></p>
+</li>
+<li>
+<p>Synchronization remains stable</p>
+</li>
+<li>
+<p><code>offsetFromMaster</code> does not show large transients</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example <code>ptp4l</code> output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">ptp4l[122.522]: eth0 assuming the PASSIVE_SLAVE role
+ptp4l[122.536]: eth1 assuming the SLAVE role
+ptp4l[124.001]: master offset        -12 s2 freq   -3 path delay     198
+ptp4l[125.001]: master offset         -8 s2 freq   -1 path delay     197
+ptp4l[126.001]: master offset         -5 s2 freq    0 path delay     197</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this output, the <code>master offset</code> field corresponds to <code>offsetFromMaster</code>.</p>
+</div>
+<div class="paragraph">
+<p>This validates redundancy-aware synchronization and deterministic failover
+behavior.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transparent_clock_tc_testing"><a class="anchor" href="#_transparent_clock_tc_testing"></a>8.2. Transparent Clock (TC) testing</h3>
+<div class="paragraph">
+<p>When testing PTP over HSR in Transparent Clock mode, a three-device setup is
+used.</p>
+</div>
+<div class="paragraph">
+<p>Two endpoint devices (DUT A and DUT C) are connected through an intermediate
+device (DUT B), which operates as an HSR Transparent Clock.</p>
+</div>
+<div class="paragraph">
+<p>ASCII topology:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ascii hljs" data-lang="ascii">                 (direct link)
+   +--------------------------------------+
+   |                                      |
+   |   LREA                        LREA   |
++--+--+                                +--+--+
+| DUT |                                | DUT |
+|  A  |                                |  C  |
++--+--+                                +--+--+
+   |   LREB      (link via TC)     LREB   |
+   |              +--------+              |
+   +--------------+ DUT B  +--------------+
+            LREA  |  (TC)  |  LREB
+                  +--------+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DUT A and DUT C are configured as Ordinary Clocks using the <strong>OC</strong> configuration
+example shown in the Configuration section</p>
+</li>
+<li>
+<p>DUT B is configured as a Transparent Clock using the <strong>TC</strong> configuration
+example shown in the Configuration section</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Verification:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Verify synchronization by observing <code>ptp4l</code> output on DUT A and DUT C and
+confirming that <code>offsetFromMaster</code> converges toward zero and remains stable</p>
+</li>
+<li>
+<p>Observe the PTP port states on DUT A and DUT C:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>One HSR leg should be in <code>SLAVE</code> state</p>
+</li>
+<li>
+<p>The other HSR leg should be in <code>PASSIVE_SLAVE</code> state</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If the <code>SLAVE</code> port already corresponds to the path flowing through the
+Transparent Clock, no further action is required</p>
+</li>
+<li>
+<p>Otherwise, unplug the cable corresponding to the <strong><code>SLAVE</code></strong> port between the
+end DUTs to enforce that PTP traffic flows through DUT B (TC)</p>
+</li>
+<li>
+<p>After enforcing TC forwarding, verify that:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>PASSIVE_SLAVE</code> port transitions to <code>SLAVE</code></p>
+</li>
+<li>
+<p>Sync remains stable while flowing through the Transparent Clock</p>
+</li>
+<li>
+<p><code>offsetFromMaster</code> remains stable without large transients</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example <code>ptp4l</code> output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">ptp4l[122.522]: eth0 assuming the PASSIVE_SLAVE role
+ptp4l[122.536]: eth1 assuming the SLAVE role
+ptp4l[124.001]: master offset        -12 s2 freq   -3 path delay     198
+ptp4l[125.001]: master offset         -8 s2 freq   -1 path delay     197
+ptp4l[126.001]: master offset         -5 s2 freq    0 path delay     197</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this output, the <code>master offset</code> field corresponds to <code>offsetFromMaster</code>.</p>
+</div>
+<div class="paragraph">
+<p>This validates correct synchronization behavior when PTP traffic is routed
+through an HSR Transparent Clock.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -4,16 +4,29 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.antoraSearch = {}));
 })(this, (function (exports) { 'use strict';
 
+  /**
+   * Splitting the text by the given positions.
+   * The text within the positions getting the type "mark", all other text gets the type "text".
+   * @param {string} text
+   * @param {Object[]} positions
+   * @param {number} positions.start
+   * @param {number} positions.length
+   * @param {number} snippetLength Maximum text length for text in the result.
+   * @returns {[{text: string, type: string}]}
+   */
   function buildHighlightedText (text, positions, snippetLength) {
     const textLength = text.length;
-    const validPositions = positions
-      .filter((position) => position.length > 0 && position.start + position.length <= textLength);
+    const validPositions = positions.filter(
+      (position) => position.length > 0 && position.start + position.length <= textLength
+    );
 
     if (validPositions.length === 0) {
       return [
         {
           type: 'text',
-          text: text.slice(0, snippetLength >= textLength ? textLength : snippetLength) + (snippetLength < textLength ? '...' : ''),
+          text:
+            text.slice(0, snippetLength >= textLength ? textLength : snippetLength) +
+            (snippetLength < textLength ? '...' : ''),
         },
       ]
     }
@@ -40,8 +53,9 @@
       });
     }
     let lastEndPosition = 0;
-    const positionsWithinRange = orderedPositions
-      .filter((position) => position.start >= range.start && position.start + position.length <= range.end);
+    const positionsWithinRange = orderedPositions.filter(
+      (position) => position.start >= range.start && position.start + position.length <= range.end
+    );
 
     for (const position of positionsWithinRange) {
       const start = position.start;
@@ -77,31 +91,22 @@
    * @param term
    * @return {{start: number, length: number}}
    */
-  function findTermPosition (lunr, term, text) {
+  function findTermPosition (term, text) {
     const str = text.toLowerCase();
-    const len = str.length;
+    const index = str.indexOf(term);
 
-    for (let sliceEnd = 0, sliceStart = 0; sliceEnd <= len; sliceEnd++) {
-      const char = str.charAt(sliceEnd);
-      const sliceLength = sliceEnd - sliceStart;
-
-      if ((char.match(lunr.tokenizer.separator) || sliceEnd === len)) {
-        if (sliceLength > 0) {
-          const value = str.slice(sliceStart, sliceEnd);
-          // QUESTION: if we get an exact match without running the pipeline should we stop?
-          if (value.includes(term)) {
-            // returns the first match
-            return {
-              start: sliceStart,
-              length: value.length,
-            }
-          }
+    if (index >= 0) {
+      // extend term until word boundary to return the entire word
+      const boundaries = str.substr(index).match(/^[\p{Alpha}]+/u);
+      if (boundaries !== null && boundaries.length >= 0) {
+        return {
+          start: index,
+          length: boundaries[0].length,
         }
-        sliceStart = sliceEnd + 1;
       }
     }
 
-    // not found!
+    // Not found
     return {
       start: 0,
       length: 0,
@@ -128,29 +133,32 @@
     document.head.appendChild(link);
   }
 
-  function highlightPageTitle (title, terms) {
-    const positions = getTermPosition(title, terms);
-    return buildHighlightedText(title, positions, snippetLength)
-  }
-
   function highlightSectionTitle (sectionTitle, terms) {
     if (sectionTitle) {
-      const text = sectionTitle.text;
+      const text = sectionTitle.title ?? sectionTitle.text;
       const positions = getTermPosition(text, terms);
-      return buildHighlightedText(text, positions, snippetLength)
+      return buildHighlightedText(text, positions)
     }
     return []
   }
 
-  function highlightText (doc, terms) {
-    const text = doc.text;
+  function highlightKeyword (doc, terms) {
+    const keyword = doc.keyword;
+    if (keyword) {
+      const positions = getTermPosition(keyword, terms);
+      return buildHighlightedText(keyword, positions)
+    }
+    return []
+  }
+
+  function highlightText (text, terms, title) {
     const positions = getTermPosition(text, terms);
-    return buildHighlightedText(text, positions, snippetLength)
+    return buildHighlightedText(text, positions, title ? undefined : snippetLength)
   }
 
   function getTermPosition (text, terms) {
     const positions = terms
-      .map((term) => findTermPosition(globalThis.lunr, term, text))
+      .map((term) => findTermPosition(term, text))
       .filter((position) => position.length > 0)
       .sort((p1, p2) => p1.start - p2.start);
 
@@ -169,9 +177,13 @@
       }
     }
     return {
-      pageTitleNodes: highlightPageTitle(doc.title, terms.title || []),
+      pageTitleNodes: highlightText(doc.title, terms.title || [], true),
       sectionTitleNodes: highlightSectionTitle(sectionTitle, terms.title || []),
-      pageContentNodes: highlightText(doc, terms.text || []),
+      pageContentNodes: highlightText(
+        sectionTitle?.title && sectionTitle.text ? sectionTitle.text : doc.text,
+        terms.text || []
+      ),
+      pageKeywordNodes: highlightKeyword(doc, terms.keyword || []),
     }
   }
 
@@ -184,12 +196,12 @@
       let sectionTitle;
       if (ids.length > 1) {
         const titleId = ids[1];
-        sectionTitle = doc.titles.filter(function (item) {
+        sectionTitle = doc.titles.find(function (item) {
           return String(item.id) === titleId
-        })[0];
+        });
       }
       const metadata = item.matchData.metadata;
-      const highlightingResult = highlightHit(metadata, sectionTitle, doc);
+      const highlightingResult = highlightHit(metadata, sectionTitle || doc, doc);
       const componentVersion = store.componentVersions[`${doc.component}/${doc.version}`];
       if (componentVersion !== undefined && currentComponent !== componentVersion) {
         const searchResultComponentHeader = document.createElement('div');
@@ -200,11 +212,11 @@
         searchResultDataset.appendChild(searchResultComponentHeader);
         currentComponent = componentVersion;
       }
-      searchResultDataset.appendChild(createSearchResultItem(doc, sectionTitle, item, highlightingResult));
+      searchResultDataset.appendChild(createSearchResultItem(doc, sectionTitle, highlightingResult));
     });
   }
 
-  function createSearchResultItem (doc, sectionTitle, item, highlightingResult) {
+  function createSearchResultItem (doc, sectionTitle, highlightingResult) {
     const documentTitle = document.createElement('div');
     documentTitle.classList.add('search-result-document-title');
     highlightingResult.pageTitleNodes.forEach(function (node) {
@@ -227,29 +239,24 @@
       const documentSectionTitle = document.createElement('div');
       documentSectionTitle.classList.add('search-result-section-title');
       documentHitLink.appendChild(documentSectionTitle);
-      highlightingResult.sectionTitleNodes.forEach(function (node) {
-        let element;
-        if (node.type === 'text') {
-          element = document.createTextNode(node.text);
-        } else {
-          element = document.createElement('span');
-          element.classList.add('search-result-highlight');
-          element.innerText = node.text;
-        }
-        documentSectionTitle.appendChild(element);
-      });
+      highlightingResult.sectionTitleNodes.forEach(createHighlightedText.bind(null, documentSectionTitle));
     }
-    highlightingResult.pageContentNodes.forEach(function (node) {
-      let element;
-      if (node.type === 'text') {
-        element = document.createTextNode(node.text);
-      } else {
-        element = document.createElement('span');
-        element.classList.add('search-result-highlight');
-        element.innerText = node.text;
-      }
-      documentHitLink.appendChild(element);
-    });
+    highlightingResult.pageContentNodes.forEach(createHighlightedText.bind(null, documentHitLink));
+
+    // only show keyword when we got a hit on them
+    if (doc.keyword && highlightingResult.pageKeywordNodes.length) {
+      const documentKeywords = document.createElement('div');
+      documentKeywords.classList.add('search-result-keywords');
+      const documentKeywordsFieldLabel = document.createElement('span');
+      documentKeywordsFieldLabel.classList.add('search-result-keywords-field-label');
+      documentKeywordsFieldLabel.innerText = 'keywords: ';
+      const documentKeywordsList = document.createElement('span');
+      documentKeywordsList.classList.add('search-result-keywords-list');
+      highlightingResult.pageKeywordNodes.forEach(createHighlightedText.bind(null, documentKeywordsList));
+      documentKeywords.appendChild(documentKeywordsFieldLabel);
+      documentKeywords.appendChild(documentKeywordsList);
+      documentHitLink.appendChild(documentKeywords);
+    }
     const searchResultItem = document.createElement('div');
     searchResultItem.classList.add('search-result-item');
     searchResultItem.appendChild(documentTitle);
@@ -258,6 +265,25 @@
       e.preventDefault();
     });
     return searchResultItem
+  }
+
+  /**
+   * Creates an element from a highlightingResultNode and add it to the targetNode.
+   * @param {Node} targetNode
+   * @param {Object} highlightingResultNode
+   * @param {String} highlightingResultNode.type - type of the node
+   * @param {String} highlightingResultNode.text
+   */
+  function createHighlightedText (targetNode, highlightingResultNode) {
+    let element;
+    if (highlightingResultNode.type === 'text') {
+      element = document.createTextNode(highlightingResultNode.text);
+    } else {
+      element = document.createElement('span');
+      element.classList.add('search-result-highlight');
+      element.innerText = highlightingResultNode.text;
+    }
+    targetNode.appendChild(element);
   }
 
   function createNoResult (text) {
@@ -278,7 +304,7 @@
   }
 
   function filter (result, documents) {
-    const facetFilter = facetFilterInput && facetFilterInput.checked && facetFilterInput.dataset.facetFilter;
+    const facetFilter = facetFilterInput?.checked && facetFilterInput.dataset.facetFilter;
     if (facetFilter) {
       const [field, value] = facetFilter.split(':');
       return result.filter((item) => {
@@ -404,11 +430,9 @@
     }
   }
 
-  function toggleFilter (e, index) {
+  function toggleFilter (_e, index) {
     searchInput.focus();
-    if (!isClosed()) {
-      executeSearch(index);
-    }
+    if (!isClosed()) executeSearch(index);
   }
 
   function initSearch (lunr, data) {
