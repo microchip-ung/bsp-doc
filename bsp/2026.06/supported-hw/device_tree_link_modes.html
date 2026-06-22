@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Device Tree Link Mode Configuration for Microchip Switch SoCs :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2026.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building/buildroot-build.html">Buildroot Build</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building/yocto-build.html">Yocto Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="peripherals_overview.html">Peripherals Overview</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="device_tree_link_modes.html">Device Tree Link Modes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="otp-fields.html">Common OTP fields</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../dcb_qos.html">DCB QoS Classification</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../policing.html">Policing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../policing_bum_lan9645x.html">BUM Policer (LAN9645X)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption (deprecated)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption_upstream.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../frer.html">FRER</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../frer_lan966x.html">LAN966x FRER</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../frer_lan9645x.html">LAN9645x FRER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../cqf.html">CQF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ptp.html">PTP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ptp_over_hsr.html">PTP over HSR</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2026.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2026.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2026.03/index.html">2026.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.12/index.html">2025.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.09/index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li>Supported HW</li>
+    <li><a href="device_tree_link_modes.html">Device Tree Link Modes</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2026.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="device_tree_link_modes.html">2026.06</a>
+    <a class="version is-missing" href="../../2026.03/index.html">2026.03</a>
+    <a class="version is-missing" href="../../2025.12/index.html">2025.12</a>
+    <a class="version is-missing" href="../../2025.09/index.html">2025.09</a>
+    <a class="version is-missing" href="../../2025.06/index.html">2025.06</a>
+    <a class="version is-missing" href="../../2025.06-1/index.html">2025.06-1</a>
+    <a class="version is-missing" href="../../2025.03/index.html">2025.03</a>
+    <a class="version is-missing" href="../../2024.12/index.html">2024.12</a>
+    <a class="version is-missing" href="../../2024.09/index.html">2024.09</a>
+    <a class="version is-missing" href="../../2024.06/index.html">2024.06</a>
+    <a class="version is-missing" href="../../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Device Tree Link Mode Configuration for Microchip Switch SoCs</h1>
+<div class="sect1">
+<h2 id="_scope"><a class="anchor" href="#_scope"></a>1. Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page describes how to bring up Ethernet and SerDes links on Microchip
+switch SoCs from device tree, on both the Linux and the U-Boot (mscc-muboot)
+sides. It covers these devices:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sparx5 (VSC7558 family)</p>
+</li>
+<li>
+<p>LAN969x (LAN9692/LAN9694/LAN9696/LAN9698)</p>
+</li>
+<li>
+<p>LAN966x (LAN9662/LAN9668)</p>
+</li>
+<li>
+<p>LAN9645x (KSZ9897/KSZ9567 class DSA)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The page focuses on cases the existing BSP doc does not currently cover:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Backplane-style links (1000BASE-KX, 10GBASE-KR).</p>
+</li>
+<li>
+<p>MAC-to-MAC SerDes links with no external PHY and no SFP.</p>
+</li>
+<li>
+<p>Fixed-speed links without autonegotiation.</p>
+</li>
+<li>
+<p>Links with Clause 37 (1000BASE-X) or SGMII in-band autonegotiation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The standard copper-PHY case (MDIO plus RGMII or SGMII to a Microchip VSC8221
+or VSC8574) is already documented in the BSP doc, and this page reproduces it
+only as a reference point for the other examples.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_background_linux_phy_mode_strings_and_what_they_mean"><a class="anchor" href="#_background_linux_phy_mode_strings_and_what_they_mean"></a>2. Background: Linux phy-mode strings and what they mean</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Linux phy-mode property identifies the PCS between the MAC and the next
+physical block. It does NOT identify the medium. In particular:</p>
+</div>
+<div class="sect2">
+<h3 id="_direct_serdes_links_sfp_backplane_mac_to_mac"><a class="anchor" href="#_direct_serdes_links_sfp_backplane_mac_to_mac"></a>2.1. Direct SerDes links (SFP, backplane, MAC-to-MAC)</h3>
+<div class="paragraph">
+<p>For these the <code>phy-mode</code> is the PCS the switch MAC itself runs.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 14.2857%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Scenario</th>
+<th class="tableblock halign-left valign-top">Linux <code>phy-mode</code></th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000BASE-X over optical SFP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1000base-x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Gbit/s serial over optical fibre in an SFP cage; in-band PCS autonegotiation at link bring-up</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000BASE-KX over backplane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1000base-x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Gbit/s serial over an AC-coupled backplane trace; same PCS as 1000BASE-X, different medium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5GBASE-X / 2.5GBASE-KX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2500base-x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rate-scaled 1000BASE-X at 3.125 Gbit/s line rate (effective 2.5 Gbit/s); no PCS aneg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5GBASE-R / 5GBASE-KR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rate-scaled 10GBASE-R at 5.15625 Gbit/s; no PCS aneg; typical for short backplane / DAC use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GBASE-R over optical SFP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 Gbit/s serial over optical SFP+ or DAC twinax (10GBASE-CR is the same mode electrically)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GBASE-KR over backplane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 Gbit/s serial over AC-coupled backplane; optional link training and backplane autoneg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25GBASE-R / 25GBASE-KR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>25gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25 Gbit/s serial over SFP28, DAC, or backplane; optional backplane autoneg; Sparx5 only</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The -KX and -KR suffixes only describe the medium (AC-coupled backplane); they
+do not appear in mainline Linux phy-mode strings.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phy_mediated_links_base_t_copper"><a class="anchor" href="#_phy_mediated_links_base_t_copper"></a>2.2. PHY-mediated links (BASE-T copper)</h3>
+<div class="paragraph">
+<p>A BASE-T link uses an external Cu PHY; the wire-side PCS lives inside that
+PHY. The DT <code>phy-mode</code> therefore describes the MAC-to-PHY SerDes interface,
+not the wire-side PCS. The Microchip driver supports the following MAC-side
+interfaces toward a BASE-T PHY:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Scenario</th>
+<th class="tableblock halign-left valign-top">Linux <code>phy-mode</code></th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000BASE-T, single port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sgmii</code>, <code>rgmii{,-id,-rxid,-txid}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One 1 Gbit/s port to a single Cu PHY (e.g. VSC8221) over SGMII or RGMII</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000BASE-T, quad PHY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>qsgmii</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Four 1 Gbit/s Cu PHY channels muxed over one SerDes lane toward a quad PHY (VSC8574)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5GBASE-T, single port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2500base-x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One 2.5 Gbit/s port to a multigig Cu PHY over rate-scaled BASE-X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5GBASE-T, quad PHY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10g-qxgmii</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Four 2.5 Gbit/s multigig Cu PHY channels muxed over one 10G SerDes lane</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5GBASE-T, single port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One 5 Gbit/s port to a multigig Cu PHY over rate-scaled BASE-R</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GBASE-T, single port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One 10 Gbit/s port to a 10G Cu PHY over BASE-R</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>At the time of writing, Microchip does not offer multigig (2.5G, 5G, or 10G)
+copper PHYs in-house, so boards that need the lower four rows above pair a
+Microchip switch with a third-party PHY. The corresponding MAC-side modes are
+supported by the driver and usable with any PHY that speaks the right host
+interface.</p>
+</div>
+<div class="paragraph">
+<p>The PHY runs Clause 28 autonegotiation (or its multigig extensions) toward
+the cable partner and reports the resolved state in-band to the MAC. The DT
+side uses <code>phy-handle = &lt;&amp;phyX&gt;</code> to reach the PHY on MDIO and, for SGMII /
+QSGMII / 10G-QXGMII, <code>managed = "in-band-status"</code> so the MAC tracks the PHY&#8217;s
+in-band status updates. See Example A for SGMII, Example E for QSGMII, and
+Example F for 10G-QXGMII.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mdio_management_clauses_clause_22_and_clause_45"><a class="anchor" href="#_mdio_management_clauses_clause_22_and_clause_45"></a>2.3. MDIO management clauses (Clause 22 and Clause 45)</h3>
+<div class="paragraph">
+<p>Two IEEE 802.3 clauses often come up in this area but describe MDIO bus
+transactions, not link operation, and therefore do not drive the DT link-mode
+choice:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 44.4444%;">
+<col style="width: 44.4445%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Clause</th>
+<th class="tableblock halign-left valign-top">Role</th>
+<th class="tableblock halign-left valign-top">Where it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Legacy MDIO with 5-bit register addresses and direct register access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microchip 1G Cu PHYs (VSC8221, VSC8574)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MDIO MMD with two-stage access, 16-bit register addresses, device IDs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SFP+ / SFP28 modules and anything that needs &gt; 32 regs</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>These clauses describe how the kernel talks to the PHY on the MDIO bus, not
+how the MAC-PHY link comes up. <code>phylib</code> selects the right clause from the
+PHY&#8217;s <code>compatible</code> string, so the DT rarely has to say anything about it.
+When the MDIO controller defaults to Clause 22 and the PHY needs Clause 45, a
+<code>use-mdio-c45</code> property on the MDIO bus node switches the default.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_property_summary"><a class="anchor" href="#_property_summary"></a>2.4. Property summary</h3>
+<div class="paragraph">
+<p>The DT expresses the backplane-vs-optical distinction, the
+fixed-vs-autoneg distinction, and the PHY-vs-SerDes distinction through a
+small set of link-management properties. The next subsection lists them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_link_management_properties"><a class="anchor" href="#_link_management_properties"></a>2.5. Link management properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>managed = "in-band-status"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PCS autonegotiation is active (Clause 37 for 1000BASE-X, SGMII in-band for SGMII).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>managed = "auto"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default. phylink picks based on other properties. Use only if behaviour is clearly safe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fixed-link</code> subnode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No aneg. DT asserts speed / duplex / pause. Typical for MAC-to-MAC and backplane-no-aneg.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>phy-handle = &lt;&amp;phyN&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External PHY on MDIO does the aneg; the MAC runs a fixed SerDes mode toward the PHY.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sfp = &lt;&amp;sfpN&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SFP cage. phylink reacts to insertion/removal and to SFP module EEPROM.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_phys_property_sparx5_lan969x"><a class="anchor" href="#_the_phys_property_sparx5_lan969x"></a>2.6. The <code>phys</code> property (Sparx5 / LAN969x)</h3>
+<div class="paragraph">
+<p>On Sparx5 and LAN969x each MAC port binds to a specific SerDes lane via the
+<code>phys</code> property, pointing at the <code>serdes</code> phandle with a lane index:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">phys = &lt;&amp;serdes 13&gt;;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The lane index has hard capability limits (next section). The Microchip
+SerDes driver rejects a lane bind if the requested phy-mode exceeds the
+lane&#8217;s maximum rate.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_serdes_lane_capabilities"><a class="anchor" href="#_serdes_lane_capabilities"></a>3. SerDes lane capabilities</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sparx5"><a class="anchor" href="#_sparx5"></a>3.1. Sparx5</h3>
+<div class="paragraph">
+<p>The SerDes driver declares three lane classes at lines 24-25 of
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/phy/microchip/sparx5_serdes.c">sparx5_serdes.c</a>,
+with maximum rates and supported modes as shown below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0002%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Lane range</th>
+<th class="tableblock halign-left valign-top">SerDes type</th>
+<th class="tableblock halign-left valign-top">Max rate</th>
+<th class="tableblock halign-left valign-top">Modes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 Gbit/s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SGMII, QSGMII, 1000BASE-X, 2500BASE-X, 5GBASE-R</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 Gbit/s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">above + 10GBASE-R, 10G-QXGMII</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25 Gbit/s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">above + 25GBASE-R</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_lan969x"><a class="anchor" href="#_lan969x"></a>3.2. LAN969x</h3>
+<div class="paragraph">
+<p>LAN969x provides only 10G-class SerDes lanes; it has no 25G lanes. Each lane
+supports the same mode set as a Sparx5 10G lane, with a maximum of 10 Gbit/s
+per lane.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lan966x"><a class="anchor" href="#_lan966x"></a>3.3. LAN966x</h3>
+<div class="paragraph">
+<p>LAN966x has no KR-class rates. The driver accepts the following phy-mode
+strings (see lines 917-931 of
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/net/ethernet/microchip/lan966x/lan966x_main.c">lan966x_main.c</a>):
+MII, RMII, GMII, SGMII, QSGMII, QUSGMII, 1000BASE-X, and 2500BASE-X. For this
+page that puts LAN966x out of scope for KR work, but in scope for
+1000BASE-X/KX links and MAC-to-MAC 2.5G-X links.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lan9645x"><a class="anchor" href="#_lan9645x"></a>3.4. LAN9645x</h3>
+<div class="paragraph">
+<p>LAN9645x is a DSA switch that attaches to a host MAC, typically the LAN966x
+SoC. Its DT structure differs from the other SoCs in several ways, which the
+LAN9645x section below documents. The driver reports the following per-port
+phylink capabilities in
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/net/dsa/microchip/lan9645x/lan9645x_phylink.c">lan9645x_phylink.c</a>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Port</th>
+<th class="tableblock halign-left valign-top">Capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal Cu PHY, GMII only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal Cu PHY (GMII) or external RGMII (shadow-port)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5-6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SerDes: QSGMII / 1000BASE-X / 2500BASE-X / SGMII</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU / uplink: QSGMII or RGMII{,_RXID,_TXID,_ID}</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The MACs support 10, 100, 1000FD, and 2500FD rates. LAN9645x has no 5G, 10G,
+or 25G MACs, and therefore no KR support.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linux_device_tree_examples"><a class="anchor" href="#_linux_device_tree_examples"></a>4. Linux device tree examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Port nodes in the examples below live under the switch&#8217;s <code>ethernet-ports</code>
+child node, which is typically filled out in a board DTSI via an <code>&amp;switch</code>
+overlay. Lane indices are schematic-specific.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisite_nodes_defined_once_at_socboard_level"><a class="anchor" href="#_prerequisite_nodes_defined_once_at_socboard_level"></a>4.1. Prerequisite nodes (defined once at SoC/board level)</h3>
+<div class="paragraph">
+<p>These are the nodes the examples reference via phandle. They are already
+present in the SoC <code>.dtsi</code> (e.g.
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm64/boot/dts/microchip/sparx5.dtsi">sparx5.dtsi</a>)
+and shown here so the example snippets are unambiguous.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">/* SoC-level: serdes and at least one MDIO controller and the switch.
+ * Provided by sparx5.dtsi / lan969x.dtsi - reproduced here for reference.
+ */
+axi: axi@600000000 {
+    serdes: serdes@610808000 {
+        compatible = "microchip,sparx5-serdes";
+        #phy-cells = &lt;1&gt;;
+        clocks = &lt;&amp;sys_clk&gt;;
+        reg = &lt;0x6 0x10808000 0x5d0000&gt;;
+    };
+
+    mdio3: mdio@61101031c {
+        #address-cells = &lt;1&gt;;
+        #size-cells = &lt;0&gt;;
+        compatible = "mscc,ocelot-miim";
+        reg = &lt;0x6 0x1101031c 0x24&gt;;
+        status = "disabled";           /* enable in board DTSI */
+    };
+
+    switch: switch@600000000 {
+        compatible = "microchip,sparx5-switch";
+        /* ... reg, interrupts, clocks etc. ... */
+
+        ethernet-ports {
+            #address-cells = &lt;1&gt;;
+            #size-cells = &lt;0&gt;;
+            /* port@N nodes appended by board DTSI via &amp;switch overlay */
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples below use the <code>&amp;switch</code> / <code>&amp;mdio3</code> overlay style.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_a_external_cu_phy_via_mdio_baseline"><a class="anchor" href="#_example_a_external_cu_phy_via_mdio_baseline"></a>4.2. Example A: external Cu PHY via MDIO (baseline)</h3>
+<div class="paragraph">
+<p>This is an example of a single-port 1 Gbit/s Cu PHY setup (VSC8221). The PHY
+runs Clause 28 autonegotiation toward the cable partner over MDIO, and the
+MAC runs SGMII toward the PHY. The PHY reports the resolved link state
+in-band to the MAC, so the DT does not need <code>managed = "in-band-status"</code>: the
+<code>phy-handle</code> is sufficient.</p>
+</div>
+<div class="paragraph">
+<p>Source: the snippet below is the minimal form of the example used on
+Microchip reference boards with a VSC8221-class PHY.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;mdio3 {
+    status = "okay";
+
+    phy10: ethernet-phy@1 {
+        reg = &lt;1&gt;;
+    };
+};
+
+&amp;switch {
+    ethernet-ports {
+        port10: port@10 {
+            reg = &lt;10&gt;;
+            microchip,bandwidth = &lt;1000&gt;;
+            phys = &lt;&amp;serdes 11&gt;;
+            phy-mode = "sgmii";
+            phy-handle = &lt;&amp;phy10&gt;;
+        };
+    };
+};</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_b_1000base_x_over_optical_or_copper_sfp"><a class="anchor" href="#_example_b_1000base_x_over_optical_or_copper_sfp"></a>4.3. Example B: 1000BASE-X over optical or copper SFP</h3>
+<div class="paragraph">
+<p>The switch MAC drives the SerDes in 1000BASE-X mode and attaches to an SFP
+cage. The switch PCS performs Clause 37 autonegotiation against the SFP
+module&#8217;s own PCS at link bring-up. phylink reacts to SFP insert and remove
+events on the cage.</p>
+</div>
+<div class="paragraph">
+<p>The SFP cage node describes the board-level wiring (I2C bus for the EEPROM,
+GPIOs for los / mod-def0 / tx-disable / tx-fault).</p>
+</div>
+<div class="paragraph">
+<p>Source:
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm64/boot/dts/microchip/sparx5_pcb134_board.dtsi">sparx5_pcb134_board.dtsi</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">/ {
+    sfp_eth12: sfp-eth12 {
+        compatible = "sff,sfp";
+        i2c-bus          = &lt;&amp;i2c_sfp1&gt;;
+        los-gpios        = &lt;&amp;sgpio_in2  11 1 GPIO_ACTIVE_HIGH&gt;;
+        mod-def0-gpios   = &lt;&amp;sgpio_in2  11 2 GPIO_ACTIVE_LOW&gt;;
+        tx-disable-gpios = &lt;&amp;sgpio_out2 11 1 GPIO_ACTIVE_LOW&gt;;
+        tx-fault-gpios   = &lt;&amp;sgpio_in2  12 0 GPIO_ACTIVE_HIGH&gt;;
+    };
+};
+
+&amp;switch {
+    ethernet-ports {
+        port12: port@12 {
+            reg = &lt;12&gt;;
+            microchip,bandwidth = &lt;1000&gt;;
+            phys = &lt;&amp;serdes 13&gt;;
+            phy-mode = "1000base-x";
+            sfp = &lt;&amp;sfp_eth12&gt;;
+            managed = "in-band-status";
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A 10G SFP cage uses the same structure with <code>phy-mode = "10gbase-r"</code> and a
+10G-capable SerDes lane; PCB134 does this for its four 10G SFP+ ports.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_c_mac_to_mac_fixed_link_all_supported_rates"><a class="anchor" href="#_example_c_mac_to_mac_fixed_link_all_supported_rates"></a>4.4. Example C: MAC-to-MAC fixed-link (all supported rates)</h3>
+<div class="paragraph">
+<p>This example describes a SerDes link with no autonegotiation, no SFP cage,
+and no external PHY. The board designer fixes both ends to the same rate.
+Typical use cases are a backplane trace, an on-board MAC-to-MAC connection,
+and an SFP+ DAC cable (the SerDes driver treats a DAC cable as the same link
+type as an optical BASE-R or a backplane -KR).</p>
+</div>
+<div class="paragraph">
+<p>The template is the same at every rate; only <code>speed</code>, <code>phy-mode</code>,
+<code>microchip,bandwidth</code>, and the SerDes lane index change.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;switch {
+    ethernet-ports {
+        portN: port@N {
+            reg = &lt;N&gt;;
+            microchip,bandwidth = &lt;SPEED_MBPS&gt;;
+            phys = &lt;&amp;serdes LANE&gt;;
+            phy-mode = "PHY_MODE";
+            fixed-link {
+                speed = &lt;SPEED_MBPS&gt;;
+                full-duplex;
+                /* optional: pause; if both ends agree on flow control */
+            };
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Rate-specific substitutions (Sparx5 lane ranges from the SerDes capability
+table above; LAN969x has only 10G lanes):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22.2222%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 44.4445%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Link type</th>
+<th class="tableblock halign-left valign-top"><code>phy-mode</code></th>
+<th class="tableblock halign-left valign-top"><code>speed</code></th>
+<th class="tableblock halign-left valign-top">Sparx5 lane ranges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000BASE-X / -KX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1000base-x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-32 (any lane)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2500BASE-X / -KX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2500base-x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2500</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-32 (any lane)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5GBASE-R / -KR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-32 (any lane)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10GBASE-R / -KR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13-32 (10G and 25G lanes)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25GBASE-R / -KR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>25gbase-r</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>25000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-32 (25G lanes, Sparx5 only)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All these modes require <code>full-duplex</code>. The SerDes driver rejects a lane
+assignment when the lane&#8217;s maximum rate falls below the requested rate; see
+<code>sparx5_serdes_validate()</code> in
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/phy/microchip/sparx5_serdes.c">sparx5_serdes.c</a>.</p>
+</div>
+<div class="paragraph">
+<p>With no autonegotiation the pause configuration defaults to off or follows
+an out-of-band agreement. Add <code>pause;</code> inside <code>fixed-link</code> when both ends
+have agreed on flow control.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_d_mac_to_mac_1000base_x_with_clause_37_aneg"><a class="anchor" href="#_example_d_mac_to_mac_1000base_x_with_clause_37_aneg"></a>4.5. Example D: MAC-to-MAC, 1000BASE-X with Clause 37 aneg</h3>
+<div class="paragraph">
+<p>This example uses the same physical setup as example C at 1 Gbit/s, with PCS
+autonegotiation enabled at both ends. The switch PCS exchanges speed,
+duplex, and pause with the link partner via the Clause 37 base page. Among
+the direct-SerDes rates that the Microchip SerDes driver supports,
+1000BASE-X is the only one with standard PCS autonegotiation; 2500BASE-X
+has no aneg by spec, and the BASE-R rates would need Clause 73 backplane
+autoneg (see Known Limitations).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;switch {
+    ethernet-ports {
+        port4: port@4 {
+            reg = &lt;4&gt;;
+            microchip,bandwidth = &lt;1000&gt;;
+            phys = &lt;&amp;serdes 4&gt;;
+            phy-mode = "1000base-x";
+            managed = "in-band-status";
+        };
+    };
+};</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_e_qsgmii_to_a_microchip_quad_1_gbits_cu_phy"><a class="anchor" href="#_example_e_qsgmii_to_a_microchip_quad_1_gbits_cu_phy"></a>4.6. Example E: QSGMII to a Microchip quad 1 Gbit/s Cu PHY</h3>
+<div class="paragraph">
+<p>This example carries four independent 1 Gbit/s ports over a single SerDes
+lane to a Microchip quad Cu PHY (VSC8574). Each port declares its own
+<code>phy-handle</code> that targets a distinct PHY address on the shared MDIO bus. All
+four ports share the same SerDes lane through an identical <code>phys</code> value,
+because QSGMII multiplexes four sub-ports onto one 10G SerDes lane. The
+SerDes driver configures the lane once; the four MAC blocks on the switch
+side then de-multiplex the sub-channels.</p>
+</div>
+<div class="paragraph">
+<p>Source:
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm64/boot/dts/microchip/sparx5_pcb135_board.dtsi">sparx5_pcb135_board.dtsi</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;mdio0 {
+    status = "okay";
+
+    phy0: ethernet-phy@0 { reg = &lt;0&gt;; };
+    phy1: ethernet-phy@1 { reg = &lt;1&gt;; };
+    phy2: ethernet-phy@2 { reg = &lt;2&gt;; };
+    phy3: ethernet-phy@3 { reg = &lt;3&gt;; };
+};
+
+&amp;switch {
+    ethernet-ports {
+        port0: port@0 {
+            reg = &lt;0&gt;;
+            microchip,bandwidth = &lt;1000&gt;;
+            phys = &lt;&amp;serdes 13&gt;;
+            phy-handle = &lt;&amp;phy0&gt;;
+            phy-mode = "qsgmii";
+        };
+        port1: port@1 {
+            reg = &lt;1&gt;;
+            microchip,bandwidth = &lt;1000&gt;;
+            phys = &lt;&amp;serdes 13&gt;;
+            phy-handle = &lt;&amp;phy1&gt;;
+            phy-mode = "qsgmii";
+        };
+        port2: port@2 {
+            reg = &lt;2&gt;;
+            microchip,bandwidth = &lt;1000&gt;;
+            phys = &lt;&amp;serdes 13&gt;;
+            phy-handle = &lt;&amp;phy2&gt;;
+            phy-mode = "qsgmii";
+        };
+        port3: port@3 {
+            reg = &lt;3&gt;;
+            microchip,bandwidth = &lt;1000&gt;;
+            phys = &lt;&amp;serdes 13&gt;;
+            phy-handle = &lt;&amp;phy3&gt;;
+            phy-mode = "qsgmii";
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The four switch ports that form a QSGMII group are not arbitrary. Consult
+the chip&#8217;s port-map table for the valid port-to-SerDes-lane groupings on the
+target SoC.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_f_10g_qxgmii_to_a_quad_2_5_gbits_multigig_cu_phy"><a class="anchor" href="#_example_f_10g_qxgmii_to_a_quad_2_5_gbits_multigig_cu_phy"></a>4.7. Example F: 10G-QXGMII to a quad 2.5 Gbit/s multigig Cu PHY</h3>
+<div class="paragraph">
+<p>This example carries four independent 2.5 Gbit/s ports over a single 10G
+SerDes lane to an external quad multigig Cu PHY. Like QSGMII, all four ports
+share the same <code>phys</code> value; unlike QSGMII, the MAC-side PCS is USXGMII-based
+and carries full in-band rate and status signalling per sub-port, so each
+port can independently run at 10 Mbit/s, 100 Mbit/s, 1 Gbit/s, or
+2.5 Gbit/s. The port requires <code>managed = "in-band-status"</code> so that the MAC
+tracks the PHY&#8217;s per-sub-port rate and link state.</p>
+</div>
+<div class="paragraph">
+<p>The Microchip driver supports this mode on Sparx5 and LAN969x. At the time
+of writing Microchip does not produce a quad multigig Cu PHY, so boards
+using this example pair the switch with a third-party PHY that exposes a
+10G-QXGMII host interface.</p>
+</div>
+<div class="paragraph">
+<p>The switch-side port numbers that form a valid 10G-QXGMII quartet are
+chip-specific. Consult the SoC datasheet for the valid port-to-SerDes-lane
+groupings.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;mdio3 {
+    status = "okay";
+
+    phy0_ext: ethernet-phy@0 { reg = &lt;0&gt;; };
+    phy1_ext: ethernet-phy@1 { reg = &lt;1&gt;; };
+    phy2_ext: ethernet-phy@2 { reg = &lt;2&gt;; };
+    phy3_ext: ethernet-phy@3 { reg = &lt;3&gt;; };
+};
+
+&amp;switch {
+    ethernet-ports {
+        port8: port@8 {
+            reg = &lt;8&gt;;
+            microchip,bandwidth = &lt;2500&gt;;
+            phys = &lt;&amp;serdes 25&gt;;
+            phy-handle = &lt;&amp;phy1_ext&gt;;
+            phy-mode = "10g-qxgmii";
+            managed = "in-band-status";
+        };
+        port24: port@24 {
+            reg = &lt;24&gt;;
+            microchip,bandwidth = &lt;2500&gt;;
+            phys = &lt;&amp;serdes 25&gt;;
+            phy-handle = &lt;&amp;phy2_ext&gt;;
+            phy-mode = "10g-qxgmii";
+            managed = "in-band-status";
+        };
+        port40: port@40 {
+            reg = &lt;40&gt;;
+            microchip,bandwidth = &lt;2500&gt;;
+            phys = &lt;&amp;serdes 25&gt;;
+            phy-handle = &lt;&amp;phy3_ext&gt;;
+            phy-mode = "10g-qxgmii";
+            managed = "in-band-status";
+        };
+        port56: port@56 {
+            reg = &lt;56&gt;;
+            microchip,bandwidth = &lt;2500&gt;;
+            phys = &lt;&amp;serdes 25&gt;;
+            phy-handle = &lt;&amp;phy0_ext&gt;;
+            phy-mode = "10g-qxgmii";
+            managed = "in-band-status";
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Two further notes apply to this example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The shared SerDes lane must be 10G-capable. On Sparx5 this means lane 13
+or higher; on LAN969x every lane is 10G-class.</p>
+</li>
+<li>
+<p>When the PHY needs a post-reset delay before it answers MDIO, set
+<code>reset-post-delay-us</code> on the MDIO bus node.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lan9645x_device_tree"><a class="anchor" href="#_lan9645x_device_tree"></a>5. LAN9645x device tree</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LAN9645x is a DSA switch. The DT structure differs from the switchdev-based
+SoCs (Sparx5, LAN969x, LAN966x) in three main ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Port naming</strong>: user-visible interfaces use names like <code>lan0</code> and <code>lan1</code>
+instead of <code>eth0</code>. Each port sets its own name through the <code>label</code> property.</p>
+</li>
+<li>
+<p><strong>CPU / uplink port</strong>: one port is the DSA CPU port. It points at the host
+MAC via <code>ethernet = &lt;&amp;hostPortPhandle&gt;</code> and typically uses <code>fixed-link</code>,
+because the switch-to-host link is a fixed internal connection that does
+not run autonegotiation.</p>
+</li>
+<li>
+<p><strong>SerDes phandle tuple</strong>: the <code>phys</code> property takes three cells,
+<code>&lt;&amp;lan9645x_serdes lane LAN9645X_SERDES6G(index)&gt;</code>, with macros from
+<a href="https://github.com/microchip-ung/linux/blob/master/include/dt-bindings/phy/phy-lan9645x-serdes.h">phy-lan9645x-serdes.h</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>One further quirk: placing <code>microchip,shadow-ports = &lt;4 8&gt;</code> in the switch
+node tells the driver that ports 4 and 8 each have two variants (internal Cu
+PHY and external RGMII), and that only one variant per shadow pair may be
+<code>status = "okay"</code> at a time.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisite_nodes_lan9645x"><a class="anchor" href="#_prerequisite_nodes_lan9645x"></a>5.1. Prerequisite nodes (LAN9645x)</h3>
+<div class="paragraph">
+<p>The LAN9645x block lives under an MFD parent on the LAN966x SoC. The
+examples below reference these nodes. Layout follows
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm/boot/dts/microchip/lan966x-pcb8385-lan9645x-evb.dts">lan966x-pcb8385-lan9645x-evb.dts</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">/* LAN9645x MFD parent - holds all sub-blocks */
+lan9645x: lan9645x@&lt;addr&gt; {
+    compatible = "microchip,lan9645x";
+    /* ... reg, interrupts, clocks ... */
+
+    /* External MDIO bus for optional RGMII PHYs (ports 4/8 shadow) */
+    mdio@4098 {
+        reg = &lt;0x4098&gt;;
+        compatible = "microchip,lan966x-miim";
+        #address-cells = &lt;1&gt;;
+        #size-cells = &lt;0&gt;;
+
+        rgmii1: ethernet-phy@1 {
+            reg = &lt;1&gt;;
+            status = "disabled";     /* enable per-board */
+        };
+    };
+
+    /* Internal MDIO bus to the on-chip Cu PHYs (ports 0-4) */
+    mdio@40bc {
+        reg = &lt;0x40bc&gt;, &lt;0&gt;;
+        compatible = "microchip,lan966x-miim";
+        #address-cells = &lt;1&gt;;
+        #size-cells = &lt;0&gt;;
+
+        cuphy0: ethernet-phy@1 { reg = &lt;1&gt;; };
+        cuphy1: ethernet-phy@2 { reg = &lt;2&gt;; };
+        cuphy2: ethernet-phy@3 { reg = &lt;3&gt;; };
+        cuphy3: ethernet-phy@4 { reg = &lt;4&gt;; };
+        cuphy4: ethernet-phy@5 { reg = &lt;5&gt;; };
+    };
+
+    /* SerDes block - targeted by port@5/6 phys property */
+    lan9645x_serdes: serdes@b0000 {
+        compatible = "microchip,lan9645x-serdes";
+        #phy-cells = &lt;2&gt;;
+        reg = &lt;0xb0000 0x10000&gt;;
+    };
+
+    /* SFP cages wired to the SerDes ports (board-specific I2C/GPIO) */
+    lan_sfp0: sfp0 {
+        compatible = "sff,sfp";
+        i2c-bus            = &lt;&amp;i2c_sfp0&gt;;
+        tx-disable-gpios   = &lt;&amp;gpio_lan9645x 11 GPIO_ACTIVE_HIGH&gt;;
+        mod-def0-gpios     = &lt;&amp;gpio_lan9645x 29 GPIO_ACTIVE_LOW&gt;;
+        los-gpios          = &lt;&amp;gpio_lan9645x 42 GPIO_ACTIVE_HIGH&gt;;
+    };
+
+    /* The DSA switch node itself */
+    switch: switch {
+        compatible = "microchip,lan9645x-switch";
+        dsa,member = &lt;0 0&gt;;
+
+        ethernet-ports {
+            #address-cells = &lt;1&gt;;
+            #size-cells = &lt;0&gt;;
+            /* port@N nodes appended by board DTSI via &amp;switch overlay */
+        };
+    };
+};
+
+/* Host (LAN966x) MAC port that the DSA CPU port conduits to.
+ * Provided by lan966x.dtsi, reproduced here as the target of
+ * `ethernet = &lt;&amp;port2&gt;` in Example L4.
+ */
+&amp;lan966x_switch {
+    ethernet-ports {
+        port2: port@2 {
+            reg = &lt;2&gt;;
+            phy-mode = "rgmii-id";
+            /* fixed-link mirrored on the lan9645x side */
+        };
+    };
+};</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_l1_internal_cu_phy_port_ports_0_3"><a class="anchor" href="#_example_l1_internal_cu_phy_port_ports_0_3"></a>5.2. Example L1: internal Cu PHY port (ports 0-3)</h3>
+<div class="paragraph">
+<p>Each of ports 0-3 pairs with a dedicated on-chip Cu PHY. The MAC-side
+interface runs GMII, and the Cu PHY handles Clause 28 autonegotiation toward
+the cable partner.</p>
+</div>
+<div class="paragraph">
+<p>Source:
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm/boot/dts/microchip/lan966x-pcb8385-lan9645x-evb.dts">lan966x-pcb8385-lan9645x-evb.dts</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;switch {
+    ethernet-ports {
+        lan0: port@0 {
+            reg = &lt;0&gt;;
+            label = "lan0";
+            phy-mode = "gmii";
+            phy-handle = &lt;&amp;cuphy0&gt;;
+        };
+    };
+};</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_l2_serdes_port_with_sfp_sgmii_in_band"><a class="anchor" href="#_example_l2_serdes_port_with_sfp_sgmii_in_band"></a>5.3. Example L2: SerDes port with SFP (SGMII in-band)</h3>
+<div class="paragraph">
+<p>Ports 5 and 6 are the SerDes ports. A port running at up to 1 Gbit/s
+attaches to an SFP cage and uses SGMII in-band autonegotiation between the
+switch PCS and the SFP module.</p>
+</div>
+<div class="paragraph">
+<p>Source:
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm/boot/dts/microchip/lan966x-pcb8385-lan9645x-evb.dts">lan966x-pcb8385-lan9645x-evb.dts</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;switch {
+    ethernet-ports {
+        lan5: port@5 {
+            reg = &lt;5&gt;;
+            label = "lan5";
+            phys = &lt;&amp;lan9645x_serdes 5 LAN9645X_SERDES6G(0)&gt;;
+            phy-mode = "sgmii";
+            managed = "in-band-status";
+            sfp = &lt;&amp;lan_sfp0&gt;;
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A 2.5G SFP uses <code>phy-mode = "2500base-x"</code> and drops
+<code>managed = "in-band-status"</code>, because the 2500BASE-X PCS has no standard
+in-band autonegotiation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_l3_serdes_port_mac_to_mac_1000base_xkx_fixed"><a class="anchor" href="#_example_l3_serdes_port_mac_to_mac_1000base_xkx_fixed"></a>5.4. Example L3: SerDes port MAC-to-MAC, 1000BASE-X/KX fixed</h3>
+<div class="paragraph">
+<p>Port 5 or port 6 drives a peer MAC directly, without autonegotiation and
+without an SFP cage. This example is the LAN9645x equivalent of Example C at
+1 Gbit/s.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;switch {
+    ethernet-ports {
+        lan6: port@6 {
+            reg = &lt;6&gt;;
+            label = "lan6";
+            phys = &lt;&amp;lan9645x_serdes 6 LAN9645X_SERDES6G(1)&gt;;
+            phy-mode = "1000base-x";
+            fixed-link {
+                speed = &lt;1000&gt;;
+                full-duplex;
+            };
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To reach 2.5 Gbit/s over the same SerDes port, replace <code>1000base-x</code> with
+<code>2500base-x</code> and <code>speed = &lt;1000&gt;</code> with <code>speed = &lt;2500&gt;</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_l4_dsa_cpu_port_to_host_mac_rgmii_fixed_link"><a class="anchor" href="#_example_l4_dsa_cpu_port_to_host_mac_rgmii_fixed_link"></a>5.5. Example L4: DSA CPU port to host MAC (RGMII fixed-link)</h3>
+<div class="paragraph">
+<p>Port 7 (and, when a second uplink is in use, port 8) connects the LAN9645x
+DSA switch to the host MAC on the LAN966x SoC. The link is a fixed internal
+connection with clocking agreed at board design time, so the DT describes it
+as a <code>fixed-link</code>. The <code>ethernet</code> property marks this port as the DSA CPU
+port and points at the LAN966x MAC port shown in the prerequisite nodes
+above.</p>
+</div>
+<div class="paragraph">
+<p>Source:
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm/boot/dts/microchip/lan966x-pcb8385-lan9645x-evb.dts">lan966x-pcb8385-lan9645x-evb.dts</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;switch {
+    ethernet-ports {
+        lan7: port@7 {
+            reg = &lt;7&gt;;
+            label = "lan7";
+            phy-mode = "rgmii-id";
+            ethernet = &lt;&amp;port2&gt;;
+            fixed-link {
+                speed = &lt;1000&gt;;
+                full-duplex;
+                pause;
+            };
+        };
+    };
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>phy-mode</code> string selects which side inserts the 2 ns RGMII clock delay:
+<code>rgmii-id</code> puts the delay on both sides, <code>rgmii-rxid</code> and <code>rgmii-txid</code> put
+it on one side, and plain <code>rgmii</code> relies on external delay. The MAC-side
+delay logic lives in
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/net/dsa/microchip/lan9645x/lan9645x_phylink.c">lan9645x_phylink.c</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_l5_external_rgmii_port_ports_4_or_8_via_shadow"><a class="anchor" href="#_example_l5_external_rgmii_port_ports_4_or_8_via_shadow"></a>5.6. Example L5: external RGMII port (ports 4 or 8 via shadow)</h3>
+<div class="paragraph">
+<p>When port 4 or port 8 runs in its RGMII variant, it attaches to an external
+RGMII Cu PHY on the corresponding chip RGMII interface. The board DTSI
+enables the PHY node that the prerequisite section declared as <code>disabled</code>,
+and disables the other member of the shadow pair so only one variant is
+active.</p>
+</div>
+<div class="paragraph">
+<p>Source:
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm/boot/dts/microchip/lan966x-pcb8385-lan9645x-evb.dts">lan966x-pcb8385-lan9645x-evb.dts</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;rgmii1 {
+    status = "okay";
+};
+
+&amp;switch {
+    microchip,shadow-ports = &lt;4 8&gt;;
+
+    ethernet-ports {
+        lan8: port@8 {
+            reg = &lt;8&gt;;
+            label = "lan8";
+            phy-mode = "rgmii-id";
+            phy-handle = &lt;&amp;rgmii1&gt;;
+        };
+    };
+};</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_u_boot_mscc_muboot_device_tree"><a class="anchor" href="#_u_boot_mscc_muboot_device_tree"></a>6. U-Boot (mscc-muboot) device tree</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The U-Boot MSCC eswitch driver does <strong>not</strong> use the Linux <code>phy-mode</code> string.
+Port interfaces are expressed as a 3-tuple in the <code>phys</code> property of the
+port node:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">phys = &lt;IF_&lt;type&gt; FA_SERDES_TYPE_&lt;n&gt;G &lt;lane&gt;&gt;;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with <code>IF_*</code> and <code>FA_SERDES_TYPE_*</code> from
+<a href="https://github.com/microchip-ung/u-boot/blob/master/include/dt-bindings/mscc/sparx5_data.h">sparx5_data.h</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_what_the_u_boot_driver_supports"><a class="anchor" href="#_what_the_u_boot_driver_supports"></a>6.1. What the U-Boot driver supports</h3>
+<div class="paragraph">
+<p>From lines 978-989 of
+<a href="https://github.com/microchip-ung/u-boot/blob/master/drivers/net/mscc_eswitch/sparx5_switch.c">sparx5_switch.c</a>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Constant</th>
+<th class="tableblock halign-left valign-top">phylink equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IF_SGMII</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PHY_INTERFACE_MODE_SGMII</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IF_SGMII_CISCO</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PHY_INTERFACE_MODE_SGMII</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IF_QSGMII</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PHY_INTERFACE_MODE_QSGMII</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IF_RGMII</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PHY_INTERFACE_MODE_NA</code> (RGMII handled outside phylink)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Anything else returns <code>PHY_INTERFACE_MODE_NA</code> and the port will not come up
+in U-Boot.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_the_u_boot_driver_does_not_support_today"><a class="anchor" href="#_what_the_u_boot_driver_does_not_support_today"></a>6.2. What the U-Boot driver does NOT support today</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>1000BASE-X / 1000BASE-KX: no <code>IF_BASEX</code>/<code>IF_BASE_KX</code>.</p>
+</li>
+<li>
+<p>10GBASE-R / 10GBASE-KR: no 10G interface at all.</p>
+</li>
+<li>
+<p>2500BASE-X, 5GBASE-R, 25GBASE-R.</p>
+</li>
+<li>
+<p>SFP cage handling, <code>managed = "in-band-status"</code>, <code>fixed-link</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Consequence: customers needing a backplane or MAC-to-MAC 1G-X / 10G-R link
+that must be active during U-Boot (for example, netboot) cannot achieve this
+with the current U-Boot driver. Options:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use a different management path during U-Boot (RGMII to an on-board PHY,
+a separate SGMII port, or eMMC / USB boot) and let Linux bring up the
+backplane link.</p>
+</li>
+<li>
+<p>Extend the U-Boot eswitch driver to cover the needed modes. This is
+non-trivial: the driver would need to add 1000BASE-X and/or 10GBASE-R MAC
+setup plus SerDes preset selection, mirroring what the Linux
+<code>sparx5_port.c</code> and <code>sparx5_serdes.c</code> already do.</p>
+</li>
+<li>
+<p>For LAN969x specifically, evaluate whether the LAN969x U-Boot path
+(<code>board/microchip/lan969x</code>) has any additional modes the Sparx5 path
+lacks.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_u_boot_dt_example_customers_current_sgmii_copper_setup"><a class="anchor" href="#_u_boot_dt_example_customers_current_sgmii_copper_setup"></a>6.3. U-Boot DT example: customer&#8217;s current SGMII copper setup</h3>
+<div class="paragraph">
+<p>Same as the example already used in <code>mscc,sparx5_pcb134.dtsi</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dts hljs" data-lang="dts">&amp;mdio3 {
+    status = "okay";
+    pinctrl-0 = &lt;&amp;miim3_pins&gt;;
+    pinctrl-names = "default";
+    phy0: ethernet-phy@28 {
+        reg = &lt;28&gt;;
+    };
+};
+
+&amp;switch {
+    status = "okay";
+    ethernet-ports {
+        port64: port@64 {
+            reg = &lt;64&gt;;
+            phy-handle = &lt;&amp;phy0&gt;;
+            phys = &lt;IF_SGMII FA_SERDES_TYPE_6G 0&gt;;
+        };
+    };
+};</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_known_limitations"><a class="anchor" href="#_known_limitations"></a>7. Known limitations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_clause_73_clause_72_not_implemented_optional"><a class="anchor" href="#_clause_73_clause_72_not_implemented_optional"></a>7.1. Clause 73 / Clause 72 not implemented (optional)</h3>
+<div class="paragraph">
+<p>The Microchip SerDes driver
+(<a href="https://github.com/microchip-ung/linux/blob/master/drivers/phy/microchip/sparx5_serdes.c">sparx5_serdes.c</a>)
+does not implement 802.3ap / Clause 73 backplane autonegotiation or Clause
+72 adaptive equalisation (commonly called "KR link training"). These are
+OPTIONAL parts of the KR and KX family: the driver brings the link up with
+static SerDes equalisation presets, the same way the driver already handles
+DAC (10GBASE-CR) and optical 10GBASE-R links.</p>
+</div>
+<div class="paragraph">
+<p>For the common cases (short on-board traces, midplane links of moderate
+length, and DAC cables) the static presets are sufficient, and this is not
+a functional gap. The board designer statically configures both ends to the
+same rate at design time.</p>
+</div>
+<div class="paragraph">
+<p>Clause 73 and Clause 72 only matter when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A long backplane trace needs per-lane equalisation tuned adaptively
+against the actual loss profile.</p>
+</li>
+<li>
+<p>A blind-mate or mixed-vendor backplane hides the link partner&#8217;s rate
+capabilities from the board design.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Such cases require a different solution: a shorter trace, a retimer, or a
+rate fallback to 5GBASE-R or 2500BASE-X.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fec_selection"><a class="anchor" href="#_fec_selection"></a>7.2. FEC selection</h3>
+<div class="paragraph">
+<p>The driver does not expose BASE-R FEC (Clause 74) or RS-FEC (Clause 91, 25G)
+via DT. The driver picks a default FEC mode per rate. A link partner that
+requires a specific FEC behaviour currently requires driver changes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_u_boot_coverage"><a class="anchor" href="#_u_boot_coverage"></a>7.3. U-Boot coverage</h3>
+<div class="paragraph">
+<p>As described above, the U-Boot MSCC eswitch driver today supports only
+SGMII, QSGMII, and RGMII. U-Boot cannot bring up a KX, KR, BASE-X, or
+BASE-R link without additional driver work.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_debug_verification"><a class="anchor" href="#_debug_verification"></a>8. Debug / verification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following checks help when a <code>fixed-link</code> or <code>managed</code> link fails to
+come up:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ip link show dev ethN</code> reports NO-CARRIER until the PCS locks.</p>
+</li>
+<li>
+<p><code>ethtool ethN</code> shows the advertised vs. link-partner capabilities. For a
+<code>fixed-link</code> port, the advertised speed matches the DT.</p>
+</li>
+<li>
+<p><code>ethtool -m ethN</code> reads the SFP module EEPROM, when an SFP cage is
+present.</p>
+</li>
+<li>
+<p>The SerDes debugfs directories dump the SerDes registers: check
+<code>/sys/kernel/debug/mscc_sd10g28/<strong></code> or <code>/sys/kernel/debug/mscc_sd25g28/</strong></code>
+to confirm that the rate preset matches the configured mode.</p>
+</li>
+<li>
+<p><code>dmesg | grep -i phylink</code> shows the mode that phylink resolved and the
+reason phylink rejects any mismatched DT at probe time.</p>
+</li>
+<li>
+<p>On a MAC-to-MAC 10GBASE-R link with both ends statically 10G: if the PCS
+never locks, suspect polarity or pre-emphasis on the physical layer
+rather than the DT.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>9. References</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Linux phylink:
+<a href="https://github.com/microchip-ung/linux/blob/master/Documentation/networking/phy.rst">phy.rst</a>,
+<a href="https://github.com/microchip-ung/linux/blob/master/Documentation/devicetree/bindings/net/ethernet-controller.yaml">ethernet-controller.yaml</a>.</p>
+</li>
+<li>
+<p>Sparx5 port binding:
+<a href="https://github.com/microchip-ung/linux/blob/master/Documentation/devicetree/bindings/net/microchip,sparx5-switch.yaml">microchip,sparx5-switch.yaml</a>.</p>
+</li>
+<li>
+<p>LAN969x port binding:
+<a href="https://github.com/microchip-ung/linux/blob/master/Documentation/devicetree/bindings/net/microchip,lan969x-switch.yaml">microchip,lan969x-switch.yaml</a>.</p>
+</li>
+<li>
+<p>LAN9645x switch binding:
+<a href="https://github.com/microchip-ung/linux/blob/master/Documentation/devicetree/bindings/net/dsa/microchip,lan9645x-switch.yaml">microchip,lan9645x-switch.yaml</a>.</p>
+</li>
+<li>
+<p>LAN9645x SerDes binding:
+<a href="https://github.com/microchip-ung/linux/blob/master/Documentation/devicetree/bindings/phy/microchip,lan9645x-serdes.yaml">microchip,lan9645x-serdes.yaml</a>.</p>
+</li>
+<li>
+<p>Sparx5 phylink driver:
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/net/ethernet/microchip/sparx5/sparx5_phylink.c">sparx5_phylink.c</a>.</p>
+</li>
+<li>
+<p>Sparx5 SerDes driver:
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/phy/microchip/sparx5_serdes.c">sparx5_serdes.c</a>.</p>
+</li>
+<li>
+<p>LAN9645x DSA phylink:
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/net/dsa/microchip/lan9645x/lan9645x_phylink.c">lan9645x_phylink.c</a>.</p>
+</li>
+<li>
+<p>LAN9645x SerDes driver:
+<a href="https://github.com/microchip-ung/linux/blob/master/drivers/phy/microchip/lan9645x_serdes.c">lan9645x_serdes.c</a>.</p>
+</li>
+<li>
+<p>LAN9645x DT bindings header:
+<a href="https://github.com/microchip-ung/linux/blob/master/include/dt-bindings/phy/phy-lan9645x-serdes.h">phy-lan9645x-serdes.h</a>.</p>
+</li>
+<li>
+<p>Reference DTs:
+<a href="https://github.com/microchip-ung/linux/blob/master/arch/arm/boot/dts/microchip/lan966x-pcb8385-lan9645x-evb.dts">lan966x-pcb8385-lan9645x-evb.dts</a>.</p>
+</li>
+<li>
+<p>U-Boot eswitch driver:
+<a href="https://github.com/microchip-ung/u-boot/blob/master/drivers/net/mscc_eswitch/sparx5_switch.c">sparx5_switch.c</a>.</p>
+</li>
+<li>
+<p>U-Boot interface enum:
+<a href="https://github.com/microchip-ung/u-boot/blob/master/include/dt-bindings/mscc/sparx5_data.h">sparx5_data.h</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

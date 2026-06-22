@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BUM Policer (LAN9645X) :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2026.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes/nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building/buildroot-build.html">Buildroot Build</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building/yocto-build.html">Yocto Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="supported-hw/lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="supported-hw/lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/peripherals_overview.html">Peripherals Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/device_tree_link_modes.html">Device Tree Link Modes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-hw/otp-fields.html">Common OTP fields</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="dcb_qos.html">DCB QoS Classification</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="policing.html">Policing</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="6">
+    <a class="nav-link" href="policing_bum_lan9645x.html">BUM Policer (LAN9645X)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption.html">Frame Preemption (deprecated)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="frame_preemption_upstream.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="frer.html">FRER</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="frer_lan966x.html">LAN966x FRER</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="frer_lan9645x.html">LAN9645x FRER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="cqf.html">CQF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ptp.html">PTP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ptp_over_hsr.html">PTP over HSR</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2026.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2026.06</a>
+        </li>
+        <li class="version">
+          <a href="../2026.03/index.html">2026.03</a>
+        </li>
+        <li class="version">
+          <a href="../2025.12/index.html">2025.12</a>
+        </li>
+        <li class="version">
+          <a href="../2025.09/index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">BSP Releases</a></li>
+    <li><a href="network_overview.html">Network</a></li>
+    <li>L2 Bridge</li>
+    <li>Frame Forwarding</li>
+    <li>Ingress</li>
+    <li><a href="policing.html">Policing</a></li>
+    <li><a href="policing_bum_lan9645x.html">BUM Policer (LAN9645X)</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2026.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="policing_bum_lan9645x.html">2026.06</a>
+    <a class="version" href="../2026.03/policing_bum_lan9645x.html">2026.03</a>
+    <a class="version is-missing" href="../2025.12/index.html">2025.12</a>
+    <a class="version is-missing" href="../2025.09/index.html">2025.09</a>
+    <a class="version is-missing" href="../2025.06/index.html">2025.06</a>
+    <a class="version is-missing" href="../2025.06-1/index.html">2025.06-1</a>
+    <a class="version is-missing" href="../2025.03/index.html">2025.03</a>
+    <a class="version is-missing" href="../2024.12/index.html">2024.12</a>
+    <a class="version is-missing" href="../2024.09/index.html">2024.09</a>
+    <a class="version is-missing" href="../2024.06/index.html">2024.06</a>
+    <a class="version is-missing" href="../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">BUM Policer (LAN9645X)</h1>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>1. Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>BUM policing — also known as storm control — rate-limits Broadcast, Unknown
+unicast, and Multicast traffic entering a switch. These three traffic types are
+flooded to multiple ports by design: broadcast frames reach every port, unknown
+unicast frames are flooded because the switch has no forwarding entry for the
+destination, and multicast frames are forwarded to all members of a group. A
+single misbehaving host or network loop can therefore generate a storm of flooded
+frames that consumes bandwidth across the entire network.</p>
+</div>
+<div class="paragraph">
+<p>A BUM policer sets a per-type frame rate limit. Frames that exceed the
+configured rate are dropped (or optionally redirected to the CPU for further
+inspection). This protects the network from broadcast storms and limits the
+impact of excessive flooding while still allowing normal levels of BUM traffic to
+pass through.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_debugfs_interface"><a class="anchor" href="#_debugfs_interface"></a>2. Debugfs Interface</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On LAN9645X, BUM policers are configured through a debugfs interface rather than
+<code>tc</code> commands. The debugfs files are located under:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">/sys/kernel/debug/lan9645x_sw/bum</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The directory tree is structured as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">/sys/kernel/debug/lan9645x_sw/bum
+|-- bc
+|   |-- cpu_redir_ena
+|   |-- frames_per_second
+|   |-- known_ena
+|   |-- mode
+|   `-- unknown_ena
+|-- burst
+|-- mc
+|   |-- cpu_redir_ena
+|   |-- frames_per_second
+|   |-- ipmc_known_ena
+|   |-- ipmc_unknown_ena
+|   |-- known_ena
+|   |-- mode
+|   `-- unknown_ena
+|-- stats
+`-- uc
+    |-- cpu_redir_ena
+    |-- frames_per_second
+    |-- known_ena
+    |-- mode
+    `-- unknown_ena</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are three policer types: unicast (<code>uc</code>), broadcast (<code>bc</code>), and multicast
+(<code>mc</code>). Each has its own subdirectory with per-policer configuration files. The
+<code>burst</code> and <code>stats</code> files are global and shared across all policer types.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_parameters"><a class="anchor" href="#_configuration_parameters"></a>3. Configuration Parameters</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_per_policer_parameters_uc_bc_mc"><a class="anchor" href="#_per_policer_parameters_uc_bc_mc"></a>3.1. Per-policer parameters (uc, bc, mc)</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">File</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>known_ena</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable policing of frames with a known destination address.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unknown_ena</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable policing of frames with an unknown destination address.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>frames_per_second</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The policing rate in frames per second. The hardware only supports a fixed set
+  of values; the closest supported value is used (see <a href="#rate-values">Supported Rate Values</a>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer (0-3)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selects which ports are policed: <code>0</code> = disabled, <code>1</code> = CPU port only, <code>2</code> =
+  front ports only, <code>3</code> = CPU and front ports. Default: <code>3</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cpu_redir_ena</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When enabled, policed frames are redirected to the CPU instead of being
+  dropped.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The multicast policer (<code>mc</code>) has two additional boolean parameters:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">File</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ipmc_known_ena</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable policing of known IP multicast frames.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ipmc_unknown_ena</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable policing of unknown IP multicast frames.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Boolean parameters accept standard kernel boolean values (<code>0</code>/<code>1</code>, <code>Y</code>/<code>N</code>,
+<code>y</code>/<code>n</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_global_parameters"><a class="anchor" href="#_global_parameters"></a>3.2. Global parameters</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">File</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>burst</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The burst size in frames, shared by all policer types. The hardware only
+  supports power-of-two values from 1 to 4096; the closest supported value is
+  used. Default: <code>128</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stats</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read-only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows the number of frames that have been policed (dropped) per type.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="rate-values"><a class="anchor" href="#rate-values"></a>4. Supported Rate Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The hardware supports a fixed set of frame rates. When writing a value to
+<code>frames_per_second</code>, the driver selects the closest supported value. Reading the
+file back shows the actual value that was applied.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ echo "1700" &gt; /sys/kernel/debug/lan9645x_sw/bum/bc/frames_per_second
+$ cat /sys/kernel/debug/lan9645x_sw/bum/bc/frames_per_second
+2000</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The supported values are: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 1000,
+2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, and 1024000
+frames per second.</p>
+</div>
+<div class="paragraph">
+<p>The <code>burst</code> parameter similarly snaps to the closest power-of-two value: 1, 2,
+4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, or 4096 frames.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defaults"><a class="anchor" href="#_defaults"></a>5. Defaults</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, all policers are disabled (<code>known_ena</code> and <code>unknown_ena</code> are both
+<code>N</code>). The default rate is 16000 frames per second and the default burst is 128
+frames. The default mode is <code>3</code> (police both CPU and front ports).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>6. Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_enable_broadcast_policing"><a class="anchor" href="#_enable_broadcast_policing"></a>6.1. Enable broadcast policing</h3>
+<div class="paragraph">
+<p>Enable the broadcast policer for both known and unknown broadcast frames, using
+the default rate and burst:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ echo "1" &gt; /sys/kernel/debug/lan9645x_sw/bum/bc/unknown_ena
+$ echo "1" &gt; /sys/kernel/debug/lan9645x_sw/bum/bc/known_ena</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify the current rate and burst:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cat /sys/kernel/debug/lan9645x_sw/bum/bc/frames_per_second
+16000
+$ cat /sys/kernel/debug/lan9645x_sw/bum/burst
+128</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Send broadcast frames and check the drop statistics:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ cat /sys/kernel/debug/lan9645x_sw/bum/stats
+UC:          0
+BC:      98481
+MC:          0</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_set_a_custom_rate"><a class="anchor" href="#_set_a_custom_rate"></a>6.2. Set a custom rate</h3>
+<div class="paragraph">
+<p>Lower the broadcast policer rate to 2000 frames per second:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ echo "2000" &gt; /sys/kernel/debug/lan9645x_sw/bum/bc/frames_per_second
+$ cat /sys/kernel/debug/lan9645x_sw/bum/bc/frames_per_second
+2000</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enable_unknown_unicast_policing"><a class="anchor" href="#_enable_unknown_unicast_policing"></a>6.3. Enable unknown unicast policing</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ echo "1" &gt; /sys/kernel/debug/lan9645x_sw/bum/uc/unknown_ena</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_police_only_front_ports"><a class="anchor" href="#_police_only_front_ports"></a>6.4. Police only front ports</h3>
+<div class="paragraph">
+<p>To police only the front ports (exclude the CPU port), set the mode to <code>2</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ echo "2" &gt; /sys/kernel/debug/lan9645x_sw/bum/bc/mode</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

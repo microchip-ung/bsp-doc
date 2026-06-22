@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BSP-2026.03 :: Microchip UNG BSP Documentation</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Microchip UNG BSP Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bsp" data-version="2026.06">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">BSP Releases</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">ReadMe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="nav.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building/buildroot-build.html">Buildroot Build</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building/yocto-build.html">Yocto Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bootloader.html">Bootloader</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Supported HW</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan966x.html">LAN966x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-tfa_ctl.html">TFA_CTL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-overlays.html">Overlays</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-aes-sha.html">Crypto HW Accelerators</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan966x-udphs.html">UDPHS - USB Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/sparx5.html">Sparx5</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/sparx5-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/sparx5-qusxgmii.html">QUSXGMII</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan969x.html">LAN969x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-boot.html">Booting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-tfa.html">SecureBoot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-verified-boot.html">Verified Boot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-flexcom.html">FLEXCOM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usart.html">USART</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-spi.html">SPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-i2c.html">I2C</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-qspi.html">QSPI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mmc.html">MMC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-pinctrl.html">GPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-sgpio.html">SGPIO</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-mcan.html">MCAN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-wdt.html">Watchdog Timer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-otp.html">OTP Configuration from Linux userspace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan969x-usb.html">USB Host Device</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../supported-hw/lan9645x.html">LAN9645x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../supported-hw/lan9645x-host-use.html">Using LAN9645x with a host board</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/peripherals_overview.html">Peripherals Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/device_tree_link_modes.html">Device Tree Link Modes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/create-secureboot.html">Creating SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/restore-secureboot.html">Restoring SecureBoot Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/secureboot-monitor-mode.html">SecureBoot Monitor Mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/pcie-rpi4cm.html">PCIe Endpoint with RPI CM4</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/lan966x-spi-host.html">LAN9662 as a SPI host</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../supported-hw/otp-fields.html">Common OTP fields</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../network_overview.html">Network</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tools_overview.html">Tools</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../front_ports.html">Front Ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tuning_performance.html">Tuning Network Performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">L2 Bridge</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bridge_configuration.html">Bridge Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frame Forwarding</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../forwarding_overview.html">Forwarding Overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../frame_meta_data.html">Frame Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-intro.html">TC Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tc/tc-flower-vcap.html">TC and VCAP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../vcap_tool.html">VCAP tool</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Ingress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../basic_qos.html">Basic QoS</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../dcb_qos.html">DCB QoS Classification</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is1.html">Classification (IS0/IS1)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-is2.html">ACL (IS2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../policing.html">Policing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../policing_bum_lan9645x.html">BUM Policer (LAN9645X)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Egress</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../scheduling.html">Scheduling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption.html">Frame Preemption (deprecated)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../frame_preemption_upstream.html">Frame Preemption</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../shaping.html">Shaping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es2.html">Egress ACL (ES2)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-etag.html">Basic VLAN tagging</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../tc/tc-es0.html">Rewriter VLAN tagging (ES0)</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../psfp.html">PSFP</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../frer.html">FRER</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../frer_lan966x.html">LAN966x FRER</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../frer_lan9645x.html">LAN9645x FRER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../cqf.html">CQF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../l3_unicast_routing.html">L3 Unicast Routing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Protection switching</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../mrp.html">MRP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cfm.html">CFM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ptp.html">PTP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ptp_over_hsr.html">PTP over HSR</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../redbox.html">HSR/PRP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../xdp.html">eXpress Data Path (XDP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../port_security.html">802.1X Port Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">BSP Releases</span>
+    <span class="version">2026.06</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">BSP Releases</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2026.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2026.03/index.html">2026.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.12/index.html">2025.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.09/index.html">2025.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06/index.html">2025.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.06-1/index.html">2025.06-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2025.03/index.html">2025.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.12/index.html">2024.12</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.09/index.html">2024.09</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.06/index.html">2024.06</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03/index.html">2024.03</a>
+        </li>
+        <li class="version">
+          <a href="../../2024.03-1/index.html">2024.03-1</a>
+        </li>
+        <li class="version">
+          <a href="../../2023.12/index.html">2023.12</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="#">Older (on AWS)</a>
+      <ul class="versions">
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09-1.html">2023.09-1</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.09.html">2023.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.06.html">2023.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2023.03.html">2023.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.12.html">2022.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.09.html">2022.09</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.06.html">2022.06</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2022.03.html">2022.03</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.12.html">2021.12</a>
+        </li>
+        <li class="version">
+          <a href="http://mscc-ent-open-source.s3-eu-west-1.amazonaws.com/public_root/bsp/mscc-brsdk-doc-2021.09.html">2021.09</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">BSP Releases</a></li>
+    <li><a href="bsp-2026.03.html">BSP-2026.03</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2026.06</button>
+  <div class="version-menu">
+    <a class="version is-current" href="bsp-2026.03.html">2026.06</a>
+    <a class="version" href="../../2026.03/release-notes/bsp-2026.03.html">2026.03</a>
+    <a class="version is-missing" href="../../2025.12/index.html">2025.12</a>
+    <a class="version is-missing" href="../../2025.09/index.html">2025.09</a>
+    <a class="version is-missing" href="../../2025.06/index.html">2025.06</a>
+    <a class="version is-missing" href="../../2025.06-1/index.html">2025.06-1</a>
+    <a class="version is-missing" href="../../2025.03/index.html">2025.03</a>
+    <a class="version is-missing" href="../../2024.12/index.html">2024.12</a>
+    <a class="version is-missing" href="../../2024.09/index.html">2024.09</a>
+    <a class="version is-missing" href="../../2024.06/index.html">2024.06</a>
+    <a class="version is-missing" href="../../2024.03/index.html">2024.03</a>
+    <a class="version is-missing" href="../../2024.03-1/index.html">2024.03-1</a>
+    <a class="version is-missing" href="../../2023.12/index.html">2023.12</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">BSP-2026.03</h1>
+<div id="preamble">
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Version</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BSP-2026.03</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Previous Version</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BSP-2025.12</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Date</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2026-03-15</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Description</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roadmap Release</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_version_of_major_components"><a class="anchor" href="#_version_of_major_components"></a>Version of major components</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Host</th>
+<th class="tableblock halign-left valign-top">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux kernel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.18.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GCC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13.2.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buildroot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025.02.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openembedded-core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yocto-5.0.13 (scarthgap)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bitbake</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yocto-5.0.13 (scarthgap)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">meta-openembedded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scarthgap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">meta-mchp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scarthgap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">U-Boot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparx5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024.04</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN969x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024.04</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN966x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024.04</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPi4CM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021.04</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MIPSEL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2019.10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LS1046</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2016.09</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_availability"><a class="anchor" href="#_availability"></a>Availability</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Linux Kernel is available as a GitHub repository.  You can find it here:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/microchip-ung/linux">GitHub Linux</a></p>
+</div>
+<div class="paragraph">
+<p>The Linux LTS is made available as branch: bsp-6.18-2026
+The minor update available with this BSP release will be added with a tag:
+bsp-6.18-2026.03</p>
+</div>
+<div class="paragraph">
+<p>The BSP binaries and source code packages can be downloaded via these links:</p>
+</div>
+<div class="paragraph">
+<p>Browse Buildroot builds:
+<a href="http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp/" class="bare">http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp/</a></p>
+</div>
+<div class="paragraph">
+<p>Browse Yocto builds:
+<a href="http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp/yocto/" class="bare">http://mscc-ent-open-source.s3-website-eu-west-1.amazonaws.com/?prefix=public_root/bsp/yocto/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_build_systems"><a class="anchor" href="#_build_systems"></a>Build Systems</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starting with BSP-2026.03, the BSP is available with two build systems:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Buildroot BSP</strong> - The traditional Buildroot-based build system. Builds both
+Standalone and XStaX artifacts.</p>
+</li>
+<li>
+<p><strong>Yocto BSP</strong> - The new Yocto Project-based build system. Currently builds
+Standalone artifacts only.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both build systems will be maintained and supported into 2027, to allow users
+time to migrate to the Yocto-based workflow.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<strong>Buildroot Standalone builds will be discontinued during 2027.</strong><br>
+<br>
+Users are encouraged to migrate to the Yocto BSP for Standalone builds.<br>
+XStaX builds will continue to use the Buildroot BSP.<br>
+<br>
+The 2027.03 release will be the last release that also support Buildroot
+Standalone builds.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For detailed information on using each build system, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../building/buildroot-build.html" class="xref page">Building Buildroot BSP from Source</a></p>
+</li>
+<li>
+<p><a href="../building/yocto-build.html" class="xref page">Building Yocto BSP from Source</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lan966x_rtlabs_pnet_support"><a class="anchor" href="#_lan966x_rtlabs_pnet_support"></a>LAN966x rtlabs-pnet support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The rtlabs-pnet support is considered to be deprecated with this release, and
+will subsequently be removed in release 2026.06.</p>
+</div>
+<div class="paragraph">
+<p>The switchdev support for LAN966x will continue, but the support profinet via
+the rtlabs-pnet component will no longer be available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_new_features_and_bug_fixes"><a class="anchor" href="#_new_features_and_bug_fixes"></a>New Features and bug fixes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_buildroot"><a class="anchor" href="#_buildroot"></a>Buildroot</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>New vcap and symreg tool packages (DBB-1045, DBB-1046),
+replacing cml-utils</p>
+</li>
+<li>
+<p>Add support for PTP over HSR in mscc-linuxptp</p>
+</li>
+<li>
+<p>Downgrade libpcap to v1.10.4 to support DSA tag drivers</p>
+</li>
+<li>
+<p>Bump hiawatha to version 11.8 (DBB-1075)</p>
+</li>
+<li>
+<p>Add lan8670 overlays to the generated fit images</p>
+</li>
+<li>
+<p>Bump buildroot to version 2025.02.9</p>
+</li>
+<li>
+<p>Bump kernel from 6.12.48 to 6.18.3</p>
+</li>
+<li>
+<p>Bump qos-utils</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_linux_kernel"><a class="anchor" href="#_linux_kernel"></a>Linux Kernel</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Standalone Config:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN9645x</p>
+<div class="ulist">
+<ul>
+<li>
+<p>HSR/PRP: PTP over HSR support</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LAN969x</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Redbox: Add traffic counters and debugfs statistics view</p>
+</li>
+<li>
+<p>Redbox: Enable IRI towards LRE ports for redbox steering</p>
+</li>
+<li>
+<p>Redbox: Glue IFH redundancy metadata to RX/TX leg steering</p>
+</li>
+<li>
+<p>Redbox: Learn locked multicast address for PTP event frames</p>
+</li>
+<li>
+<p>Redbox: Redirect BPDU address range to CPU in redbox</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sparx5</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Allow foreign devices in bridge</p>
+</li>
+<li>
+<p>Always redirect LACP slow-protocol frames to CPU</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>HSR Core</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add ethtool and hwtstamp support for virtual HSR master</p>
+</li>
+<li>
+<p>Honor DIRECTED_TX by steering to selected leg and
+preserving metadata</p>
+</li>
+<li>
+<p>Populate and propagate redundancy info and PTP timestamps</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Network Core</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add SCM_REDUNDANCY socket control message for TX metadata</p>
+</li>
+<li>
+<p>Extend skb shared info to include redundancy information</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LAN966x</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add SFP, I2C, flexcom and PTP to PCI overlay</p>
+</li>
+<li>
+<p>Add CONFIG_FDMA_PCI for shared PCI FDMA code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>PHY</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add LAN867X Rev C3 T1S PHY support</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Misc</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add sparx5-symreg debugfs driver for register access</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bug fixes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN9645x</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix spurious FDB errors on empty LAG during bridge teardown</p>
+</li>
+<li>
+<p>Fix microchip,led-drive_mode property name</p>
+</li>
+<li>
+<p>Fix missing unlock and err init</p>
+</li>
+<li>
+<p>Fix taprio gcl entry management</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sparx5</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix DWRR cost max to match hardware register width</p>
+</li>
+<li>
+<p>Fix multiple bugs in L3 routing subsystem</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sparx5/LAN969x</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix PTP clock max_adj value</p>
+</li>
+<li>
+<p>Fix RX buffer size for jumbo frames</p>
+</li>
+<li>
+<p>Fix full frame overhead in MTU calculation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LAN966x</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Disable PCIe L1 link state to fix I2C</p>
+</li>
+<li>
+<p>Fix PCI BAR assignment after rescan</p>
+</li>
+<li>
+<p>Fix overlay for FDMA and enlarge cpu reg</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>PHY</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix Indy D0 PTP4l Master-Slave sync failure in
+UDPv4/UDPv6 modes (DBB-1081)</p>
+</li>
+<li>
+<p>Fix PTP for lan8814 rev D</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Misc</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Lower the level on ocelot pre-reset messages (DBB-1079)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_u_boot"><a class="anchor" href="#_u_boot"></a>U-Boot</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>LAN969x</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix possible issue with debug_uart</p>
+</li>
+<li>
+<p>Added support for more GigaDevice SPI-NAND devices</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bug_status"><a class="anchor" href="#_bug_status"></a>Bug Status</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_linux_kernel_2"><a class="anchor" href="#_linux_kernel_2"></a>Linux Kernel</h3>
+<div class="paragraph">
+<p>These bugs are known but not fixed in this release of the BSP:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 44.4444%;">
+<col style="width: 44.4445%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Reference</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Remark and possible workaround</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DBB-903</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN9645x: Traffic corruption/drops with ports shut/no shut after
+plug-in to EDS2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set the port down and up again.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DBB-951</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN9645x: DMESG output gives wrong information when SFP plugged
+out of the port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No workaround: The information is cached by the Linux SFP subsystem.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DBB-955</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN9645x: QoS macro should be part of the code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No workaround: Currently the QoS tool needs to know which netlink
+interface to use via an environment variable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DBB-1090</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN9645x: TAS not functioning when cycle time is configured in
+microseconds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No workaround: A fix is in being evaluated for the next release</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DBB-1096</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN9645x: PTP synchronization is lost after enabling TAS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No workaround: A fix is in being evaluated for the next release</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DBB-1100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LAN9645x: TAPRIO instance configured on second interface not
+displayed in tc qdisc show output</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No workaround: A fix is in being evaluated for the next release</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_known_limitations"><a class="anchor" href="#_known_limitations"></a>Known limitations</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The upper SFP cage on the EVB-LAN96459F must not have an SFP inserted at power
+on of the EVB, as this will change the bootstrap settings and prevent
+management via SPI</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  This page was built using <a href="https://antora.org">Antora</a>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
